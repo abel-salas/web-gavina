@@ -1,0 +1,43 @@
+{
+    "seo": {
+        "siteName": "Restaurant Gavina",
+        "siteDescription": "Ontdek de authentieke mediterrane keuken bij Restaurant Gavina. Huisgemaakte gerechten, verse ingrediënten en een warme sfeer wachten op u.",
+        "keywords": "restaurant, mediterrane keuken, huisgemaakt eten, traditionele gerechten, familiesfeer",
+        "locale": "nl_NL"
+    },
+    "nav": {
+        "home": "Home",
+        "menu": "Menu",
+        "reservas": "Reserveringen",
+        "contacto": "Contact",
+        "gallery": "Galerij"
+    },
+    "home": {
+        "title": "Welkom bij Restaurant Gavina",
+        "subtitle": "Geniet van de beste mediterrane huisgemaakte keuken 🍝",
+        "description": "Familierestaurant gespecialiseerd in traditionele mediterrane keuken. Wij bieden huisgemaakte gerechten bereid met verse lokale ingrediënten.",
+        "metaTitle": "Restaurant Gavina - Authentieke Mediterrane Keuken | Huisgemaakt Eten",
+        "metaDescription": "Ontdek de authentieke mediterrane keuken bij Restaurant Gavina. Huisgemaakte gerechten, verse ingrediënten en een warme sfeer. Reserveer uw tafel!"
+    },
+    "menu": {
+        "title": "🍽️ Ons Menu",
+        "subtitle": "Geniet van het beste mediterrane huisgemaakte menu 🍝",
+        "description": "Ontdek onze selectie van traditionele mediterrane gerechten, bereid met verse ingrediënten en familierecepten.",
+        "metaTitle": "Menu Restaurant Gavina - Traditionele Mediterrane Gerechten",
+        "metaDescription": "Verken ons mediterrane keuken menu: paella's, verse zeevruchten, gegrild vlees en huisgemaakte desserts. Eersteklas kwaliteit ingrediënten."
+    },
+    "contact": {
+        "title": "📞 Contact",
+        "subtitle": "Neem contact met ons op",
+        "description": "Heeft u een vraag of wilt u een reservering maken? Neem contact met ons op en wij helpen u graag verder.",
+        "metaTitle": "Contact - Restaurant Gavina | Reserveringen en Vragen",
+        "metaDescription": "Neem contact op met Restaurant Gavina voor reserveringen, vragen of informatie. Wij staan voor u klaar met de beste service."
+    },
+    "gallery": {
+        "title": "📸 Fotogalerij",
+        "subtitle": "Ontdek onze heerlijke gerechten en gezellige sfeer",
+        "description": "Leer de unieke sfeer van Restaurant Gavina kennen en onze meest representatieve gerechten door onze fotogalerij.",
+        "metaTitle": "Galerij - Restaurant Gavina | Onze Gerechten en Sfeer",
+        "metaDescription": "Ontdek de gezellige sfeer van Restaurant Gavina en onze heerlijke mediterrane gerechten door onze fotogalerij."
+    }
+}

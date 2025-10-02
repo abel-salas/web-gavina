@@ -1,0 +1,43 @@
+{
+    "seo": {
+        "siteName": "Restaurant Gavina",
+        "siteDescription": "Descobreix l'autèntica cuina mediterrània al Restaurant Gavina. Plats casolans, ingredients frescos i un ambient acollidor t'esperen.",
+        "keywords": "restaurant, cuina mediterrània, menjar casolà, plats tradicionals, ambient familiar",
+        "locale": "ca_ES"
+    },
+    "nav": {
+        "home": "Inici",
+        "menu": "Menú",
+        "reservas": "Reserves",
+        "contacto": "Contacte",
+        "gallery": "Galeria"
+    },
+    "home": {
+        "title": "Benvingut al Restaurant Gavina",
+        "subtitle": "Gaudeix de la millor cuina casolana mediterrània 🍝",
+        "description": "Restaurant familiar especialitzat en cuina mediterrània tradicional. Oferim plats casolans elaborats amb ingredients frescos de la regió.",
+        "metaTitle": "Restaurant Gavina - Cuina Mediterrània Autèntica | Menjar Casolà",
+        "metaDescription": "Descobreix l'autèntica cuina mediterrània al Restaurant Gavina. Plats casolans, ingredients frescos i un ambient acollidor. Reserva la teva taula!"
+    },
+    "menu": {
+        "title": "🍽️ El nostre Menú",
+        "subtitle": "Gaudeix del millor menú de cuina casolana mediterrània 🍝",
+        "description": "Descobreix la nostra selecció de plats tradicionals mediterranis, elaborats amb ingredients frescos i receptes familiars.",
+        "metaTitle": "Menú Restaurant Gavina - Plats Mediterranis Tradicionals",
+        "metaDescription": "Explora el nostre menú de cuina mediterrània: paelles, peixos frescos, carns a la brasa i postres casolanes. Ingredients de primera qualitat."
+    },
+    "contact": {
+        "title": "📞 Contacte",
+        "subtitle": "Posa't en contacte amb nosaltres",
+        "description": "Tens alguna pregunta o vols fer una reserva? Contacta'ns i t'ajudarem encantats.",
+        "metaTitle": "Contacte - Restaurant Gavina | Reserves i Consultes",
+        "metaDescription": "Contacta amb Restaurant Gavina per a reserves, consultes o informació. T'atenem amb la millor predisposició."
+    },
+    "gallery": {
+        "title": "📸 Galeria de Fotos",
+        "subtitle": "Descobreix els nostres deliciosos plats i ambient acollidor",
+        "description": "Coneix l'ambient únic del Restaurant Gavina i els nostres plats més representatius a través de la nostra galeria fotogràfica.",
+        "metaTitle": "Galeria - Restaurant Gavina | Els nostres Plats i Ambient",
+        "metaDescription": "Descobreix l'ambient acollidor del Restaurant Gavina i els nostres deliciosos plats mediterranis a través de la nostra galeria de fotos."
+    }
+}

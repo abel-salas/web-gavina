@@ -1,0 +1,43 @@
+{
+    "seo": {
+        "siteName": "Gavina Restaurant",
+        "siteDescription": "Experience authentic Mediterranean cuisine at Gavina Restaurant. Homemade dishes, fresh ingredients and a welcoming atmosphere await you.",
+        "keywords": "restaurant, Mediterranean cuisine, homemade food, traditional dishes, family atmosphere",
+        "locale": "en_US"
+    },
+    "nav": {
+        "home": "Home",
+        "menu": "Menu",
+        "reservas": "Bookings",
+        "contacto": "Contact",
+        "gallery": "Gallery"
+    },
+    "home": {
+        "title": "Welcome to Gavina Restaurant",
+        "subtitle": "Enjoy the finest Mediterranean homemade cuisine 🍝",
+        "description": "Family restaurant specializing in traditional Mediterranean cuisine. We offer homemade dishes prepared with fresh local ingredients.",
+        "metaTitle": "Gavina Restaurant - Authentic Mediterranean Cuisine | Homemade Food",
+        "metaDescription": "Experience authentic Mediterranean cuisine at Gavina Restaurant. Homemade dishes, fresh ingredients and a welcoming atmosphere. Book your table!"
+    },
+    "menu": {
+        "title": "🍽️ Our Menu",
+        "subtitle": "Enjoy the finest Mediterranean homemade cuisine 🍝",
+        "description": "Discover our selection of traditional Mediterranean dishes, prepared with fresh ingredients and family recipes.",
+        "metaTitle": "Menu - Gavina Restaurant | Traditional Mediterranean Dishes",
+        "metaDescription": "Explore our Mediterranean cuisine menu: paellas, fresh seafood, grilled meats and homemade desserts. Premium quality ingredients."
+    },
+    "contact": {
+        "title": "📞 Contact",
+        "subtitle": "Get in touch with us",
+        "description": "Have a question or want to make a reservation? Contact us and we'll be happy to help you.",
+        "metaTitle": "Contact - Gavina Restaurant | Reservations and Inquiries",
+        "metaDescription": "Contact Gavina Restaurant for reservations, inquiries or information. We serve you with the best disposition."
+    },
+    "gallery": {
+        "title": "📸 Photo Gallery",
+        "subtitle": "Discover our delicious dishes and cozy atmosphere",
+        "description": "Get to know the unique atmosphere of Gavina Restaurant and our most representative dishes through our photo gallery.",
+        "metaTitle": "Gallery - Gavina Restaurant | Our Dishes and Atmosphere",
+        "metaDescription": "Discover the cozy atmosphere of Gavina Restaurant and our delicious Mediterranean dishes through our photo gallery."
+    }
+}

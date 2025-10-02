@@ -1,0 +1,130 @@
+// Datos SEO específicos por idioma - separados del contenido de la app
+export const SEO_DATA = {
+    es: {
+        site: {
+            name: 'Restaurante Gavina',
+            description: 'Descubre la auténtica cocina mediterránea en Restaurante Gavina. Platos caseros, ingredientes frescos y un ambiente acogedor te esperan.',
+            keywords: 'restaurante, cocina mediterránea, comida casera, platos tradicionales, ambiente familiar, Barcelona',
+            locale: 'es_ES',
+        },
+        pages: {
+            home: {
+                title: 'Restaurante Gavina - Cocina Mediterránea Auténtica | Comida Casera',
+                description: 'Descubre la auténtica cocina mediterránea en Restaurante Gavina. Platos caseros, ingredientes frescos y un ambiente acogedor. ¡Reserva tu mesa!',
+                keywords: 'restaurante mediterráneo Barcelona, comida casera, cocina tradicional, reservas restaurante',
+            },
+            menu: {
+                title: 'Menú Restaurante Gavina - Platos Mediterráneos Tradicionales',
+                description: 'Explora nuestro menú de cocina mediterránea: paellas, pescados frescos, carnes a la brasa y postres caseros. Ingredientes de primera calidad.',
+                keywords: 'menú mediterráneo, paella Barcelona, pescado fresco, carnes a la brasa, postres caseros',
+            },
+            contact: {
+                title: 'Contacto - Restaurante Gavina | Reservas y Consultas',
+                description: 'Contacta con Restaurante Gavina para reservas, consultas o información. Te atendemos con la mejor predisposición.',
+                keywords: 'contacto restaurante Barcelona, reservas, información restaurante, teléfono reservas',
+            },
+            gallery: {
+                title: 'Galería - Restaurante Gavina | Nuestros Platos y Ambiente',
+                description: 'Descubre el ambiente acogedor de Restaurante Gavina y nuestros deliciosos platos mediterráneos a través de nuestra galería de fotos.',
+                keywords: 'fotos restaurante, ambiente acogedor, platos mediterráneos, galería restaurante Barcelona',
+            },
+        },
+    },
+
+    en: {
+        site: {
+            name: 'Gavina Restaurant',
+            description: 'Experience authentic Mediterranean cuisine at Gavina Restaurant. Homemade dishes, fresh ingredients and a welcoming atmosphere await you.',
+            keywords: 'restaurant, Mediterranean cuisine, homemade food, traditional dishes, family atmosphere, Barcelona',
+            locale: 'en_US',
+        },
+        pages: {
+            home: {
+                title: 'Gavina Restaurant - Authentic Mediterranean Cuisine | Homemade Food',
+                description: 'Experience authentic Mediterranean cuisine at Gavina Restaurant. Homemade dishes, fresh ingredients and a welcoming atmosphere. Book your table!',
+                keywords: 'Mediterranean restaurant Barcelona, homemade food, traditional cuisine, restaurant reservations',
+            },
+            menu: {
+                title: 'Menu - Gavina Restaurant | Traditional Mediterranean Dishes',
+                description: 'Explore our Mediterranean cuisine menu: paellas, fresh seafood, grilled meats and homemade desserts. Premium quality ingredients.',
+                keywords: 'Mediterranean menu, paella Barcelona, fresh seafood, grilled meats, homemade desserts',
+            },
+            contact: {
+                title: 'Contact - Gavina Restaurant | Reservations and Inquiries',
+                description: 'Contact Gavina Restaurant for reservations, inquiries or information. We serve you with the best disposition.',
+                keywords: 'restaurant contact Barcelona, reservations, restaurant information, booking phone',
+            },
+            gallery: {
+                title: 'Gallery - Gavina Restaurant | Our Dishes and Atmosphere',
+                description: 'Discover the cozy atmosphere of Gavina Restaurant and our delicious Mediterranean dishes through our photo gallery.',
+                keywords: 'restaurant photos, cozy atmosphere, Mediterranean dishes, restaurant gallery Barcelona',
+            },
+        },
+    },
+
+    ca: {
+        site: {
+            name: 'Restaurant Gavina',
+            description: 'Descobreix l\'autèntica cuina mediterrània al Restaurant Gavina. Plats casolans, ingredients frescos i un ambient acollidor t\'esperen.',
+            keywords: 'restaurant, cuina mediterrània, menjar casolà, plats tradicionals, ambient familiar, Barcelona',
+            locale: 'ca_ES',
+        },
+        pages: {
+            home: {
+                title: 'Restaurant Gavina - Cuina Mediterrània Autèntica | Menjar Casolà',
+                description: 'Descobreix l\'autèntica cuina mediterrània al Restaurant Gavina. Plats casolans, ingredients frescos i un ambient acollidor. Reserva la teva taula!',
+                keywords: 'restaurant mediterrani Barcelona, menjar casolà, cuina tradicional, reserves restaurant',
+            },
+            menu: {
+                title: 'Menú Restaurant Gavina - Plats Mediterranis Tradicionals',
+                description: 'Explora el nostre menú de cuina mediterrània: paelles, peixos frescos, carns a la brasa i postres casolanes. Ingredients de primera qualitat.',
+                keywords: 'menú mediterrani, paella Barcelona, peix fresc, carns a la brasa, postres casolanes',
+            },
+            contact: {
+                title: 'Contacte - Restaurant Gavina | Reserves i Consultes',
+                description: 'Contacta amb Restaurant Gavina per a reserves, consultes o informació. T\'atenem amb la millor predisposició.',
+                keywords: 'contacte restaurant Barcelona, reserves, informació restaurant, telèfon reserves',
+            },
+            gallery: {
+                title: 'Galeria - Restaurant Gavina | Els nostres Plats i Ambient',
+                description: 'Descobreix l\'ambient acollidor del Restaurant Gavina i els nostres deliciosos plats mediterranis a través de la nostra galeria de fotos.',
+                keywords: 'fotos restaurant, ambient acollidor, plats mediterranis, galeria restaurant Barcelona',
+            },
+        },
+    },
+
+    nl: {
+        site: {
+            name: 'Restaurant Gavina',
+            description: 'Ontdek de authentieke mediterrane keuken bij Restaurant Gavina. Huisgemaakte gerechten, verse ingrediënten en een warme sfeer wachten op u.',
+            keywords: 'restaurant, mediterrane keuken, huisgemaakt eten, traditionele gerechten, familiesfeer, Barcelona',
+            locale: 'nl_NL',
+        },
+        pages: {
+            home: {
+                title: 'Restaurant Gavina - Authentieke Mediterrane Keuken | Huisgemaakt Eten',
+                description: 'Ontdek de authentieke mediterrane keuken bij Restaurant Gavina. Huisgemaakte gerechten, verse ingrediënten en een warme sfeer. Reserveer uw tafel!',
+                keywords: 'mediterraans restaurant Barcelona, huisgemaakt eten, traditionele keuken, restaurant reserveringen',
+            },
+            menu: {
+                title: 'Menu Restaurant Gavina - Traditionele Mediterrane Gerechten',
+                description: 'Verken ons mediterrane keuken menu: paella\'s, verse zeevruchten, gegrild vlees en huisgemaakte desserts. Eersteklas kwaliteit ingrediënten.',
+                keywords: 'mediterraans menu, paella Barcelona, verse zeevruchten, gegrild vlees, huisgemaakte desserts',
+            },
+            contact: {
+                title: 'Contact - Restaurant Gavina | Reserveringen en Vragen',
+                description: 'Neem contact op met Restaurant Gavina voor reserveringen, vragen of informatie. Wij staan voor u klaar met de beste service.',
+                keywords: 'restaurant contact Barcelona, reserveringen, restaurant informatie, reservering telefoon',
+            },
+            gallery: {
+                title: 'Galerij - Restaurant Gavina | Onze Gerechten en Sfeer',
+                description: 'Ontdek de gezellige sfeer van Restaurant Gavina en onze heerlijke mediterrane gerechten door onze fotogalerij.',
+                keywords: 'restaurant fotos, gezellige sfeer, mediterrane gerechten, restaurant galerij Barcelona',
+            },
+        },
+    },
+} as const;
+
+export type SEOData = typeof SEO_DATA;
+export type SupportedLocale = keyof typeof SEO_DATA;
+export type PageType = keyof typeof SEO_DATA.es.pages;

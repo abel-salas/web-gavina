@@ -1,0 +1,43 @@
+{
+    "seo": {
+        "siteName": "Restaurante Gavina",
+        "siteDescription": "Descubre la auténtica cocina mediterránea en Restaurante Gavina. Platos caseros, ingredientes frescos y un ambiente acogedor te esperan.",
+        "keywords": "restaurante, cocina mediterránea, comida casera, platos tradicionales, ambiente familiar",
+        "locale": "es_ES"
+    },
+    "nav": {
+        "home": "Inicio",
+        "menu": "Menú",
+        "reservas": "Reservas",
+        "contacto": "Contacto",
+        "gallery": "Galería"
+    },
+    "home": {
+        "title": "Bienvenido a Restaurante Gavina",
+        "subtitle": "Disfruta de la mejor comida casera mediterránea 🍝",
+        "description": "Restaurante familiar especializado en cocina mediterránea tradicional. Ofrecemos platos caseros elaborados con ingredientes frescos de la región.",
+        "metaTitle": "Restaurante Gavina - Cocina Mediterránea Auténtica | Comida Casera",
+        "metaDescription": "Descubre la auténtica cocina mediterránea en Restaurante Gavina. Platos caseros, ingredientes frescos y un ambiente acogedor. ¡Reserva tu mesa!"
+    },
+    "menu": {
+        "title": "🍽️ Nuestro Menú",
+        "subtitle": "Disfruta del mejor menú de comida casera mediterránea 🍝",
+        "description": "Descubre nuestra selección de platos tradicionales mediterráneos, elaborados con ingredientes frescos y recetas familiares.",
+        "metaTitle": "Menú Restaurante Gavina - Platos Mediterráneos Tradicionales",
+        "metaDescription": "Explora nuestro menú de cocina mediterránea: paellas, pescados frescos, carnes a la brasa y postres caseros. Ingredientes de primera calidad."
+    },
+    "contact": {
+        "title": "📞 Contacto",
+        "subtitle": "Ponte en contacto con nosotros",
+        "description": "¿Tienes alguna pregunta o quieres hacer una reserva? Contáctanos y te ayudaremos encantados.",
+        "metaTitle": "Contacto - Restaurante Gavina | Reservas y Consultas",
+        "metaDescription": "Contacta con Restaurante Gavina para reservas, consultas o información. Te atendemos con la mejor predisposición."
+    },
+    "gallery": {
+        "title": "📸 Galería de Fotos",
+        "subtitle": "Descubre nuestros deliciosos platos y ambiente acogedor",
+        "description": "Conoce el ambiente único de Restaurante Gavina y nuestros platos más representativos a través de nuestra galería fotográfica.",
+        "metaTitle": "Galería - Restaurante Gavina | Nuestros Platos y Ambiente",
+        "metaDescription": "Descubre el ambiente acogedor de Restaurante Gavina y nuestros deliciosos platos mediterráneos a través de nuestra galería de fotos."
+    }
+}
