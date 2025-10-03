@@ -182,7 +182,14 @@
         "subtitle": "Posa't en contacte amb nosaltres",
         "description": "Tens alguna pregunta o vols fer una reserva? Contacta'ns i t'ajudarem encantats.",
         "metaTitle": "Contacte - Restaurant Gavina | Reserves i Consultes",
-        "metaDescription": "Contacta amb Restaurant Gavina per a reserves, consultes o informació. T'atenem amb la millor predisposició."
+        "metaDescription": "Contacta amb Restaurant Gavina per a reserves, consultes o informació. T'atenem amb la millor predisposició.",
+        "address": "Passeig Manuel Puigvert s/n, Calella, Barcelona",
+        "phone": "937 69 25 39",
+        "mobile": "695 349 307",
+        "hours": "Obert tots els dies",
+        "facebook": "Facebook",
+        "location": "Platja Gran de Calella, davant de l'Estació de Renfe",
+        "parking": "Dos aparcaments gratuïts"
     },
     "gallery": {
         "title": "📸 Galeria de Fotos",
@@ -617,8 +624,8 @@
         },
         "social": {
             "title": "Segueix-nos",
-            "facebook": "Restaurant Banys La Gavina",
-            "instagram": "@banyslafgavina"
-        }
+            "facebook": "Facebook"
+        },
+        "copyright": "© 2024 Restaurant Banys La Gavina. Tots els drets reservats."
     }
 }

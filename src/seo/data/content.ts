@@ -1,14 +1,6 @@
 // Datos SEO específicos por idioma - separados del contenido de la app
-export const SEO_DATA = {            gallery: {
-                title: 'Galeria - Restaurant Gavina | Els Nostres Plats i Ambient',
-                description: 'Descobreix l\'ambient acollidor del Restaurant Gavina i els nostres deliciosos plats mediterranis a través de la nostra galeria de fotos.',
-                keywords: 'fotos restaurant, ambient acollidor, plats mediterranis, galeria restaurant Barcelona',
-            },
-            history: {
-                title: 'Història - Restaurant Banys La Gavina | Des de 1958 a Calella',
-                description: 'Descobreix la fascinant història del Restaurant Banys La Gavina, un emblema de Calella des de 1958. Més de 65 anys de tradició gastronòmica davant del mar.',
-                keywords: 'història restaurant Calella, Banys La Gavina 1958, tradició gastronòmica, turisme Calella anys 60',
-            },es: {
+export const SEO_DATA = {
+    es: {
         site: {
             name: 'Restaurante Gavina',
             description: 'Descubre la auténtica cocina mediterránea en Restaurante Gavina. Platos caseros, ingredientes frescos y un ambiente acogedor te esperan.',
