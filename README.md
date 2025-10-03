@@ -4,6 +4,8 @@ Modern multilingual website for Restaurant Banys La Gavina in Calella, built wit
 
 🚀 **Latest Update**: All translation structures verified and TypeScript compilation issues resolved.
 
+🔄 **Deployment Status**: Forcing fresh Vercel deployment with latest commits.
+
 🌍 **Fully functional with 4 languages**: Spanish, English, Catalan, Dutch
 
 ## Features
