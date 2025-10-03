@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default function NotFound() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -10,10 +12,10 @@ export default function NotFound() {
         <div className="space-y-2">
           <p className="text-sm text-gray-400">Idiomas disponibles:</p>
           <div className="flex justify-center gap-4">
-            <a href="/es/" className="text-blue-600 hover:underline">🇪🇸 Español</a>
-            <a href="/en/" className="text-blue-600 hover:underline">🇬🇧 English</a>
-            <a href="/ca/" className="text-blue-600 hover:underline">🏴󠁥󠁳󠁣󠁴󠁿 Català</a>
-            <a href="/nl/" className="text-blue-600 hover:underline">🇳🇱 Nederlands</a>
+            <Link href="/es/" className="text-blue-600 hover:underline">🇪🇸 Español</Link>
+            <Link href="/en/" className="text-blue-600 hover:underline">🇬🇧 English</Link>
+            <Link href="/ca/" className="text-blue-600 hover:underline">🏴󠁥󠁳󠁣󠁴󠁿 Català</Link>
+            <Link href="/nl/" className="text-blue-600 hover:underline">🇳🇱 Nederlands</Link>
           </div>
         </div>
       </div>

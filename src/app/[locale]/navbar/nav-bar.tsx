@@ -1,5 +1,6 @@
 import { getLocalizedData } from "@/app/lib/localization";
 import MobileNavbar from "./mobile-navbar";
+import Link from "next/link";
 
 export default async function Navbar({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -8,6 +9,7 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
   const navItems = [
     { href: href('/'), label: dict.nav.home },
     { href: href('/menu'), label: dict.nav.menu },
+    { href: href('/historia'), label: dict.nav.historia },
     { href: href('/contact'), label: dict.nav.contacto },
     { href: href('/gallery'), label: dict.nav.gallery },
   ];
@@ -20,21 +22,21 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
           <div className="flex justify-between items-center h-16">
             {/* Logo/Brand */}
             <div className="flex-shrink-0">
-              <a href={href('/')} className="text-xl font-bold text-white hover:text-blue-300 transition-colors">
+              <Link href={href('/')} className="text-xl font-bold text-white hover:text-blue-300 transition-colors">
                 🍽️ Gavina
-              </a>
+              </Link>
             </div>
 
             {/* Desktop Menu - Centrado */}
             <ul className="flex space-x-8">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <a 
+                  <Link 
                     href={item.href}
                     className="text-white hover:text-blue-300 transition-colors duration-200 font-medium"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

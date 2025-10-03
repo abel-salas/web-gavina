@@ -38,7 +38,8 @@ export async function generateMetadata({
               <span className="text-2xl mr-3">📍</span>
               <div>
                 <h3 className="font-semibold">Dirección</h3>
-                <p className="text-gray-600">Calle Example, 123<br />08000 Barcelona, España</p>
+                <p className="text-gray-600 whitespace-pre-line">{dict.contact.address}</p>
+                <p className="text-sm text-gray-500 mt-1">{dict.contact.location}</p>
               </div>
             </div>
 
@@ -46,18 +47,18 @@ export async function generateMetadata({
               <span className="text-2xl mr-3">📞</span>
               <div>
                 <h3 className="font-semibold">Teléfono</h3>
-                <a href="tel:+34123456789" className="text-blue-600 hover:text-blue-800">
-                  +34 123 456 789
+                <a href={`tel:${dict.contact.phone}`} className="text-blue-600 hover:text-blue-800">
+                  {dict.contact.phone}
                 </a>
               </div>
             </div>
 
             <div className="flex items-center">
-              <span className="text-2xl mr-3">✉️</span>
+              <span className="text-2xl mr-3">📱</span>
               <div>
-                <h3 className="font-semibold">Email</h3>
-                <a href="mailto:info@restaurante-gavina.com" className="text-blue-600 hover:text-blue-800">
-                  info@restaurante-gavina.com
+                <h3 className="font-semibold">Móvil</h3>
+                <a href={`tel:${dict.contact.mobile}`} className="text-blue-600 hover:text-blue-800">
+                  {dict.contact.mobile}
                 </a>
               </div>
             </div>
@@ -66,10 +67,25 @@ export async function generateMetadata({
               <span className="text-2xl mr-3">🕐</span>
               <div>
                 <h3 className="font-semibold">Horario</h3>
-                <p className="text-gray-600">
-                  Lunes - Domingo<br />
-                  12:00 - 23:00
-                </p>
+                <p className="text-gray-600">{dict.contact.hours}</p>
+              </div>
+            </div>
+
+            <div className="flex items-center">
+              <span className="text-2xl mr-3">�</span>
+              <div>
+                <h3 className="font-semibold">Aparcamiento</h3>
+                <p className="text-gray-600">{dict.contact.parking}</p>
+              </div>
+            </div>
+
+            <div className="flex items-center">
+              <span className="text-2xl mr-3">📘</span>
+              <div>
+                <h3 className="font-semibold">Síguenos</h3>
+                <a href="#" className="text-blue-600 hover:text-blue-800">
+                  {dict.contact.facebook}
+                </a>
               </div>
             </div>
           </div>

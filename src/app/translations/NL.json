@@ -1,0 +1,624 @@
+{
+    "seo": {
+        "siteName": "Restaurant Gavina",
+        "siteDescription": "Ontdek de authentieke mediterrane keuken bij Restaurant Gavina. Huisgemaakte gerechten, verse ingrediënten en een warme sfeer wachten op u.",
+        "keywords": "restaurant, mediterrane keuken, huisgemaakt eten, traditionele gerechten, familiesfeer",
+        "locale": "nl_NL"
+    },
+    "nav": {
+        "home": "Home",
+        "menu": "Menu",
+        "reservas": "Reserveringen",
+        "contacto": "Contact",
+        "gallery": "Galerij",
+        "historia": "Geschiedenis"
+    },
+    "home": {
+        "title": "Welkom bij Restaurant Gavina",
+        "subtitle": "Geniet van de beste mediterrane huisgemaakte keuken 🍝",
+        "description": "Familierestaurant gespecialiseerd in traditionele mediterrane keuken. Wij bieden huisgemaakte gerechten bereid met verse lokale ingrediënten.",
+        "metaTitle": "Restaurant Gavina - Authentieke Mediterrane Keuken | Huisgemaakt Eten",
+        "metaDescription": "Ontdek de authentieke mediterrane keuken bij Restaurant Gavina. Huisgemaakte gerechten, verse ingrediënten en een warme sfeer. Reserveer uw tafel!"
+    },
+    "menu": {
+        "title": "🍽️ Ons Menu",
+        "subtitle": "Geniet van het beste mediterrane huisgemaakte menu 🍝",
+        "description": "Ontdek onze selectie van traditionele mediterrane gerechten, bereid met verse ingrediënten en familierecepten.",
+        "metaTitle": "Menu Restaurant Gavina - Traditionele Mediterrane Gerechten",
+        "metaDescription": "Verken ons mediterrane keuken menu: paella's, verse zeevruchten, gegrild vlees en huisgemaakte desserts. Eersteklas kwaliteit ingrediënten.",
+        "categories": {
+            "starters": {
+                "title": "Voorgerechten",
+                "items": [
+                    {
+                        "name": "Rundercarpaccio met Parmezaanse schaafsel",
+                        "description": "Gemarineerd met citroen, balsamicocrème, zout, peper en bedekt met Parmezaan",
+                        "price": "€12,00",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Escala ansjovis met brood en tomaat",
+                        "description": "Traditionele ansjovis uit La Escala",
+                        "price": "€11,50"
+                    },
+                    {
+                        "name": "Mosselen Marinara",
+                        "description": "Mosselen met onze marinara saus",
+                        "price": "€11,50"
+                    },
+                    {
+                        "name": "Gestoomde Mosselen",
+                        "description": "Rotsmosselen gestoomd met wijn en citroen",
+                        "price": "€11,50"
+                    },
+                    {
+                        "name": "Inktvis met bloem",
+                        "description": "Gebakken inktvisringen met bloem",
+                        "price": "€16,00"
+                    },
+                    {
+                        "name": "Blanes Garnalen",
+                        "description": "Verse garnalen uit Blanes",
+                        "price": "€18,00"
+                    },
+                    {
+                        "name": "Escalivada met ansjovis",
+                        "description": "Geroosterde paprika, aubergine en ui met ansjovis en zwarte olijven",
+                        "price": "€12,00"
+                    },
+                    {
+                        "name": "Cati's huisgemaakte bommen (per stuk)",
+                        "description": "Grote kroket gevuld met licht pittige aardappel",
+                        "price": "€5,50"
+                    },
+                    {
+                        "name": "Moeder's kroketten (per stuk)",
+                        "description": "Volledig huisgemaakte kroketten",
+                        "price": "€1,60"
+                    },
+                    {
+                        "name": "Cati's Cannelloni",
+                        "description": "Huisgemaakte cannelloni gemaakt door Cati",
+                        "price": "€10,50",
+                        "recommended": true
+                    }
+                ]
+            },
+            "salads": {
+                "title": "Salades",
+                "items": [
+                    {
+                        "name": "Tonijnsalade",
+                        "description": "Gemengde sla, tomaat, ui, maïs, kiemen, paprika met tonijn",
+                        "price": "€10,50"
+                    },
+                    {
+                        "name": "Geitenkaas Salade",
+                        "description": "Gemengde sla met kiemen, walnoten, getopt met geitenkaas en honing balsamicocrème",
+                        "price": "€11,50",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Grootmoeders Salade",
+                        "description": "Tomaat, ui en olijven",
+                        "price": "€9,50"
+                    }
+                ]
+            },
+            "rice": {
+                "title": "Rijstgerechten",
+                "subtitle": "Alle rijstgerechten, minimum 2 personen",
+                "items": [
+                    {
+                        "name": "Zeevruchten Paella (portie)",
+                        "description": "Onze traditionele zeevruchten paella",
+                        "price": "€18,50"
+                    },
+                    {
+                        "name": "Speciale Paella (kreeft en zeevruchten, portie)",
+                        "description": "Paella met kreeft, garnalen, rode garnalen en zeevruchten",
+                        "price": "€24,00",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Zwarte Rijst",
+                        "description": "Traditionele zwarte rijst",
+                        "price": "€18,50"
+                    },
+                    {
+                        "name": "Kippenrijst met champignons (portie)",
+                        "description": "Seizoensnoviteit, kippenrijst met gemengde champignons",
+                        "price": "€19,00",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Fideuá (portie)",
+                        "description": "Geroosterde noedels met garnalenolie",
+                        "price": "€16,50"
+                    },
+                    {
+                        "name": "Champignon Risotto met Parmezaan",
+                        "description": "Romige risotto met champignons en Parmezaan",
+                        "price": "€17,50"
+                    }
+                ]
+            },
+            "meat": {
+                "title": "Vlees",
+                "items": [
+                    {
+                        "name": "Eendenborst met rode bessensaus",
+                        "description": "Eendenborst met bosbessensaus",
+                        "price": "€17,50",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Hamburger met geitenkaas en gekarameliseerde ui",
+                        "description": "Gourmet hamburger met geitenkaas",
+                        "price": "€11,50"
+                    },
+                    {
+                        "name": "Filet met café Paris saus",
+                        "description": "Rundfilet met café Paris saus",
+                        "price": "€24,50"
+                    },
+                    {
+                        "name": "400 gr Entrecôte",
+                        "description": "Rund entrecôte met garnering",
+                        "price": "€22,50",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Gepaneerde kipfingers met aardappelen",
+                        "description": "Kipfingers met frietjes",
+                        "price": "€9,00"
+                    }
+                ]
+            }
+        }
+    },
+    "contact": {
+        "title": "📞 Contact",
+        "subtitle": "Neem contact met ons op",
+        "description": "Heeft u een vraag of wilt u een reservering maken? Neem contact met ons op en wij helpen u graag verder.",
+        "metaTitle": "Contact - Restaurant Gavina | Reserveringen en Vragen",
+        "metaDescription": "Neem contact op met Restaurant Gavina voor reserveringen, vragen of informatie. Wij staan voor u klaar met de beste service."
+    },
+    "gallery": {
+        "title": "📸 Fotogalerij",
+        "subtitle": "Ontdek onze heerlijke gerechten en gezellige sfeer",
+        "description": "Leer de unieke sfeer van Restaurant Gavina kennen en onze meest representatieve gerechten door onze fotogalerij.",
+        "metaTitle": "Galerij - Restaurant Gavina | Onze Gerechten en Sfeer",
+        "metaDescription": "Ontdek de gezellige sfeer van Restaurant Gavina en onze heerlijke mediterrane gerechten door onze fotogalerij."
+    },
+    "menu_data": {
+        "hero": {
+            "title": "Ons Exquise Menu",
+            "subtitle": "Traditionele mediterrane smaken sinds 1958",
+            "description": "Ontdek onze authentieke recepten bereid met de verse ingrediënten van de Middellandse Zee en lokale markten."
+        },
+        "categories": [
+            {
+                "id": "rices",
+                "name": "Rijstgerechten & Paella's",
+                "description": "Onze specialiteit, bereid met traditionele technieken en de beste ingrediënten",
+                "items": [
+                    {
+                        "name": "Paella Marinera",
+                        "description": "Traditionele zeevruchten paella met garnalen, mosselen, inktvis en vis",
+                        "price": "18.00",
+                        "allergens": ["schaaldieren", "vis", "weekdieren"]
+                    },
+                    {
+                        "name": "Paella Mixta",
+                        "description": "Gemengde paella met kip, konijn, garnalen, mosselen en groenten",
+                        "price": "17.00",
+                        "allergens": ["schaaldieren", "weekdieren"]
+                    },
+                    {
+                        "name": "Paella Vegetariana",
+                        "description": "Vegetarische paella met seizoensgroenten en sperziebonen",
+                        "price": "15.00",
+                        "allergens": []
+                    },
+                    {
+                        "name": "Arroz Negro",
+                        "description": "Zwarte rijst met inktvisinkt, garnalen en alioli",
+                        "price": "19.00",
+                        "allergens": ["schaaldieren", "weekdieren", "eieren"]
+                    },
+                    {
+                        "name": "Arroz con Bogavante",
+                        "description": "Rijst met kreeft, een culinaire delicatesse",
+                        "price": "35.00",
+                        "allergens": ["schaaldieren"]
+                    }
+                ]
+            },
+            {
+                "id": "seafood",
+                "name": "Verse Zeevruchten",
+                "description": "Dagelijkse verse vangst uit de Middellandse Zee",
+                "items": [
+                    {
+                        "name": "Gegrilde Zeebrasem",
+                        "description": "Verse zeebrasem gegrild met kruiden en olijfolie",
+                        "price": "22.00",
+                        "allergens": ["vis"]
+                    },
+                    {
+                        "name": "Gegrilde Zeebaars",
+                        "description": "Zeebaars met knoflook en peterselie",
+                        "price": "24.00",
+                        "allergens": ["vis"]
+                    },
+                    {
+                        "name": "Gemengde Gegrilde Vis",
+                        "description": "Selectie van verse vis van onze dagelijkse vangst",
+                        "price": "26.00",
+                        "allergens": ["vis"]
+                    },
+                    {
+                        "name": "Gegrilde Garnalen",
+                        "description": "Grote garnalen gegrild met zeezout",
+                        "price": "20.00",
+                        "allergens": ["schaaldieren"]
+                    },
+                    {
+                        "name": "Zeevruchten Schotel",
+                        "description": "Gemengde zeevruchten met garnalen, mosselen, kokkels en inktvis",
+                        "price": "28.00",
+                        "allergens": ["schaaldieren", "weekdieren"]
+                    }
+                ]
+            },
+            {
+                "id": "meats",
+                "name": "Gegrild Vlees",
+                "description": "Hoogwaardig vlees perfect gegrild",
+                "items": [
+                    {
+                        "name": "Gegrilde Kip",
+                        "description": "Vrije uitloop kip met mediterrane kruiden",
+                        "price": "16.00",
+                        "allergens": []
+                    },
+                    {
+                        "name": "Gegrilde Rundersteak",
+                        "description": "Premium rundersteak met seizoensgarnituur",
+                        "price": "22.00",
+                        "allergens": []
+                    },
+                    {
+                        "name": "Varkensribben",
+                        "description": "Malse varkensribben met BBQ saus",
+                        "price": "18.00",
+                        "allergens": []
+                    },
+                    {
+                        "name": "Gemengde Grill",
+                        "description": "Combinatie van kip, rundvlees en varkensvlees",
+                        "price": "20.00",
+                        "allergens": []
+                    }
+                ]
+            },
+            {
+                "id": "starters",
+                "name": "Voorgerechten & Tapas",
+                "description": "Traditionele hapjes om uw maaltijd te beginnen",
+                "items": [
+                    {
+                        "name": "Pan con Tomate",
+                        "description": "Geroosterd brood met tomaat, knoflook en olijfolie",
+                        "price": "4.50",
+                        "allergens": ["gluten"]
+                    },
+                    {
+                        "name": "Patatas Bravas",
+                        "description": "Gebakken aardappelen met pittige bravas saus",
+                        "price": "6.00",
+                        "allergens": ["eieren"]
+                    },
+                    {
+                        "name": "Croquetas de Jamón",
+                        "description": "Huisgemaakte ham kroketten (6 stuks)",
+                        "price": "8.00",
+                        "allergens": ["gluten", "melk", "eieren"]
+                    },
+                    {
+                        "name": "Iberische Ham Schaal",
+                        "description": "Selectie van premium Iberische ham",
+                        "price": "16.00",
+                        "allergens": []
+                    },
+                    {
+                        "name": "Manchego Kaas",
+                        "description": "Gerijpte Manchego kaas met kweepeer",
+                        "price": "12.00",
+                        "allergens": ["melk"]
+                    }
+                ]
+            },
+            {
+                "id": "desserts",
+                "name": "Desserts",
+                "description": "Zoete afsluiting voor een perfecte maaltijd",
+                "items": [
+                    {
+                        "name": "Crema Catalana",
+                        "description": "Traditionele Catalaanse crème met gekarameliseerde suiker",
+                        "price": "5.50",
+                        "allergens": ["melk", "eieren"]
+                    },
+                    {
+                        "name": "Flan Casero",
+                        "description": "Huisgemaakte flan met karamel",
+                        "price": "5.00",
+                        "allergens": ["melk", "eieren"]
+                    },
+                    {
+                        "name": "Mel i Mató",
+                        "description": "Verse kaas met honing en noten",
+                        "price": "6.00",
+                        "allergens": ["melk", "noten"]
+                    },
+                    {
+                        "name": "IJs",
+                        "description": "Selectie van ambachtelijk ijs",
+                        "price": "4.50",
+                        "allergens": ["melk"]
+                    }
+                ]
+            }
+        ],
+        "drinks": {
+            "title": "Dranken",
+            "categories": [
+                {
+                    "name": "Wijnen",
+                    "items": [
+                        {
+                            "name": "Huiswijn Rood",
+                            "price": "12.00"
+                        },
+                        {
+                            "name": "Huiswijn Wit",
+                            "price": "12.00"
+                        },
+                        {
+                            "name": "D.O. Penedès",
+                            "price": "18.00"
+                        },
+                        {
+                            "name": "D.O. Rioja",
+                            "price": "22.00"
+                        }
+                    ]
+                },
+                {
+                    "name": "Bieren",
+                    "items": [
+                        {
+                            "name": "Tapbier",
+                            "price": "3.50"
+                        },
+                        {
+                            "name": "Fles Bier",
+                            "price": "4.00"
+                        }
+                    ]
+                },
+                {
+                    "name": "Frisdranken",
+                    "items": [
+                        {
+                            "name": "Water",
+                            "price": "2.50"
+                        },
+                        {
+                            "name": "Frisdranken",
+                            "price": "3.00"
+                        },
+                        {
+                            "name": "Verse Sappen",
+                            "price": "4.00"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "contact_data": {
+        "hero": {
+            "title": "Neem Contact Op",
+            "subtitle": "Wij staan voor u klaar",
+            "description": "Neem contact op met Restaurant Banys La Gavina voor reserveringen, evenementen of vragen. Wij helpen u graag verder."
+        },
+        "info": {
+            "phone": {
+                "title": "Telefoon",
+                "value": "937 690 356",
+                "description": "Bel voor reserveringen of vragen"
+            },
+            "address": {
+                "title": "Adres",
+                "value": "Paseo Manuel Puigvert s/n, 08370 Calella, Barcelona",
+                "description": "Direct tegenover het strand van Calella, naast het treinstation"
+            },
+            "hours": {
+                "title": "Openingstijden",
+                "schedule": [
+                    {
+                        "days": "Maandag tot Zondag",
+                        "hours": "12:00 - 16:00 en 19:00 - 23:00"
+                    },
+                    {
+                        "days": "Keuken",
+                        "hours": "Sluit om 15:30 en 22:30"
+                    }
+                ]
+            },
+            "email": {
+                "title": "Email",
+                "value": "info@banyslafgavina.com",
+                "description": "Stuur ons uw vragen of suggesties"
+            }
+        },
+        "location": {
+            "title": "Perfecte Locatie",
+            "features": [
+                {
+                    "title": "Aan het Strand",
+                    "description": "Direct tegenover het hoofdstrand van Calella"
+                },
+                {
+                    "title": "Treinstation",
+                    "description": "Op loopafstand van het treinstation van Calella"
+                },
+                {
+                    "title": "Stadscentrum",
+                    "description": "In het hart van het toeristische gebied van Calella"
+                },
+                {
+                    "title": "Gratis Parkeren",
+                    "description": "Twee gratis parkeergebieden, één voor het restaurant"
+                }
+            ]
+        },
+        "testimonials": {
+            "title": "Wat Onze Klanten Zeggen",
+            "subtitle": "Meer dan 65 jaar tevredenheid",
+            "items": [
+                {
+                    "name": "Vaste Klant",
+                    "comment": "De beste paella in Calella, traditie en kwaliteit in elk gerecht"
+                },
+                {
+                    "name": "Bezoeker",
+                    "comment": "Perfecte locatie aan zee, uitstekend eten en familieservice"
+                },
+                {
+                    "name": "Lokaal",
+                    "comment": "Een Calella klassieker die nooit teleurstelt, generatie na generatie"
+                }
+            ]
+        }
+    },
+    "history": {
+        "title": "Onze Geschiedenis",
+        "subtitle": "Een embleem van Calella sinds 1958",
+        "sections": {
+            "about": {
+                "title": "Over Ons",
+                "description": "Restaurant Banys La Gavina is een familietraditie sinds 1958, gelegen aan de kust van Calella. Wij bieden authentieke mediterrane keuken met de versste ingrediënten en uitzonderlijk uitzicht op de Middellandse Zee."
+            },
+            "specialties": {
+                "title": "Onze Specialiteiten",
+                "subtitle": "Ontdek onze selectie van traditionele gerechten",
+                "items": [
+                    {
+                        "name": "Zeevruchten Paella",
+                        "description": "Traditionele rijst met verse zeevruchten van onze kust",
+                        "price": "€24,50"
+                    },
+                    {
+                        "name": "Gegrilde Zeebrasem",
+                        "description": "Verse vis van de dag met mediterrane garnering",
+                        "price": "€22,00"
+                    },
+                    {
+                        "name": "Zwarte Rijst",
+                        "description": "Spectaculaire zwarte rijst met inktvis en aioli",
+                        "price": "€21,50"
+                    }
+                ]
+            },
+            "origin": {
+                "title": "Het Begin (1958)",
+                "content": "Restaurant Banys La Gavina opende zijn deuren in 1958, tijdens de hoogtijdagen van Calella's toeristische ontwikkeling. Vanaf het begin was het strategisch gelegen aan Calella's Platja Gran, tegenover het Renfe Station, en werd het het perfecte ontmoetingspunt voor locals en bezoekers."
+            },
+            "calella_context": {
+                "title": "Calella: Van Vissersdorp tot Toeristische Bestemming",
+                "content": "Tijdens de jaren 60 en 70 onderging Calella een radicale transformatie. Van een traditioneel vissers- en textieldorp werd het een van de belangrijkste toeristische bestemmingen aan de Costa del Maresme. Deze toeristische boom, vooral van Centraal-Europees toerisme, maakte Calella bekend als 'Calella dels Alemanys' (Calella van de Duitsers), waarbij de bevolking tijdens het hoogseizoen verdrievoudigde."
+            },
+            "golden_era": {
+                "title": "De Gouden Eeuw van het Toerisme",
+                "content": "Banys La Gavina was getuige en protagonist van dit gouden tijdperk. Met zijn bevoorrechte locatie aan zee en naast het treinstation, werd het restaurant een verplichte stop voor toeristen die naar Calella kwamen op zoek naar zon, strand en authentieke mediterrane keuken."
+            },
+            "tradition": {
+                "title": "Meer dan 65 Jaar Traditie",
+                "content": "Gedurende meer dan zes decennia heeft het restaurant zijn familiekarakter en toewijding aan kwaliteit behouden. Het is getuige geweest van Calella's evolutie, van de beginjaren als toeristische bestemming tot het worden van een kosmopolitische stad die bezoekers uit heel Europa ontvangt."
+            },
+            "calella_cinema": {
+                "title": "Calella: Filmstad",
+                "content": "Calella is ook het decor geweest voor talrijke film- en televisieproducties. Sinds 2010 maakt het deel uit van Catalunya Film Commission en heeft het zijn eigen Calella Film Office. De stad heeft gediend als 'filmsetstad' voor producties die de essentie van de Catalaanse Middellandse Zee wilden vastleggen."
+            },
+            "present": {
+                "title": "Het Restaurant Vandaag",
+                "content": "Momenteel blijft Restaurant Banys La Gavina een gastronomische referentie in Calella. Het behoudt zijn traditionele specialiteiten in rijstgerechten, zeevruchten en verse vis, terwijl het zich aanpast aan moderne tijden en zijn mediterrane en familieziel behoudt."
+            }
+        },
+        "timeline": [
+            {
+                "year": "1958",
+                "event": "Opening van Restaurant Banys La Gavina"
+            },
+            {
+                "year": "1960s-70s",
+                "event": "Toeristische boom van Calella - 'Calella dels Alemanys'"
+            },
+            {
+                "year": "1970s",
+                "event": "Consolidatie als lokale gastronomische referentie"
+            },
+            {
+                "year": "2010",
+                "event": "Calella wordt lid van Catalunya Film Commission"
+            },
+            {
+                "year": "2024",
+                "event": "Meer dan 65 jaar de beste mediterrane keuken serveren"
+            }
+        ],
+        "heritage": {
+            "title": "Erfgoed en Traditie",
+            "items": [
+                {
+                    "title": "Historische Locatie",
+                    "description": "Gelegen aan de emblematische Paseo Manuel Puigvert, tegenover Platja Gran, sinds 1958"
+                },
+                {
+                    "title": "Traditionele Recepten",
+                    "description": "Wij bewaren de originele recepten van onze rijstgerechten en zeespecialiteiten"
+                },
+                {
+                    "title": "Getuige van de Geschiedenis",
+                    "description": "Wij zijn getuige geweest van de toeristische ontwikkeling van Calella en de Costa del Maresme"
+                },
+                {
+                    "title": "Generaties van Klanten",
+                    "description": "Hele families hebben decennialang speciale momenten aan onze tafels gedeeld"
+                }
+            ]
+        }
+    },
+    "footer": {
+        "description": "Restaurant Banys La Gavina, familietraditie sinds 1958 aan de kust in Calella.",
+        "contact": {
+            "title": "Contact",
+            "address": "Paseo Manuel Puigvert s/n, Calella",
+            "phone": "937 69 25 39",
+            "mobile": "695 349 307"
+        },
+        "hours": {
+            "title": "Openingstijden",
+            "text": "Elke dag open"
+        },
+        "social": {
+            "title": "Volg Ons",
+            "facebook": "Restaurant Banys La Gavina",
+            "instagram": "@banyslafgavina"
+        }
+    }
+}

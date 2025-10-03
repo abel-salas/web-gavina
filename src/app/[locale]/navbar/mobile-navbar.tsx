@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useCloseOnEscape, useBodyScrollLock } from '@/app/components/hooks/useModal';
+import Link from 'next/link';
 
 interface NavItem {
   href: string;
@@ -40,13 +41,13 @@ export default function MobileNavbar({ navItems, homeHref }: MobileNavbarProps) 
           <div className="flex justify-between items-center h-16">
             {/* Logo/Brand */}
             <div className="flex-shrink-0">
-              <a 
+              <Link 
                 href={homeHref} 
                 className="text-xl font-bold text-white hover:text-blue-300 transition-colors"
                 onClick={closeMenu}
               >
                 🍽️ Gavina
-              </a>
+              </Link>
             </div>
 
             {/* Hamburger Button */}
@@ -112,13 +113,13 @@ export default function MobileNavbar({ navItems, homeHref }: MobileNavbarProps) 
                 <ul className="space-y-4">
                   {navItems.map((item, index) => (
                     <li key={index}>
-                      <a
+                      <Link
                         href={item.href}
                         onClick={closeMenu}
                         className="block py-3 px-4 text-lg text-white hover:text-blue-300 hover:bg-gray-800 rounded-lg transition-colors duration-200 font-medium"
                       >
                         {item.label}
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

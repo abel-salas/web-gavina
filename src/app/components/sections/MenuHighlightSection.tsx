@@ -5,40 +5,34 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from '../animations/An
 
 interface MenuHighlightProps {
   title: string;
+  subtitle?: string;
+  specialties: Array<{
+    name: string;
+    description: string;
+    price: string;
+  }>;
   menuHref: string;
 }
 
-export function MenuHighlightSection({ title, menuHref }: MenuHighlightProps) {
-  const dishes = [
-    {
-      name: "Paella Mediterranea",
-      description: "Arroz bomba con mariscos frescos y azafrán",
-      price: "€24",
-      image: "🥘",
-      color: "from-orange-400 to-red-500"
-    },
-    {
-      name: "Pescado del Día",
-      description: "Grillado con hierbas aromáticas y limón",
-      price: "€22",
-      image: "🐟",
-      color: "from-blue-400 to-cyan-500"
-    },
-    {
-      name: "Cordero a la Brasa",
-      description: "Con patatas confitadas y romero fresco",
-      price: "€28",
-      image: "🥩",
-      color: "from-red-400 to-pink-500"
-    },
-    {
-      name: "Crema Catalana",
-      description: "Postre tradicional con caramelo crujiente",
-      price: "€8",
-      image: "🍮",
-      color: "from-yellow-400 to-orange-500"
-    }
-  ];
+export function MenuHighlightSection({ title, subtitle, specialties, menuHref }: MenuHighlightProps) {
+  // Mapear los datos de especialidades a un formato con iconos y colores
+  const dishes = specialties.map((specialty, index) => {
+    const icons = ["🥘", "�", "🐟", "🍛"];
+    const colors = [
+      "from-orange-400 to-red-500",
+      "from-blue-400 to-cyan-500", 
+      "from-green-400 to-teal-500",
+      "from-gray-600 to-gray-800"
+    ];
+    
+    return {
+      name: specialty.name,
+      description: specialty.description,
+      price: specialty.price,
+      image: icons[index % icons.length],
+      color: colors[index % colors.length]
+    };
+  });
 
   return (
     <section className="py-20 bg-gray-900 text-white relative overflow-hidden">

@@ -1,6 +1,6 @@
 import { getLocalizedData } from "@/app/lib/localization";
 import LanguageSwitcher from "@/app/components/LanguageSwitcher";
-import { SEO_CONFIG } from "@/seo";
+import Link from "next/link";
 
 export default async function Footer({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -13,12 +13,12 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
           {/* Logo y descripción */}
           <div className="md:col-span-2">
             <div className="mb-4">
-              <a href={href('/')} className="text-2xl font-bold text-white hover:text-blue-300 transition-colors">
-                🍽️ Restaurante Gavina
-              </a>
+              <Link href={href('/')} className="text-2xl font-bold text-white hover:text-blue-300 transition-colors">
+                🍽️ {dict.seo.siteName}
+              </Link>
             </div>
             <p className="text-gray-300 mb-4">
-              {dict.home.description}
+              {dict.footer.description}
             </p>
             <div className="flex space-x-4">
               {/* Redes sociales */}
@@ -45,52 +45,57 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
             <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <a href={href('/')} className="text-gray-300 hover:text-white transition-colors">
+                <Link href={href('/')} className="text-gray-300 hover:text-white transition-colors">
                   {dict.nav.home}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={href('/menu')} className="text-gray-300 hover:text-white transition-colors">
+                <Link href={href('/menu')} className="text-gray-300 hover:text-white transition-colors">
                   {dict.nav.menu}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={href('/contact')} className="text-gray-300 hover:text-white transition-colors">
+                <Link href={href('/contact')} className="text-gray-300 hover:text-white transition-colors">
                   {dict.nav.contacto}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href={href('/gallery')} className="text-gray-300 hover:text-white transition-colors">
+                <Link href={href('/gallery')} className="text-gray-300 hover:text-white transition-colors">
                   {dict.nav.gallery}
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Información de contacto */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contacto</h3>
+            <h3 className="text-lg font-semibold mb-4">{dict.footer.contact.title}</h3>
             <div className="space-y-2 text-gray-300">
-              <p className="flex items-center">
-                <span className="mr-2">📍</span>
-                {SEO_CONFIG.business.address.street}<br />
-                {SEO_CONFIG.business.address.city}, {SEO_CONFIG.business.address.postalCode}
+              <p className="flex items-start">
+                <span className="mr-2 mt-1">📍</span>
+                <span className="whitespace-pre-line">{dict.footer.contact.address}</span>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">📞</span>
-                <a href={`tel:${SEO_CONFIG.business.phone}`} className="hover:text-white transition-colors">
-                  {SEO_CONFIG.business.phone}
+                <a href={`tel:${dict.footer.contact.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">
+                  {dict.footer.contact.phone}
                 </a>
               </p>
               <p className="flex items-center">
-                <span className="mr-2">✉️</span>
-                <a href={`mailto:${SEO_CONFIG.business.email}`} className="hover:text-white transition-colors">
-                  {SEO_CONFIG.business.email}
+                <span className="mr-2">📱</span>
+                <a href={`tel:${dict.footer.contact.mobile.replace(/\s/g, '')}`} className="hover:text-white transition-colors">
+                  {dict.footer.contact.mobile}
                 </a>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">🕐</span>
-                Lun - Dom: 12:00 - 23:00
+                {dict.footer.hours.text}
+              </p>
+              <p className="flex items-center">
+                <span className="mr-2">📘</span>
+                <a href="#" className="hover:text-white transition-colors">
+                  {dict.footer.social.facebook}
+                </a>
               </p>
             </div>
           </div>
@@ -100,7 +105,7 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Restaurante Gavina. Todos los derechos reservados.
+              {dict.footer.copyright}
             </div>
             
             {/* Selector de idiomas */}

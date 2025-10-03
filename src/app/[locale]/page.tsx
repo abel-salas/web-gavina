@@ -33,31 +33,43 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                 title={dict.home.title}
                 subtitle={dict.home.subtitle}
                 description={dict.home.description}
-                ctaText="Descubrir Menú"
+                ctaText={dict.home.cta || "Ver Carta"}
                 ctaHref={href('/menu')}
             />
 
             {/* Sección 2: Sobre Nosotros */}
-            <AboutSection 
-                title="Nuestra Historia"
-                description="Desde 2008, Restaurante Gavina ha sido un referente de la auténtica cocina mediterránea. Combinamos tradición familiar con técnicas modernas para crear experiencias gastronómicas únicas que celebran los sabores del Mediterráneo."
-            />
+            {dict.sections?.about && (
+                <AboutSection 
+                    title={dict.sections.about.title}
+                    description={dict.sections.about.description}
+                />
+            )}
 
             {/* Sección 3: Platos Destacados */}
-            <MenuHighlightSection 
-                title="Nuestros Platos Estrella"
-                menuHref={href('/menu')}
-            />
+            {dict.sections?.specialties && (
+                <MenuHighlightSection 
+                    title={dict.sections.specialties.title}
+                    subtitle={dict.sections.specialties.subtitle}
+                    specialties={dict.sections.specialties.items}
+                    menuHref={href('/menu')}
+                />
+            )}
 
             {/* Sección 4: Testimonios */}
-            <TestimonialsSection 
-                title="Lo Que Dicen Nuestros Clientes"
-            />
+            {dict.sections?.testimonials && (
+                <TestimonialsSection 
+                    title={dict.sections.testimonials.title}
+                    subtitle={dict.sections.testimonials.subtitle}
+                    testimonials={dict.sections.testimonials.items}
+                />
+            )}
 
             {/* Sección 5: Ubicación */}
-            <LocationSection 
-                title="Visítanos"
-            />
+            {dict.sections?.location && (
+                <LocationSection 
+                    title={dict.sections.location.title}
+                />
+            )}
 
             {/* Sección 6: Galería */}
             <GallerySection 

@@ -6,34 +6,23 @@ import { useState } from 'react';
 
 interface TestimonialsProps {
   title: string;
+  subtitle?: string;
+  testimonials: Array<{
+    name: string;
+    comment: string;
+  }>;
 }
 
-export function TestimonialsSection({ title }: TestimonialsProps) {
+export function TestimonialsSection({ title, subtitle, testimonials }: TestimonialsProps) {
   const [activeTestimonial, setActiveTestimonial] = useState(0);
 
-  const testimonials = [
-    {
-      name: "María González",
-      role: "Cliente Habitual",
-      text: "La mejor paella que he probado fuera de Valencia. El ambiente es acogedor y el servicio excepcional.",
-      avatar: "👩‍🦰",
-      rating: 5
-    },
-    {
-      name: "Jean Baptiste",
-      role: "Turista Francés",
-      text: "Une expérience culinaire magnifique! La qualité des produits et la passion du chef se ressentent dans chaque plat.",
-      avatar: "👨‍🍳",
-      rating: 5
-    },
-    {
-      name: "Carlos Ruiz",
-      role: "Crítico Gastronómico",
-      text: "Gavina representa lo mejor de la cocina mediterránea tradicional con un toque moderno. Imprescindible.",
-      avatar: "👨‍💼",
-      rating: 5
-    }
-  ];
+  const testimonialsWithAvatars = testimonials.map((testimonial, index) => ({
+    name: testimonial.name,
+    role: testimonial.name,
+    text: testimonial.comment,
+    avatar: ["👩‍🦰", "👨‍🍳", "👨‍💼"][index % 3],
+    rating: 5
+  }));
 
   return (
     <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -63,11 +52,11 @@ export function TestimonialsSection({ title }: TestimonialsProps) {
               transition={{ duration: 0.5 }}
             >
               <div className="text-6xl mb-6">
-                {testimonials[activeTestimonial].avatar}
+                {testimonialsWithAvatars[activeTestimonial].avatar}
               </div>
               
               <div className="flex justify-center mb-6">
-                {[...Array(testimonials[activeTestimonial].rating)].map((_, i) => (
+                {[...Array(testimonialsWithAvatars[activeTestimonial].rating)].map((_, i) => (
                   <motion.span
                     key={i}
                     className="text-yellow-400 text-2xl"
@@ -81,16 +70,16 @@ export function TestimonialsSection({ title }: TestimonialsProps) {
               </div>
 
               <blockquote className="text-xl md:text-2xl text-gray-700 mb-8 italic leading-relaxed">
-                &ldquo;{testimonials[activeTestimonial].text}&rdquo;
+                &ldquo;{testimonialsWithAvatars[activeTestimonial].text}&rdquo;
               </blockquote>
 
               <div>
-                <h4 className="text-xl font-bold text-gray-900">
-                  {testimonials[activeTestimonial].name}
-                </h4>
-                <p className="text-gray-600">
-                  {testimonials[activeTestimonial].role}
-                </p>
+                              <h4 className="font-bold text-gray-900">
+                {testimonialsWithAvatars[activeTestimonial].name}
+              </h4>
+              <p className="text-gray-600">
+                {testimonialsWithAvatars[activeTestimonial].role}
+              </p>
               </div>
             </motion.div>
           </div>
@@ -98,7 +87,7 @@ export function TestimonialsSection({ title }: TestimonialsProps) {
 
         {/* Navegación de testimonios */}
         <StaggerContainer className="flex justify-center space-x-4">
-          {testimonials.map((_, index) => (
+          {testimonialsWithAvatars.map((_, index) => (
             <StaggerItem key={index}>
               <motion.button
                 onClick={() => setActiveTestimonial(index)}

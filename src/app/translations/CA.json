@@ -1,0 +1,624 @@
+{
+    "seo": {
+        "siteName": "Restaurant Gavina",
+        "siteDescription": "Descobreix l'autèntica cuina mediterrània al Restaurant Gavina. Plats casolans, ingredients frescos i un ambient acollidor t'esperen.",
+        "keywords": "restaurant, cuina mediterrània, menjar casolà, plats tradicionals, ambient familiar",
+        "locale": "ca_ES"
+    },
+    "nav": {
+        "home": "Inici",
+        "menu": "Menú",
+        "reservas": "Reserves",
+        "contacto": "Contacte",
+        "gallery": "Galeria",
+        "historia": "Història"
+    },
+    "home": {
+        "title": "Benvingut al Restaurant Gavina",
+        "subtitle": "Gaudeix de la millor cuina casolana mediterrània 🍝",
+        "description": "Restaurant familiar especialitzat en cuina mediterrània tradicional. Oferim plats casolans elaborats amb ingredients frescos de la regió.",
+        "metaTitle": "Restaurant Gavina - Cuina Mediterrània Autèntica | Menjar Casolà",
+        "metaDescription": "Descobreix l'autèntica cuina mediterrània al Restaurant Gavina. Plats casolans, ingredients frescos i un ambient acollidor. Reserva la teva taula!"
+    },
+    "menu": {
+        "title": "🍽️ El nostre Menú",
+        "subtitle": "Gaudeix del millor menú de cuina casolana mediterrània 🍝",
+        "description": "Descobreix la nostra selecció de plats tradicionals mediterranis, elaborats amb ingredients frescos i receptes familiars.",
+        "metaTitle": "Menú Restaurant Gavina - Plats Mediterranis Tradicionals",
+        "metaDescription": "Explora el nostre menú de cuina mediterrània: paelles, peixos frescos, carns a la brasa i postres casolanes. Ingredients de primera qualitat.",
+        "categories": {
+            "starters": {
+                "title": "Entrants",
+                "items": [
+                    {
+                        "name": "Carpaccio de Bou amb encenalls de parmesà",
+                        "description": "Marinat amb llimona, crema d'aceto, sal, pebre i cobert de parmesà",
+                        "price": "12,00€",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Anxoves de l'Escala amb pa amb tomàquet",
+                        "description": "Anxoves tradicionals de l'Escala",
+                        "price": "11,50€"
+                    },
+                    {
+                        "name": "Musclos a la Marinera",
+                        "description": "Musclos amb la nostra salsa marinera",
+                        "price": "11,50€"
+                    },
+                    {
+                        "name": "Musclos al Vapor",
+                        "description": "Musclos de roca oberts al vapor amb vi i llimona",
+                        "price": "11,50€"
+                    },
+                    {
+                        "name": "Calamars enfarinats",
+                        "description": "Rodelles de calamar fregit amb farina",
+                        "price": "16,00€"
+                    },
+                    {
+                        "name": "Gambes de Blanes",
+                        "description": "Gambes fresques de Blanes",
+                        "price": "18,00€"
+                    },
+                    {
+                        "name": "Escalivada amb anxoves",
+                        "description": "Pebrot, albergínia i ceba escalivada amb anxoves i olives negres",
+                        "price": "12,00€"
+                    },
+                    {
+                        "name": "Bombes caseres de la Cati (per unitat)",
+                        "description": "Gran croqueta farcida de patata una mica picant",
+                        "price": "5,50€"
+                    },
+                    {
+                        "name": "Croquetes de la mare (per unitat)",
+                        "description": "Croquetes totalment caseres",
+                        "price": "1,60€"
+                    },
+                    {
+                        "name": "Canelons de la Cati",
+                        "description": "Canelons casolans fets per la Cati",
+                        "price": "10,50€",
+                        "recommended": true
+                    }
+                ]
+            },
+            "salads": {
+                "title": "Amanides",
+                "items": [
+                    {
+                        "name": "Amanida de tonyina",
+                        "description": "Variat de lletugues, tomàquet, ceba, dacsa, germinats, pebrot amb tonyina",
+                        "price": "10,50€"
+                    },
+                    {
+                        "name": "Amanida de formatge de cabra",
+                        "description": "Variat de lletugues amb germinats, nous, coronat amb formatge de cabra i crema de mòdena de mel",
+                        "price": "11,50€",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Amanida de l'àvia",
+                        "description": "Tomàquet, ceba i olives",
+                        "price": "9,50€"
+                    }
+                ]
+            },
+            "rice": {
+                "title": "Arrossos",
+                "subtitle": "Tots els arrossos, mínim 2 persones",
+                "items": [
+                    {
+                        "name": "Paella Marinera (ració)",
+                        "description": "La nostra paella marinera tradicional",
+                        "price": "18,50€"
+                    },
+                    {
+                        "name": "Paella especial (llagosta i marisc, ració)",
+                        "description": "Paella amb llagosta, llagostins, gambes vermelles i marisc",
+                        "price": "24,00€",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Arròs Negre",
+                        "description": "Arròs negre tradicional",
+                        "price": "18,50€"
+                    },
+                    {
+                        "name": "Arròs de pollastre amb bolets (ració)",
+                        "description": "Novetat de temporada, arròs de pollastre amb variat de bolets",
+                        "price": "19,00€",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Fideuà (ració)",
+                        "description": "Fideus torrats amb oli de gambes",
+                        "price": "16,50€"
+                    },
+                    {
+                        "name": "Risotto de Bolets amb Parmesà",
+                        "description": "Risotto cremós amb bolets i parmesà",
+                        "price": "17,50€"
+                    }
+                ]
+            },
+            "meat": {
+                "title": "Carns",
+                "items": [
+                    {
+                        "name": "Magret d'ànec amb salsa de fruits vermells",
+                        "description": "Magret d'ànec amb salsa de fruits del bosc",
+                        "price": "17,50€",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Hamburguesa amb formatge de cabra i ceba confitada",
+                        "description": "Hamburguesa gourmet amb formatge de cabra",
+                        "price": "11,50€"
+                    },
+                    {
+                        "name": "Filet amb salsa cafè París",
+                        "description": "Filet de vedella amb salsa cafè París",
+                        "price": "24,50€"
+                    },
+                    {
+                        "name": "Entrecot de 400 gr",
+                        "description": "Entrecot de vedella amb guarnició",
+                        "price": "22,50€",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Fingers de pollastre arrebossats amb patates",
+                        "description": "Fingers de pollastre amb patates fregides",
+                        "price": "9,00€"
+                    }
+                ]
+            }
+        }
+    },
+    "contact": {
+        "title": "📞 Contacte",
+        "subtitle": "Posa't en contacte amb nosaltres",
+        "description": "Tens alguna pregunta o vols fer una reserva? Contacta'ns i t'ajudarem encantats.",
+        "metaTitle": "Contacte - Restaurant Gavina | Reserves i Consultes",
+        "metaDescription": "Contacta amb Restaurant Gavina per a reserves, consultes o informació. T'atenem amb la millor predisposició."
+    },
+    "gallery": {
+        "title": "📸 Galeria de Fotos",
+        "subtitle": "Descobreix els nostres deliciosos plats i ambient acollidor",
+        "description": "Coneix l'ambient únic del Restaurant Gavina i els nostres plats més representatius a través de la nostra galeria fotogràfica.",
+        "metaTitle": "Galeria - Restaurant Gavina | Els nostres Plats i Ambient",
+        "metaDescription": "Descobreix l'ambient acollidor del Restaurant Gavina i els nostres deliciosos plats mediterranis a través de la nostra galeria de fotos."
+    },
+    "menu_data": {
+        "hero": {
+            "title": "El nostre Menú Exquisit",
+            "subtitle": "Sabors mediterranis tradicionals des de 1958",
+            "description": "Descobreix les nostres receptes autèntiques elaborades amb els ingredients més frescos del mar Mediterrani i els mercats locals."
+        },
+        "categories": [
+            {
+                "id": "rices",
+                "name": "Arrossos i Paelles",
+                "description": "La nostra especialitat, elaborada amb tècniques tradicionals i els millors ingredients",
+                "items": [
+                    {
+                        "name": "Paella Marinera",
+                        "description": "Paella tradicional de marisc amb gambes, musclos, calamars i peix",
+                        "price": "18.00",
+                        "allergens": ["crustacis", "peix", "mol·luscs"]
+                    },
+                    {
+                        "name": "Paella Mixta",
+                        "description": "Paella mixta amb pollastre, conill, gambes, musclos i verdures",
+                        "price": "17.00",
+                        "allergens": ["crustacis", "mol·luscs"]
+                    },
+                    {
+                        "name": "Paella Vegetariana",
+                        "description": "Paella vegetariana amb verdures de temporada i mongetes tendres",
+                        "price": "15.00",
+                        "allergens": []
+                    },
+                    {
+                        "name": "Arròs Negre",
+                        "description": "Arròs negre amb tinta de calamar, gambes i allioli",
+                        "price": "19.00",
+                        "allergens": ["crustacis", "mol·luscs", "ous"]
+                    },
+                    {
+                        "name": "Arròs amb Llagosta",
+                        "description": "Arròs amb llagosta, una delícia culinària",
+                        "price": "35.00",
+                        "allergens": ["crustacis"]
+                    }
+                ]
+            },
+            {
+                "id": "seafood",
+                "name": "Marisc Fresc",
+                "description": "Captures diàries fresques del Mediterrani",
+                "items": [
+                    {
+                        "name": "Orada a la Planxa",
+                        "description": "Orada fresca a la planxa amb herbes i oli d'oliva",
+                        "price": "22.00",
+                        "allergens": ["peix"]
+                    },
+                    {
+                        "name": "Llobarro a la Planxa",
+                        "description": "Llobarro amb all i julivert",
+                        "price": "24.00",
+                        "allergens": ["peix"]
+                    },
+                    {
+                        "name": "Parrillada de Peix",
+                        "description": "Selecció de peix fresc de la nostra captura diària",
+                        "price": "26.00",
+                        "allergens": ["peix"]
+                    },
+                    {
+                        "name": "Gambes a la Planxa",
+                        "description": "Gambes grosses a la planxa amb sal marina",
+                        "price": "20.00",
+                        "allergens": ["crustacis"]
+                    },
+                    {
+                        "name": "Parrillada de Marisc",
+                        "description": "Marisc mixt amb gambes, musclos, cloïsses i calamars",
+                        "price": "28.00",
+                        "allergens": ["crustacis", "mol·luscs"]
+                    }
+                ]
+            },
+            {
+                "id": "meats",
+                "name": "Carns a la Brasa",
+                "description": "Carns d'alta qualitat fetes a la perfecció",
+                "items": [
+                    {
+                        "name": "Pollastre a la Brasa",
+                        "description": "Pollastre de camp amb herbes mediterrànies",
+                        "price": "16.00",
+                        "allergens": []
+                    },
+                    {
+                        "name": "Bistec de Vedella",
+                        "description": "Bistec de vedella premium amb guarnició de temporada",
+                        "price": "22.00",
+                        "allergens": []
+                    },
+                    {
+                        "name": "Costelles de Porc",
+                        "description": "Costelles tendes de porc amb salsa barbacoa",
+                        "price": "18.00",
+                        "allergens": []
+                    },
+                    {
+                        "name": "Parrillada Mixta",
+                        "description": "Combinació de pollastre, vedella i porc",
+                        "price": "20.00",
+                        "allergens": []
+                    }
+                ]
+            },
+            {
+                "id": "starters",
+                "name": "Entrants i Tapes",
+                "description": "Aperitius tradicionals per començar el teu àpat",
+                "items": [
+                    {
+                        "name": "Pa amb Tomàquet",
+                        "description": "Pa torrat amb tomàquet, all i oli d'oliva",
+                        "price": "4.50",
+                        "allergens": ["gluten"]
+                    },
+                    {
+                        "name": "Patates Braves",
+                        "description": "Patates fregides amb salsa brava picant",
+                        "price": "6.00",
+                        "allergens": ["ous"]
+                    },
+                    {
+                        "name": "Croquetes de Pernil",
+                        "description": "Croquetes casolanes de pernil (6 unitats)",
+                        "price": "8.00",
+                        "allergens": ["gluten", "llet", "ous"]
+                    },
+                    {
+                        "name": "Plat de Pernil Ibèric",
+                        "description": "Selecció de pernil ibèric premium",
+                        "price": "16.00",
+                        "allergens": []
+                    },
+                    {
+                        "name": "Formatge Manxec",
+                        "description": "Formatge manxec curat amb codonyat",
+                        "price": "12.00",
+                        "allergens": ["llet"]
+                    }
+                ]
+            },
+            {
+                "id": "desserts",
+                "name": "Postres",
+                "description": "Finals dolços per a un àpat perfecte",
+                "items": [
+                    {
+                        "name": "Crema Catalana",
+                        "description": "Crema catalana tradicional amb sucre caramel·litzat",
+                        "price": "5.50",
+                        "allergens": ["llet", "ous"]
+                    },
+                    {
+                        "name": "Flam Casolà",
+                        "description": "Flam casolà amb caramel",
+                        "price": "5.00",
+                        "allergens": ["llet", "ous"]
+                    },
+                    {
+                        "name": "Mel i Mató",
+                        "description": "Formatge fresc amb mel i fruits secs",
+                        "price": "6.00",
+                        "allergens": ["llet", "fruits secs"]
+                    },
+                    {
+                        "name": "Gelats",
+                        "description": "Selecció de gelats artesanals",
+                        "price": "4.50",
+                        "allergens": ["llet"]
+                    }
+                ]
+            }
+        ],
+        "drinks": {
+            "title": "Begudes",
+            "categories": [
+                {
+                    "name": "Vins",
+                    "items": [
+                        {
+                            "name": "Vi Negre de la Casa",
+                            "price": "12.00"
+                        },
+                        {
+                            "name": "Vi Blanc de la Casa",
+                            "price": "12.00"
+                        },
+                        {
+                            "name": "D.O. Penedès",
+                            "price": "18.00"
+                        },
+                        {
+                            "name": "D.O. Rioja",
+                            "price": "22.00"
+                        }
+                    ]
+                },
+                {
+                    "name": "Cerveses",
+                    "items": [
+                        {
+                            "name": "Cervesa de Barril",
+                            "price": "3.50"
+                        },
+                        {
+                            "name": "Cervesa d'Ampolla",
+                            "price": "4.00"
+                        }
+                    ]
+                },
+                {
+                    "name": "Refrescs",
+                    "items": [
+                        {
+                            "name": "Aigua",
+                            "price": "2.50"
+                        },
+                        {
+                            "name": "Refrescs",
+                            "price": "3.00"
+                        },
+                        {
+                            "name": "Sucs Naturals",
+                            "price": "4.00"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "contact_data": {
+        "hero": {
+            "title": "Contacta'ns",
+            "subtitle": "Som aquí per servir-te",
+            "description": "Contacta amb el Restaurant Banys La Gavina per reserves, esdeveniments o qualsevol consulta. T'atendem encantats."
+        },
+        "info": {
+            "phone": {
+                "title": "Telèfon",
+                "value": "937 690 356",
+                "description": "Truca'ns per reserves o consultes"
+            },
+            "address": {
+                "title": "Adreça",
+                "value": "Passeig Manuel Puigvert s/n, 08370 Calella, Barcelona",
+                "description": "Davant mateix de la platja de Calella, al costat de l'estació de tren"
+            },
+            "hours": {
+                "title": "Horaris",
+                "schedule": [
+                    {
+                        "days": "Dilluns a Diumenge",
+                        "hours": "12:00 - 16:00 i 19:00 - 23:00"
+                    },
+                    {
+                        "days": "Cuina",
+                        "hours": "Tanca a les 15:30 i 22:30"
+                    }
+                ]
+            },
+            "email": {
+                "title": "Correu",
+                "value": "info@banyslafgavina.com",
+                "description": "Envia'ns les teves consultes o suggeriments"
+            }
+        },
+        "location": {
+            "title": "Ubicació Perfecta",
+            "features": [
+                {
+                    "title": "Primera Línia de Mar",
+                    "description": "Directament davant de la platja principal de Calella"
+                },
+                {
+                    "title": "Estació de Tren",
+                    "description": "A pocs passos de l'estació de tren de Calella"
+                },
+                {
+                    "title": "Centre Urbà",
+                    "description": "Al cor de la zona turística de Calella"
+                },
+                {
+                    "title": "Aparcament Gratuït",
+                    "description": "Dues zones d'aparcament gratuït, una davant del restaurant"
+                }
+            ]
+        },
+        "testimonials": {
+            "title": "El que diuen els nostres clients",
+            "subtitle": "Més de 65 anys de satisfacció",
+            "items": [
+                {
+                    "name": "Client Habitual",
+                    "comment": "La millor paella de Calella, tradició i qualitat en cada plat"
+                },
+                {
+                    "name": "Visitant",
+                    "comment": "Ubicació perfecta davant del mar, menjar excel·lent i servei familiar"
+                },
+                {
+                    "name": "Local",
+                    "comment": "Un clàssic de Calella que mai decepciona, generació rere generació"
+                }
+            ]
+        }
+    },
+    "history": {
+        "title": "La nostra Història",
+        "subtitle": "Un emblema de Calella des de 1958",
+        "sections": {
+            "about": {
+                "title": "Sobre Nosaltres",
+                "description": "El Restaurant Banys La Gavina és una tradició familiar des de 1958, situat en primera línia de mar de Calella. Oferim cuina mediterrània autèntica amb els ingredients més frescos i vistes excepcionals al Mar Mediterrani."
+            },
+            "specialties": {
+                "title": "Les Nostres Especialitats",
+                "subtitle": "Descobreix la nostra selecció de plats tradicionals",
+                "items": [
+                    {
+                        "name": "Paella de Mariscos",
+                        "description": "Arròs tradicional amb mariscos frescos de la nostra costa",
+                        "price": "24,50€"
+                    },
+                    {
+                        "name": "Dorada a la Planxa",
+                        "description": "Peix fresc del dia amb guarnició mediterrània",
+                        "price": "22,00€"
+                    },
+                    {
+                        "name": "Arròs Negre",
+                        "description": "Espectacular arròs negre amb calamar i allioli",
+                        "price": "21,50€"
+                    }
+                ]
+            },
+            "origin": {
+                "title": "Els Inicis (1958)",
+                "content": "El Restaurant Banys La Gavina va obrir les seves portes el 1958, en ple auge del desenvolupament turístic de Calella. Des dels seus inicis, es va ubicar estratègicament a la Platja Gran de Calella, davant de l'Estació de Renfe, convertint-se en el punt de trobada perfecte per a locals i visitants."
+            },
+            "calella_context": {
+                "title": "Calella: De Poble Pesquer a Destinació Turística",
+                "content": "Durant els anys 60 i 70, Calella va experimentar una transformació radical. De ser un tradicional poble pesquer i tèxtil, es va convertir en una de les destinacions turístiques més importants de la Costa del Maresme. Aquest boom turístic, especialment del turisme centreeuropeu, va fer que Calella fos coneguda com 'Calella dels Alemanys', arribant a triplicar la seva població durant la temporada alta."
+            },
+            "golden_era": {
+                "title": "L'Època Daurada del Turisme",
+                "content": "Banys La Gavina va ser testimoni i protagonista d'aquesta època daurada. Amb la seva ubicació privilegiada davant del mar i al costat de l'estació de tren, el restaurant es va convertir en parada obligatòria per als turistes que arribaven a Calella en busca de sol, platja i l'autèntica gastronomia mediterrània."
+            },
+            "tradition": {
+                "title": "Més de 65 Anys de Tradició",
+                "content": "Al llarg de més de sis dècades, el restaurant ha mantingut la seva essència familiar i el seu compromís amb la qualitat. Ha estat testimoni de l'evolució de Calella, des dels seus inicis com a destinació turística fins a convertir-se en una ciutat cosmopolita que rep visitants de tota Europa."
+            },
+            "calella_cinema": {
+                "title": "Calella: Ciutat de Cinema",
+                "content": "Calella també ha estat escenari de nombrosos rodatges cinematogràfics i televisius. Des del 2010, forma part de Catalunya Film Commission, i compta amb la seva pròpia Calella Film Office. La ciutat ha servit com a 'ciutat plató' per a produccions que han volgut capturar l'essència del Mediterrani català."
+            },
+            "present": {
+                "title": "El Restaurant Avui",
+                "content": "Actualment, el Restaurant Banys La Gavina continua sent un referent gastronòmic a Calella. Manté les seves especialitats tradicionals en arrossos, mariscos i peix fresc, mentre s'adapta als nous temps conservant la seva ànima mediterrània i familiar."
+            }
+        },
+        "timeline": [
+            {
+                "year": "1958",
+                "event": "Obertura del Restaurant Banys La Gavina"
+            },
+            {
+                "year": "1960s-70s",
+                "event": "Boom turístic de Calella - 'Calella dels Alemanys'"
+            },
+            {
+                "year": "1970s",
+                "event": "Consolidació com a referent gastronòmic local"
+            },
+            {
+                "year": "2010",
+                "event": "Calella s'integra a Catalunya Film Commission"
+            },
+            {
+                "year": "2024",
+                "event": "Més de 65 anys servint la millor cuina mediterrània"
+            }
+        ],
+        "heritage": {
+            "title": "Patrimoni i Tradició",
+            "items": [
+                {
+                    "title": "Ubicació Històrica",
+                    "description": "Situat a l'emblemàtic Passeig Manuel Puigvert, davant de la Platja Gran, des de 1958"
+                },
+                {
+                    "title": "Receptes Tradicionals",
+                    "description": "Conservem les receptes originals dels nostres arrossos i especialitats del mar"
+                },
+                {
+                    "title": "Testimoni de la Història",
+                    "description": "Hem estat testimonis del desenvolupament turístic de Calella i la Costa del Maresme"
+                },
+                {
+                    "title": "Generacions de Clients",
+                    "description": "Famílies senceres han compartit moments especials a les nostres taules durant dècades"
+                }
+            ]
+        }
+    },
+    "footer": {
+        "description": "Restaurant Banys La Gavina, tradició familiar des de 1958 en primera línia de mar a Calella.",
+        "contact": {
+            "title": "Contacte",
+            "address": "Passeig Manuel Puigvert s/n, Calella",
+            "phone": "937 69 25 39",
+            "mobile": "695 349 307"
+        },
+        "hours": {
+            "title": "Horaris",
+            "text": "Obert tots els dies"
+        },
+        "social": {
+            "title": "Segueix-nos",
+            "facebook": "Restaurant Banys La Gavina",
+            "instagram": "@banyslafgavina"
+        }
+    }
+}
