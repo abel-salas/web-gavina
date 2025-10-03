@@ -42,7 +42,7 @@ export default function MobileNavbar({ navItems, homeHref }: MobileNavbarProps) 
             {/* Logo/Brand */}
             <div className="flex-shrink-0">
               <Link 
-                href={homeHref} 
+                href={homeHref as any} 
                 className="text-xl font-bold text-white hover:text-blue-300 transition-colors"
                 onClick={closeMenu}
               >
@@ -114,7 +114,7 @@ export default function MobileNavbar({ navItems, homeHref }: MobileNavbarProps) 
                   {navItems.map((item, index) => (
                     <li key={index}>
                       <Link
-                        href={item.href}
+                        href={item.href as any}
                         onClick={closeMenu}
                         className="block py-3 px-4 text-lg text-white hover:text-blue-300 hover:bg-gray-800 rounded-lg transition-colors duration-200 font-medium"
                       >

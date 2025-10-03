@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
 
 interface MenuHighlightProps {
@@ -89,24 +90,27 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref }:
 
         <AnimatedSection direction="scale" delay={0.6}>
           <div className="text-center">
-            <motion.a
-              href={menuHref}
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold text-lg rounded-full shadow-xl hover:shadow-yellow-500/25 transition-all duration-300"
+            <motion.div
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 25px 50px -12px rgba(245, 158, 11, 0.5)"
               }}
               whileTap={{ scale: 0.95 }}
             >
-              Ver Menú Completo
-              <motion.span
-                className="ml-2"
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
+              <Link
+                href={menuHref as any}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold text-lg rounded-full shadow-xl hover:shadow-yellow-500/25 transition-all duration-300"
               >
-                🍴
-              </motion.span>
-            </motion.a>
+                Ver Menú Completo
+                <motion.span
+                  className="ml-2"
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  🍴
+                </motion.span>
+              </Link>
+            </motion.div>
           </div>
         </AnimatedSection>
       </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { AnimatedSection } from '../animations/AnimatedSection';
 
 interface HeroSectionProps {
@@ -103,24 +104,27 @@ export function HeroSection({ title, subtitle, description, ctaText, ctaHref }: 
 
         {ctaText && ctaHref && (
           <AnimatedSection direction="scale" delay={0.8}>
-            <motion.a
-              href={ctaHref}
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
+            <motion.div
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.5)"
               }}
               whileTap={{ scale: 0.95 }}
             >
-              {ctaText}
-              <motion.span
-                className="ml-2"
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
+              <Link
+                href={ctaHref as any}
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
               >
+                {ctaText}
+                <motion.span
+                  className="ml-2"
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
                 →
-              </motion.span>
-            </motion.a>
+                </motion.span>
+              </Link>
+            </motion.div>
           </AnimatedSection>
         )}
       </div>

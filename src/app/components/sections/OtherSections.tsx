@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
 
 interface LocationSectionProps {
@@ -148,24 +149,27 @@ export function ContactSection({ title, contactHref }: { title: string; contactH
         </StaggerContainer>
 
         <AnimatedSection direction="scale" delay={0.6}>
-          <motion.a
-            href={contactHref}
-            className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold text-xl rounded-full shadow-2xl"
+          <motion.div
             whileHover={{ 
               scale: 1.05,
               boxShadow: "0 25px 50px -12px rgba(34, 197, 94, 0.5)"
             }}
             whileTap={{ scale: 0.95 }}
           >
-            Reservar Mesa
-            <motion.span
-              className="ml-3"
-              animate={{ rotate: [0, 15, -15, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
+            <Link
+              href={contactHref as any}
+              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold text-xl rounded-full shadow-2xl"
             >
-              🍽️
-            </motion.span>
-          </motion.a>
+              Reservar Mesa
+              <motion.span
+                className="ml-3"
+                animate={{ rotate: [0, 15, -15, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                🍽️
+              </motion.span>
+            </Link>
+          </motion.div>
         </AnimatedSection>
       </div>
     </section>
