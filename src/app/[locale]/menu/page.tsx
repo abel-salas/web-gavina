@@ -23,7 +23,9 @@ export async function generateMetadata({
     { key: 'starters', data: dict.menu.categories.starters },
     { key: 'salads', data: dict.menu.categories.salads },
     { key: 'rice', data: dict.menu.categories.rice },
-    { key: 'meat', data: dict.menu.categories.meat }
+    { key: 'meat', data: dict.menu.categories.meat },
+    { key: 'fish', data: dict.menu.categories.fish },
+    { key: 'drinks', data: dict.menu.categories.drinks }
   ];
 
   return (

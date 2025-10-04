@@ -54,7 +54,7 @@ export function TestimonialsSection({ title, subtitle, testimonials }: Testimoni
               <div className="text-6xl mb-6">
                 {testimonialsWithAvatars[activeTestimonial].avatar}
               </div>
-              
+
               <div className="flex justify-center mb-6">
                 {[...Array(testimonialsWithAvatars[activeTestimonial].rating)].map((_, i) => (
                   <motion.span
@@ -74,12 +74,12 @@ export function TestimonialsSection({ title, subtitle, testimonials }: Testimoni
               </blockquote>
 
               <div>
-                              <h4 className="font-bold text-gray-900">
-                {testimonialsWithAvatars[activeTestimonial].name}
-              </h4>
-              <p className="text-gray-600">
-                {testimonialsWithAvatars[activeTestimonial].role}
-              </p>
+                <h4 className="font-bold text-gray-900">
+                  {testimonialsWithAvatars[activeTestimonial].name}
+                </h4>
+                <p className="text-gray-600">
+                  {testimonialsWithAvatars[activeTestimonial].role}
+                </p>
               </div>
             </motion.div>
           </div>
@@ -91,11 +91,10 @@ export function TestimonialsSection({ title, subtitle, testimonials }: Testimoni
             <StaggerItem key={index}>
               <motion.button
                 onClick={() => setActiveTestimonial(index)}
-                className={`w-4 h-4 rounded-full transition-all duration-300 ${
-                  index === activeTestimonial
+                className={`w-4 h-4 rounded-full transition-all duration-300 ${index === activeTestimonial
                     ? 'bg-blue-600 scale-125'
                     : 'bg-gray-300 hover:bg-gray-400'
-                }`}
+                  }`}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
               />

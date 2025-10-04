@@ -43,7 +43,7 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-blue-300"></div>
-            
+
             {dict.history.timeline.map((item, index) => (
               <div key={index} className={`flex items-center mb-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                 <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
@@ -97,23 +97,23 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
       {/* Call to Action */}
       <section className="text-center bg-gray-900 text-white p-8 rounded-lg">
         <h2 className="text-3xl font-bold mb-4">
-          Ven a Formar Parte de Nuestra Historia
+          {dict.history.cta.title}
         </h2>
         <p className="text-xl mb-6">
-          Más de 65 años de tradición gastronómica te esperan en primera línea de mar
+          {dict.history.cta.subtitle}
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href={`/${locale}/menu`}
             className="inline-block bg-yellow-500 text-black font-bold py-3 px-8 rounded-full hover:bg-yellow-400 transition-colors"
           >
-            Ver Nuestra Carta
+            {dict.history.cta.menu_button}
           </Link>
           <Link
             href={`/${locale}/contact`}
             className="inline-block bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-gray-900 transition-colors"
           >
-            Reservar Mesa
+            {dict.history.cta.contact_button}
           </Link>
         </div>
       </section>

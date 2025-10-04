@@ -25,11 +25,10 @@ export default function LanguageSwitcher({ currentLocale }: LanguageSwitcherProp
                 <Link
                     key={lang.code}
                     href={`/${lang.code}${pathWithoutLocale}`}
-                    className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                        currentLocale === lang.code
-                            ? 'bg-blue-600 text-white shadow-md' 
+                    className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${currentLocale === lang.code
+                            ? 'bg-blue-600 text-white shadow-md'
                             : 'bg-gray-700 text-gray-200 hover:bg-gray-600 hover:text-white hover:shadow-sm'
-                    }`}
+                        }`}
                     title={`Cambiar a ${lang.displayName}`}
                 >
                     {lang.name}

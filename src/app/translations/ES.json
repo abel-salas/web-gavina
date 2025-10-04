@@ -83,6 +83,66 @@
                         "description": "Canelones caseros hechos por la Cati",
                         "price": "10,50€",
                         "recommended": true
+                    },
+                    {
+                        "name": "Sonsos",
+                        "description": "Pez muy pequeño frito (según temporada)",
+                        "price": "S/M"
+                    },
+                    {
+                        "name": "Patatas bravas",
+                        "description": "Patatas fritas con nuestra salsa brava",
+                        "price": "6,50€"
+                    },
+                    {
+                        "name": "Macarrones",
+                        "description": "Macarrones caseros",
+                        "price": "8,50€"
+                    },
+                    {
+                        "name": "Pernil Ibérico con pan de coca",
+                        "description": "Jamón ibérico con pan de coca",
+                        "price": "19,00€"
+                    },
+                    {
+                        "name": "Nachos",
+                        "description": "Nachos con guacamole",
+                        "price": "10,50€"
+                    },
+                    {
+                        "name": "Callos al estilo del chef",
+                        "description": "Callos preparados al estilo del chef",
+                        "price": "10,50€"
+                    },
+                    {
+                        "name": "Gambas en el ajillo",
+                        "description": "Gambas salteadas en ajillo",
+                        "price": "16,50€"
+                    },
+                    {
+                        "name": "Escamarlanes salteados",
+                        "description": "Cigalas salteadas",
+                        "price": "18,00€"
+                    },
+                    {
+                        "name": "Boquerones fritos",
+                        "description": "Boquerones frescos fritos",
+                        "price": "12,50€"
+                    },
+                    {
+                        "name": "Escopinyes (Berberechos)",
+                        "description": "Berberechos frescos (según temporada)",
+                        "price": "S/M"
+                    },
+                    {
+                        "name": "Chipirones",
+                        "description": "Chipirones a la plancha",
+                        "price": "16,00€"
+                    },
+                    {
+                        "name": "Tallarines",
+                        "description": "Tallarines caseros (según temporada)",
+                        "price": "S/M"
                     }
                 ]
             },
@@ -174,6 +234,72 @@
                         "name": "Fingers de pollo rebozados con patatas",
                         "description": "Fingers de pollo con patatas fritas",
                         "price": "9,00€"
+                    }
+                ]
+            },
+            "fish": {
+                "title": "Pescados",
+                "items": [
+                    {
+                        "name": "Pescado del día",
+                        "description": "Pescado fresco según temporada y mercado",
+                        "price": "S/M",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Lubina a la sal",
+                        "description": "Lubina fresca cocinada a la sal",
+                        "price": "S/M"
+                    },
+                    {
+                        "name": "Dorada a la plancha",
+                        "description": "Dorada fresca a la plancha con guarnición",
+                        "price": "S/M"
+                    }
+                ]
+            },
+            "drinks": {
+                "title": "Bebidas",
+                "items": [
+                    {
+                        "name": "Gin & Tonic Premium",
+                        "description": "Amplia selección de ginebras premium: Tanqueray, Hendrick's, Bombay Sapphire, Bulldog, Martin Miller's",
+                        "price": "S/M"
+                    },
+                    {
+                        "name": "Cerveza Nacional",
+                        "description": "Mahou 5 estrellas, Alhambra, Selecta, Voll Damm",
+                        "price": "S/M"
+                    },
+                    {
+                        "name": "Cerveza Internacional",
+                        "description": "Coronita",
+                        "price": "S/M"
+                    },
+                    {
+                        "name": "Vinos Blancos",
+                        "description": "Ermita de Sant Gil, Blanc Pescador premium, Domine, Descomunal",
+                        "price": "S/M"
+                    },
+                    {
+                        "name": "Vinos Tintos",
+                        "description": "Ermita de Sant Gil, GR-174, 3 Fincas, 5 Fincas",
+                        "price": "S/M"
+                    },
+                    {
+                        "name": "Cavas",
+                        "description": "Família Oliveda brut jove, Rovellats gran reserva brut nature",
+                        "price": "S/M"
+                    },
+                    {
+                        "name": "Sangría",
+                        "description": "Sangría de vino o cava (jarra)",
+                        "price": "S/M"
+                    },
+                    {
+                        "name": "Schweppes Premium",
+                        "description": "Pimienta Rosa, Azahar & Lavanda, Ginger & Cardamomo, Hibiscus",
+                        "price": "S/M"
                     }
                 ]
             }
@@ -344,6 +470,12 @@
                     "description": "Familias enteras han compartido momentos especiales en nuestras mesas durante décadas"
                 }
             ]
+        },
+        "cta": {
+            "title": "Ven a Formar Parte de Nuestra Historia",
+            "subtitle": "Más de 65 años de tradición gastronómica te esperan en primera línea de mar",
+            "menu_button": "Ver Nuestra Carta",
+            "contact_button": "Reservar Mesa"
         }
     },
     "footer": {

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import type { Route } from 'next';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
 
 interface LocationSectionProps {
@@ -19,7 +20,7 @@ export function LocationSection({ title }: LocationSectionProps) {
                 {title}
               </h2>
             </AnimatedSection>
-            
+
             <AnimatedSection direction="right" delay={0.2}>
               <p className="text-xl text-gray-700 mb-8">
                 Ubicado en el corazón de la costa mediterránea, nuestro restaurante ofrece vistas espectaculares al mar mientras disfrutas de nuestra exquisita gastronomía.
@@ -88,7 +89,7 @@ export function GallerySection({ title }: { title: string }) {
             <StaggerItem key={index}>
               <motion.div
                 className="aspect-square bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl shadow-lg flex flex-col items-center justify-center text-white relative overflow-hidden"
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
                   rotate: index % 2 === 0 ? 2 : -2
                 }}
@@ -116,7 +117,7 @@ export function ContactSection({ title, contactHref }: { title: string; contactH
             {title}
           </h2>
         </AnimatedSection>
-        
+
         <AnimatedSection direction="up" delay={0.2}>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
             ¿Listo para vivir una experiencia gastronómica única? Reserva tu mesa y déjanos sorprenderte.
@@ -150,14 +151,14 @@ export function ContactSection({ title, contactHref }: { title: string; contactH
 
         <AnimatedSection direction="scale" delay={0.6}>
           <motion.div
-            whileHover={{ 
+            whileHover={{
               scale: 1.05,
               boxShadow: "0 25px 50px -12px rgba(34, 197, 94, 0.5)"
             }}
             whileTap={{ scale: 0.95 }}
           >
             <Link
-              href={contactHref as any}
+              href={contactHref as Route}
               className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold text-xl rounded-full shadow-2xl"
             >
               Reservar Mesa

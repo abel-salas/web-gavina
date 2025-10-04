@@ -12,10 +12,10 @@ export default function NotFound() {
         <div className="space-y-2">
           <p className="text-sm text-gray-400">Idiomas disponibles:</p>
           <div className="flex justify-center gap-4">
-            <Link href="/es/" className="text-blue-600 hover:underline">🇪🇸 Español</Link>
-            <Link href="/en/" className="text-blue-600 hover:underline">🇬🇧 English</Link>
-            <Link href="/ca/" className="text-blue-600 hover:underline">🏴󠁥󠁳󠁣󠁴󠁿 Català</Link>
-            <Link href="/nl/" className="text-blue-600 hover:underline">🇳🇱 Nederlands</Link>
+            <Link href="/es" className="text-blue-600 hover:underline">🇪🇸 Español</Link>
+            <Link href="/en" className="text-blue-600 hover:underline">🇬🇧 English</Link>
+            <Link href="/ca" className="text-blue-600 hover:underline">🏴󠁥󠁳󠁣󠁴󠁿 Català</Link>
+            <Link href="/nl" className="text-blue-600 hover:underline">🇳🇱 Nederlands</Link>
           </div>
         </div>
       </div>

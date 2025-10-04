@@ -5,10 +5,8 @@ const nextConfig: NextConfig = {
     // Ensure TypeScript compilation is strict
     tsconfigPath: './tsconfig.json',
   },
-  experimental: {
-    // Force fresh compilation
-    typedRoutes: true,
-  },
+  // Moved from experimental to main config
+  typedRoutes: true,
 };
 
 export default nextConfig;

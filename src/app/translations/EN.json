@@ -81,6 +81,66 @@
                         "description": "Homemade cannelloni made by Cati",
                         "price": "€10.50",
                         "recommended": true
+                    },
+                    {
+                        "name": "Sonsos",
+                        "description": "Very small fried fish (seasonal)",
+                        "price": "M/P"
+                    },
+                    {
+                        "name": "Patatas bravas",
+                        "description": "Fried potatoes with our spicy sauce",
+                        "price": "€6.50"
+                    },
+                    {
+                        "name": "Macaroni",
+                        "description": "Homemade macaroni",
+                        "price": "€8.50"
+                    },
+                    {
+                        "name": "Iberian ham with coca bread",
+                        "description": "Iberian ham with coca bread",
+                        "price": "€19.00"
+                    },
+                    {
+                        "name": "Nachos",
+                        "description": "Nachos with guacamole",
+                        "price": "€10.50"
+                    },
+                    {
+                        "name": "Chef's style tripe",
+                        "description": "Tripe prepared chef's style",
+                        "price": "€10.50"
+                    },
+                    {
+                        "name": "Garlic prawns",
+                        "description": "Prawns sautéed in garlic",
+                        "price": "€16.50"
+                    },
+                    {
+                        "name": "Sautéed langoustines",
+                        "description": "Fresh sautéed langoustines",
+                        "price": "€18.00"
+                    },
+                    {
+                        "name": "Fried anchovies",
+                        "description": "Fresh fried anchovies",
+                        "price": "€12.50"
+                    },
+                    {
+                        "name": "Cockles",
+                        "description": "Fresh cockles (seasonal)",
+                        "price": "M/P"
+                    },
+                    {
+                        "name": "Baby squid",
+                        "description": "Grilled baby squid",
+                        "price": "€16.00"
+                    },
+                    {
+                        "name": "Tagliatelle",
+                        "description": "Homemade tagliatelle (seasonal)",
+                        "price": "M/P"
                     }
                 ]
             },
@@ -172,6 +232,72 @@
                         "name": "Breaded chicken fingers with potatoes",
                         "description": "Chicken fingers with french fries",
                         "price": "€9.00"
+                    }
+                ]
+            },
+            "fish": {
+                "title": "Fish",
+                "items": [
+                    {
+                        "name": "Fish of the day",
+                        "description": "Fresh fish according to season and market",
+                        "price": "M/P",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Sea bass with salt",
+                        "description": "Fresh sea bass cooked with salt",
+                        "price": "M/P"
+                    },
+                    {
+                        "name": "Grilled sea bream",
+                        "description": "Fresh grilled sea bream with garnish",
+                        "price": "M/P"
+                    }
+                ]
+            },
+            "drinks": {
+                "title": "Drinks",
+                "items": [
+                    {
+                        "name": "Premium Gin & Tonic",
+                        "description": "Wide selection of premium gins: Tanqueray, Hendrick's, Bombay Sapphire, Bulldog, Martin Miller's",
+                        "price": "M/P"
+                    },
+                    {
+                        "name": "National Beer",
+                        "description": "Mahou 5 stars, Alhambra, Selecta, Voll Damm",
+                        "price": "M/P"
+                    },
+                    {
+                        "name": "International Beer",
+                        "description": "Coronita",
+                        "price": "M/P"
+                    },
+                    {
+                        "name": "White Wines",
+                        "description": "Ermita de Sant Gil, Blanc Pescador premium, Domine, Descomunal",
+                        "price": "M/P"
+                    },
+                    {
+                        "name": "Red Wines",
+                        "description": "Ermita de Sant Gil, GR-174, 3 Fincas, 5 Fincas",
+                        "price": "M/P"
+                    },
+                    {
+                        "name": "Cavas",
+                        "description": "Família Oliveda brut jove, Rovellats gran reserva brut nature",
+                        "price": "M/P"
+                    },
+                    {
+                        "name": "Sangria",
+                        "description": "Wine or cava sangria (jug)",
+                        "price": "M/P"
+                    },
+                    {
+                        "name": "Schweppes Premium",
+                        "description": "Pink Pepper, Orange Blossom & Lavender, Ginger & Cardamom, Hibiscus",
+                        "price": "M/P"
                     }
                 ]
             }
@@ -516,31 +642,6 @@
         "title": "Our History",
         "subtitle": "A Calella emblem since 1958",
         "sections": {
-            "about": {
-                "title": "About Us",
-                "description": "Restaurant Banys La Gavina has been a family tradition since 1958, located on the seafront of Calella. We offer authentic Mediterranean cuisine with the freshest ingredients and exceptional views of the Mediterranean Sea."
-            },
-            "specialties": {
-                "title": "Our Specialties",
-                "subtitle": "Discover our selection of traditional dishes",
-                "items": [
-                    {
-                        "name": "Seafood Paella",
-                        "description": "Traditional rice with fresh seafood from our coast",
-                        "price": "€24.50"
-                    },
-                    {
-                        "name": "Grilled Sea Bream",
-                        "description": "Fresh fish of the day with Mediterranean garnish",
-                        "price": "€22.00"
-                    },
-                    {
-                        "name": "Black Rice",
-                        "description": "Spectacular black rice with squid and aioli",
-                        "price": "€21.50"
-                    }
-                ]
-            },
             "origin": {
                 "title": "The Beginning (1958)",
                 "content": "Restaurant Banys La Gavina opened its doors in 1958, during the height of Calella's tourism development. From the beginning, it was strategically located on Calella's Platja Gran, facing the Renfe Station, becoming the perfect meeting point for locals and visitors."
@@ -608,6 +709,12 @@
                     "description": "Entire families have shared special moments at our tables for decades"
                 }
             ]
+        },
+        "cta": {
+            "title": "Come Be Part of Our History",
+            "subtitle": "More than 65 years of gastronomic tradition await you on the seafront",
+            "menu_button": "View Our Menu",
+            "contact_button": "Book a Table"
         }
     },
     "footer": {

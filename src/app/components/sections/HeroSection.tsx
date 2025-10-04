@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Link from 'next/link';
 import { AnimatedSection } from '../animations/AnimatedSection';
 
 interface HeroSectionProps {
@@ -77,7 +76,7 @@ export function HeroSection({ title, subtitle, description, ctaText, ctaHref }: 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         <AnimatedSection direction="down" delay={0.2}>
-          <motion.h1 
+          <motion.h1
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
             style={{
               background: "linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%)",
@@ -104,27 +103,24 @@ export function HeroSection({ title, subtitle, description, ctaText, ctaHref }: 
 
         {ctaText && ctaHref && (
           <AnimatedSection direction="scale" delay={0.8}>
-            <motion.div
-              whileHover={{ 
+            <motion.a
+              href={ctaHref}
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
+              whileHover={{
                 scale: 1.05,
                 boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.5)"
               }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link
-                href={ctaHref as any}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
+              {ctaText}
+              <motion.span
+                className="ml-2"
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
               >
-                {ctaText}
-                <motion.span
-                  className="ml-2"
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
                 →
-                </motion.span>
-              </Link>
-            </motion.div>
+              </motion.span>
+            </motion.a>
           </AnimatedSection>
         )}
       </div>

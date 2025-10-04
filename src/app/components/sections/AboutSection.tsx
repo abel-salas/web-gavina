@@ -43,7 +43,7 @@ export function AboutSection({ title, description }: AboutSectionProps) {
                 {title}
               </h2>
             </AnimatedSection>
-            
+
             <AnimatedSection direction="right" delay={0.2}>
               <p className="text-lg text-gray-700 mb-8 leading-relaxed">
                 {description}
@@ -53,7 +53,7 @@ export function AboutSection({ title, description }: AboutSectionProps) {
             <StaggerContainer className="space-y-6">
               {features.map((feature, index) => (
                 <StaggerItem key={index}>
-                  <motion.div 
+                  <motion.div
                     className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
                     whileHover={{ y: -2 }}
                   >

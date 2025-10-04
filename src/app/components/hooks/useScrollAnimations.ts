@@ -20,7 +20,7 @@ export function useScrollAnimation() {
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(timeoutId);

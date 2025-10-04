@@ -1,6 +1,7 @@
 import { getLocalizedData } from "@/app/lib/localization";
 import MobileNavbar from "./mobile-navbar";
 import Link from "next/link";
+import type { Route } from 'next';
 
 export default async function Navbar({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -22,7 +23,7 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
           <div className="flex justify-between items-center h-16">
             {/* Logo/Brand */}
             <div className="flex-shrink-0">
-              <Link href={href('/') as any} className="text-xl font-bold text-white hover:text-blue-300 transition-colors">
+              <Link href={href('/') as Route} className="text-xl font-bold text-white hover:text-blue-300 transition-colors">
                 🍽️ Gavina
               </Link>
             </div>
@@ -31,8 +32,8 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
             <ul className="flex space-x-8">
               {navItems.map((item, index) => (
                 <li key={index}>
-                  <Link 
-                    href={item.href as any}
+                  <Link
+                    href={item.href as Route}
                     className="text-white hover:text-blue-300 transition-colors duration-200 font-medium"
                   >
                     {item.label}
@@ -48,9 +49,9 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
       </nav>
 
       {/* Mobile Navigation */}
-      <MobileNavbar 
+      <MobileNavbar
         navItems={navItems}
-        homeHref={href('/') as any}
+        homeHref={href('/') as Route}
       />
     </>
   );

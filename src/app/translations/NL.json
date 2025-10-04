@@ -81,6 +81,66 @@
                         "description": "Huisgemaakte cannelloni gemaakt door Cati",
                         "price": "€10,50",
                         "recommended": true
+                    },
+                    {
+                        "name": "Sonsos",
+                        "description": "Zeer kleine gefrituurde vis (seizoensgebonden)",
+                        "price": "V/P"
+                    },
+                    {
+                        "name": "Patatas bravas",
+                        "description": "Gefrituurde aardappelen met onze pittige saus",
+                        "price": "€6,50"
+                    },
+                    {
+                        "name": "Macaroni",
+                        "description": "Huisgemaakte macaroni",
+                        "price": "€8,50"
+                    },
+                    {
+                        "name": "Iberische ham met coca brood",
+                        "description": "Iberische ham met coca brood",
+                        "price": "€19,00"
+                    },
+                    {
+                        "name": "Nachos",
+                        "description": "Nachos met guacamole",
+                        "price": "€10,50"
+                    },
+                    {
+                        "name": "Pens op chef's wijze",
+                        "description": "Pens bereid op chef's wijze",
+                        "price": "€10,50"
+                    },
+                    {
+                        "name": "Knoflook garnalen",
+                        "description": "Garnalen gesauteerd in knoflook",
+                        "price": "€16,50"
+                    },
+                    {
+                        "name": "Gesauteerde langoustines",
+                        "description": "Verse gesauteerde langoustines",
+                        "price": "€18,00"
+                    },
+                    {
+                        "name": "Gefrituurde ansjovis",
+                        "description": "Verse gefrituurde ansjovis",
+                        "price": "€12,50"
+                    },
+                    {
+                        "name": "Kokkels",
+                        "description": "Verse kokkels (seizoensgebonden)",
+                        "price": "V/P"
+                    },
+                    {
+                        "name": "Baby inktvis",
+                        "description": "Gegrilde baby inktvis",
+                        "price": "€16,00"
+                    },
+                    {
+                        "name": "Tagliatelle",
+                        "description": "Huisgemaakte tagliatelle (seizoensgebonden)",
+                        "price": "V/P"
                     }
                 ]
             },
@@ -172,6 +232,72 @@
                         "name": "Gepaneerde kipfingers met aardappelen",
                         "description": "Kipfingers met frietjes",
                         "price": "€9,00"
+                    }
+                ]
+            },
+            "fish": {
+                "title": "Vis",
+                "items": [
+                    {
+                        "name": "Vis van de dag",
+                        "description": "Verse vis volgens seizoen en markt",
+                        "price": "V/P",
+                        "recommended": true
+                    },
+                    {
+                        "name": "Zeebaars met zout",
+                        "description": "Verse zeebaars gekookt met zout",
+                        "price": "V/P"
+                    },
+                    {
+                        "name": "Gegrilde dorade",
+                        "description": "Verse gegrilde dorade met garnituur",
+                        "price": "V/P"
+                    }
+                ]
+            },
+            "drinks": {
+                "title": "Dranken",
+                "items": [
+                    {
+                        "name": "Premium Gin & Tonic",
+                        "description": "Ruime selectie premium gins: Tanqueray, Hendrick's, Bombay Sapphire, Bulldog, Martin Miller's",
+                        "price": "V/P"
+                    },
+                    {
+                        "name": "Nationaal Bier",
+                        "description": "Mahou 5 sterren, Alhambra, Selecta, Voll Damm",
+                        "price": "V/P"
+                    },
+                    {
+                        "name": "Internationaal Bier",
+                        "description": "Coronita",
+                        "price": "V/P"
+                    },
+                    {
+                        "name": "Witte Wijnen",
+                        "description": "Ermita de Sant Gil, Blanc Pescador premium, Domine, Descomunal",
+                        "price": "V/P"
+                    },
+                    {
+                        "name": "Rode Wijnen",
+                        "description": "Ermita de Sant Gil, GR-174, 3 Fincas, 5 Fincas",
+                        "price": "V/P"
+                    },
+                    {
+                        "name": "Cava's",
+                        "description": "Família Oliveda brut jove, Rovellats gran reserva brut nature",
+                        "price": "V/P"
+                    },
+                    {
+                        "name": "Sangria",
+                        "description": "Wijn of cava sangria (kan)",
+                        "price": "V/P"
+                    },
+                    {
+                        "name": "Schweppes Premium",
+                        "description": "Roze Peper, Oranjebloesem & Lavendel, Gember & Kardemom, Hibiscus",
+                        "price": "V/P"
                     }
                 ]
             }
@@ -516,31 +642,6 @@
         "title": "Onze Geschiedenis",
         "subtitle": "Een embleem van Calella sinds 1958",
         "sections": {
-            "about": {
-                "title": "Over Ons",
-                "description": "Restaurant Banys La Gavina is een familietraditie sinds 1958, gelegen aan de kust van Calella. Wij bieden authentieke mediterrane keuken met de versste ingrediënten en uitzonderlijk uitzicht op de Middellandse Zee."
-            },
-            "specialties": {
-                "title": "Onze Specialiteiten",
-                "subtitle": "Ontdek onze selectie van traditionele gerechten",
-                "items": [
-                    {
-                        "name": "Zeevruchten Paella",
-                        "description": "Traditionele rijst met verse zeevruchten van onze kust",
-                        "price": "€24,50"
-                    },
-                    {
-                        "name": "Gegrilde Zeebrasem",
-                        "description": "Verse vis van de dag met mediterrane garnering",
-                        "price": "€22,00"
-                    },
-                    {
-                        "name": "Zwarte Rijst",
-                        "description": "Spectaculaire zwarte rijst met inktvis en aioli",
-                        "price": "€21,50"
-                    }
-                ]
-            },
             "origin": {
                 "title": "Het Begin (1958)",
                 "content": "Restaurant Banys La Gavina opende zijn deuren in 1958, tijdens de hoogtijdagen van Calella's toeristische ontwikkeling. Vanaf het begin was het strategisch gelegen aan Calella's Platja Gran, tegenover het Renfe Station, en werd het het perfecte ontmoetingspunt voor locals en bezoekers."
@@ -608,6 +709,12 @@
                     "description": "Hele families hebben decennialang speciale momenten aan onze tafels gedeeld"
                 }
             ]
+        },
+        "cta": {
+            "title": "Word Deel van Onze Geschiedenis",
+            "subtitle": "Meer dan 65 jaar gastronomische traditie wacht op u aan de kust",
+            "menu_button": "Bekijk Onze Kaart",
+            "contact_button": "Reserveer een Tafel"
         }
     },
     "footer": {

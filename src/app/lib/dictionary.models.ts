@@ -33,6 +33,8 @@ export interface Dictionary {
             salads: MenuCategory;
             rice: MenuCategory;
             meat: MenuCategory;
+            fish: MenuCategory;
+            drinks: MenuCategory;
         };
     };
     contact: {
@@ -132,6 +134,12 @@ export interface Dictionary {
                 title: string;
                 description: string;
             }>;
+        };
+        cta: {
+            title: string;
+            subtitle: string;
+            menu_button: string;
+            contact_button: string;
         };
     };
     footer: {

@@ -29,7 +29,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
     return (
         <>
             {/* Sección 1: Hero */}
-            <HeroSection 
+            <HeroSection
                 title={dict.home.title}
                 subtitle={dict.home.subtitle}
                 description={dict.home.description}
@@ -39,7 +39,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
 
             {/* Sección 2: Sobre Nosotros */}
             {dict.sections?.about && (
-                <AboutSection 
+                <AboutSection
                     title={dict.sections.about.title}
                     description={dict.sections.about.description}
                 />
@@ -47,7 +47,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
 
             {/* Sección 3: Platos Destacados */}
             {dict.sections?.specialties && (
-                <MenuHighlightSection 
+                <MenuHighlightSection
                     title={dict.sections.specialties.title}
                     subtitle={dict.sections.specialties.subtitle}
                     specialties={dict.sections.specialties.items}
@@ -57,7 +57,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
 
             {/* Sección 4: Testimonios */}
             {dict.sections?.testimonials && (
-                <TestimonialsSection 
+                <TestimonialsSection
                     title={dict.sections.testimonials.title}
                     subtitle={dict.sections.testimonials.subtitle}
                     testimonials={dict.sections.testimonials.items}
@@ -66,18 +66,18 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
 
             {/* Sección 5: Ubicación */}
             {dict.sections?.location && (
-                <LocationSection 
+                <LocationSection
                     title={dict.sections.location.title}
                 />
             )}
 
             {/* Sección 6: Galería */}
-            <GallerySection 
+            <GallerySection
                 title={dict.gallery.title}
             />
 
             {/* Sección 7: Contacto */}
-            <ContactSection 
+            <ContactSection
                 title="Reserva Tu Experiencia"
                 contactHref={href('/contact')}
             />

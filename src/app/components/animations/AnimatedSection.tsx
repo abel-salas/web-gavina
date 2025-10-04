@@ -38,12 +38,12 @@ const variants = {
   }
 };
 
-export function AnimatedSection({ 
-  children, 
-  className = '', 
-  delay = 0, 
+export function AnimatedSection({
+  children,
+  className = '',
+  delay = 0,
   direction = 'up',
-  duration = 0.6 
+  duration = 0.6
 }: AnimatedSectionProps) {
   return (
     <motion.div
@@ -52,10 +52,10 @@ export function AnimatedSection({
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={variants[direction]}
-      transition={{ 
-        duration, 
-        delay, 
-        ease: [0.25, 0.25, 0.25, 0.75] 
+      transition={{
+        duration,
+        delay,
+        ease: [0.25, 0.25, 0.25, 0.75]
       }}
     >
       {children}

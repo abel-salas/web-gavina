@@ -15,7 +15,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
     },
     {
       id: 2,
-      src: "/placeholder-food-2.jpg", 
+      src: "/placeholder-food-2.jpg",
       alt: "Fresh salad",
       title: "Ensalada Fresca"
     },
@@ -64,7 +64,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
                   Imagen: {image.src}
                 </p>
               </div>
-              
+
               {/* Cuando tengas las imágenes reales, puedes usar esto: */}
               {/* 
               <Image
@@ -90,13 +90,13 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
           Ven y disfruta de estos deliciosos platos en nuestro acogedor restaurante
         </p>
         <div className="flex justify-center gap-4">
-          <a 
+          <a
             href={`/${locale}/menu`}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
             Ver Menú Completo
           </a>
-          <a 
+          <a
             href={`/${locale}/contact`}
             className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors"
           >
