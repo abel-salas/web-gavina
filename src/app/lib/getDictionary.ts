@@ -7,10 +7,10 @@ import { Dictionary } from "./dictionary.models";
 import { DEFAULT_LOCALE, isValidLocale } from "./languages";
 
 const dictionaries: Record<string, Dictionary> = {
-    es,
-    en,
-    ca,
-    nl,
+    es: es as unknown as Dictionary,
+    en: en as unknown as Dictionary,
+    ca: ca as unknown as Dictionary,
+    nl: nl as unknown as Dictionary,
 };
 
 export function getDictionary(locale: string): Dictionary {

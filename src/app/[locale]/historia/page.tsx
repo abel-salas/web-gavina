@@ -22,6 +22,17 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
   const { locale } = await params;
   const { dict } = getLocalizedData(locale);
 
+  if (!dict.history) {
+    return (
+      <main className="container mx-auto px-4 py-8">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Historia</h1>
+          <p>Contenido no disponible</p>
+        </div>
+      </main>
+    );
+  }
+
   return (
     <main className="container mx-auto px-4 py-8">
       {/* Hero Section */}

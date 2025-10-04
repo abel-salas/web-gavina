@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getLocalizedData } from "@/app/lib/localization";
 import { generatePageMetadata, getValidLocale } from '@/seo';
+import { getPageContent, getSiteConfig } from '../../../../sanity/queries';
 
 export async function generateMetadata({
   params
@@ -19,13 +20,41 @@ export async function generateMetadata({
   const { locale } = await params;
   const { dict } = getLocalizedData(locale);
 
+  // Obtener datos desde Sanity
+  const [contactContent, contactConfig] = await Promise.all([
+    getPageContent('contact', locale).catch(() => null),
+    getSiteConfig('contact', locale).catch(() => null)
+  ]);
+
+  // Usar datos de Sanity si están disponibles, sino valores por defecto
+  const pageData = contactContent ? {
+    title: contactContent.title,
+    subtitle: contactContent.subtitle,
+    description: contactContent.description,
+  } : {
+    title: "📞 Contacto",
+    subtitle: "Estamos aquí para atenderte",
+    description: "Para reservar mesa, llámanos o ven directamente. Te esperamos en primera línea de mar.",
+  };
+
+  // Información de contacto por defecto
+  const contactInfo = {
+    address: "Paseo Manuel Puigvert s/n, Calella, Barcelona",
+    location: "Platja Gran de Calella, frente a la Estación de Renfe",
+    phone: "937 69 25 39",
+    mobile: "695 349 307",
+    hours: "Abierto todos los días",
+    parking: "Dos aparcamientos gratuitos",
+    facebook: "Facebook"
+  };
+
   return (
     <main className="container mx-auto px-4 py-8">
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">{dict.contact.title}</h1>
-        <p className="text-xl text-gray-600 mb-8">{dict.contact.subtitle}</p>
+        <h1 className="text-4xl font-bold mb-4">{pageData.title}</h1>
+        <p className="text-xl text-gray-600 mb-8">{pageData.subtitle}</p>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-          {dict.contact.description}
+          {pageData.description}
         </p>
       </section>
 
@@ -38,8 +67,8 @@ export async function generateMetadata({
               <span className="text-2xl mr-3">📍</span>
               <div>
                 <h3 className="font-semibold">Dirección</h3>
-                <p className="text-gray-600 whitespace-pre-line">{dict.contact.address}</p>
-                <p className="text-sm text-gray-500 mt-1">{dict.contact.location}</p>
+                <p className="text-gray-600 whitespace-pre-line">{contactInfo.address}</p>
+                <p className="text-sm text-gray-500 mt-1">{contactInfo.location}</p>
               </div>
             </div>
 
@@ -47,8 +76,8 @@ export async function generateMetadata({
               <span className="text-2xl mr-3">📞</span>
               <div>
                 <h3 className="font-semibold">Teléfono</h3>
-                <a href={`tel:${dict.contact.phone}`} className="text-blue-600 hover:text-blue-800">
-                  {dict.contact.phone}
+                <a href={`tel:${contactInfo.phone}`} className="text-blue-600 hover:text-blue-800">
+                  {contactInfo.phone}
                 </a>
               </div>
             </div>
@@ -57,8 +86,8 @@ export async function generateMetadata({
               <span className="text-2xl mr-3">📱</span>
               <div>
                 <h3 className="font-semibold">Móvil</h3>
-                <a href={`tel:${dict.contact.mobile}`} className="text-blue-600 hover:text-blue-800">
-                  {dict.contact.mobile}
+                <a href={`tel:${contactInfo.mobile}`} className="text-blue-600 hover:text-blue-800">
+                  {contactInfo.mobile}
                 </a>
               </div>
             </div>
@@ -67,7 +96,7 @@ export async function generateMetadata({
               <span className="text-2xl mr-3">🕐</span>
               <div>
                 <h3 className="font-semibold">Horario</h3>
-                <p className="text-gray-600">{dict.contact.hours}</p>
+                <p className="text-gray-600">{contactInfo.hours}</p>
               </div>
             </div>
 
@@ -75,7 +104,7 @@ export async function generateMetadata({
               <span className="text-2xl mr-3">�</span>
               <div>
                 <h3 className="font-semibold">Aparcamiento</h3>
-                <p className="text-gray-600">{dict.contact.parking}</p>
+                <p className="text-gray-600">{contactInfo.parking}</p>
               </div>
             </div>
 
@@ -84,7 +113,7 @@ export async function generateMetadata({
               <div>
                 <h3 className="font-semibold">Síguenos</h3>
                 <a href="#" className="text-blue-600 hover:text-blue-800">
-                  {dict.contact.facebook}
+                  {contactInfo.facebook}
                 </a>
               </div>
             </div>

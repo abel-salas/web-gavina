@@ -1,9 +1,24 @@
 import { getLocalizedData } from "@/app/lib/localization";
+import { getPageContent } from '../../../../sanity/queries';
 // import Image from "next/image"; // Descomentarlo cuando tengas imágenes reales
 
 export default async function GalleryPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const { dict } = getLocalizedData(locale);
+
+  // Obtener datos desde Sanity
+  const galleryContent = await getPageContent('gallery', locale).catch(() => null);
+
+  // Usar datos de Sanity si están disponibles, sino valores por defecto
+  const pageData = galleryContent ? {
+    title: galleryContent.title,
+    subtitle: galleryContent.subtitle,
+    description: galleryContent.description,
+  } : {
+    title: "📸 Galería de Fotos",
+    subtitle: "Descubre nuestro restaurante y entorno 🏖️",
+    description: "Un marco incomparable frente al mar Mediterráneo en Calella.",
+  };
 
   // Imágenes de ejemplo para la galería
   const galleryImages = [
@@ -48,8 +63,8 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
   return (
     <main className="container mx-auto px-4 py-8">
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">{dict.gallery.title}</h1>
-        <p className="text-xl text-gray-600">{dict.gallery.subtitle}</p>
+        <h1 className="text-4xl font-bold mb-4">{pageData.title}</h1>
+        <p className="text-xl text-gray-600">{pageData.subtitle}</p>
       </section>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

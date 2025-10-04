@@ -13,3 +13,16 @@ export function getLocalizedData(locale: string) {
         locale
     };
 }
+
+// Versión mejorada con Sanity + fallback JSON (TEMPORALMENTE DESHABILITADA)
+export async function getLocalizedDataWithSanity(locale: string) {
+    const fallbackDict = getDictionary(locale);
+    // const dict = await getSanityDict(locale, fallbackDict);
+    
+    return {
+        dict: fallbackDict,
+        href: (path: string) => localizedHref(locale, path),
+        locale,
+        isUsingFallback: true // dict === fallbackDict
+    };
+}

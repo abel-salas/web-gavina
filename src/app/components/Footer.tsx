@@ -19,7 +19,7 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
               </Link>
             </div>
             <p className="text-gray-300 mb-4">
-              {dict.footer.description}
+              {dict.footer?.description || 'Restaurant tradicional con auténtica cocina mediterránea.'}
             </p>
             <div className="flex space-x-4">
               {/* Redes sociales */}
@@ -77,32 +77,32 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
 
           {/* Información de contacto */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">{dict.footer.contact.title}</h3>
+            <h3 className="text-lg font-semibold mb-4">{dict.footer?.contact?.title || 'Contacto'}</h3>
             <div className="space-y-2 text-gray-300">
               <p className="flex items-start">
                 <span className="mr-2 mt-1">📍</span>
-                <span className="whitespace-pre-line">{dict.footer.contact.address}</span>
+                <span className="whitespace-pre-line">{dict.footer?.contact?.address || 'Passeig Manuel Puigvert, s/n\n17310 Calella, Barcelona'}</span>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">📞</span>
-                <a href={`tel:${dict.footer.contact.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">
-                  {dict.footer.contact.phone}
+                <a href={`tel:${dict.footer?.contact?.phone?.replace(/\s/g, '') || '937690919'}`} className="hover:text-white transition-colors">
+                  {dict.footer?.contact?.phone || '937 69 09 19'}
                 </a>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">📱</span>
-                <a href={`tel:${dict.footer.contact.mobile.replace(/\s/g, '')}`} className="hover:text-white transition-colors">
-                  {dict.footer.contact.mobile}
+                <a href={`tel:${dict.footer?.contact?.mobile?.replace(/\s/g, '') || '636849282'}`} className="hover:text-white transition-colors">
+                  {dict.footer?.contact?.mobile || '636 84 92 82'}
                 </a>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">🕐</span>
-                {dict.footer.hours.text}
+                {dict.footer?.hours?.text || 'Todos los días de 9:00 a 24:00'}
               </p>
               <p className="flex items-center">
                 <span className="mr-2">📘</span>
                 <a href="#" className="hover:text-white transition-colors">
-                  {dict.footer.social.facebook}
+                  {dict.footer?.social?.facebook || 'Restaurant Banys La Gavina'}
                 </a>
               </p>
             </div>
@@ -113,7 +113,7 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              {dict.footer.copyright}
+              {dict.footer?.copyright || '© 2024 Restaurant Banys La Gavina. Todos los derechos reservados.'}
             </div>
 
             {/* Selector de idiomas */}

@@ -4,8 +4,8 @@ import { generatePageMetadata, getValidLocale } from '@/seo';
 import { HeroSection } from '../components/sections/HeroSection';
 import { AboutSection } from '../components/sections/AboutSection';
 import { MenuHighlightSection } from '../components/sections/MenuHighlightSection';
-import { TestimonialsSection } from '../components/sections/TestimonialsSection';
 import { LocationSection, GallerySection, ContactSection } from '../components/sections/OtherSections';
+import { getPageContent, getSiteConfig } from '../../../sanity/queries';
 
 export async function generateMetadata({
     params
@@ -26,14 +26,35 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
     const { locale } = await params;
     const { dict, href } = getLocalizedData(locale);
 
+    // Obtener datos desde Sanity
+    const [homeContent, siteConfig] = await Promise.all([
+        getPageContent('home', locale).catch(() => null),
+        getSiteConfig('general', locale).catch(() => null)
+    ]);
+
+    // Usar datos de Sanity si están disponibles, sino valores por defecto
+    const pageData = homeContent ? {
+        title: homeContent.title,
+        subtitle: homeContent.subtitle,
+        description: homeContent.description,
+        cta: "Ver Carta",
+        cta_secondary: "Reservar Mesa"
+    } : {
+        title: "Restaurant Banys La Gavina",
+        subtitle: "Desde 1958 en primera línea de mar 🌊",
+        description: "Situados en la Platja Gran de Calella, especialistas en arroces, mariscos y pescado fresco.",
+        cta: "Ver Carta",
+        cta_secondary: "Reservar Mesa"
+    };
+
     return (
         <>
             {/* Sección 1: Hero */}
             <HeroSection
-                title={dict.home.title}
-                subtitle={dict.home.subtitle}
-                description={dict.home.description}
-                ctaText={dict.home.cta || "Ver Carta"}
+                title={pageData.title}
+                subtitle={pageData.subtitle}
+                description={pageData.description}
+                ctaText={pageData.cta || "Ver Carta"}
                 ctaHref={href('/menu')}
             />
 
@@ -55,28 +76,19 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                 />
             )}
 
-            {/* Sección 4: Testimonios */}
-            {dict.sections?.testimonials && (
-                <TestimonialsSection
-                    title={dict.sections.testimonials.title}
-                    subtitle={dict.sections.testimonials.subtitle}
-                    testimonials={dict.sections.testimonials.items}
-                />
-            )}
-
-            {/* Sección 5: Ubicación */}
+            {/* Sección 4: Ubicación */}
             {dict.sections?.location && (
                 <LocationSection
                     title={dict.sections.location.title}
                 />
             )}
 
-            {/* Sección 6: Galería */}
+            {/* Sección 5: Galería */}
             <GallerySection
-                title={dict.gallery.title}
+                title={dict.gallery?.title || "Galería de Fotos"}
             />
 
-            {/* Sección 7: Contacto */}
+            {/* Sección 6: Contacto */}
             <ContactSection
                 title="Reserva Tu Experiencia"
                 contactHref={href('/contact')}

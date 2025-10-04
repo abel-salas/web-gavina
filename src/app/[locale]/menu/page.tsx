@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { getLocalizedData } from "@/app/lib/localization";
 import { generatePageMetadata, getValidLocale } from '@/seo';
+import { getAllMenuCategories } from '../../../../sanity/queries';
+import { MenuCategory } from '@/app/lib/dictionary.models';
 
 export async function generateMetadata({
   params
@@ -19,22 +21,28 @@ export async function generateMetadata({
   const { locale } = await params;
   const { dict } = getLocalizedData(locale);
 
+  // Obtener datos del menú desde Sanity
+  const sanityMenuData = await getAllMenuCategories(locale).catch(() => null);
+  
+  // Si hay datos de Sanity, usarlos; sino, usar JSON como fallback
+  const menuData = sanityMenuData || dict.menu?.categories || {};
+
   const categories = [
-    { key: 'starters', data: dict.menu.categories.starters },
-    { key: 'salads', data: dict.menu.categories.salads },
-    { key: 'rice', data: dict.menu.categories.rice },
-    { key: 'meat', data: dict.menu.categories.meat },
-    { key: 'fish', data: dict.menu.categories.fish },
-    { key: 'drinks', data: dict.menu.categories.drinks }
-  ];
+    { key: 'starters', data: menuData.starters },
+    { key: 'salads', data: menuData.salads },
+    { key: 'rice', data: menuData.rice },
+    { key: 'meat', data: menuData.meat },
+    { key: 'fish', data: menuData.fish },
+    { key: 'drinks', data: menuData.drinks }
+  ].filter(category => category.data); // Filtrar categorías que existen
 
   return (
     <main className="container mx-auto px-4 py-8">
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">{dict.menu.title}</h1>
-        <p className="text-xl text-gray-600 mb-8">{dict.menu.subtitle}</p>
+        <h1 className="text-4xl font-bold mb-4">{dict.menu?.title || "🍽️ Nuestra Carta"}</h1>
+        <p className="text-xl text-gray-600 mb-8">{dict.menu?.subtitle || "Cocina mediterránea inspirada en los productos del mar 🦐"}</p>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-          {dict.menu.description}
+          {dict.menu?.description || "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación."}
         </p>
       </section>
 
@@ -48,7 +56,7 @@ export async function generateMetadata({
               )}
             </div>
             <div className="space-y-4">
-              {data.items.map((item, index) => (
+              {data.items.map((item: MenuCategory['items'][0], index: number) => (
                 <div key={index} className="border-b pb-4 last:border-b-0">
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="font-medium text-gray-900 flex-1">

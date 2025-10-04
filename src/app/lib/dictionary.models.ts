@@ -13,7 +13,7 @@ export interface Dictionary {
         contacto: string;
         gallery: string;
     };
-    home: {
+    home?: {
         title: string;
         subtitle: string;
         description: string;
@@ -22,22 +22,22 @@ export interface Dictionary {
         cta?: string;
         cta_secondary?: string;
     };
-    menu: {
+    menu?: {
         title: string;
         subtitle: string;
         description: string;
         metaTitle: string;
         metaDescription: string;
-        categories: {
-            starters: MenuCategory;
-            salads: MenuCategory;
-            rice: MenuCategory;
-            meat: MenuCategory;
-            fish: MenuCategory;
-            drinks: MenuCategory;
+        categories?: {
+            starters?: MenuCategory;
+            salads?: MenuCategory;
+            rice?: MenuCategory;
+            meat?: MenuCategory;
+            fish?: MenuCategory;
+            drinks?: MenuCategory;
         };
     };
-    contact: {
+    contact?: {
         title: string;
         subtitle: string;
         description: string;
@@ -51,7 +51,7 @@ export interface Dictionary {
         location: string;
         parking: string;
     };
-    gallery: {
+    gallery?: {
         title: string;
         subtitle: string;
         description: string;
@@ -78,7 +78,7 @@ export interface Dictionary {
             subtitle: string;
             description: string;
         };
-        services: {
+        services?: {
             title: string;
             subtitle: string;
             items: Array<{
@@ -86,16 +86,8 @@ export interface Dictionary {
                 description: string;
             }>;
         };
-        testimonials: {
-            title: string;
-            subtitle: string;
-            items: Array<{
-                name: string;
-                comment: string;
-            }>;
-        };
     };
-    history: {
+    history?: {
         title: string;
         subtitle: string;
         sections: {
@@ -142,7 +134,7 @@ export interface Dictionary {
             contact_button: string;
         };
     };
-    footer: {
+    footer?: {
         description: string;
         contact: {
             title: string;
