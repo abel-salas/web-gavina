@@ -5,10 +5,20 @@ export interface Dictionary {
         keywords: string;
         locale: string;
     };
+    contact_info?: {
+        phone: string;
+        mobile: string;
+        address: string;
+        hours: string;
+        location: string;
+        parking: string;
+        facebook: string;
+        instagram: string;
+    };
     nav: {
         home: string;
         menu: string;
-        historia: string;
+        history: string;
         reservas: string;
         contacto: string;
         gallery: string;
@@ -50,6 +60,26 @@ export interface Dictionary {
         facebook: string;
         location: string;
         parking: string;
+        info_section?: string;
+        form_section?: string;
+        fields?: {
+            address: string;
+            phone: string;
+            mobile: string;
+            schedule: string;
+            parking: string;
+            parking_description: string;
+            follow_us: string;
+            name: string;
+            email: string;
+            message: string;
+            send_button: string;
+        };
+        whatsapp?: {
+            title: string;
+            description: string;
+            button: string;
+        };
     };
     gallery?: {
         title: string;
@@ -138,18 +168,19 @@ export interface Dictionary {
         description: string;
         contact: {
             title: string;
-            address: string;
-            phone: string;
-            mobile: string;
+            address?: string;
+            phone?: string;
+            mobile?: string;
         };
         hours: {
             title: string;
-            text: string;
+            text?: string;
         };
         social: {
             title: string;
             facebook: string;
         };
+        language_selector?: string;
         copyright: string;
     };
 }

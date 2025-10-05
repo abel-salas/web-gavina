@@ -19,12 +19,12 @@ interface MenuHighlightProps {
 export function MenuHighlightSection({ title, subtitle, specialties, menuHref }: MenuHighlightProps) {
   // Mapear los datos de especialidades a un formato con iconos y colores
   const dishes = specialties.map((specialty, index) => {
-    const icons = ["🥘", "�", "🐟", "🍛"];
+    const icons = ["🥘", "🦐", "🐟", "🥩"];
     const colors = [
       "from-orange-400 to-red-500",
       "from-blue-400 to-cyan-500",
       "from-green-400 to-teal-500",
-      "from-gray-600 to-gray-800"
+      "from-red-600 to-red-800"
     ];
 
     return {
@@ -92,6 +92,7 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref }:
         <AnimatedSection direction="scale" delay={0.6}>
           <div className="text-center">
             <motion.div
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold text-lg rounded-full shadow-xl hover:shadow-yellow-500/25 transition-all duration-300 cursor-pointer"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 25px 50px -12px rgba(245, 158, 11, 0.5)"
@@ -100,7 +101,7 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref }:
             >
               <Link
                 href={menuHref as Route}
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold text-lg rounded-full shadow-xl hover:shadow-yellow-500/25 transition-all duration-300"
+                className="contents"
               >
                 Ver Menú Completo
                 <motion.span

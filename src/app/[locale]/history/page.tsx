@@ -14,7 +14,7 @@ export async function generateMetadata({
   return generatePageMetadata({
     locale: validLocale,
     page: 'history',
-    path: '/historia'
+    path: '/history'
   });
 }
 
@@ -26,7 +26,7 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
     return (
       <main className="container mx-auto px-4 py-8">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4">Historia</h1>
+          <h1 className="text-4xl font-bold mb-4">{dict.nav.history || 'History'}</h1>
           <p>Contenido no disponible</p>
         </div>
       </main>

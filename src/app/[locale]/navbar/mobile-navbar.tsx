@@ -37,7 +37,7 @@ export default function MobileNavbar({ navItems, homeHref }: MobileNavbarProps) 
   return (
     <>
       {/* Mobile Navigation Bar */}
-      <nav className="md:hidden bg-gray-900 text-white relative z-50">
+      <nav className="md:hidden fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm text-white transition-all duration-300">
         <div className="px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo/Brand */}
@@ -47,7 +47,7 @@ export default function MobileNavbar({ navItems, homeHref }: MobileNavbarProps) 
                 className="text-xl font-bold text-white hover:text-blue-300 transition-colors"
                 onClick={closeMenu}
               >
-                🍽️ Gavina
+                Banys la Gavina
               </Link>
             </div>
 

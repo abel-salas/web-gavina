@@ -5,7 +5,8 @@ import { HeroSection } from '../components/sections/HeroSection';
 import { AboutSection } from '../components/sections/AboutSection';
 import { MenuHighlightSection } from '../components/sections/MenuHighlightSection';
 import { LocationSection, GallerySection, ContactSection } from '../components/sections/OtherSections';
-import { getPageContent, getSiteConfig } from '../../../sanity/queries';
+import { client } from '../../../sanity/client';
+import { siteImagesQuery } from '../lib/sanity/siteQueries';
 
 export async function generateMetadata({
     params
@@ -26,25 +27,28 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
     const { locale } = await params;
     const { dict, href } = getLocalizedData(locale);
 
-    // Obtener datos desde Sanity
-    const [homeContent, siteConfig] = await Promise.all([
-        getPageContent('home', locale).catch(() => null),
-        getSiteConfig('general', locale).catch(() => null)
-    ]);
+    // Obtener la configuración de imágenes desde Sanity con manejo de errores
+    let siteImages = null;
+    try {
+        siteImages = await client.fetch(siteImagesQuery);
+    } catch (error) {
+        console.warn('⚠️ No se pudo obtener configuración de imágenes desde Sanity:', error);
+    }
+    
+    // Determinar la imagen de fondo del hero con fallback
+    const heroBackgroundImage = siteImages?.heroBackgroundImage?.asset?.url || 
+                               siteImages?.heroImageUrl || 
+                               'http://www.banyslagavina.cat/wp-content/uploads/2010/10/Vistesweb.jpg';
+    
+    const heroBackgroundAlt = siteImages?.heroBackgroundImage?.alt || 'Restaurant Banys La Gavina vista al mar';
 
-    // Usar datos de Sanity si están disponibles, sino valores por defecto
-    const pageData = homeContent ? {
-        title: homeContent.title,
-        subtitle: homeContent.subtitle,
-        description: homeContent.description,
-        cta: "Ver Carta",
-        cta_secondary: "Reservar Mesa"
-    } : {
-        title: "Restaurant Banys La Gavina",
-        subtitle: "Desde 1958 en primera línea de mar 🌊",
-        description: "Situados en la Platja Gran de Calella, especialistas en arroces, mariscos y pescado fresco.",
-        cta: "Ver Carta",
-        cta_secondary: "Reservar Mesa"
+    // Usar datos exclusivamente del JSON para la home
+    const pageData = {
+        title: dict.home?.title || "Restaurant Banys La Gavina",
+        subtitle: dict.home?.subtitle || "Desde 1958 en primera línea de mar",
+        description: dict.home?.description || "Situados en la Playa de Calella, somos especialistas en arroces, mariscos, pescado fresco y carnes selectas.",
+        cta: dict.home?.cta || "Ver Carta",
+        cta_secondary: dict.home?.cta_secondary || "Reservar Mesa"
     };
 
     return (
@@ -56,6 +60,8 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                 description={pageData.description}
                 ctaText={pageData.cta || "Ver Carta"}
                 ctaHref={href('/menu')}
+                backgroundImage={heroBackgroundImage}
+                backgroundAlt={heroBackgroundAlt}
             />
 
             {/* Sección 2: Sobre Nosotros */}

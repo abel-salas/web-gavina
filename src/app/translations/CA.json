@@ -1,24 +1,34 @@
 {
     "seo": {
-        "siteName": "Restaurant Gavina",
-        "siteDescription": "Descobreix l'autèntica cuina mediterrània al Restaurant Gavina. Plats casolans, ingredients frescos i un ambient acollidor t'esperen.",
-        "keywords": "restaurant, cuina mediterrània, menjar casolà, plats tradicionals, ambient familiar",
+        "siteName": "Restaurant Banys La Gavina",
+        "siteDescription": "Restaurant tradicional en primera línia de mar a Calella des de 1958. Especialistes en arrossos, mariscos, peix fresc i carns selectives. Terrassa amb vistes al mar i aparcament gratuït.",
+        "keywords": "restaurant calella, mariscos, arrossos, paella, peix fresc, carns selectives, terrassa mar, banys gavina, des de 1958",
         "locale": "ca_ES"
+    },
+    "contact_info": {
+        "phone": "937 69 25 39",
+        "mobile": "695 349 307",
+        "address": "Paseo Manuel Puigvert s/n, Calella, Barcelona",
+        "hours": "Obert tots els dies",
+        "location": "Platja Gran de Calella, davant de l'Estació de Renfe",
+        "parking": "Dues zones d'aparcament gratuït",
+        "facebook": "Facebook",
+        "instagram": "Instagram"
     },
     "nav": {
         "home": "Inici",
         "menu": "Menú",
+        "history": "Història",
         "reservas": "Reserves",
         "contacto": "Contacte",
-        "gallery": "Galeria",
-        "historia": "Història"
+        "gallery": "Galeria"
     },
     "home": {
-        "title": "Benvingut al Restaurant Gavina",
-        "subtitle": "Gaudeix de la millor cuina casolana mediterrània 🍝",
-        "description": "Restaurant familiar especialitzat en cuina mediterrània tradicional. Oferim plats casolans elaborats amb ingredients frescos de la regió.",
-        "metaTitle": "Restaurant Gavina - Cuina Mediterrània Autèntica | Menjar Casolà",
-        "metaDescription": "Descobreix l'autèntica cuina mediterrània al Restaurant Gavina. Plats casolans, ingredients frescos i un ambient acollidor. Reserva la teva taula!"
+        "title": "Banys La Gavina",
+        "subtitle": "Des de 1958 en primera línia de mar",
+        "description": "Situats a la Platja de Calella, som especialistes en arrossos, mariscos, peix fresc i carns selectes. Un marc incomparable davant del mar Mediterrani.",
+        "metaTitle": "Restaurant Banys La Gavina - Des de 1958 a Calella | Arrossos i Mariscos",
+        "metaDescription": "Restaurant tradicional davant del mar a Calella des de 1958. Especialistes en arrossos, mariscos, peix fresc i carns selectes. Terrassa amb vistes al mar i aparcament gratuït."
     },
     "menu": {
         "title": "🍽️ El nostre Menú",
@@ -26,287 +36,12 @@
         "description": "Descobreix la nostra selecció de plats tradicionals mediterranis, elaborats amb ingredients frescos i receptes familiars.",
         "metaTitle": "Menú Restaurant Gavina - Plats Mediterranis Tradicionals",
         "metaDescription": "Explora el nostre menú de cuina mediterrània: paelles, peixos frescos, carns a la brasa i postres casolanes. Ingredients de primera qualitat.",
-        "categories": {
-            "starters": {
-                "title": "Entrants",
-                "items": [
-                    {
-                        "name": "Carpaccio de Bou amb encenalls de parmesà",
-                        "description": "Marinat amb llimona, crema d'aceto, sal, pebre i cobert de parmesà",
-                        "price": "12,00€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Anxoves de l'Escala amb pa amb tomàquet",
-                        "description": "Anxoves tradicionals de l'Escala",
-                        "price": "11,50€"
-                    },
-                    {
-                        "name": "Musclos a la Marinera",
-                        "description": "Musclos amb la nostra salsa marinera",
-                        "price": "11,50€"
-                    },
-                    {
-                        "name": "Musclos al Vapor",
-                        "description": "Musclos de roca oberts al vapor amb vi i llimona",
-                        "price": "11,50€"
-                    },
-                    {
-                        "name": "Calamars enfarinats",
-                        "description": "Rodelles de calamar fregit amb farina",
-                        "price": "16,00€"
-                    },
-                    {
-                        "name": "Gambes de Blanes",
-                        "description": "Gambes fresques de Blanes",
-                        "price": "18,00€"
-                    },
-                    {
-                        "name": "Escalivada amb anxoves",
-                        "description": "Pebrot, albergínia i ceba escalivada amb anxoves i olives negres",
-                        "price": "12,00€"
-                    },
-                    {
-                        "name": "Bombes caseres de la Cati (per unitat)",
-                        "description": "Gran croqueta farcida de patata una mica picant",
-                        "price": "5,50€"
-                    },
-                    {
-                        "name": "Croquetes de la mare (per unitat)",
-                        "description": "Croquetes totalment caseres",
-                        "price": "1,60€"
-                    },
-                    {
-                        "name": "Canelons de la Cati",
-                        "description": "Canelons casolans fets per la Cati",
-                        "price": "10,50€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Sonsos",
-                        "description": "Peix molt petit fregit (segons temporada)",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Patates braves",
-                        "description": "Patates fregides amb la nostra salsa brava",
-                        "price": "6,50€"
-                    },
-                    {
-                        "name": "Macarrons",
-                        "description": "Macarrons casolans",
-                        "price": "8,50€"
-                    },
-                    {
-                        "name": "Pernil Ibèric amb pa de coca",
-                        "description": "Pernil ibèric amb pa de coca",
-                        "price": "19,00€"
-                    },
-                    {
-                        "name": "Nachos",
-                        "description": "Nachos amb guacamole",
-                        "price": "10,50€"
-                    },
-                    {
-                        "name": "Callos a l'estil del xef",
-                        "description": "Callos preparats a l'estil del xef",
-                        "price": "10,50€"
-                    },
-                    {
-                        "name": "Gambes a l'allet",
-                        "description": "Gambes saltejades amb allet",
-                        "price": "16,50€"
-                    },
-                    {
-                        "name": "Escamarlans saltejats",
-                        "description": "Escamarlans frescos saltejats",
-                        "price": "18,00€"
-                    },
-                    {
-                        "name": "Seitons fregits",
-                        "description": "Seitons frescos fregits",
-                        "price": "12,50€"
-                    },
-                    {
-                        "name": "Escopinyes (Berberetxos)",
-                        "description": "Escopinyes fresques (segons temporada)",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Calamarsos",
-                        "description": "Calamarsos a la planxa",
-                        "price": "16,00€"
-                    },
-                    {
-                        "name": "Tallarins",
-                        "description": "Tallarins casolans (segons temporada)",
-                        "price": "S/M"
-                    }
-                ]
-            },
-            "salads": {
-                "title": "Amanides",
-                "items": [
-                    {
-                        "name": "Amanida de tonyina",
-                        "description": "Variat de lletugues, tomàquet, ceba, dacsa, germinats, pebrot amb tonyina",
-                        "price": "10,50€"
-                    },
-                    {
-                        "name": "Amanida de formatge de cabra",
-                        "description": "Variat de lletugues amb germinats, nous, coronat amb formatge de cabra i crema de mòdena de mel",
-                        "price": "11,50€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Amanida de l'àvia",
-                        "description": "Tomàquet, ceba i olives",
-                        "price": "9,50€"
-                    }
-                ]
-            },
-            "rice": {
-                "title": "Arrossos",
-                "subtitle": "Tots els arrossos, mínim 2 persones",
-                "items": [
-                    {
-                        "name": "Paella Marinera (ració)",
-                        "description": "La nostra paella marinera tradicional",
-                        "price": "18,50€"
-                    },
-                    {
-                        "name": "Paella especial (llagosta i marisc, ració)",
-                        "description": "Paella amb llagosta, llagostins, gambes vermelles i marisc",
-                        "price": "24,00€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Arròs Negre",
-                        "description": "Arròs negre tradicional",
-                        "price": "18,50€"
-                    },
-                    {
-                        "name": "Arròs de pollastre amb bolets (ració)",
-                        "description": "Novetat de temporada, arròs de pollastre amb variat de bolets",
-                        "price": "19,00€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Fideuà (ració)",
-                        "description": "Fideus torrats amb oli de gambes",
-                        "price": "16,50€"
-                    },
-                    {
-                        "name": "Risotto de Bolets amb Parmesà",
-                        "description": "Risotto cremós amb bolets i parmesà",
-                        "price": "17,50€"
-                    }
-                ]
-            },
-            "meat": {
-                "title": "Carns",
-                "items": [
-                    {
-                        "name": "Magret d'ànec amb salsa de fruits vermells",
-                        "description": "Magret d'ànec amb salsa de fruits del bosc",
-                        "price": "17,50€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Hamburguesa amb formatge de cabra i ceba confitada",
-                        "description": "Hamburguesa gourmet amb formatge de cabra",
-                        "price": "11,50€"
-                    },
-                    {
-                        "name": "Filet amb salsa cafè París",
-                        "description": "Filet de vedella amb salsa cafè París",
-                        "price": "24,50€"
-                    },
-                    {
-                        "name": "Entrecot de 400 gr",
-                        "description": "Entrecot de vedella amb guarnició",
-                        "price": "22,50€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Fingers de pollastre arrebossats amb patates",
-                        "description": "Fingers de pollastre amb patates fregides",
-                        "price": "9,00€"
-                    }
-                ]
-            },
-            "fish": {
-                "title": "Peixos",
-                "items": [
-                    {
-                        "name": "Peix del dia",
-                        "description": "Peix fresc segons temporada i mercat",
-                        "price": "S/M",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Llobarro a la sal",
-                        "description": "Llobarro fresc cuinat a la sal",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Orada a la planxa",
-                        "description": "Orada fresca a la planxa amb guarnició",
-                        "price": "S/M"
-                    }
-                ]
-            },
-            "drinks": {
-                "title": "Begudes",
-                "items": [
-                    {
-                        "name": "Gin & Tonic Premium",
-                        "description": "Àmplia selecció de ginebres premium: Tanqueray, Hendrick's, Bombay Sapphire, Bulldog, Martin Miller's",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Cervesa Nacional",
-                        "description": "Mahou 5 estrelles, Alhambra, Selecta, Voll Damm",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Cervesa Internacional",
-                        "description": "Coronita",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Vins Blancs",
-                        "description": "Ermita de Sant Gil, Blanc Pescador premium, Domine, Descomunal",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Vins Negres",
-                        "description": "Ermita de Sant Gil, GR-174, 3 Finques, 5 Finques",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Caves",
-                        "description": "Família Oliveda brut jove, Rovellats gran reserva brut nature",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Sangria",
-                        "description": "Sangria de vi o cava (gerra)",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Schweppes Premium",
-                        "description": "Pebre Rosa, Atzahar i Lavanda, Gingebre i Cardamom, Hibiscus",
-                        "price": "S/M"
-                    }
-                ]
-            }
-        }
+        "categories": {}
     },
     "contact": {
         "title": "📞 Contacte",
-        "subtitle": "Posa't en contacte amb nosaltres",
-        "description": "Tens alguna pregunta o vols fer una reserva? Contacta'ns i t'ajudarem encantats.",
+        "subtitle": "Restaurant davant del mar a Calella - Reserves i consultes",
+        "description": "Contacta amb nosaltres per reserves, esdeveniments o consultes. Restaurant Banys La Gavina, des de 1958 en primera línia de mar a Calella, Barcelona.",
         "metaTitle": "Contacte - Restaurant Gavina | Reserves i Consultes",
         "metaDescription": "Contacta amb Restaurant Gavina per a reserves, consultes o informació. T'atenem amb la millor predisposició.",
         "address": "Passeig Manuel Puigvert s/n, Calella, Barcelona",
@@ -315,7 +50,27 @@
         "hours": "Obert tots els dies",
         "facebook": "Facebook",
         "location": "Platja Gran de Calella, davant de l'Estació de Renfe",
-        "parking": "Dos aparcaments gratuïts"
+        "parking": "Dos aparcaments gratuïts",
+        "info_section": "Informació de Contacte",
+        "form_section": "Envia'ns un Missatge",
+        "fields": {
+            "address": "Adreça",
+            "phone": "Telèfon",
+            "mobile": "Mòbil",
+            "schedule": "Horari",
+            "parking": "Aparcament gratuït",
+            "parking_description": "Disposem de dos pàrquings públics gratuïts de Calella molt propers al restaurant",
+            "follow_us": "🌐 Segueix-nos a les xarxes socials",
+            "name": "Nom",
+            "email": "Email",
+            "message": "Missatge",
+            "send_button": "Enviar Missatge"
+        },
+        "whatsapp": {
+            "title": "Reserves per WhatsApp",
+            "description": "També pots reservar taula directament per WhatsApp",
+            "button": "Reservar per WhatsApp"
+        }
     },
     "gallery": {
         "title": "📸 Galeria de Fotos",
@@ -340,13 +95,20 @@
                         "name": "Paella Marinera",
                         "description": "Paella tradicional de marisc amb gambes, musclos, calamars i peix",
                         "price": "18.00",
-                        "allergens": ["crustacis", "peix", "mol·luscs"]
+                        "allergens": [
+                            "crustacis",
+                            "peix",
+                            "mol·luscs"
+                        ]
                     },
                     {
                         "name": "Paella Mixta",
                         "description": "Paella mixta amb pollastre, conill, gambes, musclos i verdures",
                         "price": "17.00",
-                        "allergens": ["crustacis", "mol·luscs"]
+                        "allergens": [
+                            "crustacis",
+                            "mol·luscs"
+                        ]
                     },
                     {
                         "name": "Paella Vegetariana",
@@ -358,13 +120,19 @@
                         "name": "Arròs Negre",
                         "description": "Arròs negre amb tinta de calamar, gambes i allioli",
                         "price": "19.00",
-                        "allergens": ["crustacis", "mol·luscs", "ous"]
+                        "allergens": [
+                            "crustacis",
+                            "mol·luscs",
+                            "ous"
+                        ]
                     },
                     {
                         "name": "Arròs amb Llagosta",
                         "description": "Arròs amb llagosta, una delícia culinària",
                         "price": "35.00",
-                        "allergens": ["crustacis"]
+                        "allergens": [
+                            "crustacis"
+                        ]
                     }
                 ]
             },
@@ -377,31 +145,42 @@
                         "name": "Orada a la Planxa",
                         "description": "Orada fresca a la planxa amb herbes i oli d'oliva",
                         "price": "22.00",
-                        "allergens": ["peix"]
+                        "allergens": [
+                            "peix"
+                        ]
                     },
                     {
                         "name": "Llobarro a la Planxa",
                         "description": "Llobarro amb all i julivert",
                         "price": "24.00",
-                        "allergens": ["peix"]
+                        "allergens": [
+                            "peix"
+                        ]
                     },
                     {
                         "name": "Parrillada de Peix",
                         "description": "Selecció de peix fresc de la nostra captura diària",
                         "price": "26.00",
-                        "allergens": ["peix"]
+                        "allergens": [
+                            "peix"
+                        ]
                     },
                     {
                         "name": "Gambes a la Planxa",
                         "description": "Gambes grosses a la planxa amb sal marina",
                         "price": "20.00",
-                        "allergens": ["crustacis"]
+                        "allergens": [
+                            "crustacis"
+                        ]
                     },
                     {
                         "name": "Parrillada de Marisc",
                         "description": "Marisc mixt amb gambes, musclos, cloïsses i calamars",
                         "price": "28.00",
-                        "allergens": ["crustacis", "mol·luscs"]
+                        "allergens": [
+                            "crustacis",
+                            "mol·luscs"
+                        ]
                     }
                 ]
             },
@@ -445,19 +224,27 @@
                         "name": "Pa amb Tomàquet",
                         "description": "Pa torrat amb tomàquet, all i oli d'oliva",
                         "price": "4.50",
-                        "allergens": ["gluten"]
+                        "allergens": [
+                            "gluten"
+                        ]
                     },
                     {
                         "name": "Patates Braves",
                         "description": "Patates fregides amb salsa brava picant",
                         "price": "6.00",
-                        "allergens": ["ous"]
+                        "allergens": [
+                            "ous"
+                        ]
                     },
                     {
                         "name": "Croquetes de Pernil",
                         "description": "Croquetes casolanes de pernil (6 unitats)",
                         "price": "8.00",
-                        "allergens": ["gluten", "llet", "ous"]
+                        "allergens": [
+                            "gluten",
+                            "llet",
+                            "ous"
+                        ]
                     },
                     {
                         "name": "Plat de Pernil Ibèric",
@@ -469,7 +256,9 @@
                         "name": "Formatge Manxec",
                         "description": "Formatge manxec curat amb codonyat",
                         "price": "12.00",
-                        "allergens": ["llet"]
+                        "allergens": [
+                            "llet"
+                        ]
                     }
                 ]
             },
@@ -482,25 +271,36 @@
                         "name": "Crema Catalana",
                         "description": "Crema catalana tradicional amb sucre caramel·litzat",
                         "price": "5.50",
-                        "allergens": ["llet", "ous"]
+                        "allergens": [
+                            "llet",
+                            "ous"
+                        ]
                     },
                     {
                         "name": "Flam Casolà",
                         "description": "Flam casolà amb caramel",
                         "price": "5.00",
-                        "allergens": ["llet", "ous"]
+                        "allergens": [
+                            "llet",
+                            "ous"
+                        ]
                     },
                     {
                         "name": "Mel i Mató",
                         "description": "Formatge fresc amb mel i fruits secs",
                         "price": "6.00",
-                        "allergens": ["llet", "fruits secs"]
+                        "allergens": [
+                            "llet",
+                            "fruits secs"
+                        ]
                     },
                     {
                         "name": "Gelats",
                         "description": "Selecció de gelats artesanals",
                         "price": "4.50",
-                        "allergens": ["llet"]
+                        "allergens": [
+                            "llet"
+                        ]
                     }
                 ]
             }
@@ -594,7 +394,7 @@
             },
             "email": {
                 "title": "Correu",
-                "value": "info@banyslafgavina.com",
+                "value": "info@banyslagavina.cat",
                 "description": "Envia'ns les teves consultes o suggeriments"
             }
         },
@@ -616,6 +416,37 @@
                 {
                     "title": "Aparcament Gratuït",
                     "description": "Dues zones d'aparcament gratuït, una davant del restaurant"
+                }
+            ]
+        },
+        "about": {
+            "title": "La Nostra Història",
+            "subtitle": "Tradició familiar des de 1958",
+            "description": "Situats a la Platja Gran de Calella, davant de l'Estació de Renfe, som un restaurant familiar que porta dècades oferint el millor del mar Mediterrani i carns selectives. Amb dos aparcaments gratuïts i un marc incomparable davant del mar."
+        },
+        "specialties": {
+            "title": "Les Nostres Especialitats",
+            "subtitle": "El millor del mar Mediterrani i carns selectives",
+            "items": [
+                {
+                    "name": "Arrossos",
+                    "description": "Paella marinera, arròs negre, paella especial amb llagosta i fideuà",
+                    "price": "Des de 18€"
+                },
+                {
+                    "name": "Mariscos",
+                    "description": "Gambes de Blanes, llagostins, musclos marinera i al vapor",
+                    "price": "Des de 16€"
+                },
+                {
+                    "name": "Peixos Frescos",
+                    "description": "Selecció diària de peix fresc del mediterrani",
+                    "price": "Des de 20€"
+                },
+                {
+                    "name": "Carns Selectives",
+                    "description": "Entrecot, solomillo, costelles de xai i especialitats a la brasa",
+                    "price": "Des de 22€"
                 }
             ]
         },
@@ -720,20 +551,17 @@
     "footer": {
         "description": "Restaurant Banys La Gavina, tradició familiar des de 1958 en primera línia de mar a Calella.",
         "contact": {
-            "title": "Contacte",
-            "address": "Passeig Manuel Puigvert s/n, Calella",
-            "phone": "937 69 25 39",
-            "mobile": "695 349 307"
+            "title": "Contacte"
         },
         "hours": {
-            "title": "Horaris",
-            "text": "Obert tots els dies"
+            "title": "Horaris"
         },
         "social": {
             "title": "Segueix-nos",
             "facebook": "Facebook",
             "instagram": "Instagram"
         },
+        "language_selector": "Idioma",
         "copyright": "© 2024 Restaurant Banys La Gavina. Tots els drets reservats."
     }
 }

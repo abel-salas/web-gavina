@@ -10,7 +10,7 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
   const navItems = [
     { href: href('/'), label: dict.nav.home },
     { href: href('/menu'), label: dict.nav.menu },
-    { href: href('/historia'), label: dict.nav.historia },
+    { href: href('/history'), label: dict.nav.history },
     { href: href('/contact'), label: dict.nav.contacto },
     { href: href('/gallery'), label: dict.nav.gallery },
   ];
@@ -18,13 +18,13 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden md:block bg-gray-900 text-white">
+      <nav className="hidden md:block fixed top-0 left-0 right-0 z-50 bg-gray-900/95 backdrop-blur-sm text-white transition-all duration-300">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo/Brand */}
             <div className="flex-shrink-0">
               <Link href={href('/') as Route} className="text-xl font-bold text-white hover:text-blue-300 transition-colors">
-                🍽️ Gavina
+                Banys la Gavina
               </Link>
             </div>
 

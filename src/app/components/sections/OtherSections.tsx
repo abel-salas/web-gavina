@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import type { Route } from 'next';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
+import { CONTACT_INFO } from '../../lib/contact-info';
 
 interface LocationSectionProps {
   title: string;
@@ -126,9 +127,9 @@ export function ContactSection({ title, contactHref }: { title: string; contactH
 
         <StaggerContainer className="grid md:grid-cols-3 gap-8 mb-12">
           {[
-            { icon: "📞", title: "Llámanos", info: "+34 123 456 789", action: "tel:+34123456789" },
-            { icon: "✉️", title: "Email", info: "info@gavina.com", action: "mailto:info@gavina.com" },
-            { icon: "🕐", title: "Horario", info: "Lun-Dom 12:00-23:00", action: null }
+            { icon: "📞", title: "Llámanos", info: CONTACT_INFO.phone, action: `tel:${CONTACT_INFO.phone.replace(/\s/g, '')}` },
+            { icon: "✉️", title: "Email", info: CONTACT_INFO.email, action: `mailto:${CONTACT_INFO.email}` },
+            { icon: "🕐", title: "Horario", info: CONTACT_INFO.hours.es, action: null }
           ].map((contact, index) => (
             <StaggerItem key={index}>
               <motion.div
@@ -151,6 +152,7 @@ export function ContactSection({ title, contactHref }: { title: string; contactH
 
         <AnimatedSection direction="scale" delay={0.6}>
           <motion.div
+            className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold text-xl rounded-full shadow-2xl cursor-pointer"
             whileHover={{
               scale: 1.05,
               boxShadow: "0 25px 50px -12px rgba(34, 197, 94, 0.5)"
@@ -159,7 +161,7 @@ export function ContactSection({ title, contactHref }: { title: string; contactH
           >
             <Link
               href={contactHref as Route}
-              className="inline-flex items-center px-10 py-5 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold text-xl rounded-full shadow-2xl"
+              className="contents"
             >
               Reservar Mesa
               <motion.span

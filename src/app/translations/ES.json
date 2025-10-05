@@ -1,24 +1,34 @@
 {
     "seo": {
-        "siteName": "Restaurant Banys La Gavina",
-        "siteDescription": "Restaurant tradicional frente al mar en Calella desde 1958. Especialistas en arroces, mariscos y pescado fresco. Terraza con vistas al mar y aparcamiento gratuito.",
-        "keywords": "restaurant calella, mariscos, arroces, paella, pescado fresco, terraza mar, banys gavina, desde 1958",
+        "siteName": "Restaurante Banys La Gavina",
+        "siteDescription": "Restaurante tradicional frente al mar en Calella desde 1958. Especialistas en arroces, mariscos, pescado fresco y carnes selectas. Terraza con vistas al mar y aparcamiento gratuito.",
+        "keywords": "restaurante calella, mariscos, arroces, paella, pescado fresco, carnes selectas, terraza mar, banys gavina, desde 1958",
         "locale": "es_ES"
+    },
+    "contact_info": {
+        "phone": "937 69 25 39",
+        "mobile": "695 349 307",
+        "address": "Paseo Manuel Puigvert s/n, Calella, Barcelona",
+        "hours": "Abierto todos los días",
+        "location": "Platja Gran de Calella, frente a la Estación de Renfe",
+        "parking": "Dos aparcamientos gratuitos",
+        "facebook": "Facebook",
+        "instagram": "Instagram"
     },
     "nav": {
         "home": "Inicio",
         "menu": "Carta",
-        "historia": "Historia",
+        "history": "Historia",
         "reservas": "Reservas",
         "contacto": "Contacto",
         "gallery": "Galería"
     },
     "home": {
-        "title": "Restaurant Banys La Gavina",
-        "subtitle": "Desde 1958 en primera línea de mar 🌊",
-        "description": "Situados en la Platja Gran de Calella, frente a la Estación de Renfe, somos especialistas en arroces, mariscos y pescado fresco. Un marco incomparable frente al mar Mediterráneo.",
-        "metaTitle": "Restaurant Banys La Gavina - Desde 1958 en Calella | Arroces y Mariscos",
-        "metaDescription": "Restaurant tradicional frente al mar en Calella desde 1958. Especialistas en arroces, mariscos y pescado fresco. Terraza con vistas al mar y aparcamiento gratuito.",
+        "title": "Banys La Gavina",
+        "subtitle": "Desde 1958 en primera línea de mar",
+        "description": "Situados en la Playa de Calella, somos especialistas en arroces, mariscos, pescado fresco y carnes selectas. Un marco incomparable frente al mar Mediterráneo.",
+        "metaTitle": "Restaurante Banys La Gavina - Desde 1958 en Calella | Arroces y Mariscos",
+        "metaDescription": "Restaurante tradicional frente al mar en Calella desde 1958. Especialistas en arroces, mariscos, pescado fresco y carnes selectas. Terraza con vistas al mar y aparcamiento gratuito.",
         "cta": "Ver Carta",
         "cta_secondary": "Reservar Mesa"
     },
@@ -26,315 +36,53 @@
         "title": "🍽️ Nuestra Carta",
         "subtitle": "Cocina mediterránea inspirada en los productos del mar 🦐",
         "description": "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación.",
-        "metaTitle": "Carta - Restaurant Banys La Gavina | Arroces, Mariscos y Especialidades",
+        "metaTitle": "Carta - Restaurante Banys La Gavina | Arroces, Mariscos y Especialidades",
         "metaDescription": "Descubre nuestra carta con los mejores arroces, mariscos frescos y especialidades mediterráneas. Paella marinera, arroz negro, pescados del día.",
-        "categories": {
-            "starters": {
-                "title": "Entrantes",
-                "items": [
-                    {
-                        "name": "Carpaccio de Buey con virutas de parmesano",
-                        "description": "Marinado con limón, crema de aceto, sal, pimienta y cubierto de parmesano",
-                        "price": "12,00€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Anchoas de la Escala con pan con tomate",
-                        "description": "Anchoas tradicionales de la Escala",
-                        "price": "11,50€"
-                    },
-                    {
-                        "name": "Mejillones a la Marinera",
-                        "description": "Mejillones con nuestra salsa marinera",
-                        "price": "11,50€"
-                    },
-                    {
-                        "name": "Mejillones al Vapor",
-                        "description": "Mejillones de roca abiertos al vapor con vino y limón",
-                        "price": "11,50€"
-                    },
-                    {
-                        "name": "Calamares enharinados",
-                        "description": "Rodanchas de calamar frito con harina",
-                        "price": "16,00€"
-                    },
-                    {
-                        "name": "Gambas de Blanes",
-                        "description": "Gambas frescas de Blanes",
-                        "price": "18,00€"
-                    },
-                    {
-                        "name": "Escalivada con anchoas",
-                        "description": "Pimiento, berenjena y cebolla escalivado con anchoas y aceitunas negras",
-                        "price": "12,00€"
-                    },
-                    {
-                        "name": "Bombas caseras de la Cati (por unidad)",
-                        "description": "Gran croqueta rellena de patata un poco picante",
-                        "price": "5,50€"
-                    },
-                    {
-                        "name": "Croquetas de la madre (por unidad)",
-                        "description": "Croquetas totalmente caseras",
-                        "price": "1,60€"
-                    },
-                    {
-                        "name": "Canelones de la Cati",
-                        "description": "Canelones caseros hechos por la Cati",
-                        "price": "10,50€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Sonsos",
-                        "description": "Pez muy pequeño frito (según temporada)",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Patatas bravas",
-                        "description": "Patatas fritas con nuestra salsa brava",
-                        "price": "6,50€"
-                    },
-                    {
-                        "name": "Macarrones",
-                        "description": "Macarrones caseros",
-                        "price": "8,50€"
-                    },
-                    {
-                        "name": "Pernil Ibérico con pan de coca",
-                        "description": "Jamón ibérico con pan de coca",
-                        "price": "19,00€"
-                    },
-                    {
-                        "name": "Nachos",
-                        "description": "Nachos con guacamole",
-                        "price": "10,50€"
-                    },
-                    {
-                        "name": "Callos al estilo del chef",
-                        "description": "Callos preparados al estilo del chef",
-                        "price": "10,50€"
-                    },
-                    {
-                        "name": "Gambas en el ajillo",
-                        "description": "Gambas salteadas en ajillo",
-                        "price": "16,50€"
-                    },
-                    {
-                        "name": "Escamarlanes salteados",
-                        "description": "Cigalas salteadas",
-                        "price": "18,00€"
-                    },
-                    {
-                        "name": "Boquerones fritos",
-                        "description": "Boquerones frescos fritos",
-                        "price": "12,50€"
-                    },
-                    {
-                        "name": "Escopinyes (Berberechos)",
-                        "description": "Berberechos frescos (según temporada)",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Chipirones",
-                        "description": "Chipirones a la plancha",
-                        "price": "16,00€"
-                    },
-                    {
-                        "name": "Tallarines",
-                        "description": "Tallarines caseros (según temporada)",
-                        "price": "S/M"
-                    }
-                ]
-            },
-            "salads": {
-                "title": "Ensaladas",
-                "items": [
-                    {
-                        "name": "Ensalada de atún",
-                        "description": "Variado de lechugas, tomate, cebolla, maíz, germinados, pimiento con atún",
-                        "price": "10,50€"
-                    },
-                    {
-                        "name": "Ensalada de queso de cabra",
-                        "description": "Variado de lechugas con germinados, nueces, coronado con queso de cabra y crema de módena de miel",
-                        "price": "11,50€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Ensalada de la abuela",
-                        "description": "Tomate, cebolla y aceitunas",
-                        "price": "9,50€"
-                    }
-                ]
-            },
-            "rice": {
-                "title": "Arroces",
-                "subtitle": "Todos los arroces, mínimo 2 personas",
-                "items": [
-                    {
-                        "name": "Paella Marinera (ración)",
-                        "description": "Nuestra paella marinera tradicional",
-                        "price": "18,50€"
-                    },
-                    {
-                        "name": "Paella especial (langosta y marisco, ración)",
-                        "description": "Paella con langosta, langostinos, gambas rojas y marisco",
-                        "price": "24,00€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Arroz Negro",
-                        "description": "Arroz negro tradicional",
-                        "price": "18,50€"
-                    },
-                    {
-                        "name": "Arroz de pollo con setas (ración)",
-                        "description": "Novedad de temporada, arroz de pollo con variado de setas",
-                        "price": "19,00€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Fideuá (ración)",
-                        "description": "Fideos tostados con aceite de gambas",
-                        "price": "16,50€"
-                    },
-                    {
-                        "name": "Risotto de Setas con Parmesano",
-                        "description": "Risotto cremoso con setas y parmesano",
-                        "price": "17,50€"
-                    }
-                ]
-            },
-            "meat": {
-                "title": "Carnes",
-                "items": [
-                    {
-                        "name": "Magret de pato con salsa de frutos rojos",
-                        "description": "Magret de pato con salsa de frutos del bosque",
-                        "price": "17,50€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Hamburguesa con queso de cabra y cebolla confitada",
-                        "description": "Hamburguesa gourmet con queso de cabra",
-                        "price": "11,50€"
-                    },
-                    {
-                        "name": "Filet con salsa café París",
-                        "description": "Filet de ternera con salsa café París",
-                        "price": "24,50€"
-                    },
-                    {
-                        "name": "Entrecot de 400 gr",
-                        "description": "Entrecot de ternera con guarnición",
-                        "price": "22,50€",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Fingers de pollo rebozados con patatas",
-                        "description": "Fingers de pollo con patatas fritas",
-                        "price": "9,00€"
-                    }
-                ]
-            },
-            "fish": {
-                "title": "Pescados",
-                "items": [
-                    {
-                        "name": "Pescado del día",
-                        "description": "Pescado fresco según temporada y mercado",
-                        "price": "S/M",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Lubina a la sal",
-                        "description": "Lubina fresca cocinada a la sal",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Dorada a la plancha",
-                        "description": "Dorada fresca a la plancha con guarnición",
-                        "price": "S/M"
-                    }
-                ]
-            },
-            "drinks": {
-                "title": "Bebidas",
-                "items": [
-                    {
-                        "name": "Gin & Tonic Premium",
-                        "description": "Amplia selección de ginebras premium: Tanqueray, Hendrick's, Bombay Sapphire, Bulldog, Martin Miller's",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Cerveza Nacional",
-                        "description": "Mahou 5 estrellas, Alhambra, Selecta, Voll Damm",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Cerveza Internacional",
-                        "description": "Coronita",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Vinos Blancos",
-                        "description": "Ermita de Sant Gil, Blanc Pescador premium, Domine, Descomunal",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Vinos Tintos",
-                        "description": "Ermita de Sant Gil, GR-174, 3 Fincas, 5 Fincas",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Cavas",
-                        "description": "Família Oliveda brut jove, Rovellats gran reserva brut nature",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Sangría",
-                        "description": "Sangría de vino o cava (jarra)",
-                        "price": "S/M"
-                    },
-                    {
-                        "name": "Schweppes Premium",
-                        "description": "Pimienta Rosa, Azahar & Lavanda, Ginger & Cardamomo, Hibiscus",
-                        "price": "S/M"
-                    }
-                ]
-            }
-        }
+        "categories": {}
     },
     "contact": {
         "title": "📞 Contacto",
-        "subtitle": "Estamos aquí para atenderte",
-        "description": "Para reservar mesa, llámanos o ven directamente. Te esperamos en primera línea de mar.",
-        "metaTitle": "Contacto - Restaurant Banys La Gavina | Reservas y Información",
-        "metaDescription": "Contacta con Restaurant Banys La Gavina. Reservas: 937 69 25 39. Paseo Manuel Puigvert s/n, Calella. Abierto todos los días frente a la playa.",
-        "address": "Paseo Manuel Puigvert s/n, Calella, Barcelona",
-        "phone": "937 69 25 39",
-        "mobile": "695 349 307",
-        "hours": "Abierto todos los días",
-        "facebook": "Facebook",
-        "location": "Platja Gran de Calella, frente a la Estación de Renfe",
-        "parking": "Dos aparcamientos gratuitos"
+        "subtitle": "Restaurante frente al mar en Calella - Reservas y consultas",
+        "description": "Contacta con nosotros para reservas, eventos o consultas. Restaurante Banys La Gavina, desde 1958 en primera línea de mar en Calella, Barcelona.",
+        "metaTitle": "Contacto - Restaurante Banys La Gavina | Reservas y Información",
+        "metaDescription": "Contacta con Restaurante Banys La Gavina. Reservas: 937 69 25 39. Paseo Manuel Puigvert s/n, Calella. Abierto todos los días frente a la playa.",
+        "info_section": "Información de Contacto",
+        "form_section": "Envíanos un Mensaje",
+        "fields": {
+            "address": "Dirección",
+            "phone": "Teléfono",
+            "mobile": "Móvil",
+            "schedule": "Horario",
+            "parking": "Aparcamiento gratuito",
+            "parking_description": "Disponemos de dos parkings públicos gratuitos de Calella muy cercanos al restaurante",
+            "follow_us": "🌐 Síguenos en redes sociales",
+            "name": "Nombre",
+            "email": "Email",
+            "message": "Mensaje",
+            "send_button": "Enviar Mensaje"
+        },
+        "whatsapp": {
+            "title": "Reservas por WhatsApp",
+            "description": "También puedes reservar mesa directamente por WhatsApp",
+            "button": "Reservar por WhatsApp"
+        }
     },
     "gallery": {
         "title": "📸 Galería de Fotos",
-        "subtitle": "Descubre nuestro restaurante y entorno 🏖️",
+        "subtitle": "Descubre nuestro restaurantee y entorno 🏖️",
         "description": "Un marco incomparable frente al mar Mediterráneo en Calella. Conoce nuestro ambiente, terraza frente al mar y las mejores vistas.",
-        "metaTitle": "Galería - Restaurant Banys La Gavina | Fotos del Restaurante y Terraza",
-        "metaDescription": "Galería de fotos del Restaurant Banys La Gavina. Descubre nuestro ambiente, terraza frente al mar y las mejores vistas de Calella."
+        "metaTitle": "Galería - Restaurante Banys La Gavina | Fotos del Restaurantee y Terraza",
+        "metaDescription": "Galería de fotos del Restaurante Banys La Gavina. Descubre nuestro ambiente, terraza frente al mar y las mejores vistas de Calella."
     },
     "sections": {
         "about": {
             "title": "Nuestra Historia",
             "subtitle": "Tradición familiar desde 1958",
-            "description": "Situados en la Platja Gran de Calella, frente a la Estación de Renfe, somos un restaurante familiar que lleva décadas ofreciendo lo mejor del mar Mediterráneo. Con dos aparcamientos gratuitos y un marco incomparable frente al mar."
+            "description": "Situados en la Playa Gran de Calella, frente a la Estación de Renfe, somos un restaurantee familiar que lleva décadas ofreciendo lo mejor del mar Mediterráneo y carnes selectas. Con dos aparcamientos gratuitos y un marco incomparable frente al mar."
         },
         "specialties": {
             "title": "Nuestras Especialidades",
-            "subtitle": "Lo mejor del mar Mediterráneo",
+            "subtitle": "Lo mejor del mar Mediterráneo y carnes selectas",
             "items": [
                 {
                     "name": "Arroces",
@@ -350,6 +98,11 @@
                     "name": "Pescados Frescos",
                     "description": "Selección diaria de pescado fresco del mediterráneo",
                     "price": "Desde 20€"
+                },
+                {
+                    "name": "Carnes Selectas",
+                    "description": "Entrecot, solomillo, chuletas de cordero y especialidades a la brasa",
+                    "price": "Desde 22€"
                 }
             ]
         },
@@ -363,8 +116,8 @@
             "subtitle": "Todo lo que necesitas para una experiencia perfecta",
             "items": [
                 {
-                    "title": "Restaurante",
-                    "description": "Servicio diario de restaurante con cocina mediterránea"
+                    "title": "Restaurantee",
+                    "description": "Servicio diario de restaurantee con cocina mediterránea"
                 },
                 {
                     "title": "Hamacas y Sombrillas",
@@ -376,7 +129,7 @@
                 },
                 {
                     "title": "Aparcamiento Gratuito",
-                    "description": "Dos aparcamientos gratuitos, uno frente al restaurante"
+                    "description": "Dos aparcamientos gratuitos, uno frente al restaurantee"
                 }
             ]
         },
@@ -405,7 +158,7 @@
         "sections": {
             "origin": {
                 "title": "Los Inicios (1958)",
-                "content": "Restaurant Banys La Gavina abrió sus puertas en 1958, en pleno auge del desarrollo turístico de Calella. Desde sus inicios, se ubicó estratégicamente en la Platja Gran de Calella, frente a la Estación de Renfe, convirtiéndose en el punto de encuentro perfecto para locales y visitantes."
+                "content": "Restaurante Banys La Gavina abrió sus puertas en 1958, en pleno auge del desarrollo turístico de Calella. Desde sus inicios, se ubicó estratégicamente en la Platja Gran de Calella, frente a la Estación de Renfe, convirtiéndose en el punto de encuentro perfecto para locales y visitantes."
             },
             "calella_context": {
                 "title": "Calella: De Pueblo Pesquero a Destino Turístico",
@@ -413,25 +166,25 @@
             },
             "golden_era": {
                 "title": "La Época Dorada del Turismo",
-                "content": "Banys La Gavina fue testigo y protagonista de esta época dorada. Con su ubicación privilegiada frente al mar y junto a la estación de tren, el restaurante se convirtió en parada obligatoria para los turistas que llegaban a Calella en busca de sol, playa y la auténtica gastronomía mediterránea."
+                "content": "Banys La Gavina fue testigo y protagonista de esta época dorada. Con su ubicación privilegiada frente al mar y junto a la estación de tren, el restaurantee se convirtió en parada obligatoria para los turistas que llegaban a Calella en busca de sol, playa y la auténtica gastronomía mediterránea."
             },
             "tradition": {
                 "title": "Más de 65 Años de Tradición",
-                "content": "A lo largo de más de seis décadas, el restaurante ha mantenido su esencia familiar y su compromiso con la calidad. Ha sido testigo de la evolución de Calella, desde sus inicios como destino turístico hasta convertirse en una ciudad cosmopolita que recibe visitantes de toda Europa."
+                "content": "A lo largo de más de seis décadas, el restaurantee ha mantenido su esencia familiar y su compromiso con la calidad. Ha sido testigo de la evolución de Calella, desde sus inicios como destino turístico hasta convertirse en una ciudad cosmopolita que recibe visitantes de toda Europa."
             },
             "calella_cinema": {
                 "title": "Calella: Ciudad de Cine",
                 "content": "Calella también ha sido escenario de numerosos rodajes cinematográficos y televisivos. Desde 2010, forma parte de Catalunya Film Commission, y cuenta con su propia Calella Film Office. La ciudad ha servido como 'ciudad plató' para producciones que han querido capturar la esencia del Mediterráneo catalán."
             },
             "present": {
-                "title": "El Restaurante Hoy",
-                "content": "Actualmente, Restaurant Banys La Gavina continúa siendo un referente gastronómico en Calella. Mantiene sus especialidades tradicionales en arroces, mariscos y pescado fresco, mientras se adapta a los nuevos tiempos conservando su alma mediterránea y familiar."
+                "title": "El Restaurantee Hoy",
+                "content": "Actualmente, Restaurante Banys La Gavina continúa siendo un referente gastronómico en Calella. Mantiene sus especialidades tradicionales en arroces, mariscos y pescado fresco, mientras se adapta a los nuevos tiempos conservando su alma mediterránea y familiar."
             }
         },
         "timeline": [
             {
                 "year": "1958",
-                "event": "Apertura del Restaurant Banys La Gavina"
+                "event": "Apertura del Restaurante Banys La Gavina"
             },
             {
                 "year": "1960s-70s",
@@ -479,22 +232,19 @@
         }
     },
     "footer": {
-        "description": "Restaurant Banys La Gavina, tradición familiar desde 1958 en primera línea de mar en Calella.",
+        "description": "Restaurante Banys La Gavina, tradición familiar desde 1958 en primera línea de mar en Calella.",
         "contact": {
-            "title": "Contacto",
-            "address": "Paseo Manuel Puigvert s/n, Calella",
-            "phone": "937 69 25 39",
-            "mobile": "695 349 307"
+            "title": "Contacto"
         },
         "hours": {
-            "title": "Horarios",
-            "text": "Abierto todos los días"
+            "title": "Horarios"
         },
         "social": {
             "title": "Síguenos",
             "facebook": "Facebook",
             "instagram": "Instagram"
         },
-        "copyright": "© 2024 Restaurant Banys La Gavina. Todos los derechos reservados."
+        "language_selector": "Idioma",
+        "copyright": "© 2024 Restaurante Banys La Gavina. Todos los derechos reservados."
     }
 }

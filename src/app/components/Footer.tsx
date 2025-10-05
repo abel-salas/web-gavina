@@ -2,10 +2,12 @@ import { getLocalizedData } from "@/app/lib/localization";
 import LanguageSwitcher from "@/app/components/LanguageSwitcher";
 import Link from "next/link";
 import type { Route } from 'next';
+import { getContactInfo } from "@/app/lib/contact-utils";
 
 export default async function Footer({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const { dict, href } = getLocalizedData(locale);
+  const contactInfo = getContactInfo(locale);
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -24,7 +26,7 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
             <div className="flex space-x-4">
               {/* Redes sociales */}
               <a
-                href="https://www.facebook.com/Restaurant-Banys-La-Gavina"
+                href={contactInfo.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-blue-400 transition-colors"
@@ -35,7 +37,7 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/restaurantbanyslag_gavina"
+                href={contactInfo.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-pink-400 transition-colors"
@@ -63,6 +65,11 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
                 </Link>
               </li>
               <li>
+                <Link href={href('/history') as Route} className="text-gray-300 hover:text-white transition-colors">
+                  {dict.nav.history}
+                </Link>
+              </li>
+              <li>
                 <Link href={href('/contact') as Route} className="text-gray-300 hover:text-white transition-colors">
                   {dict.nav.contacto}
                 </Link>
@@ -81,23 +88,23 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
             <div className="space-y-2 text-gray-300">
               <p className="flex items-start">
                 <span className="mr-2 mt-1">📍</span>
-                <span className="whitespace-pre-line">{dict.footer?.contact?.address || 'Passeig Manuel Puigvert, s/n\n17310 Calella, Barcelona'}</span>
+                <span className="whitespace-pre-line">{contactInfo.address}</span>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">📞</span>
-                <a href={`tel:${dict.footer?.contact?.phone?.replace(/\s/g, '') || '937690919'}`} className="hover:text-white transition-colors">
-                  {dict.footer?.contact?.phone || '937 69 09 19'}
+                <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">
+                  {contactInfo.phone}
                 </a>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">📱</span>
-                <a href={`tel:${dict.footer?.contact?.mobile?.replace(/\s/g, '') || '636849282'}`} className="hover:text-white transition-colors">
-                  {dict.footer?.contact?.mobile || '636 84 92 82'}
+                <a href={`tel:${contactInfo.mobile.replace(/\s/g, '')}`} className="hover:text-white transition-colors">
+                  {contactInfo.mobile}
                 </a>
               </p>
               <p className="flex items-center">
                 <span className="mr-2">🕐</span>
-                {dict.footer?.hours?.text || 'Todos los días de 9:00 a 24:00'}
+                {contactInfo.hours}
               </p>
               <p className="flex items-center">
                 <span className="mr-2">📘</span>
@@ -119,7 +126,7 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
             {/* Selector de idiomas */}
             <div className="flex flex-col items-center md:items-end">
               <div className="mb-2">
-                <span className="text-sm text-gray-400 font-medium">Idioma / Language</span>
+                <span className="text-sm text-gray-400 font-medium">{dict.footer?.language_selector || 'Idioma'}</span>
               </div>
               <LanguageSwitcher currentLocale={locale} />
             </div>

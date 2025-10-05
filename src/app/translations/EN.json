@@ -1,24 +1,34 @@
 {
     "seo": {
-        "siteName": "Gavina Restaurant",
-        "siteDescription": "Experience authentic Mediterranean cuisine at Gavina Restaurant. Homemade dishes, fresh ingredients and a welcoming atmosphere await you.",
-        "keywords": "restaurant, Mediterranean cuisine, homemade food, traditional dishes, family atmosphere",
+        "siteName": "Restaurant Banys La Gavina",
+        "siteDescription": "Traditional seafront restaurant in Calella since 1958. Specialists in rice dishes, seafood, fresh fish and select meats. Sea view terrace and free parking.",
+        "keywords": "restaurant calella, seafood, rice dishes, paella, fresh fish, select meats, sea terrace, banys gavina, since 1958",
         "locale": "en_US"
+    },
+    "contact_info": {
+        "phone": "937 69 25 39",
+        "mobile": "695 349 307",
+        "address": "Paseo Manuel Puigvert s/n, Calella, Barcelona",
+        "hours": "Open every day",
+        "location": "Platja Gran de Calella, facing the Renfe Station",
+        "parking": "Two free parking areas",
+        "facebook": "Facebook",
+        "instagram": "Instagram"
     },
     "nav": {
         "home": "Home",
         "menu": "Menu",
+        "history": "History",
         "reservas": "Bookings",
         "contacto": "Contact",
-        "gallery": "Gallery",
-        "historia": "History"
+        "gallery": "Gallery"
     },
     "home": {
-        "title": "Welcome to Gavina Restaurant",
-        "subtitle": "Enjoy the finest Mediterranean homemade cuisine 🍝",
-        "description": "Family restaurant specializing in traditional Mediterranean cuisine. We offer homemade dishes prepared with fresh local ingredients.",
-        "metaTitle": "Gavina Restaurant - Authentic Mediterranean Cuisine | Homemade Food",
-        "metaDescription": "Experience authentic Mediterranean cuisine at Gavina Restaurant. Homemade dishes, fresh ingredients and a welcoming atmosphere. Book your table!"
+        "title": "Banys La Gavina",
+        "subtitle": "Since 1958 on the seafront",
+        "description": "Located on Calella Beach, we specialize in rice dishes, seafood, fresh fish and select meats. An incomparable setting facing the Mediterranean Sea.",
+        "metaTitle": "Restaurant Banys La Gavina - Since 1958 in Calella | Rice dishes and Seafood",
+        "metaDescription": "Traditional seafront restaurant in Calella since 1958. Specialists in rice dishes, seafood, fresh fish and select meats. Sea view terrace and free parking."
     },
     "menu": {
         "title": "🍽️ Our Menu",
@@ -26,296 +36,34 @@
         "description": "Discover our selection of traditional Mediterranean dishes, prepared with fresh ingredients and family recipes.",
         "metaTitle": "Menu - Gavina Restaurant | Traditional Mediterranean Dishes",
         "metaDescription": "Explore our Mediterranean cuisine menu: paellas, fresh seafood, grilled meats and homemade desserts. Premium quality ingredients.",
-        "categories": {
-            "starters": {
-                "title": "Starters",
-                "items": [
-                    {
-                        "name": "Beef Carpaccio with Parmesan shavings",
-                        "description": "Marinated with lemon, balsamic cream, salt, pepper and covered with Parmesan",
-                        "price": "€12.00",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Escala Anchovies with bread and tomato",
-                        "description": "Traditional anchovies from La Escala",
-                        "price": "€11.50"
-                    },
-                    {
-                        "name": "Mussels Marinara",
-                        "description": "Mussels with our marinara sauce",
-                        "price": "€11.50"
-                    },
-                    {
-                        "name": "Steamed Mussels",
-                        "description": "Rock mussels steamed with wine and lemon",
-                        "price": "€11.50"
-                    },
-                    {
-                        "name": "Floured Squid",
-                        "description": "Fried squid rings with flour",
-                        "price": "€16.00"
-                    },
-                    {
-                        "name": "Blanes Prawns",
-                        "description": "Fresh prawns from Blanes",
-                        "price": "€18.00"
-                    },
-                    {
-                        "name": "Escalivada with anchovies",
-                        "description": "Roasted pepper, eggplant and onion with anchovies and black olives",
-                        "price": "€12.00"
-                    },
-                    {
-                        "name": "Cati's homemade bombs (per unit)",
-                        "description": "Large croquette filled with slightly spicy potato",
-                        "price": "€5.50"
-                    },
-                    {
-                        "name": "Mother's croquettes (per unit)",
-                        "description": "Totally homemade croquettes",
-                        "price": "€1.60"
-                    },
-                    {
-                        "name": "Cati's Cannelloni",
-                        "description": "Homemade cannelloni made by Cati",
-                        "price": "€10.50",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Sonsos",
-                        "description": "Very small fried fish (seasonal)",
-                        "price": "M/P"
-                    },
-                    {
-                        "name": "Patatas bravas",
-                        "description": "Fried potatoes with our spicy sauce",
-                        "price": "€6.50"
-                    },
-                    {
-                        "name": "Macaroni",
-                        "description": "Homemade macaroni",
-                        "price": "€8.50"
-                    },
-                    {
-                        "name": "Iberian ham with coca bread",
-                        "description": "Iberian ham with coca bread",
-                        "price": "€19.00"
-                    },
-                    {
-                        "name": "Nachos",
-                        "description": "Nachos with guacamole",
-                        "price": "€10.50"
-                    },
-                    {
-                        "name": "Chef's style tripe",
-                        "description": "Tripe prepared chef's style",
-                        "price": "€10.50"
-                    },
-                    {
-                        "name": "Garlic prawns",
-                        "description": "Prawns sautéed in garlic",
-                        "price": "€16.50"
-                    },
-                    {
-                        "name": "Sautéed langoustines",
-                        "description": "Fresh sautéed langoustines",
-                        "price": "€18.00"
-                    },
-                    {
-                        "name": "Fried anchovies",
-                        "description": "Fresh fried anchovies",
-                        "price": "€12.50"
-                    },
-                    {
-                        "name": "Cockles",
-                        "description": "Fresh cockles (seasonal)",
-                        "price": "M/P"
-                    },
-                    {
-                        "name": "Baby squid",
-                        "description": "Grilled baby squid",
-                        "price": "€16.00"
-                    },
-                    {
-                        "name": "Tagliatelle",
-                        "description": "Homemade tagliatelle (seasonal)",
-                        "price": "M/P"
-                    }
-                ]
-            },
-            "salads": {
-                "title": "Salads",
-                "items": [
-                    {
-                        "name": "Tuna Salad",
-                        "description": "Mixed lettuce, tomato, onion, corn, sprouts, pepper with tuna",
-                        "price": "€10.50"
-                    },
-                    {
-                        "name": "Goat Cheese Salad",
-                        "description": "Mixed lettuce with sprouts, walnuts, topped with goat cheese and honey balsamic cream",
-                        "price": "€11.50",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Grandmother's Salad",
-                        "description": "Tomato, onion and olives",
-                        "price": "€9.50"
-                    }
-                ]
-            },
-            "rice": {
-                "title": "Rice Dishes",
-                "subtitle": "All rice dishes, minimum 2 people",
-                "items": [
-                    {
-                        "name": "Seafood Paella (portion)",
-                        "description": "Our traditional seafood paella",
-                        "price": "€18.50"
-                    },
-                    {
-                        "name": "Special Paella (lobster and seafood, portion)",
-                        "description": "Paella with lobster, prawns, red shrimp and seafood",
-                        "price": "€24.00",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Black Rice",
-                        "description": "Traditional black rice",
-                        "price": "€18.50"
-                    },
-                    {
-                        "name": "Chicken Rice with mushrooms (portion)",
-                        "description": "Seasonal novelty, chicken rice with mixed mushrooms",
-                        "price": "€19.00",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Fideuá (portion)",
-                        "description": "Toasted noodles with shrimp oil",
-                        "price": "€16.50"
-                    },
-                    {
-                        "name": "Mushroom Risotto with Parmesan",
-                        "description": "Creamy risotto with mushrooms and Parmesan",
-                        "price": "€17.50"
-                    }
-                ]
-            },
-            "meat": {
-                "title": "Meat",
-                "items": [
-                    {
-                        "name": "Duck Breast with red berry sauce",
-                        "description": "Duck breast with forest berry sauce",
-                        "price": "€17.50",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Burger with goat cheese and caramelized onion",
-                        "description": "Gourmet burger with goat cheese",
-                        "price": "€11.50"
-                    },
-                    {
-                        "name": "Filet with café Paris sauce",
-                        "description": "Beef filet with café Paris sauce",
-                        "price": "€24.50"
-                    },
-                    {
-                        "name": "400 gr Entrecôte",
-                        "description": "Beef entrecôte with garnish",
-                        "price": "€22.50",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Breaded chicken fingers with potatoes",
-                        "description": "Chicken fingers with french fries",
-                        "price": "€9.00"
-                    }
-                ]
-            },
-            "fish": {
-                "title": "Fish",
-                "items": [
-                    {
-                        "name": "Fish of the day",
-                        "description": "Fresh fish according to season and market",
-                        "price": "M/P",
-                        "recommended": true
-                    },
-                    {
-                        "name": "Sea bass with salt",
-                        "description": "Fresh sea bass cooked with salt",
-                        "price": "M/P"
-                    },
-                    {
-                        "name": "Grilled sea bream",
-                        "description": "Fresh grilled sea bream with garnish",
-                        "price": "M/P"
-                    }
-                ]
-            },
-            "drinks": {
-                "title": "Drinks",
-                "items": [
-                    {
-                        "name": "Premium Gin & Tonic",
-                        "description": "Wide selection of premium gins: Tanqueray, Hendrick's, Bombay Sapphire, Bulldog, Martin Miller's",
-                        "price": "M/P"
-                    },
-                    {
-                        "name": "National Beer",
-                        "description": "Mahou 5 stars, Alhambra, Selecta, Voll Damm",
-                        "price": "M/P"
-                    },
-                    {
-                        "name": "International Beer",
-                        "description": "Coronita",
-                        "price": "M/P"
-                    },
-                    {
-                        "name": "White Wines",
-                        "description": "Ermita de Sant Gil, Blanc Pescador premium, Domine, Descomunal",
-                        "price": "M/P"
-                    },
-                    {
-                        "name": "Red Wines",
-                        "description": "Ermita de Sant Gil, GR-174, 3 Fincas, 5 Fincas",
-                        "price": "M/P"
-                    },
-                    {
-                        "name": "Cavas",
-                        "description": "Família Oliveda brut jove, Rovellats gran reserva brut nature",
-                        "price": "M/P"
-                    },
-                    {
-                        "name": "Sangria",
-                        "description": "Wine or cava sangria (jug)",
-                        "price": "M/P"
-                    },
-                    {
-                        "name": "Schweppes Premium",
-                        "description": "Pink Pepper, Orange Blossom & Lavender, Ginger & Cardamom, Hibiscus",
-                        "price": "M/P"
-                    }
-                ]
-            }
-        }
+        "categories": {}
     },
     "contact": {
         "title": "📞 Contact",
-        "subtitle": "Get in touch with us",
-        "description": "Have a question or want to make a reservation? Contact us and we'll be happy to help you.",
+        "subtitle": "Seafront restaurant in Calella - Reservations and inquiries",
+        "description": "Contact us for reservations, events or inquiries. Restaurant Banys La Gavina, since 1958 on the seafront in Calella, Barcelona.",
         "metaTitle": "Contact - Gavina Restaurant | Reservations and Inquiries",
         "metaDescription": "Contact Gavina Restaurant for reservations, inquiries or information. We serve you with the best disposition.",
-        "address": "Paseo Manuel Puigvert s/n, Calella, Barcelona",
-        "phone": "937 69 25 39",
-        "mobile": "695 349 307",
-        "hours": "Open every day",
-        "facebook": "Facebook",
-        "location": "Platja Gran de Calella, in front of Renfe Station",
-        "parking": "Two free parking lots"
+        "info_section": "Contact Information",
+        "form_section": "Send us a Message",
+        "fields": {
+            "address": "Address",
+            "phone": "Phone",
+            "mobile": "Mobile",
+            "schedule": "Schedule",
+            "parking": "Free parking",
+            "parking_description": "We have two free public parking areas in Calella very close to the restaurant",
+            "follow_us": "🌐 Follow us on social media",
+            "name": "Name",
+            "email": "Email",
+            "message": "Message",
+            "send_button": "Send Message"
+        },
+        "whatsapp": {
+            "title": "WhatsApp Reservations",
+            "description": "You can also book your table directly via WhatsApp",
+            "button": "Book via WhatsApp"
+        }
     },
     "gallery": {
         "title": "📸 Photo Gallery",
@@ -340,13 +88,20 @@
                         "name": "Paella Marinera",
                         "description": "Traditional seafood paella with prawns, mussels, squid and fish",
                         "price": "18.00",
-                        "allergens": ["shellfish", "fish", "mollusks"]
+                        "allergens": [
+                            "shellfish",
+                            "fish",
+                            "mollusks"
+                        ]
                     },
                     {
                         "name": "Paella Mixta",
                         "description": "Mixed paella with chicken, rabbit, prawns, mussels and vegetables",
                         "price": "17.00",
-                        "allergens": ["shellfish", "mollusks"]
+                        "allergens": [
+                            "shellfish",
+                            "mollusks"
+                        ]
                     },
                     {
                         "name": "Paella Vegetariana",
@@ -358,13 +113,19 @@
                         "name": "Arroz Negro",
                         "description": "Black rice with squid ink, prawns and alioli",
                         "price": "19.00",
-                        "allergens": ["shellfish", "mollusks", "eggs"]
+                        "allergens": [
+                            "shellfish",
+                            "mollusks",
+                            "eggs"
+                        ]
                     },
                     {
                         "name": "Arroz con Bogavante",
                         "description": "Rice with lobster, a culinary delicacy",
                         "price": "35.00",
-                        "allergens": ["shellfish"]
+                        "allergens": [
+                            "shellfish"
+                        ]
                     }
                 ]
             },
@@ -377,31 +138,42 @@
                         "name": "Grilled Sea Bream",
                         "description": "Fresh sea bream grilled with herbs and olive oil",
                         "price": "22.00",
-                        "allergens": ["fish"]
+                        "allergens": [
+                            "fish"
+                        ]
                     },
                     {
                         "name": "Grilled Sea Bass",
                         "description": "Sea bass with garlic and parsley",
                         "price": "24.00",
-                        "allergens": ["fish"]
+                        "allergens": [
+                            "fish"
+                        ]
                     },
                     {
                         "name": "Mixed Grilled Fish",
                         "description": "Selection of fresh fish from our daily catch",
                         "price": "26.00",
-                        "allergens": ["fish"]
+                        "allergens": [
+                            "fish"
+                        ]
                     },
                     {
                         "name": "Grilled Prawns",
                         "description": "Large prawns grilled with sea salt",
                         "price": "20.00",
-                        "allergens": ["shellfish"]
+                        "allergens": [
+                            "shellfish"
+                        ]
                     },
                     {
                         "name": "Seafood Platter",
                         "description": "Mixed seafood with prawns, mussels, clams and squid",
                         "price": "28.00",
-                        "allergens": ["shellfish", "mollusks"]
+                        "allergens": [
+                            "shellfish",
+                            "mollusks"
+                        ]
                     }
                 ]
             },
@@ -445,19 +217,27 @@
                         "name": "Pan con Tomate",
                         "description": "Toasted bread with tomato, garlic and olive oil",
                         "price": "4.50",
-                        "allergens": ["gluten"]
+                        "allergens": [
+                            "gluten"
+                        ]
                     },
                     {
                         "name": "Patatas Bravas",
                         "description": "Fried potatoes with spicy bravas sauce",
                         "price": "6.00",
-                        "allergens": ["eggs"]
+                        "allergens": [
+                            "eggs"
+                        ]
                     },
                     {
                         "name": "Croquetas de Jamón",
                         "description": "Homemade ham croquettes (6 units)",
                         "price": "8.00",
-                        "allergens": ["gluten", "milk", "eggs"]
+                        "allergens": [
+                            "gluten",
+                            "milk",
+                            "eggs"
+                        ]
                     },
                     {
                         "name": "Iberian Ham Platter",
@@ -469,7 +249,9 @@
                         "name": "Manchego Cheese",
                         "description": "Aged Manchego cheese with membrillo",
                         "price": "12.00",
-                        "allergens": ["milk"]
+                        "allergens": [
+                            "milk"
+                        ]
                     }
                 ]
             },
@@ -482,25 +264,36 @@
                         "name": "Crema Catalana",
                         "description": "Traditional Catalan cream with caramelized sugar",
                         "price": "5.50",
-                        "allergens": ["milk", "eggs"]
+                        "allergens": [
+                            "milk",
+                            "eggs"
+                        ]
                     },
                     {
                         "name": "Flan Casero",
                         "description": "Homemade flan with caramel",
                         "price": "5.00",
-                        "allergens": ["milk", "eggs"]
+                        "allergens": [
+                            "milk",
+                            "eggs"
+                        ]
                     },
                     {
                         "name": "Mel i Mató",
                         "description": "Fresh cheese with honey and nuts",
                         "price": "6.00",
-                        "allergens": ["milk", "nuts"]
+                        "allergens": [
+                            "milk",
+                            "nuts"
+                        ]
                     },
                     {
                         "name": "Ice Cream",
                         "description": "Selection of artisanal ice creams",
                         "price": "4.50",
-                        "allergens": ["milk"]
+                        "allergens": [
+                            "milk"
+                        ]
                     }
                 ]
             }
@@ -594,7 +387,7 @@
             },
             "email": {
                 "title": "Email",
-                "value": "info@banyslafgavina.com",
+                "value": "info@banyslagavina.cat",
                 "description": "Send us your inquiries or suggestions"
             }
         },
@@ -616,6 +409,37 @@
                 {
                     "title": "Free Parking",
                     "description": "Two free parking areas, one in front of the restaurant"
+                }
+            ]
+        },
+        "about": {
+            "title": "Our History",
+            "subtitle": "Family tradition since 1958",
+            "description": "Located on Calella's Platja Gran, facing the Renfe Station, we are a family restaurant that has been offering the best of the Mediterranean Sea and select meats for decades. With two free parking areas and an incomparable setting facing the sea."
+        },
+        "specialties": {
+            "title": "Our Specialties",
+            "subtitle": "The best of the Mediterranean Sea and select meats",
+            "items": [
+                {
+                    "name": "Rice Dishes",
+                    "description": "Seafood paella, black rice, special paella with lobster and fideuá",
+                    "price": "From €18"
+                },
+                {
+                    "name": "Seafood",
+                    "description": "Blanes prawns, langostinos, mussels marinera and steamed",
+                    "price": "From €16"
+                },
+                {
+                    "name": "Fresh Fish",
+                    "description": "Daily selection of fresh Mediterranean fish",
+                    "price": "From €20"
+                },
+                {
+                    "name": "Select Meats",
+                    "description": "Entrecôte, sirloin, lamb chops and grilled specialties",
+                    "price": "From €22"
                 }
             ]
         },
@@ -720,20 +544,17 @@
     "footer": {
         "description": "Restaurant Banys La Gavina, family tradition since 1958 on the seafront in Calella.",
         "contact": {
-            "title": "Contact",
-            "address": "Paseo Manuel Puigvert s/n, Calella",
-            "phone": "937 69 25 39",
-            "mobile": "695 349 307"
+            "title": "Contact"
         },
         "hours": {
-            "title": "Opening Hours",
-            "text": "Open every day"
+            "title": "Opening Hours"
         },
         "social": {
             "title": "Follow Us",
             "facebook": "Facebook",
             "instagram": "Instagram"
         },
+        "language_selector": "Language",
         "copyright": "© 2024 Restaurant Banys La Gavina. All rights reserved."
     }
 }

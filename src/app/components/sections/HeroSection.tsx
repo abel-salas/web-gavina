@@ -2,6 +2,9 @@
 
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '../animations/AnimatedSection';
+import Image from 'next/image';
+import Link from 'next/link';
+import type { Route } from 'next';
 
 interface HeroSectionProps {
   title: string;
@@ -9,29 +12,47 @@ interface HeroSectionProps {
   description: string;
   ctaText?: string;
   ctaHref?: string;
+  backgroundImage?: string;
+  backgroundAlt?: string;
 }
 
-export function HeroSection({ title, subtitle, description, ctaText, ctaHref }: HeroSectionProps) {
+export function HeroSection({ title, subtitle, description, ctaText, ctaHref, backgroundImage, backgroundAlt }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-gray-900 to-black overflow-hidden">
-      {/* Background Animation */}
-      <div className="absolute inset-0">
-        <motion.div
-          className="absolute inset-0 opacity-20"
-          animate={{
-            background: [
-              "radial-gradient(circle at 20% 80%, #3b82f6 0%, transparent 50%)",
-              "radial-gradient(circle at 80% 20%, #1d4ed8 0%, transparent 50%)",
-              "radial-gradient(circle at 40% 40%, #2563eb 0%, transparent 50%)",
-            ],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-        />
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image or Gradient */}
+      {backgroundImage ? (
+        <div className="absolute inset-0">
+          <Image
+            src={backgroundImage}
+            alt={backgroundAlt || 'Hero background'}
+            fill
+            className="object-cover"
+            priority
+            quality={90}
+          />
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-gray-900 to-black">
+          {/* Background Animation */}
+          <motion.div
+            className="absolute inset-0 opacity-20"
+            animate={{
+              background: [
+                "radial-gradient(circle at 20% 80%, #3b82f6 0%, transparent 50%)",
+                "radial-gradient(circle at 80% 20%, #1d4ed8 0%, transparent 50%)",
+                "radial-gradient(circle at 40% 40%, #2563eb 0%, transparent 50%)",
+              ],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+          />
+        </div>
+      )}
 
       {/* Floating elements */}
       <motion.div
@@ -103,24 +124,25 @@ export function HeroSection({ title, subtitle, description, ctaText, ctaHref }: 
 
         {ctaText && ctaHref && (
           <AnimatedSection direction="scale" delay={0.8}>
-            <motion.a
-              href={ctaHref}
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.5)"
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              {ctaText}
-              <motion.span
-                className="ml-2"
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
+            <Link href={ctaHref as Route}>
+              <motion.div
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 cursor-pointer"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.5)"
+                }}
+                whileTap={{ scale: 0.95 }}
               >
-                →
-              </motion.span>
-            </motion.a>
+                {ctaText}
+                <motion.span
+                  className="ml-2"
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                >
+                  →
+                </motion.span>
+              </motion.div>
+            </Link>
           </AnimatedSection>
         )}
       </div>

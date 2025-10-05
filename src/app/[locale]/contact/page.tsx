@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { getLocalizedData } from "@/app/lib/localization";
 import { generatePageMetadata, getValidLocale } from '@/seo';
-import { getPageContent, getSiteConfig } from '../../../../sanity/queries';
+import { getContactInfo } from "@/app/lib/contact-utils";
+import WhatsAppReservation from "@/app/components/WhatsAppReservation";
 
 export async function generateMetadata({
   params
@@ -16,57 +17,34 @@ export async function generateMetadata({
     page: 'contact',
     path: '/contact'
   });
-} export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
+}
+
+export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const { dict } = getLocalizedData(locale);
 
-  // Obtener datos desde Sanity
-  const [contactContent, contactConfig] = await Promise.all([
-    getPageContent('contact', locale).catch(() => null),
-    getSiteConfig('contact', locale).catch(() => null)
-  ]);
-
-  // Usar datos de Sanity si están disponibles, sino valores por defecto
-  const pageData = contactContent ? {
-    title: contactContent.title,
-    subtitle: contactContent.subtitle,
-    description: contactContent.description,
-  } : {
-    title: "📞 Contacto",
-    subtitle: "Estamos aquí para atenderte",
-    description: "Para reservar mesa, llámanos o ven directamente. Te esperamos en primera línea de mar.",
-  };
-
-  // Información de contacto por defecto
-  const contactInfo = {
-    address: "Paseo Manuel Puigvert s/n, Calella, Barcelona",
-    location: "Platja Gran de Calella, frente a la Estación de Renfe",
-    phone: "937 69 25 39",
-    mobile: "695 349 307",
-    hours: "Abierto todos los días",
-    parking: "Dos aparcamientos gratuitos",
-    facebook: "Facebook"
-  };
+  // Información de contacto centralizada
+  const contactInfo = getContactInfo(locale);
 
   return (
     <main className="container mx-auto px-4 py-8">
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">{pageData.title}</h1>
-        <p className="text-xl text-gray-600 mb-8">{pageData.subtitle}</p>
+        <h1 className="text-4xl font-bold mb-4">{dict.contact?.title || '📞 Contacto'}</h1>
+        <p className="text-xl text-gray-600 mb-8">{dict.contact?.subtitle || 'Estamos aquí para atenderte'}</p>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-          {pageData.description}
+          {dict.contact?.description || 'Para reservar mesa, llámanos o ven directamente. Te esperamos en primera línea de mar.'}
         </p>
       </section>
 
       <div className="grid md:grid-cols-2 gap-12">
         <section className="bg-white p-8 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-6 text-blue-800">Información de Contacto</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-blue-800">{dict.contact?.info_section || 'Información de Contacto'}</h2>
 
           <div className="space-y-4">
             <div className="flex items-center">
               <span className="text-2xl mr-3">📍</span>
               <div>
-                <h3 className="font-semibold">Dirección</h3>
+                <h3 className="font-semibold">{dict.contact?.fields?.address || 'Dirección'}</h3>
                 <p className="text-gray-600 whitespace-pre-line">{contactInfo.address}</p>
                 <p className="text-sm text-gray-500 mt-1">{contactInfo.location}</p>
               </div>
@@ -75,7 +53,7 @@ export async function generateMetadata({
             <div className="flex items-center">
               <span className="text-2xl mr-3">📞</span>
               <div>
-                <h3 className="font-semibold">Teléfono</h3>
+                <h3 className="font-semibold">{dict.contact?.fields?.phone || 'Teléfono'}</h3>
                 <a href={`tel:${contactInfo.phone}`} className="text-blue-600 hover:text-blue-800">
                   {contactInfo.phone}
                 </a>
@@ -85,7 +63,7 @@ export async function generateMetadata({
             <div className="flex items-center">
               <span className="text-2xl mr-3">📱</span>
               <div>
-                <h3 className="font-semibold">Móvil</h3>
+                <h3 className="font-semibold">{dict.contact?.fields?.mobile || 'Móvil'}</h3>
                 <a href={`tel:${contactInfo.mobile}`} className="text-blue-600 hover:text-blue-800">
                   {contactInfo.mobile}
                 </a>
@@ -95,38 +73,52 @@ export async function generateMetadata({
             <div className="flex items-center">
               <span className="text-2xl mr-3">🕐</span>
               <div>
-                <h3 className="font-semibold">Horario</h3>
+                <h3 className="font-semibold">{dict.contact?.fields?.schedule || 'Horario'}</h3>
                 <p className="text-gray-600">{contactInfo.hours}</p>
+              </div>
+            </div>
+
+            <div className="flex items-center">
+              <span className="text-2xl mr-3">🅿️</span>
+              <div>
+                <h3 className="font-semibold">{dict.contact?.fields?.parking || 'Aparcamiento'}</h3>
+                <p className="text-gray-600">{dict.contact?.fields?.parking_description || contactInfo.parking}</p>
               </div>
             </div>
 
             <div className="flex items-center">
               <span className="text-2xl mr-3">�</span>
               <div>
-                <h3 className="font-semibold">Aparcamiento</h3>
-                <p className="text-gray-600">{contactInfo.parking}</p>
+                <h3 className="font-semibold">{dict.contact?.fields?.follow_us || 'Síguenos'}</h3>
+                <div className="space-y-1">
+                  <div>
+                    <a href={contactInfo.facebook} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                      {dict.contact_info?.facebook || 'Facebook'}
+                    </a>
+                  </div>
+                  <div>
+                    <a href={contactInfo.instagram} target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800">
+                      {dict.contact_info?.instagram || 'Instagram'}
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div className="flex items-center">
-              <span className="text-2xl mr-3">📘</span>
-              <div>
-                <h3 className="font-semibold">Síguenos</h3>
-                <a href="#" className="text-blue-600 hover:text-blue-800">
-                  {contactInfo.facebook}
-                </a>
-              </div>
-            </div>
+          {/* WhatsApp Reservation Section */}
+          <div className="mt-6">
+            <WhatsAppReservation dict={dict} />
           </div>
         </section>
 
         <section className="bg-white p-8 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-6 text-blue-800">Envíanos un Mensaje</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-blue-800">{dict.contact?.form_section || 'Envíanos un Mensaje'}</h2>
 
           <form className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                Nombre
+{dict.contact?.fields?.name || 'Nombre'}
               </label>
               <input
                 type="text"
@@ -139,7 +131,7 @@ export async function generateMetadata({
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                Email
+{dict.contact?.fields?.email || 'Email'}
               </label>
               <input
                 type="email"
@@ -152,7 +144,7 @@ export async function generateMetadata({
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                Mensaje
+{dict.contact?.fields?.message || 'Mensaje'}
               </label>
               <textarea
                 id="message"
@@ -167,7 +159,7 @@ export async function generateMetadata({
               type="submit"
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
             >
-              Enviar Mensaje
+{dict.contact?.fields?.send_button || 'Enviar Mensaje'}
             </button>
           </form>
         </section>

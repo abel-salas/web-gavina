@@ -31,7 +31,7 @@ export const SEO_DATA = {
             history: {
                 title: 'Historia - Restaurant Banys La Gavina | Desde 1958 en Calella',
                 description: 'Descubre la fascinante historia del Restaurant Banys La Gavina, un emblema de Calella desde 1958. Más de 65 años de tradición gastronómica frente al mar.',
-                keywords: 'historia restaurant Calella, Banys La Gavina 1958, tradición gastronómica, turismo Calella años 60',
+                keywords: 'history restaurant Calella, Banys La Gavina 1958, tradición gastronómica, turismo Calella años 60',
             },
         },
     },

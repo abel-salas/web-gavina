@@ -1,7 +1,7 @@
 import { createClient } from '@sanity/client'
 
-// Configurar SSL en desarrollo
-if (process.env.NODE_ENV === 'development') {
+// Configurar SSL en desarrollo y build
+if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === undefined) {
   process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
 }
 

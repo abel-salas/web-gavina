@@ -16,6 +16,7 @@ export const siteConfig = defineType({
           { title: 'Navegación', value: 'nav' },
           { title: 'Contacto', value: 'contact' },
           { title: 'Footer', value: 'footer' },
+          { title: 'Imágenes del Sitio', value: 'site-images' },
         ],
       },
       validation: (Rule) => Rule.required(),
@@ -91,6 +92,29 @@ export const siteConfig = defineType({
       title: 'Facebook URL',
       type: 'url',
       hidden: ({ document }) => document?.configType !== 'contact',
+    }),
+    defineField({
+      name: 'heroBackgroundImage',
+      title: 'Imagen de Fondo del Hero',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Texto Alternativo',
+          type: 'string',
+        },
+      ],
+      hidden: ({ document }) => document?.configType !== 'site-images',
+    }),
+    defineField({
+      name: 'heroImageUrl',
+      title: 'URL de Imagen Externa (alternativo)',
+      type: 'url',
+      description: 'Si prefieres usar una imagen externa en lugar de subir una',
+      hidden: ({ document }) => document?.configType !== 'site-images',
     }),
   ],
   preview: {

@@ -56,7 +56,7 @@ export default async function LocaleLayout({
             />
             <div className="min-h-screen flex flex-col">
                 <Navbar params={params} />
-                <main className="flex-1">
+                <main className="flex-1 pt-16">
                     {children}
                 </main>
                 <Footer params={params} />
