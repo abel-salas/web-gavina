@@ -48,7 +48,7 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref }:
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <AnimatedSection direction="down">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-5xl md:text-6xl font-parisienne mb-6">
               {title}
             </h2>
           </AnimatedSection>

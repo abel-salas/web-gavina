@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { AnimatedSection } from '../animations/AnimatedSection';
+import { LogoText } from '../LogoText';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Route } from 'next';
@@ -18,15 +19,15 @@ interface HeroSectionProps {
 
 export function HeroSection({ title, subtitle, description, ctaText, ctaHref, backgroundImage, backgroundAlt }: HeroSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image or Gradient */}
       {backgroundImage ? (
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 -top-16">
           <Image
             src={backgroundImage}
             alt={backgroundAlt || 'Hero background'}
             fill
-            className="object-cover"
+            className="object-cover object-top"
             priority
             quality={90}
           />
@@ -97,17 +98,15 @@ export function HeroSection({ title, subtitle, description, ctaText, ctaHref, ba
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
         <AnimatedSection direction="down" delay={0.2}>
-          <motion.h1
-            className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6"
+          {/* Usando el texto SVG extraído del logo original */}
+          <motion.div
+            className="w-full max-w-2xl mx-auto mb-6"
             style={{
-              background: "linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #e2e8f0 100%)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
+              filter: "drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))",
             }}
           >
-            {title}
-          </motion.h1>
+            <LogoText className="w-full h-auto" />
+          </motion.div>
         </AnimatedSection>
 
         <AnimatedSection direction="up" delay={0.4}>

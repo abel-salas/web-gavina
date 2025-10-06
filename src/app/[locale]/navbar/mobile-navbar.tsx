@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { useCloseOnEscape, useBodyScrollLock } from '@/app/components/hooks/useModal';
 import Link from 'next/link';
 import type { Route } from 'next';
+import { LogoText } from '@/app/components/LogoText';
 
 interface NavItem {
   href: string;
@@ -47,7 +48,7 @@ export default function MobileNavbar({ navItems, homeHref }: MobileNavbarProps) 
                 className="text-xl font-bold text-white hover:text-blue-300 transition-colors"
                 onClick={closeMenu}
               >
-                Banys la Gavina
+                <LogoText className="w-full h-auto w-logo-header-mobile" />
               </Link>
             </div>
 

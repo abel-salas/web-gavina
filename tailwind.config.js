@@ -11,6 +11,13 @@ module.exports = {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
+      fontFamily: {
+        'parisienne': ['Parisienne', 'cursive'],
+        'prime-script': ['Prime Script', 'cursive'],
+        'great-vibes': ['Great Vibes', 'cursive'],
+        'dancing-script': ['Dancing Script', 'cursive'],
+        'allura': ['Allura', 'cursive'],
+      },
     },
   },
   plugins: [],

@@ -39,7 +39,7 @@ export async function generateMetadata({
   return (
     <main className="container mx-auto px-4 py-8">
       <section className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-4">{dict.menu?.title || "🍽️ Nuestra Carta"}</h1>
+        <h1 className="text-5xl font-parisienne mb-4">{dict.menu?.title || "🍽️ Nuestra Carta"}</h1>
         <p className="text-xl text-gray-600 mb-8">{dict.menu?.subtitle || "Cocina mediterránea inspirada en los productos del mar 🦐"}</p>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
           {dict.menu?.description || "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación."}
