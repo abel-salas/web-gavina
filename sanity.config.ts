@@ -9,9 +9,9 @@ export default defineConfig({
   name: 'restaurant-gavina',
   title: 'Restaurant Banys La Gavina',
 
-  // Credenciales del proyecto
-  projectId: 'tkwezd48',
-  dataset: 'production',
+  // Credenciales del proyecto desde variables de entorno
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'tkwezd48',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
 
   plugins: [
     structureTool(),

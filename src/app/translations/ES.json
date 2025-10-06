@@ -33,15 +33,15 @@
         "cta_secondary": "Reservar Mesa"
     },
     "menu": {
-        "title": "🍽️ Nuestra Carta",
-        "subtitle": "Cocina mediterránea inspirada en los productos del mar 🦐",
+        "title": "Nuestra Carta",
+        "subtitle": "Cocina mediterránea inspirada en los productos del mar",
         "description": "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación.",
         "metaTitle": "Carta - Restaurante Banys La Gavina | Arroces, Mariscos y Especialidades",
         "metaDescription": "Descubre nuestra carta con los mejores arroces, mariscos frescos y especialidades mediterráneas. Paella marinera, arroz negro, pescados del día.",
         "categories": {}
     },
     "contact": {
-        "title": "📞 Contacto",
+        "title": "Contacto",
         "subtitle": "Restaurante frente al mar en Calella - Reservas y consultas",
         "description": "Contacta con nosotros para reservas, eventos o consultas. Restaurante Banys La Gavina, desde 1958 en primera línea de mar en Calella, Barcelona.",
         "metaTitle": "Contacto - Restaurante Banys La Gavina | Reservas y Información",

@@ -31,7 +31,7 @@
         "metaDescription": "Restaurant tradicional davant del mar a Calella des de 1958. Especialistes en arrossos, mariscos, peix fresc i carns selectes. Terrassa amb vistes al mar i aparcament gratuït."
     },
     "menu": {
-        "title": "🍽️ El nostre Menú",
+        "title": "El nostre Menú",
         "subtitle": "Gaudeix del millor menú de cuina casolana mediterrània 🍝",
         "description": "Descobreix la nostra selecció de plats tradicionals mediterranis, elaborats amb ingredients frescos i receptes familiars.",
         "metaTitle": "Menú Restaurant Gavina - Plats Mediterranis Tradicionals",
@@ -39,7 +39,7 @@
         "categories": {}
     },
     "contact": {
-        "title": "📞 Contacte",
+        "title": "Contacte",
         "subtitle": "Restaurant davant del mar a Calella - Reserves i consultes",
         "description": "Contacta amb nosaltres per reserves, esdeveniments o consultes. Restaurant Banys La Gavina, des de 1958 en primera línia de mar a Calella, Barcelona.",
         "metaTitle": "Contacte - Restaurant Gavina | Reserves i Consultes",
