@@ -59,6 +59,45 @@ export const menuItem = defineType({
       initialValue: false,
     }),
     defineField({
+      name: 'image',
+      title: 'Imagen del Plato',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Texto alternativo',
+          description: 'Descripción de la imagen para accesibilidad',
+        },
+      ],
+      description: 'Imagen del plato para mostrar en el modal de detalles',
+    }),
+    defineField({
+      name: 'allergens',
+      title: 'Alérgenos',
+      type: 'array',
+      of: [{ type: 'string' }],
+      options: {
+        list: [
+          { title: 'Gluten', value: 'gluten' },
+          { title: 'Mariscos', value: 'shellfish' },
+          { title: 'Pescado', value: 'fish' },
+          { title: 'Lácteos', value: 'dairy' },
+          { title: 'Huevos', value: 'eggs' },
+          { title: 'Frutos secos', value: 'nuts' },
+          { title: 'Soja', value: 'soy' },
+          { title: 'Apio', value: 'celery' },
+          { title: 'Mostaza', value: 'mustard' },
+          { title: 'Sésamo', value: 'sesame' },
+          { title: 'Sulfitos', value: 'sulfites' },
+        ],
+      },
+      description: 'Selecciona los alérgenos presentes en este plato',
+    }),
+    defineField({
       name: 'order',
       title: 'Orden de aparición',
       type: 'number',

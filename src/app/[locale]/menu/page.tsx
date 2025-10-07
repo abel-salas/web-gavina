@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { getLocalizedData } from "@/app/lib/localization";
 import { generatePageMetadata, getValidLocale } from '@/seo';
-import { getAllMenuCategories } from '../../../../sanity/queries';
+import { client } from '../../../../sanity/client';
+import { menuContentQuery, menuItemsQuery } from '../../lib/sanity/contentQueries';
+import { processMenuContentResponse } from '../../lib/sanity/contentTypes';
 import MenuContent from './MenuContent';
 
 export async function generateMetadata({
@@ -23,11 +25,24 @@ export default async function MenuPage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const { dict } = getLocalizedData(locale);
 
-  // Obtener datos del menú desde Sanity
-  const sanityMenuData = await getAllMenuCategories(locale).catch(() => null);
+  // Obtener contenido del menú desde Sanity
+  let menuContentData = [];
+  let menuItems = [];
 
-  // Si hay datos de Sanity, usarlos; sino, usar JSON como fallback
-  const menuData = sanityMenuData || dict.menu?.categories || {};
+  try {
+    [menuContentData, menuItems] = await Promise.all([
+      client.fetch(menuContentQuery),
+      client.fetch(menuItemsQuery)
+    ]);
+  } catch (error) {
+    console.warn('⚠️ No se pudo obtener contenido del menú desde Sanity:', error);
+  }
 
-  return <MenuContent dict={dict} menuData={menuData} />;
+  // Procesar los datos obtenidos
+  const menuContent = processMenuContentResponse(menuContentData);
+
+  // Si no hay datos de Sanity, usar JSON como fallback  
+  const menuData = menuItems.length > 0 ? menuItems : dict.menu?.categories || {};
+
+  return <MenuContent dict={dict} menuData={menuData} menuContent={menuContent} />;
 }

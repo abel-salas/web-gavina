@@ -1,21 +1,19 @@
 // Schemas de Sanity para Restaurant Banys La Gavina
 import { menuItem } from './menuItem'
-import { pageContent } from './pageContent'
-import { historyContent } from './historyContent'
-import { timelineEvent } from './timelineEvent'
 import { siteConfig } from './siteConfig'
+import { homeContent } from './homeContent'
+import { menuContent } from './menuContent'
+import { contactContent } from './contactContent'
 
 export const schemaTypes = [
-  // Contenido del menú
+  // Schemas organizados por página
+  homeContent,
+  menuContent,
+  contactContent,
+
+  // Contenido del menú (actualizado con imágenes)
   menuItem,
-  
-  // Contenido de páginas
-  pageContent,
-  
-  // Contenido de historia
-  historyContent,
-  timelineEvent,
-  
-  // Configuración del sitio
+
+  // Configuración del sitio (se mantiene centralizada)
   siteConfig,
 ]

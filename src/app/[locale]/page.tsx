@@ -6,7 +6,9 @@ import { AboutSection } from '../components/sections/AboutSection';
 import { MenuHighlightSection } from '../components/sections/MenuHighlightSection';
 import { LocationSection, GallerySection, ContactSection } from '../components/sections/OtherSections';
 import { client } from '../../../sanity/client';
-import { siteImagesQuery } from '../lib/sanity/siteQueries';
+import { homeContentQuery } from '../lib/sanity/contentQueries';
+import { processHomeContentResponse, getLocalizedText } from '../lib/sanity/contentTypes';
+import type { HomeContent } from '../lib/sanity/contentTypes';
 
 export async function generateMetadata({
     params
@@ -27,41 +29,49 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
     const { locale } = await params;
     const { dict, href } = getLocalizedData(locale);
 
-    // Obtener la configuración de imágenes desde Sanity con manejo de errores
-    let siteImages = null;
+    // Obtener el contenido de HOME desde Sanity con manejo de errores
+    let homeContentData: HomeContent[] = [];
     try {
-        siteImages = await client.fetch(siteImagesQuery);
+        homeContentData = await client.fetch(homeContentQuery);
     } catch (error) {
-        console.warn('⚠️ No se pudo obtener configuración de imágenes desde Sanity:', error);
+        console.warn('⚠️ No se pudo obtener contenido de HOME desde Sanity:', error);
     }
 
-    // Determinar la imagen de fondo del hero con fallback local
-    const heroBackgroundImage = siteImages?.heroBackgroundImage?.asset?.url ||
-        siteImages?.heroImageUrl ||
-        '/images/home/mesa.jpg';
+    // Procesar los datos obtenidos
+    const homeContent = processHomeContentResponse(homeContentData);
 
-    const heroBackgroundAlt = siteImages?.heroBackgroundImage?.alt || 'Restaurant Banys La Gavina vista al mar';
+    // Obtener datos de cada sección con fallbacks
+    const heroData = homeContent.hero;
+    const aboutData = homeContent.about;
+    const specialtiesData = homeContent.specialties;
+    const locationData = homeContent.location;
+
+    // Determinar la imagen de fondo del hero con fallback local
+    const heroBackgroundImage = heroData?.heroBackgroundImage?.asset?.url || '/images/home/mesa.jpg';
+    const heroBackgroundAlt = heroData?.heroBackgroundImage?.alt || 'Restaurant Banys La Gavina vista al mar';
 
     // Determinar la imagen de ubicación con fallback local
-    const locationBackgroundImage = siteImages?.locationBackgroundImage?.asset?.url ||
-        siteImages?.locationImageUrl ||
-        '/images/home/gavina_frontal.jpg';
-
-    const locationBackgroundAlt = siteImages?.locationBackgroundImage?.alt || 'Ubicación privilegiada en Calella';
+    const locationBackgroundImage = locationData?.locationImage?.asset?.url || '/images/home/gavina_frontal.jpg';
+    const locationBackgroundAlt = locationData?.locationImage?.alt || 'Ubicación privilegiada en Calella';
 
     // Determinar la imagen de historia (sección sobre nosotros) con fallback local
-    const historyBackgroundImage = siteImages?.historyBackgroundImage?.asset?.url ||
-        siteImages?.historyImageUrl ||
-        '/images/gavina/taules.jpg';
-
-    const historyBackgroundAlt = siteImages?.historyBackgroundImage?.alt || 'Historia del restaurante Banys La Gavina';
+    const historyBackgroundImage = aboutData?.aboutImage?.asset?.url || '/images/gavina/taules.jpg';
+    const historyBackgroundAlt = aboutData?.aboutImage?.alt || 'Historia del restaurante Banys La Gavina';
 
     // Determinar las imágenes de especialidades con fallback local
-    const specialtyImages = {
-        arroces: siteImages?.arrocesImage?.asset?.url || siteImages?.arrocesImageUrl || '/images/home/paellas.jpg',
-        mariscos: siteImages?.mariscosImage?.asset?.url || siteImages?.mariscosImageUrl || '/images/home/mariscos.jpg',
-        pescados: siteImages?.pescadosImage?.asset?.url || siteImages?.pescadosImageUrl || '/images/home/pescado.jpg',
-        carnes: siteImages?.carnesImage?.asset?.url || siteImages?.carnesImageUrl || '/images/home/carne_brasa.jpg'
+    const specialtyImages = specialtiesData?.specialtyItems?.reduce((acc, item, index) => {
+        const keys = ['arroces', 'mariscos', 'pescados', 'carnes'];
+        const fallbacks = ['/images/home/paellas.jpg', '/images/home/mariscos.jpg', '/images/home/pescado.jpg', '/images/home/carne_brasa.jpg'];
+        
+        if (keys[index]) {
+            acc[keys[index]] = item.image?.asset?.url || fallbacks[index];
+        }
+        return acc;
+    }, {} as Record<string, string>) || {
+        arroces: '/images/home/paellas.jpg',
+        mariscos: '/images/home/mariscos.jpg',
+        pescados: '/images/home/pescado.jpg',
+        carnes: '/images/home/carne_brasa.jpg'
     };
 
     // Usar datos exclusivamente del JSON para la home
@@ -77,9 +87,9 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
         <>
             {/* Sección 1: Hero */}
             <HeroSection
-                title={pageData.title}
-                subtitle={pageData.subtitle}
-                description={pageData.description}
+                title={heroData ? getLocalizedText(heroData.heroTitle, locale, pageData.title) : pageData.title}
+                subtitle={heroData ? getLocalizedText(heroData.heroSubtitle, locale, pageData.subtitle) : pageData.subtitle}
+                description={heroData ? getLocalizedText(heroData.heroDescription, locale, pageData.description) : pageData.description}
                 ctaText={pageData.cta || "Ver Carta"}
                 ctaHref={href('/menu')}
                 backgroundImage={heroBackgroundImage}
@@ -87,37 +97,36 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
             />
 
             {/* Sección 2: Sobre Nosotros */}
-            {dict.sections?.about && (
-                <AboutSection
-                    title={dict.sections.about.title}
-                    description={dict.sections.about.description}
-                    backgroundImage={historyBackgroundImage}
-                    backgroundAlt={historyBackgroundAlt}
-                />
-            )}
+            <AboutSection
+                title={aboutData ? getLocalizedText(aboutData.aboutTitle, locale, dict.sections?.about?.title || '') : dict.sections?.about?.title || ''}
+                description={aboutData ? getLocalizedText(aboutData.aboutDescription, locale, dict.sections?.about?.description || '') : dict.sections?.about?.description || ''}
+                backgroundImage={historyBackgroundImage}
+                backgroundAlt={historyBackgroundAlt}
+            />
 
             {/* Sección 3: Platos Destacados */}
-            {dict.sections?.specialties && (
-                <MenuHighlightSection
-                    title={dict.sections.specialties.title}
-                    subtitle={dict.sections.specialties.subtitle}
-                    specialties={dict.sections.specialties.items}
-                    menuHref={href('/menu')}
-                    specialtyImages={specialtyImages}
-                />
-            )}
+            <MenuHighlightSection
+                title={specialtiesData ? getLocalizedText(specialtiesData.specialtiesTitle, locale, dict.sections?.specialties?.title || '') : dict.sections?.specialties?.title || ''}
+                subtitle={specialtiesData ? getLocalizedText(specialtiesData.specialtiesSubtitle, locale, dict.sections?.specialties?.subtitle || '') : dict.sections?.specialties?.subtitle || ''}
+                specialties={specialtiesData?.specialtyItems?.map(item => ({
+                    name: getLocalizedText(item.name, locale, ''),
+                    description: getLocalizedText(item.description, locale, ''),
+                    price: item.price,
+                    image: item.image?.asset?.url || ''
+                })) || dict.sections?.specialties?.items || []}
+                menuHref={href('/menu')}
+                specialtyImages={specialtyImages}
+            />
 
             {/* Sección 4: Ubicación */}
-            {dict.sections?.location && (
-                <LocationSection
-                    title={dict.sections.location.title}
-                    subtitle={dict.sections.location.subtitle}
-                    description={dict.sections.location.description}
-                    backgroundImage={locationBackgroundImage}
-                    backgroundAlt={locationBackgroundAlt}
-                    useContactInfo={true}
-                />
-            )}
+            <LocationSection
+                title={locationData ? getLocalizedText(locationData.locationTitle, locale, dict.sections?.location?.title || '') : dict.sections?.location?.title || ''}
+                subtitle={locationData ? getLocalizedText(locationData.locationSubtitle, locale, dict.sections?.location?.subtitle || '') : dict.sections?.location?.subtitle || ''}
+                description={locationData ? getLocalizedText(locationData.locationDescription, locale, dict.sections?.location?.description || '') : dict.sections?.location?.description || ''}
+                backgroundImage={locationBackgroundImage}
+                backgroundAlt={locationBackgroundAlt}
+                useContactInfo={true}
+            />
 
             {/* Sección 5: Galería
             <GallerySection

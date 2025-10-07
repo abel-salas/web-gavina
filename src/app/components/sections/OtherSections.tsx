@@ -5,7 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Route } from 'next';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
-import { CONTACT_INFO } from '../../lib/contact-info';
 
 interface LocationSectionProps {
   title: string;
@@ -20,7 +19,7 @@ export function LocationSection({ title, backgroundImage, backgroundAlt, useCont
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div>
             <AnimatedSection direction="right">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -34,31 +33,10 @@ export function LocationSection({ title, backgroundImage, backgroundAlt, useCont
             </AnimatedSection>
 
             <AnimatedSection direction="right" delay={0.2}>
-              <p className="text-xl text-gray-700 mb-8">
+              <p className="text-xl text-gray-700">
                 {description || "Ubicado en el corazón de la costa mediterránea, nuestro restaurante ofrece vistas espectaculares al mar mientras disfrutas de nuestra exquisita gastronomía."}
               </p>
             </AnimatedSection>
-
-            <StaggerContainer className="space-y-4">
-              {(useContactInfo ? [
-                { icon: "📍", text: CONTACT_INFO.address },
-                { icon: "🏖️", text: CONTACT_INFO.location },
-                { icon: "🚗", text: CONTACT_INFO.parking },
-                { icon: "📞", text: CONTACT_INFO.phone }
-              ] : [
-                { icon: "📍", text: CONTACT_INFO.address },
-                { icon: "🏖️", text: CONTACT_INFO.location },
-                { icon: "�", text: CONTACT_INFO.parking },
-                { icon: "🌊", text: "Vista panorámica al Mediterráneo" }
-              ]).map((item, index) => (
-                <StaggerItem key={index}>
-                  <div className="flex items-center space-x-3">
-                    <span className="text-2xl">{item.icon}</span>
-                    <span className="text-gray-700">{item.text}</span>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
           </div>
 
           <AnimatedSection direction="left" delay={0.3}>
@@ -152,31 +130,6 @@ export function ContactSection({ title, contactHref }: { title: string; contactH
             ¿Listo para vivir una experiencia gastronómica única? Reserva tu mesa y déjanos sorprenderte.
           </p>
         </AnimatedSection>
-
-        <StaggerContainer className="grid md:grid-cols-3 gap-8 mb-12">
-          {[
-            { icon: "📞", title: "Llámanos", info: CONTACT_INFO.phone, action: `tel:${CONTACT_INFO.phone.replace(/\s/g, '')}` },
-            { icon: "✉️", title: "Email", info: CONTACT_INFO.email, action: `mailto:${CONTACT_INFO.email}` },
-            { icon: "🕐", title: "Horario", info: CONTACT_INFO.hours.es, action: null }
-          ].map((contact, index) => (
-            <StaggerItem key={index}>
-              <motion.div
-                className="bg-gray-800 rounded-2xl p-6 border border-gray-700"
-                whileHover={{ y: -5, backgroundColor: "#374151" }}
-              >
-                <div className="text-4xl mb-4">{contact.icon}</div>
-                <h3 className="text-xl font-bold mb-2">{contact.title}</h3>
-                {contact.action ? (
-                  <a href={contact.action} className="text-blue-400 hover:text-blue-300">
-                    {contact.info}
-                  </a>
-                ) : (
-                  <p className="text-gray-300">{contact.info}</p>
-                )}
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
 
         <AnimatedSection direction="scale" delay={0.6}>
           <motion.div

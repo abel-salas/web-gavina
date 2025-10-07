@@ -116,9 +116,9 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
                 calella_context: '/images/gavina/barques.jpg',
                 present: '/images/gavina/calella.jpg'
               };
-              
+
               const hasImage = sectionImages[key as keyof typeof sectionImages];
-              
+
               return (
                 <div key={key} className="space-y-4">
                   <article className="bg-white p-8 rounded-lg shadow-md">
@@ -129,7 +129,7 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
                       {section.content}
                     </p>
                   </article>
-                  
+
                   {hasImage && (
                     <div className="w-full">
                       <Image

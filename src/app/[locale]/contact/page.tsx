@@ -36,6 +36,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         </p>
       </section>
 
+      {/* WhatsApp Reservation Section */}
+      <div className="mt-6">
+        <WhatsAppReservation dict={dict} />
+      </div>
+
       <div className="grid md:grid-cols-2 gap-12">
         <section className="bg-white p-8 rounded-lg shadow-md">
           <h2 className="text-2xl font-semibold mb-6 text-blue-800">{dict.contact?.info_section || 'Información de Contacto'}</h2>
@@ -105,11 +110,6 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               </div>
             </div>
           </div>
-
-          {/* WhatsApp Reservation Section */}
-          <div className="mt-6">
-            <WhatsAppReservation dict={dict} />
-          </div>
         </section>
 
         <section className="bg-white p-8 rounded-lg shadow-md">
@@ -118,7 +118,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <form className="space-y-4">
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-{dict.contact?.fields?.name || 'Nombre'}
+                {dict.contact?.fields?.name || 'Nombre'}
               </label>
               <input
                 type="text"
@@ -131,7 +131,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-{dict.contact?.fields?.email || 'Email'}
+                {dict.contact?.fields?.email || 'Email'}
               </label>
               <input
                 type="email"
@@ -144,7 +144,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
             <div>
               <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-{dict.contact?.fields?.message || 'Mensaje'}
+                {dict.contact?.fields?.message || 'Mensaje'}
               </label>
               <textarea
                 id="message"
@@ -159,7 +159,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               type="submit"
               className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
             >
-{dict.contact?.fields?.send_button || 'Enviar Mensaje'}
+              {dict.contact?.fields?.send_button || 'Enviar Mensaje'}
             </button>
           </form>
         </section>
