@@ -4,11 +4,12 @@ import { generatePageMetadata, getValidLocale } from '@/seo';
 import { HeroSection } from '../components/sections/HeroSection';
 import { AboutSection } from '../components/sections/AboutSection';
 import { MenuHighlightSection } from '../components/sections/MenuHighlightSection';
-import { LocationSection, GallerySection, ContactSection } from '../components/sections/OtherSections';
+import { LocationSection, ContactSection } from '../components/sections/OtherSections';
 import { client } from '../../../sanity/client';
-import { homeContentQuery } from '../lib/sanity/contentQueries';
+import { homeContentQuery, imageSliderQuery } from '../lib/sanity/contentQueries';
 import { processHomeContentResponse, getLocalizedText } from '../lib/sanity/contentTypes';
-import type { HomeContent } from '../lib/sanity/contentTypes';
+import type { HomeContent, ImageSlider } from '../lib/sanity/contentTypes';
+import ImageSliderSection from '../components/sections/ImageSliderSection';
 
 export async function generateMetadata({
     params
@@ -29,12 +30,17 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
     const { locale } = await params;
     const { dict, href } = getLocalizedData(locale);
 
-    // Obtener el contenido de HOME desde Sanity con manejo de errores
+    // Obtener el contenido de HOME y sliders desde Sanity con manejo de errores
     let homeContentData: HomeContent[] = [];
+    let imageSliders: ImageSlider[] = [];
+    
     try {
-        homeContentData = await client.fetch(homeContentQuery);
+        [homeContentData, imageSliders] = await Promise.all([
+            client.fetch(homeContentQuery),
+            client.fetch(imageSliderQuery)
+        ]);
     } catch (error) {
-        console.warn('⚠️ No se pudo obtener contenido de HOME desde Sanity:', error);
+        console.warn('⚠️ No se pudo obtener contenido desde Sanity:', error);
     }
 
     // Procesar los datos obtenidos
@@ -117,6 +123,9 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                 menuHref={href('/menu')}
                 specialtyImages={specialtyImages}
             />
+
+            {/* Sección 3.5: Slider de Imágenes */}
+            <ImageSliderSection sliders={imageSliders} locale={locale} />
 
             {/* Sección 4: Ubicación */}
             <LocationSection

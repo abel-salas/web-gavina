@@ -73,7 +73,19 @@ Los schemas han sido reestructurados para organizar el contenido por páginas pr
 **Propósito**: Eventos para la línea de tiempo de historia
 - Se mantiene sin cambios
 
-### ~~8. Page Content~~ ❌ **ELIMINADO**
+### 8. Image Slider (`imageSlider.ts`) ✨ **NUEVO**
+**Propósito**: Slider de imágenes para mostrar galerías dinámicas
+
+**Características**:
+- **Array de imágenes**: Hasta 10 imágenes con títulos multiidioma
+- **Autoplay configurable**: Velocidad ajustable (2-15 segundos)
+- **Responsive**: Control independiente para móvil/desktop
+- **Single image support**: Si solo hay 1 imagen, se muestra sin slider
+- **Progress indicators**: Líneas horizontales planas (no clickeables)
+
+**Ubicación**: Aparece en HOME después de la sección de especialidades
+
+### ~~9. Page Content~~ ❌ **ELIMINADO**
 **Razón**: Schema genérico innecesario, reemplazado por schemas específicos por página
 
 ## Ventajas de la Nueva Estructura
@@ -100,11 +112,33 @@ Los schemas han sido reestructurados para organizar el contenido por páginas pr
 
 1. **HOME** - Más crítico, contiene la mayoría del contenido visible
 2. **MENU** - Importante para la experiencia del usuario
-3. **CONTACT** - Importante pero más estático
+3. **IMAGE SLIDER** - Opcional, solo se muestra si se configura en Sanity
+4. **CONTACT** - Importante pero más estático
+
+## Slider de Imágenes - Funcionalidades Avanzadas
+
+### 🎨 **Características del Slider**
+- **Autoplay inteligente**: Solo funciona si hay múltiples imágenes
+- **Progress bars**: Líneas horizontales minimalistas que muestran progreso
+- **Transiciones suaves**: Fade in/out con Framer Motion
+- **Responsive**: Se adapta perfectamente a móvil y desktop
+- **Optimización**: Lazy loading y prioridad en primera imagen
+
+### 🎛️ **Controles Disponibles**
+- ✅ **Título opcional**: Multiidioma para encabezado del slider
+- ✅ **Velocidad autoplay**: 2-15 segundos configurables
+- ✅ **Control móvil**: Mostrar/ocultar en dispositivos móviles
+- ✅ **Orden**: Múltiples sliders ordenados por prioridad
+- ✅ **Estado activo**: Toggle para activar/desactivar
+
+### 📱 **Comportamiento**
+- **1 imagen**: Se muestra estática con título, sin controles
+- **2+ imágenes**: Slider completo con autoplay y progress indicators
+- **Solo Sanity**: No tiene fallback, solo aparece si se configura
 
 ## Próximos Pasos Recomendados
 
 1. **Crear contenido inicial** en Sanity Studio usando los nuevos schemas
-2. **Actualizar componentes frontend** para usar los nuevos schemas
-3. **Implementar sistema de fallback** para transición suave
-4. **Migrar gradualmente** desde schemas antiguos a nuevos
+2. **Configurar slider** añadiendo imágenes con títulos atractivos
+3. **Probar responsive** en diferentes dispositivos
+4. **Ajustar velocidad** según el contenido de las imágenes

@@ -139,6 +139,22 @@ export interface MenuItem {
   allergens?: string[];
 }
 
+// Slider de imágenes
+export interface ImageSliderItem {
+  image: SanityImage;
+  caption: MultiLanguageText;
+}
+
+export interface ImageSlider {
+  _id: string;
+  title?: MultiLanguageText;
+  isActive: boolean;
+  autoplaySpeed: number;
+  showOnMobile: boolean;
+  order: number;
+  images: ImageSliderItem[];
+}
+
 // Tipos de respuesta de las queries
 export interface HomeContentResponse {
   hero?: HomeContent;

@@ -310,3 +310,29 @@ export const menuItemsByCategoryQuery = groq`
     allergens
   }
 `;
+
+// Query para slider de imágenes
+export const imageSliderQuery = groq`
+  *[_type == "imageSlider" && !(_id in path("drafts.**")) && isActive == true] | order(order asc) {
+    _id,
+    title,
+    isActive,
+    autoplaySpeed,
+    showOnMobile,
+    order,
+    images[] {
+      image {
+        asset->{
+          _id,
+          url,
+          metadata {
+            dimensions,
+            lqip
+          }
+        },
+        alt
+      },
+      caption
+    }
+  }
+`;
