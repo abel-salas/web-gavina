@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { MenuCategory, Dictionary } from '@/app/lib/dictionary.models';
 
@@ -63,9 +63,96 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
             imageAlt: ''
         });
     };
-console.log('menuContent', menuContent);
 
-console.log('menu data', menuData);
+    // Allergen mapping for display with translations
+    const getAllergenLabel = (allergen: string) => {
+        const translations: Record<string, Record<string, string>> = {
+            gluten: {
+                es: 'Gluten',
+                en: 'Gluten',
+                ca: 'Gluten',
+                nl: 'Gluten'
+            },
+            shellfish: {
+                es: 'Mariscos',
+                en: 'Shellfish',
+                ca: 'Marisc',
+                nl: 'Schaaldieren'
+            },
+            fish: {
+                es: 'Pescado',
+                en: 'Fish',
+                ca: 'Peix',
+                nl: 'Vis'
+            },
+            dairy: {
+                es: 'Lácteos',
+                en: 'Dairy',
+                ca: 'Lactis',
+                nl: 'Zuivel'
+            },
+            eggs: {
+                es: 'Huevos',
+                en: 'Eggs',
+                ca: 'Ous',
+                nl: 'Eieren'
+            },
+            nuts: {
+                es: 'Frutos secos',
+                en: 'Nuts',
+                ca: 'Fruits secs',
+                nl: 'Noten'
+            },
+            soy: {
+                es: 'Soja',
+                en: 'Soy',
+                ca: 'Soja',
+                nl: 'Soja'
+            },
+            celery: {
+                es: 'Apio',
+                en: 'Celery',
+                ca: 'Api',
+                nl: 'Selderij'
+            },
+            mustard: {
+                es: 'Mostaza',
+                en: 'Mustard',
+                ca: 'Mostassa',
+                nl: 'Mosterd'
+            },
+            sesame: {
+                es: 'Sésamo',
+                en: 'Sesame',
+                ca: 'Sèsam',
+                nl: 'Sesam'
+            },
+            sulfites: {
+                es: 'Sulfitos',
+                en: 'Sulfites',
+                ca: 'Sulfits',
+                nl: 'Sulfieten'
+            }
+        };
+
+        const locale = dict.seo?.locale?.substring(0, 2) || 'es';
+        return translations[allergen]?.[locale] || translations[allergen]?.es || allergen;
+    };
+
+    const allergenIcons: Record<string, string> = {
+        gluten: 'grass',
+        shellfish: 'set_meal',
+        fish: 'phishing',
+        dairy: 'local_drink',
+        eggs: 'egg',
+        nuts: 'nature',
+        soy: 'eco',
+        celery: 'local_florist',
+        mustard: 'spa',
+        sesame: 'grain',
+        sulfites: 'science'
+    };
+
     return (
         <>
             <main className="pt-12">
@@ -111,6 +198,30 @@ console.log('menu data', menuData);
                                                 <span className="text-blue-600 font-semibold ml-4">{item.price}</span>
                                             </div>
                                             <p className="text-gray-600 text-sm">{item.description}</p>
+
+                                            {/* Allergens */}
+                                            {item.allergens && item.allergens.length > 0 && (
+                                                <div className="mt-2 flex flex-wrap gap-1">
+                                                    <span className="text-xs text-gray-500 mr-2">
+                                                        {dict.seo?.locale?.startsWith('en') ? 'Allergens:' :
+                                                            dict.seo?.locale?.startsWith('ca') ? 'Al·lèrgens:' :
+                                                                dict.seo?.locale?.startsWith('nl') ? 'Allergenen:' :
+                                                                    'Alérgenos:'}
+                                                    </span>
+                                                    {item.allergens.map((allergen: string, allergenIndex: number) => (
+                                                        <span
+                                                            key={allergenIndex}
+                                                            className="inline-flex items-center text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full"
+                                                            title={getAllergenLabel(allergen)}
+                                                        >
+                                                            <span className="material-icons-outlined mr-1 text-xs">
+                                                                {allergenIcons[allergen] || 'warning'}
+                                                            </span>
+                                                            {getAllergenLabel(allergen)}
+                                                        </span>
+                                                    ))}
+                                                </div>
+                                            )}
                                         </div>
                                     ))}
                                 </div>

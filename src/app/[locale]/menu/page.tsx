@@ -72,6 +72,7 @@ export default async function MenuPage({ params }: { params: Promise<{ locale: s
       description: item.description?.[locale] || item.description?.es || item.description?.en || '',
       price: item.price || 'Consultar',
       recommended: item.recommended || false,
+      allergens: item.allergens || [],
       image: item.image?.asset?.url || null,
       imageAlt: item.image?.alt || ''
     });

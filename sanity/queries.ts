@@ -4,18 +4,20 @@ import { MenuCategory, Dictionary } from '../src/app/lib/dictionary.models'
 
 // Query para obtener elementos del menú por categoría
 export async function getMenuItemsByCategory(category: string, locale: string = 'es') {
-  const query = `*[_type == "menuItem" && category == $category] | order(order asc) {
+  const query = `*[_type == "menuItem" && category == $category && isActive == true] | order(order asc) {
     _id,
     name,
     description,
     price,
     category,
     recommended,
+    allergens,
+    image,
     order
   }`
   
   const items = await client.fetch(query, { category })
-  
+  console.log('Menu items for category:', items);
   // Formatear para coincidir con MenuCategory interface
   return {
     title: getCategoryTitle(category, locale),
@@ -25,6 +27,9 @@ export async function getMenuItemsByCategory(category: string, locale: string = 
       description: item.description?.[locale] || item.description?.es || 'Sin descripción',
       price: item.price || '0€',
       recommended: item.recommended || false,
+      allergens: item.allergens || [],
+      image: item.image || null,
+      imageAlt: item.name?.[locale] || item.name?.es || 'Sin nombre',
     }))
   } as MenuCategory
 }

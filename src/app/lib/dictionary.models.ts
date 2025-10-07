@@ -189,6 +189,7 @@ export interface MenuCategory {
     title: string;
     subtitle?: string;
     items: Array<{
+        allergens: string[];
         name: string;
         description: string;
         price: string;
