@@ -28,6 +28,7 @@ export const metadata: Metadata = {
       return acc;
     }, {} as Record<string, string>),
   },
+  manifest: '/favicon_io/site.webmanifest',
 };
 
 export default function RootLayout({
@@ -37,9 +38,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <head>
-        <link rel="icon" href="/favicon.ico" />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <DynamicHtmlLang />
         {children}

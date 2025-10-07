@@ -125,10 +125,10 @@ export function HeroSection({ title, subtitle, description, ctaText, ctaHref, ba
           <AnimatedSection direction="scale" delay={0.8}>
             <Link href={ctaHref as Route}>
               <motion.div
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 cursor-pointer"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-900 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 cursor-pointer"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 25px 50px -12px rgba(59, 130, 246, 0.5)"
+                  boxShadow: "0 25px 50px -12px rgba(6, 182, 212, 0.5)"
                 }}
                 whileTap={{ scale: 0.95 }}
               >

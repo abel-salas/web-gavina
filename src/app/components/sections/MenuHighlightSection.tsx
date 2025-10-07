@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Route } from 'next';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
 
@@ -14,25 +15,33 @@ interface MenuHighlightProps {
     price: string;
   }>;
   menuHref: string;
+  specialtyImages?: {
+    arroces?: string;
+    mariscos?: string;
+    pescados?: string;
+    carnes?: string;
+  };
 }
 
-export function MenuHighlightSection({ title, subtitle, specialties, menuHref }: MenuHighlightProps) {
-  // Mapear los datos de especialidades a un formato con iconos y colores
+export function MenuHighlightSection({ title, subtitle, specialties, menuHref, specialtyImages }: MenuHighlightProps) {
+  // Mapear los datos de especialidades a un formato con imágenes
   const dishes = specialties.map((specialty, index) => {
-    const icons = ["🥘", "🦐", "🐟", "🥩"];
-    const colors = [
-      "from-orange-400 to-red-500",
-      "from-blue-400 to-cyan-500",
-      "from-green-400 to-teal-500",
-      "from-red-600 to-red-800"
+    const fallbackImages = [
+      "/images/home/paellas.jpg",
+      "/images/home/mariscos.jpg", 
+      "/images/home/pescado.jpg",
+      "/images/home/carne_brasa.jpg"
     ];
+
+    const imageKeys = ['arroces', 'mariscos', 'pescados', 'carnes'] as const;
+    const backgroundImage = specialtyImages?.[imageKeys[index]] || fallbackImages[index];
 
     return {
       name: specialty.name,
       description: specialty.description,
       price: specialty.price,
-      image: icons[index % icons.length],
-      color: colors[index % colors.length]
+      backgroundImage,
+      fallbackImage: fallbackImages[index]
     };
   });
 
@@ -54,7 +63,7 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref }:
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.2}>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Descubre algunos de nuestros platos más populares, elaborados con pasión y los mejores ingredientes
+              {subtitle || "Descubre algunos de nuestros platos más populares, elaborados con pasión y los mejores ingredientes"}
             </p>
           </AnimatedSection>
         </div>
@@ -63,26 +72,39 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref }:
           {dishes.map((dish, index) => (
             <StaggerItem key={index}>
               <motion.div
-                className="bg-gray-800 rounded-2xl p-6 hover:bg-gray-750 transition-all duration-300 border border-gray-700"
+                className="relative rounded-2xl overflow-hidden h-80 group cursor-pointer"
                 whileHover={{
                   y: -10,
                   boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)"
                 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <div className={`w-16 h-16 bg-gradient-to-br ${dish.color} rounded-full flex items-center justify-center text-3xl mb-4 mx-auto`}>
-                  {dish.image}
+                {/* Imagen de fondo */}
+                <div className="absolute inset-0">
+                  <Image
+                    src={dish.backgroundImage}
+                    alt={dish.name}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    quality={90}
+                  />
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                 </div>
-                <h3 className="text-xl font-bold mb-2 text-center">
-                  {dish.name}
-                </h3>
-                <p className="text-gray-400 text-sm mb-4 text-center leading-relaxed">
-                  {dish.description}
-                </p>
-                <div className="text-center">
-                  <span className="text-2xl font-bold text-yellow-400">
-                    {dish.price}
-                  </span>
+
+                {/* Contenido */}
+                <div className="relative z-10 h-full flex flex-col justify-end p-6">
+                  <h3 className="text-2xl font-bold mb-2 text-white">
+                    {dish.name}
+                  </h3>
+                  <p className="text-gray-200 text-sm mb-4 leading-relaxed">
+                    {dish.description}
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <span className="text-2xl font-bold text-yellow-400">
+                      {dish.price}
+                    </span>
+                  </div>
                 </div>
               </motion.div>
             </StaggerItem>

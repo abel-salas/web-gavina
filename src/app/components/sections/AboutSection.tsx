@@ -1,14 +1,17 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
 
 interface AboutSectionProps {
   title: string;
   description: string;
+  backgroundImage?: string;
+  backgroundAlt?: string;
 }
 
-export function AboutSection({ title, description }: AboutSectionProps) {
+export function AboutSection({ title, description, backgroundImage, backgroundAlt }: AboutSectionProps) {
   const features = [
     {
       icon: "🌿",
@@ -83,9 +86,19 @@ export function AboutSection({ title, description }: AboutSectionProps) {
                 transition={{ duration: 0.3 }}
               >
                 <div className="aspect-[4/3] bg-gradient-to-br from-blue-400 to-purple-600 rounded-2xl shadow-2xl overflow-hidden">
-                  <div className="w-full h-full bg-gray-800 flex items-center justify-center text-white text-6xl">
-                    🍽️
-                  </div>
+                  {backgroundImage ? (
+                    <Image
+                      src={backgroundImage}
+                      alt={backgroundAlt || 'Historia del restaurante'}
+                      fill
+                      className="object-cover"
+                      quality={90}
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-gray-800 flex items-center justify-center text-white text-6xl">
+                      🍽️
+                    </div>
+                  )}
                 </div>
               </motion.div>
             </AnimatedSection>

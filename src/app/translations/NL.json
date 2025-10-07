@@ -419,36 +419,43 @@
                 }
             ]
         },
-        "about": {
-            "title": "Onze Geschiedenis",
-            "subtitle": "Familietraditie sinds 1958",
-            "description": "Gelegen aan het Platja Gran van Calella, tegenover het Renfe Station, zijn wij een familierestaurant dat al tientallen jaren het beste van de Middellandse Zee en selecte vlees biedt. Met twee gratis parkeerplaatsen en een onvergelijkbare omgeving aan zee."
-        },
-        "specialties": {
-            "title": "Onze Specialiteiten",
-            "subtitle": "Het beste van de Middellandse Zee en selecte vlees",
-            "items": [
-                {
-                    "name": "Rijstgerechten",
-                    "description": "Zeevruchten paella, zwarte rijst, speciale paella met kreeft en fideuá",
-                    "price": "Vanaf €18"
-                },
-                {
-                    "name": "Zeevruchten",
-                    "description": "Blanes garnalen, langostinos, mosselen marinera en gestoomd",
-                    "price": "Vanaf €16"
-                },
-                {
-                    "name": "Verse Vis",
-                    "description": "Dagelijkse selectie van verse Middellandse Zeevis",
-                    "price": "Vanaf €20"
-                },
-                {
-                    "name": "Selecte Vlees",
-                    "description": "Entrecôte, sirloin, lamskoteletjes en gegrilde specialiteiten",
-                    "price": "Vanaf €22"
-                }
-            ]
+        "sections": {
+            "about": {
+                "title": "Onze Geschiedenis",
+                "subtitle": "Familietraditie sinds 1958",
+                "description": "Aan het Platja Gran van Calella zijn wij een familierestaurant dat sinds 1958 authentieke mediterrane keuken biedt met specialiteiten in rijstgerechten, verse vis en eersteklas vlees in een unieke omgeving aan zee."
+            },
+            "specialties": {
+                "title": "Onze Specialiteiten",
+                "subtitle": "Het beste van de Middellandse Zee en eersteklas vlees",
+                "items": [
+                    {
+                        "name": "Rijstgerechten",
+                        "description": "Zeevruchten paella, zwarte rijst, speciale paella met kreeft en fideuá",
+                        "price": "Vanaf €18"
+                    },
+                    {
+                        "name": "Zeevruchten",
+                        "description": "Blanes garnalen, langostinos, mosselen marinera en gestoomd",
+                        "price": "Vanaf €16"
+                    },
+                    {
+                        "name": "Verse Vis",
+                        "description": "Dagelijkse selectie van verse Middellandse Zeevis",
+                        "price": "Vanaf €20"
+                    },
+                    {
+                        "name": "Eersteklas Vlees",
+                        "description": "Entrecôte, sirloin, lamskoteletjes en gegrilde specialiteiten",
+                        "price": "Vanaf €22"
+                    }
+                ]
+            },
+            "location": {
+                "title": "Bevoorrechte Locatie",
+                "subtitle": "Aan zee in Calella",
+                "description": "Aan de kust van Platja Gran de Calella geniet je van directe toegang tot het strand en panoramisch uitzicht over de Middellandse Zee. Ons terras biedt de perfecte sfeer om te genieten van authentieke mediterrane keuken in een unieke omgeving waar de zee centraal staat."
+            }
         },
         "testimonials": {
             "title": "Wat Onze Klanten Zeggen",

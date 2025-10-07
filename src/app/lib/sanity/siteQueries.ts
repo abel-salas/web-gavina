@@ -48,6 +48,79 @@ export const siteImagesQuery = groq`
       },
       alt
     },
-    heroImageUrl
+    heroImageUrl,
+    historyBackgroundImage {
+      asset->{
+        _id,
+        url,
+        metadata {
+          dimensions,
+          lqip
+        }
+      },
+      alt
+    },
+    historyImageUrl,
+    locationBackgroundImage {
+      asset->{
+        _id,
+        url,
+        metadata {
+          dimensions,
+          lqip
+        }
+      },
+      alt
+    },
+    locationImageUrl,
+    // Specialty images
+    arrocesImage {
+      asset->{
+        _id,
+        url,
+        metadata {
+          dimensions,
+          lqip
+        }
+      },
+      alt
+    },
+    arrocesImageUrl,
+    mariscosImage {
+      asset->{
+        _id,
+        url,
+        metadata {
+          dimensions,
+          lqip
+        }
+      },
+      alt
+    },
+    mariscosImageUrl,
+    pescadosImage {
+      asset->{
+        _id,
+        url,
+        metadata {
+          dimensions,
+          lqip
+        }
+      },
+      alt
+    },
+    pescadosImageUrl,
+    carnesImage {
+      asset->{
+        _id,
+        url,
+        metadata {
+          dimensions,
+          lqip
+        }
+      },
+      alt
+    },
+    carnesImageUrl
   }
 `;

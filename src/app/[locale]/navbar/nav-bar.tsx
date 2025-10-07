@@ -2,6 +2,7 @@ import { getLocalizedData } from "@/app/lib/localization";
 import MobileNavbar from "./mobile-navbar";
 import Link from "next/link";
 import type { Route } from 'next';
+import { LogoText } from "@/app/components/LogoText";
 
 export default async function Navbar({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -12,7 +13,7 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
     { href: href('/menu'), label: dict.nav.menu },
     { href: href('/history'), label: dict.nav.history },
     { href: href('/contact'), label: dict.nav.contacto },
-    { href: href('/gallery'), label: dict.nav.gallery },
+    // { href: href('/gallery'), label: dict.nav.gallery },
   ];
 
   return (
@@ -24,7 +25,7 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
             {/* Logo/Brand */}
             <div className="flex-shrink-0">
               <Link href={href('/') as Route} className="text-xl font-bold text-white hover:text-blue-300 transition-colors">
-                Banys la Gavina
+                <LogoText className="w-full h-auto w-logo-header-mobile" />
               </Link>
             </div>
 

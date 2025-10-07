@@ -74,11 +74,11 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
                   {dict.nav.contacto}
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href={href('/gallery') as Route} className="text-gray-300 hover:text-white transition-colors">
                   {dict.nav.gallery}
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

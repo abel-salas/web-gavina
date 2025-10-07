@@ -412,36 +412,43 @@
                 }
             ]
         },
-        "about": {
-            "title": "Our History",
-            "subtitle": "Family tradition since 1958",
-            "description": "Located on Calella's Platja Gran, facing the Renfe Station, we are a family restaurant that has been offering the best of the Mediterranean Sea and select meats for decades. With two free parking areas and an incomparable setting facing the sea."
-        },
-        "specialties": {
-            "title": "Our Specialties",
-            "subtitle": "The best of the Mediterranean Sea and select meats",
-            "items": [
-                {
-                    "name": "Rice Dishes",
-                    "description": "Seafood paella, black rice, special paella with lobster and fideuá",
-                    "price": "From €18"
-                },
-                {
-                    "name": "Seafood",
-                    "description": "Blanes prawns, langostinos, mussels marinera and steamed",
-                    "price": "From €16"
-                },
-                {
-                    "name": "Fresh Fish",
-                    "description": "Daily selection of fresh Mediterranean fish",
-                    "price": "From €20"
-                },
-                {
-                    "name": "Select Meats",
-                    "description": "Entrecôte, sirloin, lamb chops and grilled specialties",
-                    "price": "From €22"
-                }
-            ]
+        "sections": {
+            "about": {
+                "title": "Our History",
+                "subtitle": "Family tradition since 1958",
+                "description": "On Calella's Platja Gran, we are a family restaurant that since 1958 offers authentic Mediterranean cuisine with specialties in rice dishes, fresh fish and premium quality meats in a unique beachfront setting."
+            },
+            "specialties": {
+                "title": "Our Specialties",
+                "subtitle": "The best of the Mediterranean Sea and premium meats",
+                "items": [
+                    {
+                        "name": "Rice Dishes",
+                        "description": "Seafood paella, black rice, special paella with lobster and fideuá",
+                        "price": "From €18"
+                    },
+                    {
+                        "name": "Seafood",
+                        "description": "Blanes prawns, langostinos, mussels marinera and steamed",
+                        "price": "From €16"
+                    },
+                    {
+                        "name": "Fresh Fish",
+                        "description": "Daily selection of fresh Mediterranean fish",
+                        "price": "From €20"
+                    },
+                    {
+                        "name": "Premium Meats",
+                        "description": "Entrecôte, sirloin, lamb chops and grilled specialties",
+                        "price": "From €22"
+                    }
+                ]
+            },
+            "location": {
+                "title": "Privileged Location",
+                "subtitle": "Beachfront in Calella",
+                "description": "On the beachfront at Platja Gran de Calella, you'll enjoy direct beach access and panoramic Mediterranean views. Our terrace offers the perfect atmosphere to savor authentic Mediterranean cuisine in a unique setting where the sea takes center stage."
+            }
         },
         "testimonials": {
             "title": "What Our Customers Say",

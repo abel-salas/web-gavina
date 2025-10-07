@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from 'next/link';
 import type { Route } from 'next';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
@@ -8,9 +9,14 @@ import { CONTACT_INFO } from '../../lib/contact-info';
 
 interface LocationSectionProps {
   title: string;
+  backgroundImage?: string;
+  backgroundAlt?: string;
+  useContactInfo?: boolean;
+  subtitle?: string;
+  description?: string;
 }
 
-export function LocationSection({ title }: LocationSectionProps) {
+export function LocationSection({ title, backgroundImage, backgroundAlt, useContactInfo = false, subtitle, description }: LocationSectionProps) {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -20,21 +26,31 @@ export function LocationSection({ title }: LocationSectionProps) {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 {title}
               </h2>
+              {subtitle && (
+                <p className="text-xl text-gray-600 mb-4 font-medium">
+                  {subtitle}
+                </p>
+              )}
             </AnimatedSection>
 
             <AnimatedSection direction="right" delay={0.2}>
               <p className="text-xl text-gray-700 mb-8">
-                Ubicado en el corazón de la costa mediterránea, nuestro restaurante ofrece vistas espectaculares al mar mientras disfrutas de nuestra exquisita gastronomía.
+                {description || "Ubicado en el corazón de la costa mediterránea, nuestro restaurante ofrece vistas espectaculares al mar mientras disfrutas de nuestra exquisita gastronomía."}
               </p>
             </AnimatedSection>
 
             <StaggerContainer className="space-y-4">
-              {[
-                { icon: "📍", text: "Calle Example, 123 - Barcelona" },
-                { icon: "🚗", text: "Parking gratuito disponible" },
-                { icon: "🚇", text: "Metro: Línea 4, Estación Gavina" },
+              {(useContactInfo ? [
+                { icon: "📍", text: CONTACT_INFO.address },
+                { icon: "🏖️", text: CONTACT_INFO.location },
+                { icon: "🚗", text: CONTACT_INFO.parking },
+                { icon: "📞", text: CONTACT_INFO.phone }
+              ] : [
+                { icon: "📍", text: CONTACT_INFO.address },
+                { icon: "🏖️", text: CONTACT_INFO.location },
+                { icon: "�", text: CONTACT_INFO.parking },
                 { icon: "🌊", text: "Vista panorámica al Mediterráneo" }
-              ].map((item, index) => (
+              ]).map((item, index) => (
                 <StaggerItem key={index}>
                   <div className="flex items-center space-x-3">
                     <span className="text-2xl">{item.icon}</span>
@@ -47,15 +63,27 @@ export function LocationSection({ title }: LocationSectionProps) {
 
           <AnimatedSection direction="left" delay={0.3}>
             <motion.div
-              className="aspect-[4/3] bg-gradient-to-br from-blue-400 to-green-500 rounded-2xl shadow-2xl relative overflow-hidden"
+              className="aspect-[4/3] rounded-2xl shadow-2xl relative overflow-hidden"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="text-8xl mb-4">🏛️</div>
-                  <p className="text-xl font-semibold">Vista del Restaurante</p>
+              {backgroundImage ? (
+                <Image
+                  src={backgroundImage}
+                  alt={backgroundAlt || 'Vista del restaurante'}
+                  fill
+                  className="object-cover"
+                  quality={90}
+                />
+              ) : (
+                <div className="aspect-[4/3] bg-gradient-to-br from-blue-400 to-green-500 rounded-2xl shadow-2xl relative overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center text-white">
+                      <div className="text-8xl mb-4">🏛️</div>
+                      <p className="text-xl font-semibold">Vista del Restaurante</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              )}
             </motion.div>
           </AnimatedSection>
         </div>

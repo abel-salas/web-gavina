@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const { site } = SEO_CONFIG;
 
     // Páginas principales
-    const pages = ['', '/menu', '/contact', '/gallery'];
+    const pages = ['', '/menu', '/contact', '/history']; // '/gallery' removed
 
     // Generar URLs para cada idioma y página
     const sitemapEntries: MetadataRoute.Sitemap = [];

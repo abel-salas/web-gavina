@@ -16,7 +16,7 @@ export const pageContent = defineType({
           { title: 'Menú', value: 'menu' },
           { title: 'Historia', value: 'history' },
           { title: 'Contacto', value: 'contact' },
-          { title: 'Galería', value: 'gallery' },
+          // { title: 'Galería', value: 'gallery' },
         ],
       },
       validation: (Rule) => Rule.required(),

@@ -6,7 +6,7 @@ export const CONTACT_INFO = {
   email: "info@banyslagavina.cat",
   address: "Paseo Manuel Puigvert s/n, Calella, Barcelona",
   location: "Platja Gran de Calella, frente a la Estación de Renfe",
-  parking: "Dos aparcamientos gratuitos",
+  parking: "Disponemos de dos parkings públicos gratuitos de Calella muy cercanos al restaurante",
   facebook: "https://www.facebook.com/GavinaCalella",
   instagram: "https://www.instagram.com/banyslagavina?igsh=MXBzdHpoZjI2ZTlxNA==",
   hours: {
