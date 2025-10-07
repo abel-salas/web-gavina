@@ -21,13 +21,15 @@ interface ModalState {
     isOpen: boolean;
     imageSrc: string;
     title: string;
+    imageAlt: string;
 }
 
 export default function MenuContent({ dict, menuData, menuContent }: MenuContentProps) {
     const [modal, setModal] = useState<ModalState>({
         isOpen: false,
         imageSrc: '',
-        title: ''
+        title: '',
+        imageAlt: ''
     });
 
     // Definir el orden deseado de las categorías (7, 6, 5, 4, 3, 2, 1)
@@ -42,13 +44,14 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
         .filter(category => category.data && category.data.items && category.data.items.length > 0)
         .reverse();
 
-    const openModal = (itemName: string) => {
-        // Por ahora usamos una imagen placeholder
-        // Más adelante se podrán agregar imágenes específicas por plato
+    const openModal = (item: { name: string; image?: string | null; imageAlt?: string }) => {
+        if (!item.image) return; // Solo abrir modal si hay imagen
+        
         setModal({
             isOpen: true,
-            imageSrc: '/images/menu/carta_menu.jpg', // Imagen placeholder
-            title: itemName
+            imageSrc: item.image,
+            title: item.name,
+            imageAlt: item.imageAlt || item.name
         });
     };
 
@@ -56,7 +59,8 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
         setModal({
             isOpen: false,
             imageSrc: '',
-            title: ''
+            title: '',
+            imageAlt: ''
         });
     };
 
@@ -107,18 +111,20 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                                     {data.items.map((item: MenuCategory['items'][0], index: number) => (
                                         <div
                                             key={index}
-                                            className="border-b pb-4 last:border-b-0 cursor-pointer hover:bg-gray-50 p-2 rounded transition-colors"
-                                            onClick={() => openModal(item.name)}
+                                            className={`border-b pb-4 last:border-b-0 p-2 rounded transition-colors ${item.image ? 'cursor-pointer hover:bg-gray-50' : ''}`}
+                                            onClick={() => item.image && openModal(item)}
                                         >
                                             <div className="flex justify-between items-start mb-2">
-                                                <h3 className="font-medium text-gray-900 flex-1 hover:text-blue-600 transition-colors">
+                                                <h3 className={`font-medium text-gray-900 flex-1 transition-colors ${item.image ? 'hover:text-blue-600' : ''}`}>
                                                     {item.name}
                                                     {item.recommended && (
                                                         <span className="ml-2 text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">
                                                             Recomendado
                                                         </span>
                                                     )}
-                                                    <span className="ml-2 text-gray-400 text-sm">📸</span>
+                                                    {item.image && (
+                                                        <span className="ml-2 text-blue-500 text-sm hover:text-blue-700 transition-colors" title="Ver imagen del plato">📸</span>
+                                                    )}
                                                 </h3>
                                                 <span className="text-blue-600 font-semibold ml-4">{item.price}</span>
                                             </div>
@@ -139,7 +145,7 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                     onClick={closeModal}
                 >
                     <div
-                        className="relative bg-white rounded-lg max-w-2xl max-h-[90vh] overflow-hidden"
+                        className="relative bg-white rounded-lg max-w-4xl max-h-[90vh] w-[90vw] overflow-hidden"
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Close button */}
@@ -151,12 +157,12 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                         </button>
 
                         {/* Image */}
-                        <div className="relative w-full h-80 md:h-96">
+                        <div className="relative w-full h-96 md:h-[500px] lg:h-[600px]">
                             <Image
                                 src={modal.imageSrc}
-                                alt={modal.title}
+                                alt={modal.imageAlt}
                                 fill
-                                className="object-cover"
+                                className="object-contain"
                                 quality={90}
                             />
                         </div>
@@ -165,8 +171,7 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                         <div className="p-4">
                             <h3 className="text-xl font-semibold text-gray-900 mb-2">{modal.title}</h3>
                             <p className="text-gray-600 text-sm">
-                                {/* Placeholder text - se puede personalizar por plato más adelante */}
-                                Imagen del plato - Próximamente con fotos reales
+                                {modal.imageAlt || 'Imagen del plato'}
                             </p>
                         </div>
                     </div>

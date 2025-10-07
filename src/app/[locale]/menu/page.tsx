@@ -70,7 +70,10 @@ export default async function MenuPage({ params }: { params: Promise<{ locale: s
     acc[category].items.push({
       name: item.name?.[locale] || item.name?.es || item.name?.en || 'Sin nombre',
       description: item.description?.[locale] || item.description?.es || item.description?.en || '',
-      price: item.price || 'Consultar'
+      price: item.price || 'Consultar',
+      recommended: item.recommended || false,
+      image: item.image?.asset?.url || null,
+      imageAlt: item.image?.alt || ''
     });
     
     return acc;

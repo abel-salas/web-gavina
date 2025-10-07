@@ -193,5 +193,7 @@ export interface MenuCategory {
         description: string;
         price: string;
         recommended?: boolean;
+        image?: string | null;
+        imageAlt?: string;
     }>;
 }
