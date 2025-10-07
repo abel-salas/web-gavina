@@ -53,7 +53,7 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
   return (
     <main>
       {/* Hero Section with Background Image */}
-      <section className="relative h-96 md:h-[500px] flex items-center justify-center mb-16">
+      <section className="relative h-96 md:h-[500px] flex items-center justify-center">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
