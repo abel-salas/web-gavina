@@ -38,6 +38,11 @@ export const homeContentQuery = groq`
       },
       alt
     },
+    aboutFeatures[] {
+      icon,
+      title,
+      description
+    },
     
     // Especialidades (specialties)
     specialtiesTitle,
@@ -263,7 +268,7 @@ export const contactContentQuery = groq`
 
 // Query para items del menú (platos individuales)
 export const menuItemsQuery = groq`
-  *[_type == "menuItem"] | order(category asc, order asc) {
+  *[_type == "menuItem" && !(_id in path("drafts.**")) && isActive == true] | order(category asc, order asc) {
     _id,
     name,
     description,
@@ -288,7 +293,7 @@ export const menuItemsQuery = groq`
 
 // Query para items del menú por categoría
 export const menuItemsByCategoryQuery = groq`
-  *[_type == "menuItem" && category == $category] | order(order asc) {
+  *[_type == "menuItem" && category == $category && !(_id in path("drafts.**")) && isActive == true] | order(order asc) {
     _id,
     name,
     description,

@@ -105,9 +105,15 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
             {/* Sección 2: Sobre Nosotros */}
             <AboutSection
                 title={aboutData ? getLocalizedText(aboutData.aboutTitle, locale, dict.sections?.about?.title || '') : dict.sections?.about?.title || ''}
+                subtitle={aboutData ? getLocalizedText(aboutData.aboutSubtitle, locale, '') : ''}
                 description={aboutData ? getLocalizedText(aboutData.aboutDescription, locale, dict.sections?.about?.description || '') : dict.sections?.about?.description || ''}
                 backgroundImage={historyBackgroundImage}
                 backgroundAlt={historyBackgroundAlt}
+                features={aboutData?.aboutFeatures?.map(feature => ({
+                    icon: feature.icon,
+                    title: getLocalizedText(feature.title, locale, ''),
+                    description: getLocalizedText(feature.description, locale, '')
+                }))}
             />
 
             {/* Sección 3: Platos Destacados */}

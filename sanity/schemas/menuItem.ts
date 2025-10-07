@@ -7,6 +7,14 @@ export const menuItem = defineType({
   icon: () => '🍽️',
   fields: [
     defineField({
+      name: 'isActive',
+      title: '✅ Plato Activo',
+      type: 'boolean',
+      initialValue: true,
+      description: '🔴 IMPORTANTE: Desactiva este toggle para ocultar el plato del menú público',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'name',
       title: 'Nombre del Plato',
       type: 'object',
@@ -47,6 +55,7 @@ export const menuItem = defineType({
           { title: 'Arroces', value: 'rice' },
           { title: 'Carnes', value: 'meat' },
           { title: 'Pescados', value: 'fish' },
+          { title: 'Postres', value: 'desserts' },
           { title: 'Bebidas', value: 'drinks' },
         ],
       },
@@ -110,11 +119,14 @@ export const menuItem = defineType({
       subtitle: 'category',
       price: 'price',
       recommended: 'recommended',
+      isActive: 'isActive',
     },
-    prepare({ title, subtitle, price, recommended }) {
+    prepare({ title, subtitle, price, recommended, isActive }) {
+      const status = isActive ? '✅' : '❌';
+      const star = recommended ? ' ⭐' : '';
       return {
-        title: title || 'Sin título',
-        subtitle: `${subtitle || 'Sin categoría'} - ${price || 'Sin precio'}${recommended ? ' ⭐' : ''}`,
+        title: `${status} ${title || 'Sin título'}`,
+        subtitle: `${subtitle || 'Sin categoría'} - ${price || 'Sin precio'}${star}`,
       }
     },
   },

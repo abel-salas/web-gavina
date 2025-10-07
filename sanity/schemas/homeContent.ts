@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export const homeContent = defineType({
   name: 'homeContent',
-  title: 'Contenido de la Página Principal',
+  title: 'Página Principal',
   type: 'document',
   fields: [
     defineField({
@@ -137,6 +137,62 @@ export const homeContent = defineType({
           name: 'alt',
           type: 'string',
           title: 'Texto alternativo',
+        },
+      ],
+      hidden: ({ document }) => document?.sectionId !== 'about',
+    }),
+
+    defineField({
+      name: 'aboutFeatures',
+      title: 'Características Destacadas',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            {
+              name: 'icon',
+              title: 'Icono (emoji)',
+              type: 'string',
+              validation: (Rule) => Rule.max(2).required(),
+            },
+            {
+              name: 'title',
+              title: 'Título',
+              type: 'object',
+              fields: [
+                { name: 'es', title: 'Español', type: 'string' },
+                { name: 'en', title: 'English', type: 'string' },
+                { name: 'ca', title: 'Català', type: 'string' },
+                { name: 'nl', title: 'Nederlands', type: 'string' },
+              ],
+            },
+            {
+              name: 'description',
+              title: 'Descripción',
+              type: 'object',
+              fields: [
+                { name: 'es', title: 'Español', type: 'text' },
+                { name: 'en', title: 'English', type: 'text' },
+                { name: 'ca', title: 'Català', type: 'text' },
+                { name: 'nl', title: 'Nederlands', type: 'text' },
+              ],
+            },
+          ],
+          preview: {
+            select: {
+              title: 'title.es',
+              subtitle: 'description.es',
+              media: 'icon',
+            },
+            prepare(selection) {
+              const { title, subtitle } = selection;
+              return {
+                title: title,
+                subtitle: subtitle,
+              };
+            },
+          },
         },
       ],
       hidden: ({ document }) => document?.sectionId !== 'about',

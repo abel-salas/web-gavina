@@ -4,16 +4,17 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { MenuCategory, Dictionary } from '@/app/lib/dictionary.models';
 
+interface MenuContentInfo {
+    title: string;
+    subtitle: string;
+    description: string;
+    backgroundImage: string;
+}
+
 interface MenuContentProps {
     dict: Dictionary;
-    menuData: {
-        starters?: MenuCategory;
-        salads?: MenuCategory;
-        rice?: MenuCategory;
-        meat?: MenuCategory;
-        fish?: MenuCategory;
-        drinks?: MenuCategory;
-    };
+    menuData: Record<string, MenuCategory>;
+    menuContent?: MenuContentInfo;
 }
 
 interface ModalState {
@@ -22,23 +23,24 @@ interface ModalState {
     title: string;
 }
 
-export default function MenuContent({ dict, menuData }: MenuContentProps) {
+export default function MenuContent({ dict, menuData, menuContent }: MenuContentProps) {
     const [modal, setModal] = useState<ModalState>({
         isOpen: false,
         imageSrc: '',
         title: ''
     });
 
-    const categories = [
-        { key: 'starters', data: menuData.starters },
-        { key: 'salads', data: menuData.salads },
-        { key: 'rice', data: menuData.rice },
-        { key: 'meat', data: menuData.meat },
-        { key: 'fish', data: menuData.fish },
-        { key: 'drinks', data: menuData.drinks }
-    ].filter((category): category is { key: string; data: MenuCategory } =>
-        category.data !== undefined
-    );
+    // Definir el orden deseado de las categorías (7, 6, 5, 4, 3, 2, 1)
+    const categoryOrder = ['drinks', 'desserts', 'fish', 'meat', 'rice', 'salads', 'starters'];
+    
+    // Convertir el objeto de categorías a array con orden específico
+    const categories = categoryOrder
+        .map(key => ({
+            key,
+            data: menuData[key] as MenuCategory
+        }))
+        .filter(category => category.data && category.data.items && category.data.items.length > 0)
+        .reverse();
 
     const openModal = (itemName: string) => {
         // Por ahora usamos una imagen placeholder
@@ -62,11 +64,11 @@ export default function MenuContent({ dict, menuData }: MenuContentProps) {
         <>
             <main>
                 {/* Hero Section con imagen */}
-                <section className="relative h-96 md:h-[500px] flex items-center justify-center mb-16">
+                <section className="relative h-96 md:h-[500px] flex items-center justify-center py-20">
                     {/* Background Image */}
                     <div className="absolute inset-0">
                         <Image
-                            src="/images/menu/mesa_carta.jpg"
+                            src={menuContent?.backgroundImage || "/images/menu/mesa_carta.jpg"}
                             alt="Carta del restaurante Banys La Gavina"
                             fill
                             className="object-cover"
@@ -80,13 +82,13 @@ export default function MenuContent({ dict, menuData }: MenuContentProps) {
                     {/* Content */}
                     <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
                         <h1 className="text-5xl md:text-6xl font-parisienne mb-6 text-white">
-                            {dict.menu?.title || "Nuestra Carta"}
+                            {menuContent?.title || dict.menu?.title || "Nuestra Carta"}
                         </h1>
                         <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                            {dict.menu?.subtitle || "Cocina mediterránea inspirada en los productos del mar"}
+                            {menuContent?.subtitle || dict.menu?.subtitle || "Cocina mediterránea inspirada en los productos del mar"}
                         </p>
                         <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                            {dict.menu?.description || "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación."}
+                            {menuContent?.description || dict.menu?.description || "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación."}
                         </p>
                     </div>
                 </section>

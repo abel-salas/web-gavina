@@ -9,7 +9,6 @@
         "phone": "937 69 25 39",
         "mobile": "695 349 307",
         "address": "Paseo Manuel Puigvert s/n, Calella, Barcelona",
-        "hours": "Abierto todos los días",
         "location": "Platja Gran de Calella, frente a la Estación de Renfe",
         "parking": "Dos aparcamientos gratuitos",
         "facebook": "Facebook",
@@ -38,7 +37,15 @@
         "description": "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación.",
         "metaTitle": "Carta - Restaurante Banys La Gavina | Arroces, Mariscos y Especialidades",
         "metaDescription": "Descubre nuestra carta con los mejores arroces, mariscos frescos y especialidades mediterráneas. Paella marinera, arroz negro, pescados del día.",
-        "categories": {}
+        "categoryNames": {
+            "starters": "Entrantes",
+            "salads": "Ensaladas",
+            "rice": "Arroces",
+            "meat": "Carnes",
+            "fish": "Pescados",
+            "desserts": "Postres",
+            "drinks": "Bebidas"
+        }
     },
     "contact": {
         "title": "Contacto",
@@ -132,24 +139,6 @@
                     "description": "Dos aparcamientos gratuitos, uno frente al restaurantee"
                 }
             ]
-        },
-        "testimonials": {
-            "title": "Lo que dicen nuestros clientes",
-            "subtitle": "Más de 65 años de satisfacción",
-            "items": [
-                {
-                    "name": "Cliente Habitual",
-                    "comment": "La mejor paella de Calella, tradición y calidad en cada plato"
-                },
-                {
-                    "name": "Visitante",
-                    "comment": "Ubicación perfecta frente al mar, comida excelente y servicio familiar"
-                },
-                {
-                    "name": "Local",
-                    "comment": "Un clásico de Calella que nunca defrauda, generación tras generación"
-                }
-            ]
         }
     },
     "history": {
@@ -236,15 +225,7 @@
         "contact": {
             "title": "Contacto"
         },
-        "hours": {
-            "title": "Horarios"
-        },
-        "social": {
-            "title": "Síguenos",
-            "facebook": "Facebook",
-            "instagram": "Instagram"
-        },
         "language_selector": "Idioma",
-        "copyright": "© 2024 Restaurante Banys La Gavina. Todos los derechos reservados."
+        "copyright": "© 2025 Restaurante Banys La Gavina. Todos los derechos reservados."
     }
 }

@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export const menuContent = defineType({
   name: 'menuContent',
-  title: 'Contenido de la Página de Menú',
+  title: 'Página de Menú',
   type: 'document',
   fields: [
     defineField({
@@ -13,7 +13,6 @@ export const menuContent = defineType({
         list: [
           { title: 'Encabezado del Menú', value: 'hero' },
           { title: 'Introducción', value: 'intro' },
-          { title: 'Categorías', value: 'categories' },
         ],
       },
       validation: (Rule) => Rule.required(),
@@ -112,155 +111,7 @@ export const menuContent = defineType({
     }),
 
     // Categories Section
-    defineField({
-      name: 'categoryTitles',
-      title: 'Títulos de Categorías',
-      type: 'object',
-      fields: [
-        {
-          name: 'starters',
-          title: 'Entrantes',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'string' },
-            { name: 'en', title: 'English', type: 'string' },
-            { name: 'ca', title: 'Català', type: 'string' },
-            { name: 'nl', title: 'Nederlands', type: 'string' },
-          ],
-        },
-        {
-          name: 'salads',
-          title: 'Ensaladas',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'string' },
-            { name: 'en', title: 'English', type: 'string' },
-            { name: 'ca', title: 'Català', type: 'string' },
-            { name: 'nl', title: 'Nederlands', type: 'string' },
-          ],
-        },
-        {
-          name: 'rice',
-          title: 'Arroces',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'string' },
-            { name: 'en', title: 'English', type: 'string' },
-            { name: 'ca', title: 'Català', type: 'string' },
-            { name: 'nl', title: 'Nederlands', type: 'string' },
-          ],
-        },
-        {
-          name: 'meat',
-          title: 'Carnes',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'string' },
-            { name: 'en', title: 'English', type: 'string' },
-            { name: 'ca', title: 'Català', type: 'string' },
-            { name: 'nl', title: 'Nederlands', type: 'string' },
-          ],
-        },
-        {
-          name: 'fish',
-          title: 'Pescados',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'string' },
-            { name: 'en', title: 'English', type: 'string' },
-            { name: 'ca', title: 'Català', type: 'string' },
-            { name: 'nl', title: 'Nederlands', type: 'string' },
-          ],
-        },
-        {
-          name: 'drinks',
-          title: 'Bebidas',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'string' },
-            { name: 'en', title: 'English', type: 'string' },
-            { name: 'ca', title: 'Català', type: 'string' },
-            { name: 'nl', title: 'Nederlands', type: 'string' },
-          ],
-        },
-      ],
-      hidden: ({ document }) => document?.sectionId !== 'categories',
-    }),
 
-    defineField({
-      name: 'categoryDescriptions',
-      title: 'Descripciones de Categorías',
-      type: 'object',
-      fields: [
-        {
-          name: 'starters',
-          title: 'Descripción Entrantes',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'text' },
-            { name: 'en', title: 'English', type: 'text' },
-            { name: 'ca', title: 'Català', type: 'text' },
-            { name: 'nl', title: 'Nederlands', type: 'text' },
-          ],
-        },
-        {
-          name: 'salads',
-          title: 'Descripción Ensaladas',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'text' },
-            { name: 'en', title: 'English', type: 'text' },
-            { name: 'ca', title: 'Català', type: 'text' },
-            { name: 'nl', title: 'Nederlands', type: 'text' },
-          ],
-        },
-        {
-          name: 'rice',
-          title: 'Descripción Arroces',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'text' },
-            { name: 'en', title: 'English', type: 'text' },
-            { name: 'ca', title: 'Català', type: 'text' },
-            { name: 'nl', title: 'Nederlands', type: 'text' },
-          ],
-        },
-        {
-          name: 'meat',
-          title: 'Descripción Carnes',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'text' },
-            { name: 'en', title: 'English', type: 'text' },
-            { name: 'ca', title: 'Català', type: 'text' },
-            { name: 'nl', title: 'Nederlands', type: 'text' },
-          ],
-        },
-        {
-          name: 'fish',
-          title: 'Descripción Pescados',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'text' },
-            { name: 'en', title: 'English', type: 'text' },
-            { name: 'ca', title: 'Català', type: 'text' },
-            { name: 'nl', title: 'Nederlands', type: 'text' },
-          ],
-        },
-        {
-          name: 'drinks',
-          title: 'Descripción Bebidas',
-          type: 'object',
-          fields: [
-            { name: 'es', title: 'Español', type: 'text' },
-            { name: 'en', title: 'English', type: 'text' },
-            { name: 'ca', title: 'Català', type: 'text' },
-            { name: 'nl', title: 'Nederlands', type: 'text' },
-          ],
-        },
-      ],
-      hidden: ({ document }) => document?.sectionId !== 'categories',
-    }),
 
     defineField({
       name: 'order',

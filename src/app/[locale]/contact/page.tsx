@@ -3,6 +3,8 @@ import { getLocalizedData } from "@/app/lib/localization";
 import { generatePageMetadata, getValidLocale } from '@/seo';
 import { getContactInfo } from "@/app/lib/contact-utils";
 import WhatsAppReservation from "@/app/components/WhatsAppReservation";
+import HoursSection from "@/app/components/HoursSection";
+import SocialMedia from '@/app/components/SocialMedia';
 
 export async function generateMetadata({
   params
@@ -24,7 +26,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const { dict } = getLocalizedData(locale);
 
   // Información de contacto centralizada
-  const contactInfo = getContactInfo(locale);
+  const contactInfo = getContactInfo();
 
   return (
     <main className="container mx-auto px-4 py-8">
@@ -75,11 +77,15 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               </div>
             </div>
 
-            <div className="flex items-center">
+            <div className="flex items-start">
               <span className="text-2xl mr-3">🕐</span>
-              <div>
-                <h3 className="font-semibold">{dict.contact?.fields?.schedule || 'Horario'}</h3>
-                <p className="text-gray-600">{contactInfo.hours}</p>
+              <div className="flex-1">
+                <HoursSection
+                  locale={locale}
+                  showTitle={true}
+                  showIcon={false}
+                  className="text-gray-600"
+                />
               </div>
             </div>
 
@@ -91,23 +97,8 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               </div>
             </div>
 
-            <div className="flex items-center">
-              <span className="text-2xl mr-3">�</span>
-              <div>
-                <h3 className="font-semibold">{dict.contact?.fields?.follow_us || 'Síguenos'}</h3>
-                <div className="space-y-1">
-                  <div>
-                    <a href={contactInfo.facebook} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                      {dict.contact_info?.facebook || 'Facebook'}
-                    </a>
-                  </div>
-                  <div>
-                    <a href={contactInfo.instagram} target="_blank" rel="noopener noreferrer" className="text-pink-600 hover:text-pink-800">
-                      {dict.contact_info?.instagram || 'Instagram'}
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div className="flex justify-center pt-6">
+              <SocialMedia theme="light" iconSize="large" />
             </div>
           </div>
         </section>

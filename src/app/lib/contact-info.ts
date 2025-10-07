@@ -8,11 +8,5 @@ export const CONTACT_INFO = {
   location: "Platja Gran de Calella, frente a la Estación de Renfe",
   parking: "Disponemos de dos parkings públicos gratuitos de Calella muy cercanos al restaurante",
   facebook: "https://www.facebook.com/GavinaCalella",
-  instagram: "https://www.instagram.com/banyslagavina?igsh=MXBzdHpoZjI2ZTlxNA==",
-  hours: {
-    es: "Abierto todos los días",
-    en: "Open every day", 
-    ca: "Obert tots els dies",
-    nl: "Elke dag geopend"
-  }
+  instagram: "https://www.instagram.com/banyslagavina?igsh=MXBzdHpoZjI2ZTlxNA=="
 } as const;

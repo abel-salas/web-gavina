@@ -24,6 +24,13 @@ export interface SanityImage {
   alt?: string;
 }
 
+// Característica de la sección About
+export interface AboutFeature {
+  icon: string;
+  title: MultiLanguageText;
+  description: MultiLanguageText;
+}
+
 // Contenido de la página HOME
 export interface HomeContent {
   _id: string;
@@ -42,6 +49,7 @@ export interface HomeContent {
   aboutSubtitle?: MultiLanguageText;
   aboutDescription?: MultiLanguageText;
   aboutImage?: SanityImage;
+  aboutFeatures?: AboutFeature[];
   
   // Especialidades (specialties)
   specialtiesTitle?: MultiLanguageText;

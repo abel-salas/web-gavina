@@ -4,15 +4,24 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../animations/AnimatedSection';
 
+interface AboutFeature {
+  icon: string;
+  title: string;
+  description: string;
+}
+
 interface AboutSectionProps {
   title: string;
+  subtitle?: string;
   description: string;
   backgroundImage?: string;
   backgroundAlt?: string;
+  features?: AboutFeature[];
 }
 
-export function AboutSection({ title, description, backgroundImage, backgroundAlt }: AboutSectionProps) {
-  const features = [
+export function AboutSection({ title, subtitle, description, backgroundImage, backgroundAlt, features }: AboutSectionProps) {
+  // Features por defecto si no se proporcionan desde Sanity
+  const defaultFeatures = [
     {
       icon: "🌿",
       title: "Ingredientes Frescos",
@@ -20,7 +29,7 @@ export function AboutSection({ title, description, backgroundImage, backgroundAl
     },
     {
       icon: "👨‍🍳",
-      title: "Chef Experto",
+      title: "Chef Experto", 
       description: "Más de 20 años de experiencia en cocina mediterránea"
     },
     {
@@ -34,8 +43,8 @@ export function AboutSection({ title, description, backgroundImage, backgroundAl
       description: "Vistas al mar en un entorno acogedor y elegante"
     }
   ];
-
-  return (
+  
+  const displayFeatures = features && features.length > 0 ? features : defaultFeatures;  return (
     <section className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -45,6 +54,11 @@ export function AboutSection({ title, description, backgroundImage, backgroundAl
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                 {title}
               </h2>
+              {subtitle && (
+                <p className="text-xl text-blue-600 mb-4 font-medium">
+                  {subtitle}
+                </p>
+              )}
             </AnimatedSection>
 
             <AnimatedSection direction="right" delay={0.2}>
@@ -54,7 +68,7 @@ export function AboutSection({ title, description, backgroundImage, backgroundAl
             </AnimatedSection>
 
             <StaggerContainer className="space-y-6">
-              {features.map((feature, index) => (
+              {displayFeatures.map((feature, index) => (
                 <StaggerItem key={index}>
                   <motion.div
                     className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"

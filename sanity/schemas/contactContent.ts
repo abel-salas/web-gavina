@@ -2,7 +2,7 @@ import { defineField, defineType } from 'sanity'
 
 export const contactContent = defineType({
   name: 'contactContent',
-  title: 'Contenido de la Página de Contacto',
+  title: 'Página de Contacto',
   type: 'document',
   fields: [
     defineField({
@@ -14,7 +14,6 @@ export const contactContent = defineType({
           { title: 'Encabezado de Contacto', value: 'header' },
           { title: 'Información de Contacto', value: 'info' },
           { title: 'Horarios', value: 'hours' },
-          { title: 'Ubicación', value: 'location' },
         ],
       },
       validation: (Rule) => Rule.required(),
@@ -137,45 +136,7 @@ export const contactContent = defineType({
     }),
 
     // Location Section
-    defineField({
-      name: 'locationTitle',
-      title: 'Título Ubicación',
-      type: 'object',
-      fields: [
-        { name: 'es', title: 'Español', type: 'string' },
-        { name: 'en', title: 'English', type: 'string' },
-        { name: 'ca', title: 'Català', type: 'string' },
-        { name: 'nl', title: 'Nederlands', type: 'string' },
-      ],
-      hidden: ({ document }) => document?.sectionId !== 'location',
-    }),
 
-    defineField({
-      name: 'locationDescription',
-      title: 'Descripción Ubicación',
-      type: 'object',
-      fields: [
-        { name: 'es', title: 'Español', type: 'text' },
-        { name: 'en', title: 'English', type: 'text' },
-        { name: 'ca', title: 'Català', type: 'text' },
-        { name: 'nl', title: 'Nederlands', type: 'text' },
-      ],
-      hidden: ({ document }) => document?.sectionId !== 'location',
-    }),
-
-    defineField({
-      name: 'directions',
-      title: 'Indicaciones',
-      type: 'object',
-      fields: [
-        { name: 'es', title: 'Español', type: 'text' },
-        { name: 'en', title: 'English', type: 'text' },
-        { name: 'ca', title: 'Català', type: 'text' },
-        { name: 'nl', title: 'Nederlands', type: 'text' },
-      ],
-      description: 'Instrucciones para llegar al restaurante',
-      hidden: ({ document }) => document?.sectionId !== 'location',
-    }),
 
     defineField({
       name: 'order',
@@ -196,7 +157,6 @@ export const contactContent = defineType({
         header: 'Encabezado de Contacto',
         info: 'Información de Contacto',
         hours: 'Horarios',
-        location: 'Ubicación',
       }
       
       return {
