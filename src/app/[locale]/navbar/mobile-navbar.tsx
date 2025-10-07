@@ -48,7 +48,7 @@ export default function MobileNavbar({ navItems, homeHref }: MobileNavbarProps) 
                 className="text-xl font-bold text-white hover:text-blue-300 transition-colors"
                 onClick={closeMenu}
               >
-                <LogoText className="w-full h-auto w-logo-header-mobile" />
+                <LogoText className="h-auto w-logo-header-mobile" />
               </Link>
             </div>
 

@@ -34,7 +34,7 @@ export default async function MenuPage({ params }: { params: Promise<{ locale: s
   }
 
   // Si no hay datos de Sanity, usar JSON como fallback  
-  const menuData = menuItems.length > 0 ? menuItems : dict.menu?.categories || {};
+  const menuData = menuItems.length > 0 ? menuItems : (dict.menu?.categories || {});
 
   return <MenuContent dict={dict} menuData={menuData} />;
 }
