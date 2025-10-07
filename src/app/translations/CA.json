@@ -172,5 +172,43 @@
         },
         "language_selector": "Idioma",
         "copyright": "© 2024 Restaurant Banys La Gavina. Tots els drets reservats."
+    },
+    "sections": {
+        "about": {
+            "title": "La nostra Història",
+            "subtitle": "Tradició familiar des de 1958",
+            "description": "A la Platja Gran de Calella, davant de l'Estació de Renfe, som un restaurant familiar que des de 1958 ofereix l'autèntica cuina mediterrània amb especialitats en arrossos, peixos frescos i carns de primera qualitat en un entorn únic davant del mar."
+        },
+        "specialties": {
+            "title": "Les nostres Especialitats",
+            "subtitle": "El millor del mar Mediterrani i carns selectes",
+            "items": [
+                {
+                    "name": "Arrossos",
+                    "description": "Paella marinera, arròs negre, paella especial amb llagosta i fideuà",
+                    "price": "____"
+                },
+                {
+                    "name": "Mariscos",
+                    "description": "Gambes de Blanes, llagostins, musclos a la marinera i al vapor",
+                    "price": "____"
+                },
+                {
+                    "name": "Peixos Frescos",
+                    "description": "Selecció diària de peix fresc del mediterrani",
+                    "price": "____"
+                },
+                {
+                    "name": "Carns Selectes",
+                    "description": "Entrecot, solomillo, costelles de xai i especialitats a la brasa",
+                    "price": "____"
+                }
+            ]
+        },
+        "location": {
+            "title": "Ubicació Privilegiada",
+            "subtitle": "Davant del mar a Calella",
+            "description": "En primera línia de mar a la Platja Gran de Calella, gaudiràs d'accés directe a la platja i vistes panoràmiques al Mediterrani. La nostra terrassa ofereix l'ambient perfecte per assaborir l'autèntica cuina mediterrània en un entorn únic on el mar és el protagonista."
+        }
     }
 }

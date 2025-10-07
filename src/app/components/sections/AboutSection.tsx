@@ -23,29 +23,29 @@ export function AboutSection({ title, subtitle, description, backgroundImage, ba
   // Features por defecto si no se proporcionan desde Sanity
   const defaultFeatures = [
     {
-      icon: "🌿",
+      icon: "eco",
       title: "Ingredientes Frescos",
       description: "Seleccionamos los mejores productos locales cada día"
     },
     {
-      icon: "👨‍🍳",
-      title: "Chef Experto", 
+      icon: "restaurant",
+      title: "Chef Experto",
       description: "Más de 20 años de experiencia en cocina mediterránea"
     },
     {
-      icon: "🏛️",
+      icon: "home",
       title: "Tradición Familiar",
       description: "Recetas transmitidas de generación en generación"
     },
     {
-      icon: "🌊",
+      icon: "waves",
       title: "Ambiente Único",
       description: "Vistas al mar en un entorno acogedor y elegante"
     }
   ];
-  
-  const displayFeatures = features && features.length > 0 ? features : defaultFeatures;  return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+
+  const displayFeatures = features && features.length > 0 ? features : defaultFeatures; return (
+    <section className="about-section py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Texto */}
@@ -74,8 +74,10 @@ export function AboutSection({ title, subtitle, description, backgroundImage, ba
                     className="flex items-start space-x-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow"
                     whileHover={{ y: -2 }}
                   >
-                    <div className="text-3xl flex-shrink-0">
-                      {feature.icon}
+                    <div className="text-3xl flex-shrink-0 text-blue-600">
+                      <span className="material-icons-outlined text-4xl">
+                        {feature.icon}
+                      </span>
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">

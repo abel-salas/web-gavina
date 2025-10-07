@@ -165,5 +165,43 @@
         },
         "language_selector": "Language",
         "copyright": "© 2024 Restaurant Banys La Gavina. All rights reserved."
+    },
+    "sections": {
+        "about": {
+            "title": "Our History",
+            "subtitle": "Family tradition since 1958",
+            "description": "At Platja Gran de Calella, facing the Renfe Station, we are a family restaurant that since 1958 offers authentic Mediterranean cuisine with specialties in rice dishes, fresh fish and premium quality meats in a unique setting facing the sea."
+        },
+        "specialties": {
+            "title": "Our Specialties",
+            "subtitle": "The best of the Mediterranean Sea and select meats",
+            "items": [
+                {
+                    "name": "Rice Dishes",
+                    "description": "Seafood paella, black rice, special paella with lobster and fideuà",
+                    "price": "____"
+                },
+                {
+                    "name": "Seafood",
+                    "description": "Blanes prawns, langoustines, mussels marinera and steamed",
+                    "price": "____"
+                },
+                {
+                    "name": "Fresh Fish",
+                    "description": "Daily selection of fresh Mediterranean fish",
+                    "price": "____"
+                },
+                {
+                    "name": "Select Meats",
+                    "description": "Entrecote, sirloin, lamb chops and grilled specialties",
+                    "price": "____"
+                }
+            ]
+        },
+        "location": {
+            "title": "Privileged Location",
+            "subtitle": "Facing the sea in Calella",
+            "description": "On the seafront at Platja Gran de Calella, you'll enjoy direct beach access and panoramic Mediterranean views. Our terrace offers the perfect atmosphere to savor authentic Mediterranean cuisine in a unique setting where the sea is the protagonist."
+        }
     }
 }

@@ -7,8 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type { Route } from 'next';
 
-interface HeroSectionProps {
-  title: string;
+interface HomeMainSectionProps {
   subtitle: string;
   description: string;
   ctaText?: string;
@@ -17,9 +16,9 @@ interface HeroSectionProps {
   backgroundAlt?: string;
 }
 
-export function HeroSection({ title, subtitle, description, ctaText, ctaHref, backgroundImage, backgroundAlt }: HeroSectionProps) {
+export function HomeMainSection({ subtitle, description, ctaText, ctaHref, backgroundImage, backgroundAlt }: HomeMainSectionProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+    <section className="home-main-section relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background Image or Gradient */}
       {backgroundImage ? (
         <div className="absolute inset-0 -top-16">
@@ -100,12 +99,12 @@ export function HeroSection({ title, subtitle, description, ctaText, ctaHref, ba
         <AnimatedSection direction="down" delay={0.2}>
           {/* Usando el texto SVG extraído del logo original */}
           <motion.div
-            className="w-full max-w-2xl mx-auto mb-6"
+            className="w-full max-w-xl mx-auto mb-6"
             style={{
               filter: "drop-shadow(0 4px 6px rgb(0 0 0 / 0.1))",
             }}
           >
-            <LogoText className="w-full h-auto" />
+            <LogoText className="w-logo-home-section" />
           </motion.div>
         </AnimatedSection>
 

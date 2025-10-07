@@ -34,7 +34,7 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
 
     // Definir el orden deseado de las categorías (7, 6, 5, 4, 3, 2, 1)
     const categoryOrder = ['drinks', 'desserts', 'fish', 'meat', 'rice', 'salads', 'starters'];
-    
+
     // Convertir el objeto de categorías a array con orden específico
     const categories = categoryOrder
         .map(key => ({
@@ -46,7 +46,7 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
 
     const openModal = (item: { name: string; image?: string | null; imageAlt?: string }) => {
         if (!item.image) return; // Solo abrir modal si hay imagen
-        
+
         setModal({
             isOpen: true,
             imageSrc: item.image,
@@ -63,39 +63,21 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
             imageAlt: ''
         });
     };
+console.log('menuContent', menuContent);
 
+console.log('menu data', menuData);
     return (
         <>
-            <main>
-                {/* Hero Section con imagen */}
-                <section className="relative h-96 md:h-[500px] flex items-center justify-center py-20">
-                    {/* Background Image */}
-                    <div className="absolute inset-0">
-                        <Image
-                            src={menuContent?.backgroundImage || "/images/menu/mesa_carta.jpg"}
-                            alt="Carta del restaurante Banys La Gavina"
-                            fill
-                            className="object-cover"
-                            priority
-                            quality={90}
-                        />
-                        {/* Dark overlay for better text readability */}
-                        <div className="absolute inset-0 bg-black/50" />
-                    </div>
-
-                    {/* Content */}
-                    <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                        <h1 className="text-5xl md:text-6xl font-parisienne mb-6 text-white">
-                            {menuContent?.title || dict.menu?.title || "Nuestra Carta"}
-                        </h1>
-                        <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-                            {menuContent?.subtitle || dict.menu?.subtitle || "Cocina mediterránea inspirada en los productos del mar"}
-                        </p>
-                        <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                            {menuContent?.description || dict.menu?.description || "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación."}
-                        </p>
-                    </div>
-                </section>
+            <main className="pt-12">
+                {/* Content */}
+                <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                    <h1 className="text-5xl md:text-6xl font-parisienne mb-6">
+                        {menuContent?.title || dict.menu?.title || "Nuestra Carta"}
+                    </h1>
+                    <p className="text-xl mb-8 max-w-3xl mx-auto">
+                        {menuContent?.subtitle || dict.menu?.subtitle || "Cocina mediterránea inspirada en los productos del mar"}
+                    </p>
+                </div>
 
                 <div className="container mx-auto px-4 py-8">
                     <section className="grid lg:grid-cols-2 gap-8">
@@ -136,6 +118,29 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                         ))}
                     </section>
                 </div>
+
+                <section className="menu-content relative h-96 md:h-[500px] flex items-center justify-center py-20">
+                    {/* Background Image */}
+                    <div className="absolute inset-0">
+                        <Image
+                            src={menuContent?.backgroundImage || "/images/menu/mesa_carta.jpg"}
+                            alt="Carta del restaurante Banys La Gavina"
+                            fill
+                            className="object-cover"
+                            priority
+                            quality={90}
+                        />
+                        {/* Dark overlay for better text readability */}
+                        <div className="absolute inset-0 bg-black/50" />
+                    </div>
+
+                    {/* Content */}
+                    <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                        <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                            {menuContent?.description || dict.menu?.description || "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación."}
+                        </p>
+                    </div>
+                </section>
             </main>
 
             {/* Modal */}

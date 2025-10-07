@@ -94,22 +94,22 @@
                 {
                     "name": "Arroces",
                     "description": "Paella marinera, arroz negro, paella especial con langosta y fideuá",
-                    "price": "Desde 18€"
+                    "price": "____"
                 },
                 {
                     "name": "Mariscos",
                     "description": "Gambas de Blanes, langostinos, mejillones marinera y al vapor",
-                    "price": "Desde 16€"
+                    "price": "____"
                 },
                 {
                     "name": "Pescados Frescos",
                     "description": "Selección diaria de pescado fresco del mediterráneo",
-                    "price": "Desde 20€"
+                    "price": "____"
                 },
                 {
                     "name": "Carnes Selectas",
                     "description": "Entrecot, solomillo, chuletas de cordero y especialidades a la brasa",
-                    "price": "Desde 22€"
+                    "price": "____"
                 }
             ]
         },

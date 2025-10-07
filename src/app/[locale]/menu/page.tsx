@@ -34,7 +34,7 @@ export default async function MenuPage({ params }: { params: Promise<{ locale: s
   // Obtener items del menú y contenido desde Sanity
   let menuItems = [];
   let menuContentData = [];
-  
+
   try {
     [menuItems, menuContentData] = await Promise.all([
       client.fetch(menuItemsQuery),
@@ -65,7 +65,7 @@ export default async function MenuPage({ params }: { params: Promise<{ locale: s
         items: []
       };
     }
-    
+
     // Transformar el item de Sanity al formato esperado
     acc[category].items.push({
       name: item.name?.[locale] || item.name?.es || item.name?.en || 'Sin nombre',
@@ -75,17 +75,17 @@ export default async function MenuPage({ params }: { params: Promise<{ locale: s
       image: item.image?.asset?.url || null,
       imageAlt: item.image?.alt || ''
     });
-    
+
     return acc;
   }, {});
 
   // Procesar datos del contenido del menú (hero section)
-  const heroSection = menuContentData.find((section: { sectionId: string }) => section.sectionId === 'hero');
+  const homeMainSection = menuContentData.find((section: { sectionId: string }) => section.sectionId === 'hero');
   const menuContentInfo = {
-    title: heroSection ? getLocalizedText(heroSection.heroTitle, locale, dict.menu?.title || '') : dict.menu?.title || '',
-    subtitle: heroSection ? getLocalizedText(heroSection.heroSubtitle, locale, dict.menu?.subtitle || '') : dict.menu?.subtitle || '',
-    description: heroSection ? getLocalizedText(heroSection.heroDescription, locale, dict.menu?.description || '') : dict.menu?.description || '',
-    backgroundImage: heroSection?.heroBackgroundImage?.asset?.url || '/images/menu/mesa_carta.jpg'
+    title: homeMainSection ? getLocalizedText(homeMainSection.heroTitle, locale, dict.menu?.title || '') : dict.menu?.title || '',
+    subtitle: homeMainSection ? getLocalizedText(homeMainSection.heroSubtitle, locale, dict.menu?.subtitle || '') : dict.menu?.subtitle || '',
+    description: homeMainSection ? getLocalizedText(homeMainSection.heroDescription, locale, dict.menu?.description || '') : dict.menu?.description || '',
+    backgroundImage: homeMainSection?.heroBackgroundImage?.asset?.url || '/images/menu/mesa_carta.jpg'
   };
 
   return <MenuContent dict={dict} menuData={menuDataByCategory} menuContent={menuContentInfo} />;

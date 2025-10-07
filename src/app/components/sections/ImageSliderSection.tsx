@@ -37,11 +37,11 @@ const SingleSlider = ({ slider, locale }: SingleSliderProps) => {
   const hasMultipleImages = images.length > 1;
 
   return (
-    <section className="pt-16 bg-gradient-to-b from-slate-50 to-white">
-      <div className="md:container md:mx-auto px-0 md:px-4">
+    <section className="image-slider-section pt-16 bg-gradient-to-b from-slate-50 to-white">
+      <div className="md:container md:mx-auto px-0 md:px-4 md:pb-12">
         {/* Título del slider */}
         {title && (
-          <div className="text-center mb-6 md:mb-8 px-4 md:px-0">
+          <div className="text-center mb-6 md:mb-8 px-4 md:px-0 py-6">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-slate-800 mb-4">
               {getLocalizedText(title, locale)}
             </h2>
@@ -51,9 +51,9 @@ const SingleSlider = ({ slider, locale }: SingleSliderProps) => {
 
         {/* Slider Container */}
         <div className="w-full md:max-w-6xl md:mx-auto">
-          <div className="relative overflow-hidden md:rounded-2xl shadow-2xl bg-white">
+          <div className="relative overflow-hidden md:rounded-2xl shadow-2xl bg-white pb-12 md:pb-2">
             {/* Images */}
-            <div className="relative aspect-[16/9] md:aspect-[21/9]">
+            <div className="relative aspect-[16/9]">
               {/* All images stacked */}
               {images.map((imageItem, index) => (
                 <motion.div
@@ -86,7 +86,7 @@ const SingleSlider = ({ slider, locale }: SingleSliderProps) => {
 
             {/* Progress Bar - Solo si hay múltiples imágenes */}
             {hasMultipleImages && (
-              <div className="absolute bottom-4 md:bottom-6 left-1/2 transform -translate-x-1/2 z-10">
+              <div className="absolute bottom-20 md:bottom-6 left-1/2 transform -translate-x-1/2 z-10">
                 <div className="relative w-24 md:w-32 lg:w-40">
                   {/* Background bar */}
                   <div className="w-full h-0.5 bg-slate-300" />
@@ -108,7 +108,7 @@ const SingleSlider = ({ slider, locale }: SingleSliderProps) => {
             )}
 
             {/* Caption - Always on top, outside the image container */}
-            <div className="bg-white px-4 py-8 md:px-8 md:py-10">
+            <div className="bg-white px-4 py-content-imag-slider">
               <AnimatePresence mode="wait">
                 <motion.h3
                   key={currentIndex}

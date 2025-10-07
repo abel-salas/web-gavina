@@ -25,7 +25,7 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
             {/* Logo/Brand */}
             <div className="flex-shrink-0">
               <Link href={href('/') as Route} className="text-xl font-bold text-white hover:text-blue-300 transition-colors">
-                <LogoText className="h-auto w-logo-header-mobile" />
+                <LogoText className="w-logo-header-desk" />
               </Link>
             </div>
 

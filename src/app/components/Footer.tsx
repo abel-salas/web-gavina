@@ -19,7 +19,8 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
           <div className="md:col-span-2">
             <div className="mb-4">
               <Link href={href('/') as Route} className="text-2xl font-bold text-white hover:text-blue-300 transition-colors">
-                🍽️ {dict.seo.siteName}
+                <span className="material-icons-outlined mr-2 align-middle">restaurant</span>
+                {dict.seo.siteName}
               </Link>
             </div>
             <p className="text-gray-300 mb-6">
@@ -65,23 +66,23 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
             <h3 className="text-lg font-semibold mb-4">{dict.footer?.contact?.title || 'Contacto'}</h3>
             <div className="space-y-2 text-gray-300">
               <p className="flex items-start">
-                <span className="mr-2 mt-1">📍</span>
+                <span className="material-icons-outlined mr-2 mt-1 text-lg">place</span>
                 <span className="whitespace-pre-line">{contactInfo.address}</span>
               </p>
               <p className="flex items-center">
-                <span className="mr-2">📞</span>
+                <span className="material-icons-outlined mr-2 text-lg">phone</span>
                 <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="hover:text-white transition-colors">
                   {contactInfo.phone}
                 </a>
               </p>
               <p className="flex items-center">
-                <span className="mr-2">📱</span>
+                <span className="material-icons-outlined mr-2 text-lg">smartphone</span>
                 <a href={`tel:${contactInfo.mobile.replace(/\s/g, '')}`} className="hover:text-white transition-colors">
                   {contactInfo.mobile}
                 </a>
               </p>
               <div className="flex items-start">
-                <span className="mr-2 mt-1">🕐</span>
+                <span className="material-icons-outlined mr-2 mt-1 text-lg">access_time</span>
                 <div className="flex-1">
                   <HoursSection 
                     locale={locale} 

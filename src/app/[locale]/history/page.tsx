@@ -110,15 +110,18 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
         {/* History Sections */}
         <section className="mb-16">
           <div className="grid lg:grid-cols-2 gap-8">
+            <div className='space-y-4'>
+              <Image
+                src={'/images/gavina/barques.jpg'}
+                alt='Barques a la platja de Calella'
+                width={800}
+                height={600}
+                className="w-full h-auto rounded-lg shadow-md"
+                quality={90}
+              />
+            </div>
+
             {Object.entries(dict.history.sections).map(([key, section]) => {
-              // Definir imágenes específicas para ciertas secciones
-              const sectionImages = {
-                calella_context: '/images/gavina/barques.jpg',
-                present: '/images/gavina/calella.jpg'
-              };
-
-              const hasImage = sectionImages[key as keyof typeof sectionImages];
-
               return (
                 <div key={key} className="space-y-4">
                   <article className="bg-white p-8 rounded-lg shadow-md">
@@ -129,22 +132,21 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
                       {section.content}
                     </p>
                   </article>
-
-                  {hasImage && (
-                    <div className="w-full">
-                      <Image
-                        src={hasImage}
-                        alt={section.title}
-                        width={800}
-                        height={600}
-                        className="w-full h-auto rounded-lg shadow-md"
-                        quality={90}
-                      />
-                    </div>
-                  )}
                 </div>
               );
             })}
+
+            <div className='space-y-4'>
+              <Image
+                src={'/images/gavina/calella.jpg'}
+                alt='Restaurant Banys La Gavina historia'
+                width={800}
+                height={600}
+                className="w-full h-auto rounded-lg shadow-md"
+                quality={90}
+              />
+            </div>
+
           </div>
         </section>
 

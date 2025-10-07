@@ -1,15 +1,16 @@
 import type { Metadata } from 'next';
 import { getLocalizedData } from "../lib/localization";
 import { generatePageMetadata, getValidLocale } from '@/seo';
-import { HeroSection } from '../components/sections/HeroSection';
 import { AboutSection } from '../components/sections/AboutSection';
 import { MenuHighlightSection } from '../components/sections/MenuHighlightSection';
-import { LocationSection, ContactSection } from '../components/sections/OtherSections';
 import { client } from '../../../sanity/client';
 import { homeContentQuery, imageSliderQuery } from '../lib/sanity/contentQueries';
 import { processHomeContentResponse, getLocalizedText } from '../lib/sanity/contentTypes';
 import type { HomeContent, ImageSlider } from '../lib/sanity/contentTypes';
 import ImageSliderSection from '../components/sections/ImageSliderSection';
+import { ContactSection } from '../components/sections/ContactSection';
+import { HomeMainSection } from '../components/sections/HomeMainSection';
+import { LocationSection } from '../components/sections/LocationSection';
 
 export async function generateMetadata({
     params
@@ -33,7 +34,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
     // Obtener el contenido de HOME y sliders desde Sanity con manejo de errores
     let homeContentData: HomeContent[] = [];
     let imageSliders: ImageSlider[] = [];
-    
+
     try {
         [homeContentData, imageSliders] = await Promise.all([
             client.fetch(homeContentQuery),
@@ -68,7 +69,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
     const specialtyImages = specialtiesData?.specialtyItems?.reduce((acc, item, index) => {
         const keys = ['arroces', 'mariscos', 'pescados', 'carnes'];
         const fallbacks = ['/images/home/paellas.jpg', '/images/home/mariscos.jpg', '/images/home/pescado.jpg', '/images/home/carne_brasa.jpg'];
-        
+
         if (keys[index]) {
             acc[keys[index]] = item.image?.asset?.url || fallbacks[index];
         }
@@ -92,8 +93,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
     return (
         <>
             {/* Sección 1: Hero */}
-            <HeroSection
-                title={heroData ? getLocalizedText(heroData.heroTitle, locale, pageData.title) : pageData.title}
+            <HomeMainSection
                 subtitle={heroData ? getLocalizedText(heroData.heroSubtitle, locale, pageData.subtitle) : pageData.subtitle}
                 description={heroData ? getLocalizedText(heroData.heroDescription, locale, pageData.description) : pageData.description}
                 ctaText={pageData.cta || "Ver Carta"}
@@ -130,9 +130,6 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                 specialtyImages={specialtyImages}
             />
 
-            {/* Sección 3.5: Slider de Imágenes */}
-            <ImageSliderSection sliders={imageSliders} locale={locale} />
-
             {/* Sección 4: Ubicación */}
             <LocationSection
                 title={locationData ? getLocalizedText(locationData.locationTitle, locale, dict.sections?.location?.title || '') : dict.sections?.location?.title || ''}
@@ -153,6 +150,10 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                 title="Reserva Tu Experiencia"
                 contactHref={href('/contact')}
             />
+
+            {/* Sección 3.5: Slider de Imágenes */}
+            <ImageSliderSection sliders={imageSliders} locale={locale} />
+
         </>
     );
 }

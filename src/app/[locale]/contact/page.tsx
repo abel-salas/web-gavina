@@ -39,7 +39,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
       </section>
 
       {/* WhatsApp Reservation Section */}
-      <div className="mt-6">
+      <div className="mt-6 md:hidden">
         <WhatsAppReservation dict={dict} />
       </div>
 

@@ -28,7 +28,7 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref, s
   const dishes = specialties.map((specialty, index) => {
     const fallbackImages = [
       "/images/home/paellas.jpg",
-      "/images/home/mariscos.jpg", 
+      "/images/home/mariscos.jpg",
       "/images/home/pescado.jpg",
       "/images/home/carne_brasa.jpg"
     ];
@@ -46,7 +46,7 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref, s
   });
 
   return (
-    <section className="py-20 bg-gray-900 text-white relative overflow-hidden">
+    <section className="menu-highlight-section py-20 bg-gray-900 text-white relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -127,11 +127,11 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref, s
               >
                 Ver Menú Completo
                 <motion.span
-                  className="ml-2"
+                  className="ml-2 flex items-center"
                   animate={{ x: [0, 5, 0] }}
                   transition={{ duration: 1.5, repeat: Infinity }}
                 >
-                  🍴
+                  <span className="material-icons-outlined">arrow_forward</span>
                 </motion.span>
               </Link>
             </motion.div>
