@@ -23,6 +23,7 @@
         "home": "Inicio",
         "menu": "Carta",
         "history": "Historia",
+        "celebrations": "Celebraciones",
         "reservas": "Reservas",
         "contacto": "Contacto",
         "gallery": "Galería"
@@ -128,6 +129,14 @@
         "description": "Un marco incomparable frente al mar Mediterráneo en Calella. Conoce nuestro ambiente, terraza frente al mar y las mejores vistas.",
         "metaTitle": "Galería - Restaurante Banys La Gavina | Fotos del Restaurantee y Terraza",
         "metaDescription": "Galería de fotos del Restaurante Banys La Gavina. Descubre nuestro ambiente, terraza frente al mar y las mejores vistas de Calella."
+    },
+    "celebrations": {
+        "title": "Celebraciones",
+        "subtitle": "Tu evento especial frente al mar",
+        "description": "Celebra tus momentos más especiales en un entorno único frente al Mediterráneo. Organizamos banquetes, bodas, comuniones, cenas de empresa y todo tipo de celebraciones familiares.",
+        "metaTitle": "Celebraciones y Banquetes - Restaurante Banys La Gavina | Eventos frente al mar",
+        "metaDescription": "Celebra tus eventos especiales en Restaurante Banys La Gavina. Banquetes, bodas, comuniones y cenas de empresa frente al mar en Calella. Capacidad hasta 100 personas.",
+        "keywords": "celebraciones restaurante calella, banquetes frente al mar, bodas restaurante barcelona, comuniones costa maresme, cenas empresa calella, eventos vista mar"
     },
     "sections": {
         "about": {

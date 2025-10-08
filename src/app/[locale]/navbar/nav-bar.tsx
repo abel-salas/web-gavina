@@ -11,6 +11,7 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
   const navItems = [
     { href: href('/'), label: dict.nav.home },
     { href: href('/menu'), label: dict.nav.menu },
+    { href: href('/celebrations'), label: dict.nav.celebrations },
     { href: href('/history'), label: dict.nav.history },
     { href: href('/contact'), label: dict.nav.contacto },
     // { href: href('/gallery'), label: dict.nav.gallery },

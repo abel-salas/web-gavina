@@ -3,6 +3,7 @@ import { menuItem } from './menuItem'
 import { homeContent } from './homeContent'
 import { menuContent } from './menuContent'
 import { contactContent } from './contactContent'
+import { celebrationsContent } from './celebrationsContent'
 import { imageSlider } from './imageSlider'
 
 export const schemaTypes = [
@@ -10,6 +11,7 @@ export const schemaTypes = [
   homeContent,
   menuContent,
   contactContent,
+  celebrationsContent,
 
   // Componentes globales
   imageSlider,

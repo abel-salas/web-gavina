@@ -23,6 +23,7 @@
         "home": "Home",
         "menu": "Menu",
         "history": "Geschiedenis",
+        "celebrations": "Vieringen",
         "reservas": "Reserveringen",
         "contacto": "Contact",
         "gallery": "Galerij"
@@ -134,6 +135,14 @@
         "description": "Leer de unieke sfeer van Restaurant Gavina kennen en onze meest representatieve gerechten door onze fotogalerij.",
         "metaTitle": "Galerij - Restaurant Gavina | Onze Gerechten en Sfeer",
         "metaDescription": "Ontdek de gezellige sfeer van Restaurant Gavina en onze heerlijke mediterrane gerechten door onze fotogalerij."
+    },
+    "celebrations": {
+        "title": "Vieringen",
+        "subtitle": "Uw speciale evenement aan zee",
+        "description": "Vier uw meest speciale momenten in een unieke omgeving aan de Middellandse Zee. Wij organiseren banketten, bruiloften, communies, bedrijfsdiners en alle soorten familievieringen.",
+        "metaTitle": "Vieringen & Banketten - Restaurant Banys La Gavina | Evenementen aan zee",
+        "metaDescription": "Vier uw speciale evenementen bij Restaurant Banys La Gavina. Banketten, bruiloften, communies en bedrijfsdiners aan zee in Calella. Capaciteit tot 100 personen.",
+        "keywords": "vieringen restaurant calella, banketten aan zee, bruiloft restaurant barcelona, communies costa maresme, bedrijfsdiners calella, evenementen zeezicht"
     },
     "history": {
         "title": "Onze Geschiedenis",

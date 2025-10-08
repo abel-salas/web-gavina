@@ -4,7 +4,7 @@ export const SEO_CONFIG = {
         name: 'Restaurante Gavina',
         url: process.env.NEXT_PUBLIC_BASE_URL || 'https://restaurante-gavina.com',
         defaultLocale: 'es',
-        supportedLocales: ['es', 'en', 'ca', 'nl'],
+        supportedLocales: ['es', 'en', 'ca', 'nl', 'de'],
     },
 
     social: {

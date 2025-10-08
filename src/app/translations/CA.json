@@ -23,6 +23,7 @@
         "home": "Inici",
         "menu": "Menú",
         "history": "Història",
+        "celebrations": "Celebracions",
         "reservas": "Reserves",
         "contacto": "Contacte",
         "gallery": "Galeria"
@@ -134,6 +135,14 @@
         "description": "Coneix l'ambient únic del Restaurant Gavina i els nostres plats més representatius a través de la nostra galeria fotogràfica.",
         "metaTitle": "Galeria - Restaurant Gavina | Els nostres Plats i Ambient",
         "metaDescription": "Descobreix l'ambient acollidor del Restaurant Gavina i els nostres deliciosos plats mediterranis a través de la nostra galeria de fotos."
+    },
+    "celebrations": {
+        "title": "Celebracions",
+        "subtitle": "El teu esdeveniment especial davant del mar",
+        "description": "Celebra els teus moments més especials en un entorn únic davant del Mediterrani. Organitzem banquets, casaments, comunions, sopars d'empresa i tot tipus de celebracions familiars.",
+        "metaTitle": "Celebracions i Banquets - Restaurant Banys La Gavina | Esdeveniments davant del mar",
+        "metaDescription": "Celebra els teus esdeveniments especials al Restaurant Banys La Gavina. Banquets, casaments, comunions i sopars d'empresa davant del mar a Calella. Capacitat fins a 100 persones.",
+        "keywords": "celebracions restaurant calella, banquets davant del mar, casaments restaurant barcelona, comunions costa maresme, sopars empresa calella, esdeveniments vista mar"
     },
     "history": {
         "title": "La nostra Història",

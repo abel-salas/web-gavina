@@ -23,6 +23,7 @@
         "home": "Startseite",
         "menu": "Speisekarte",
         "history": "Geschichte",
+        "celebrations": "Feiern",
         "reservas": "Reservierungen",
         "contacto": "Kontakt",
         "gallery": "Galerie"
@@ -128,6 +129,14 @@
         "description": "Lernen Sie die einzigartige Atmosphäre von Restaurant Gavina und unsere repräsentativsten Gerichte durch unsere Fotogalerie kennen.",
         "metaTitle": "Galerie - Restaurant Gavina | Unsere Gerichte und Atmosphäre",
         "metaDescription": "Entdecken Sie die gemütliche Atmosphäre von Restaurant Gavina und unsere köstlichen mediterranen Gerichte durch unsere Fotogalerie."
+    },
+    "celebrations": {
+        "title": "Feiern",
+        "subtitle": "Ihr besonderes Event am Meer",
+        "description": "Feiern Sie Ihre besonderen Momente in einer einzigartigen Umgebung direkt am Mittelmeer. Wir organisieren Bankette, Hochzeiten, Kommunionen, Firmenessen und alle Arten von Familienfeiern.",
+        "metaTitle": "Feiern & Bankette - Restaurant Banys La Gavina | Events am Meer",
+        "metaDescription": "Feiern Sie Ihre besonderen Events im Restaurant Banys La Gavina. Bankette, Hochzeiten, Kommunionen und Firmenessen am Meer in Calella. Kapazität bis zu 100 Personen.",
+        "keywords": "feiern restaurant calella, bankette am meer, hochzeit restaurant barcelona, kommunionen costa maresme, firmenessen calella, events meerblick"
     },
     "sections": {
         "about": {

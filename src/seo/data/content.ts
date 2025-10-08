@@ -143,6 +143,41 @@ export const SEO_DATA = {
             },
         },
     },
+    de: {
+        site: {
+            name: 'Restaurant Banys La Gavina',
+            description: 'Entdecken Sie die authentische mediterrane Küche im Restaurant Banys La Gavina. Hausgemachte Gerichte, frische Zutaten und familiäre Atmosphäre.',
+            keywords: 'restaurant calella, mediterrane küche, meeresfrüchte, paella, frischer fisch, meerblick terrasse, seit 1958',
+            locale: 'de_DE',
+        },
+        pages: {
+            home: {
+                title: 'Restaurant Banys La Gavina - Authentische Mediterrane Küche | Seit 1958',
+                description: 'Entdecken Sie die authentische mediterrane Küche im Restaurant Banys La Gavina in Calella. Hausgemachte Gerichte und Meerblick seit 1958.',
+                keywords: 'restaurant mediterran calella, meeresfrüchte, paella barcelona, frischer fisch, meerblick terrasse',
+            },
+            menu: {
+                title: 'Speisekarte Restaurant Banys La Gavina - Mediterrane Spezialitäten',
+                description: 'Entdecken Sie unsere mediterrane Speisekarte: Paellas, frische Meeresfrüchte, gegrilltes Fleisch und hausgemachte Desserts.',
+                keywords: 'mediterrane speisekarte, paella calella, frische meeresfrüchte, gegrilltes fleisch, hausgemachte desserts',
+            },
+            contact: {
+                title: 'Kontakt - Restaurant Banys La Gavina | Reservierungen und Anfragen',
+                description: 'Kontaktieren Sie Restaurant Banys La Gavina für Reservierungen, Anfragen oder Informationen. Wir stehen Ihnen gerne zur Verfügung.',
+                keywords: 'restaurant kontakt calella, reservierungen, restaurant informationen, telefon reservierungen',
+            },
+            gallery: {
+                title: 'Galerie - Restaurant Banys La Gavina | Unsere Gerichte und Atmosphäre',
+                description: 'Entdecken Sie die gemütliche Atmosphäre von Restaurant Banys La Gavina und unsere köstlichen mediterranen Gerichte in unserer Fotogalerie.',
+                keywords: 'restaurant fotos, gemütliche atmosphäre, mediterrane gerichte, restaurant galerie calella',
+            },
+            history: {
+                title: 'Geschichte - Restaurant Banys La Gavina | Seit 1958 in Calella',
+                description: 'Entdecken Sie die faszinierende Geschichte des Restaurant Banys La Gavina, ein Wahrzeichen von Calella seit 1958. Über 65 Jahre gastronomische Tradition am Meer.',
+                keywords: 'restaurant geschichte calella, banys la gavina 1958, gastronomische tradition, calella tourismus 60er jahre',
+            },
+        },
+    },
 } as const;
 
 export type SEOData = typeof SEO_DATA;

@@ -23,6 +23,7 @@
         "home": "Home",
         "menu": "Menu",
         "history": "History",
+        "celebrations": "Celebrations",
         "reservas": "Bookings",
         "contacto": "Contact",
         "gallery": "Gallery"
@@ -127,6 +128,14 @@
         "description": "Get to know the unique atmosphere of Gavina Restaurant and our most representative dishes through our photo gallery.",
         "metaTitle": "Gallery - Gavina Restaurant | Our Dishes and Atmosphere",
         "metaDescription": "Discover the cozy atmosphere of Gavina Restaurant and our delicious Mediterranean dishes through our photo gallery."
+    },
+    "celebrations": {
+        "title": "Celebrations",
+        "subtitle": "Your special event by the sea",
+        "description": "Celebrate your most special moments in a unique setting facing the Mediterranean. We organize banquets, weddings, communions, corporate dinners and all kinds of family celebrations.",
+        "metaTitle": "Celebrations & Banquets - Restaurant Banys La Gavina | Seaside Events",
+        "metaDescription": "Celebrate your special events at Restaurant Banys La Gavina. Banquets, weddings, communions and corporate dinners by the sea in Calella. Capacity up to 100 people.",
+        "keywords": "celebrations restaurant calella, seaside banquets, wedding restaurant barcelona, communions costa maresme, corporate dinners calella, sea view events"
     },
     "history": {
         "title": "Our History",

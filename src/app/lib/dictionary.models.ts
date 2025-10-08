@@ -24,6 +24,7 @@ export interface Dictionary {
         home: string;
         menu: string;
         history: string;
+        celebrations: string;
         reservas: string;
         contacto: string;
         gallery: string;
@@ -349,6 +350,14 @@ export interface Dictionary {
         };
         last_updated: string;
         date: string;
+    };
+    celebrations?: {
+        title: string;
+        subtitle: string;
+        description: string;
+        metaTitle: string;
+        metaDescription: string;
+        keywords: string;
     };
 }
 

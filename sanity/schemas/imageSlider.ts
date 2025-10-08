@@ -55,7 +55,7 @@ export const imageSlider = defineType({
             },
             {
               name: 'caption',
-              title: 'Título de la Imagen',
+              title: 'Título de la Imagen (Opcional)',
               type: 'object',
               fields: [
                 { name: 'es', title: 'Español', type: 'string' },
@@ -64,7 +64,7 @@ export const imageSlider = defineType({
                 { name: 'nl', title: 'Nederlands', type: 'string' },
                 { name: 'de', title: 'Deutsch', type: 'string' },
               ],
-              validation: (Rule) => Rule.required(),
+              description: 'Título que aparecerá sobre la imagen (opcional)',
             },
           ],
           preview: {
