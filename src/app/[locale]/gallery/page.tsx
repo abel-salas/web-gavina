@@ -109,7 +109,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
             href={`/${locale}/menu`}
             className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Ver Menú Completo
+            {dict.menu?.view_full_menu || 'Ver Menú Completo'}
           </a>
           <a
             href={`/${locale}/contact`}

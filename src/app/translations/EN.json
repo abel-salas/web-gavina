@@ -66,7 +66,8 @@
                 "sesame": "Sesame",
                 "sulfites": "Sulfites"
             }
-        }
+        },
+        "view_full_menu": "View Full Menu"
     },
     "contact": {
         "title": "Contact",
@@ -334,6 +335,7 @@
     },
     "footer": {
         "description": "Restaurant Banys La Gavina, family tradition since 1958 on the seafront in Calella.",
+        "quick_links": "Quick Links",
         "contact": {
             "title": "Contact"
         },

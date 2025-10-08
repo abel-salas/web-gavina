@@ -69,6 +69,7 @@ export interface Dictionary {
                 sulfites: string;
             };
         };
+        view_full_menu?: string;
         categories?: {
             starters?: MenuCategory;
             salads?: MenuCategory;
@@ -204,6 +205,7 @@ export interface Dictionary {
     };
     footer?: {
         description: string;
+        quick_links?: string;
         contact: {
             title: string;
             address?: string;

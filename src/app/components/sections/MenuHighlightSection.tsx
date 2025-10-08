@@ -15,6 +15,7 @@ interface MenuHighlightProps {
     price: string;
   }>;
   menuHref: string;
+  viewMenuText?: string;
   specialtyImages?: {
     arroces?: string;
     mariscos?: string;
@@ -23,7 +24,7 @@ interface MenuHighlightProps {
   };
 }
 
-export function MenuHighlightSection({ title, subtitle, specialties, menuHref, specialtyImages }: MenuHighlightProps) {
+export function MenuHighlightSection({ title, subtitle, specialties, menuHref, viewMenuText, specialtyImages }: MenuHighlightProps) {
   // Mapear los datos de especialidades a un formato con imágenes
   const dishes = specialties.map((specialty, index) => {
     const fallbackImages = [
@@ -125,7 +126,7 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref, s
                 href={menuHref as Route}
                 className="contents"
               >
-                Ver Menú Completo
+                {viewMenuText || 'Ver Menú Completo'}
                 <motion.span
                   className="ml-2 flex items-center"
                   animate={{ x: [0, 5, 0] }}

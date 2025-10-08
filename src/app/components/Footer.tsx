@@ -31,7 +31,7 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
 
           {/* Enlaces rápidos */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+            <h3 className="text-lg font-semibold mb-4">{dict.footer?.quick_links || 'Enlaces Rápidos'}</h3>
             <ul className="space-y-2">
               <li>
                 <Link href={href('/') as Route} className="text-gray-300 hover:text-white transition-colors">
