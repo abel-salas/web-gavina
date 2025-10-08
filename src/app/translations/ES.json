@@ -45,6 +45,23 @@
             "fish": "Pescados",
             "desserts": "Postres",
             "drinks": "Bebidas"
+        },
+        "allergens": {
+            "label": "Alérgenos:",
+            "legend": "Leyenda de Alérgenos",
+            "types": {
+                "gluten": "Gluten",
+                "shellfish": "Mariscos",
+                "fish": "Pescado",
+                "dairy": "Lácteos",
+                "eggs": "Huevos",
+                "nuts": "Frutos secos",
+                "soy": "Soja",
+                "celery": "Apio",
+                "mustard": "Mostaza",
+                "sesame": "Sésamo",
+                "sulfites": "Sulfitos"
+            }
         }
     },
     "contact": {

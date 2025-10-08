@@ -43,6 +43,23 @@
             "fish": "Vis",
             "desserts": "Desserts",
             "drinks": "Dranken"
+        },
+        "allergens": {
+            "label": "Allergenen:",
+            "legend": "Allergenen Legenda",
+            "types": {
+                "gluten": "Gluten",
+                "shellfish": "Schaaldieren",
+                "fish": "Vis",
+                "dairy": "Zuivel",
+                "eggs": "Eieren",
+                "nuts": "Noten",
+                "soy": "Soja",
+                "celery": "Selderij",
+                "mustard": "Mosterd",
+                "sesame": "Sesam",
+                "sulfites": "Sulfieten"
+            }
         }
     },
     "contact": {

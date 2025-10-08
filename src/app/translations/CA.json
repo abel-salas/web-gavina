@@ -43,6 +43,23 @@
             "fish": "Peixos",
             "desserts": "Postres",
             "drinks": "Begudes"
+        },
+        "allergens": {
+            "label": "Al·lèrgens:",
+            "legend": "Llegenda d'Al·lèrgens",
+            "types": {
+                "gluten": "Gluten",
+                "shellfish": "Marisc",
+                "fish": "Peix",
+                "dairy": "Lactis",
+                "eggs": "Ous",
+                "nuts": "Fruits secs",
+                "soy": "Soja",
+                "celery": "Api",
+                "mustard": "Mostassa",
+                "sesame": "Sèsam",
+                "sulfites": "Sulfits"
+            }
         }
     },
     "contact": {

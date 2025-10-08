@@ -38,6 +38,32 @@ export interface Dictionary {
         description: string;
         metaTitle: string;
         metaDescription: string;
+        categoryNames?: {
+            starters?: string;
+            salads?: string;
+            rice?: string;
+            meat?: string;
+            fish?: string;
+            desserts?: string;
+            drinks?: string;
+        };
+        allergens?: {
+            label: string;
+            legend: string;
+            types: {
+                gluten: string;
+                shellfish: string;
+                fish: string;
+                dairy: string;
+                eggs: string;
+                nuts: string;
+                soy: string;
+                celery: string;
+                mustard: string;
+                sesame: string;
+                sulfites: string;
+            };
+        };
         categories?: {
             starters?: MenuCategory;
             salads?: MenuCategory;

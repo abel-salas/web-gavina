@@ -66,77 +66,7 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
 
     // Allergen mapping for display with translations
     const getAllergenLabel = (allergen: string) => {
-        const translations: Record<string, Record<string, string>> = {
-            gluten: {
-                es: 'Gluten',
-                en: 'Gluten',
-                ca: 'Gluten',
-                nl: 'Gluten'
-            },
-            shellfish: {
-                es: 'Mariscos',
-                en: 'Shellfish',
-                ca: 'Marisc',
-                nl: 'Schaaldieren'
-            },
-            fish: {
-                es: 'Pescado',
-                en: 'Fish',
-                ca: 'Peix',
-                nl: 'Vis'
-            },
-            dairy: {
-                es: 'Lácteos',
-                en: 'Dairy',
-                ca: 'Lactis',
-                nl: 'Zuivel'
-            },
-            eggs: {
-                es: 'Huevos',
-                en: 'Eggs',
-                ca: 'Ous',
-                nl: 'Eieren'
-            },
-            nuts: {
-                es: 'Frutos secos',
-                en: 'Nuts',
-                ca: 'Fruits secs',
-                nl: 'Noten'
-            },
-            soy: {
-                es: 'Soja',
-                en: 'Soy',
-                ca: 'Soja',
-                nl: 'Soja'
-            },
-            celery: {
-                es: 'Apio',
-                en: 'Celery',
-                ca: 'Api',
-                nl: 'Selderij'
-            },
-            mustard: {
-                es: 'Mostaza',
-                en: 'Mustard',
-                ca: 'Mostassa',
-                nl: 'Mosterd'
-            },
-            sesame: {
-                es: 'Sésamo',
-                en: 'Sesame',
-                ca: 'Sèsam',
-                nl: 'Sesam'
-            },
-            sulfites: {
-                es: 'Sulfitos',
-                en: 'Sulfites',
-                ca: 'Sulfits',
-                nl: 'Sulfieten'
-            }
-        };
-
-        const locale = dict.seo?.locale?.substring(0, 2) || 'es';
-        return translations[allergen]?.[locale] || translations[allergen]?.es || allergen;
+        return dict.menu?.allergens?.types?.[allergen as keyof typeof dict.menu.allergens.types] || allergen;
     };
 
     const allergenIcons: Record<string, string> = {
@@ -203,21 +133,17 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                                             {item.allergens && item.allergens.length > 0 && (
                                                 <div className="mt-2 flex flex-wrap gap-1">
                                                     <span className="text-xs text-gray-500 mr-2">
-                                                        {dict.seo?.locale?.startsWith('en') ? 'Allergens:' :
-                                                            dict.seo?.locale?.startsWith('ca') ? 'Al·lèrgens:' :
-                                                                dict.seo?.locale?.startsWith('nl') ? 'Allergenen:' :
-                                                                    'Alérgenos:'}
+                                                        {dict.menu?.allergens?.label || 'Alérgenos:'}
                                                     </span>
                                                     {item.allergens.map((allergen: string, allergenIndex: number) => (
                                                         <span
                                                             key={allergenIndex}
-                                                            className="inline-flex items-center text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full"
+                                                            className="inline-flex items-center text-[10px] bg-orange-100 text-orange-800 px-1.5 py-0.5 rounded-full"
                                                             title={getAllergenLabel(allergen)}
                                                         >
-                                                            <span className="material-icons-outlined mr-1 text-xs">
+                                                            <span className="material-icons-outlined text-[12px] leading-none" style={{ fontSize: '12px', lineHeight: '12px' }}>
                                                                 {allergenIcons[allergen] || 'warning'}
                                                             </span>
-                                                            {getAllergenLabel(allergen)}
                                                         </span>
                                                     ))}
                                                 </div>
@@ -229,6 +155,30 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                         ))}
                     </section>
                 </div>
+
+                {/* Allergens Legend - Horizontal scroll on mobile */}
+                <section className="bg-orange-50 py-6 mt-8">
+                    <div className="container mx-auto px-4">
+                        <h3 className="text-lg font-semibold text-gray-800 mb-4 text-center">
+                            {dict.menu?.allergens?.legend || 'Leyenda de Alérgenos'}
+                        </h3>
+                        <div className="overflow-x-auto">
+                            <div className="flex gap-3 pb-2 min-w-max lg:justify-center">
+                                {Object.keys(allergenIcons).map((allergen) => (
+                                    <div
+                                        key={allergen}
+                                        className="inline-flex items-center text-[10px] bg-orange-100 text-orange-800 px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0"
+                                    >
+                                        <span className="material-icons-outlined mr-1 text-[10px]">
+                                            {allergenIcons[allergen] || 'warning'}
+                                        </span>
+                                        {getAllergenLabel(allergen)}
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
                 <section className="menu-content relative h-96 md:h-[500px] flex items-center justify-center py-20">
                     {/* Background Image */}

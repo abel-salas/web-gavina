@@ -43,6 +43,23 @@
             "fish": "Fish",
             "desserts": "Desserts",
             "drinks": "Drinks"
+        },
+        "allergens": {
+            "label": "Allergens:",
+            "legend": "Allergens Legend",
+            "types": {
+                "gluten": "Gluten",
+                "shellfish": "Shellfish",
+                "fish": "Fish",
+                "dairy": "Dairy",
+                "eggs": "Eggs",
+                "nuts": "Nuts",
+                "soy": "Soy",
+                "celery": "Celery",
+                "mustard": "Mustard",
+                "sesame": "Sesame",
+                "sulfites": "Sulfites"
+            }
         }
     },
     "contact": {
