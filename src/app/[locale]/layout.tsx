@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import Navbar from "./navbar/nav-bar";
 import Footer from "../components/Footer";
+import LanguageSelectorWrapper from "../components/LanguageSelectorWrapper";
+import NoIndexWithParams from "../components/NoIndexWithParams";
 import {
     generatePageMetadata,
     generateRestaurantJsonLd,
@@ -60,6 +62,8 @@ export default async function LocaleLayout({
                     {children}
                 </main>
                 <Footer params={params} />
+                <LanguageSelectorWrapper currentLocale={validLocale} />
+                <NoIndexWithParams />
             </div>
         </>
     );
