@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Image from 'next/image';
 import { MenuCategory, Dictionary } from '@/app/lib/dictionary.models';
 
@@ -83,6 +83,21 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
         sulfites: 'science'
     };
 
+    // Colores específicos para cada alérgeno basados en el ingrediente real
+    const allergenColors: Record<string, { bg: string; text: string }> = {
+        gluten: { bg: 'bg-amber-100', text: 'text-amber-800' }, // Dorado como el trigo
+        shellfish: { bg: 'bg-red-100', text: 'text-red-800' }, // Rojo como las gambas cocidas
+        fish: { bg: 'bg-blue-100', text: 'text-blue-800' }, // Azul como el mar
+        dairy: { bg: 'bg-slate-100', text: 'text-slate-800' }, // Blanco como la leche
+        eggs: { bg: 'bg-orange-100', text: 'text-orange-800' }, // Naranja/marrón como la yema
+        nuts: { bg: 'bg-yellow-100', text: 'text-yellow-800' }, // Amarillo como las almendras
+        soy: { bg: 'bg-green-100', text: 'text-green-800' }, // Verde como la soja
+        celery: { bg: 'bg-lime-100', text: 'text-lime-800' }, // Verde lima como el apio
+        mustard: { bg: 'bg-yellow-200', text: 'text-yellow-900' }, // Amarillo intenso como la mostaza
+        sesame: { bg: 'bg-stone-100', text: 'text-stone-800' }, // Beige como las semillas
+        sulfites: { bg: 'bg-purple-100', text: 'text-purple-800' } // Púrpura como químico
+    };
+
     return (
         <>
             <main className="pt-12">
@@ -118,7 +133,7 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                                                     {item.name}
                                                     {item.recommended && (
                                                         <span className="ml-2 text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full">
-                                                            Recomendado
+                                                            {dict.menu?.recommended || 'Recomendado'}
                                                         </span>
                                                     )}
                                                     {item.image && (
@@ -135,17 +150,20 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                                                     <span className="text-xs text-gray-500 mr-2">
                                                         {dict.menu?.allergens?.label || 'Alérgenos:'}
                                                     </span>
-                                                    {item.allergens.map((allergen: string, allergenIndex: number) => (
-                                                        <span
-                                                            key={allergenIndex}
-                                                            className="inline-flex items-center text-[10px] bg-orange-100 text-orange-800 px-1.5 py-0.5 rounded-full"
-                                                            title={getAllergenLabel(allergen)}
-                                                        >
-                                                            <span className="material-icons-outlined text-[12px] leading-none" style={{ fontSize: '12px', lineHeight: '12px' }}>
+                                                    {item.allergens.map((allergen: string, allergenIndex: number) => {
+                                                        const colors = allergenColors[allergen] || { bg: 'bg-gray-100', text: 'text-gray-800' };
+                                                        return (
+                                                            <span
+                                                                key={allergenIndex}
+                                                                className={`inline-flex items-center text-[10px] ${colors.bg} ${colors.text} px-1.5 py-0.5 rounded-full`}
+                                                                title={getAllergenLabel(allergen)}
+                                                            >
+                                                            <span className="material-icons-outlined text-[14px] leading-none" style={{ fontSize: '14px', lineHeight: '14px' }}>
                                                                 {allergenIcons[allergen] || 'warning'}
                                                             </span>
                                                         </span>
-                                                    ))}
+                                                        );
+                                                    })}
                                                 </div>
                                             )}
                                         </div>
@@ -164,17 +182,20 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                         </h3>
                         <div className="overflow-x-auto">
                             <div className="flex gap-3 pb-2 min-w-max lg:justify-center">
-                                {Object.keys(allergenIcons).map((allergen) => (
-                                    <div
-                                        key={allergen}
-                                        className="inline-flex items-center text-[10px] bg-orange-100 text-orange-800 px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0"
-                                    >
-                                        <span className="material-icons-outlined mr-1 text-[10px]">
+                                {Object.keys(allergenIcons).map((allergen) => {
+                                    const colors = allergenColors[allergen] || { bg: 'bg-gray-100', text: 'text-gray-800' };
+                                    return (
+                                        <div
+                                            key={allergen}
+                                            className={`inline-flex items-center text-[10px] ${colors.bg} ${colors.text} px-2 py-1 rounded-full whitespace-nowrap flex-shrink-0`}
+                                        >
+                                        <span className="material-icons-outlined mr-1 text-[12px]">
                                             {allergenIcons[allergen] || 'warning'}
                                         </span>
                                         {getAllergenLabel(allergen)}
                                     </div>
-                                ))}
+                                    );
+                                })}
                             </div>
                         </div>
                     </div>

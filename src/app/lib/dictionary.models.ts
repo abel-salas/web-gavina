@@ -70,6 +70,7 @@ export interface Dictionary {
             };
         };
         view_full_menu?: string;
+        recommended?: string;
         categories?: {
             starters?: MenuCategory;
             salads?: MenuCategory;

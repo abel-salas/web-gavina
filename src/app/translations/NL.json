@@ -67,7 +67,8 @@
                 "sulfites": "Sulfieten"
             }
         },
-        "view_full_menu": "Bekijk Volledige Menu"
+        "view_full_menu": "Bekijk Volledige Menu",
+        "recommended": "Aanbevolen"
     },
     "contact": {
         "title": "Contact",

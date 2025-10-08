@@ -67,7 +67,8 @@
                 "sulfites": "Sulfites"
             }
         },
-        "view_full_menu": "View Full Menu"
+        "view_full_menu": "View Full Menu",
+        "recommended": "Recommended"
     },
     "contact": {
         "title": "Contact",
