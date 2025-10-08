@@ -4,20 +4,23 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import type { Route } from 'next';
 import { AnimatedSection } from '../animations/AnimatedSection';
+import { getLocalizedData } from '@/app/lib/localization';
 
-export function ContactSection({ title, contactHref }: { title: string; contactHref: string }) {
+export function ContactSection({ locale, contactHref }: { locale: string; contactHref: string }) {
+  const { dict } = getLocalizedData(locale);
+
   return (
     <section className="py-20 bg-gradient-to-br from-gray-900 to-black text-white">
       <div className="container mx-auto px-4 text-center">
         <AnimatedSection direction="down">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            {title}
+            {dict.contact_section?.title}
           </h2>
         </AnimatedSection>
 
         <AnimatedSection direction="up" delay={0.2}>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            ¿Listo para vivir una experiencia gastronómica única? Reserva tu mesa y déjanos sorprenderte.
+            {dict.contact_section?.subtitle}
           </p>
         </AnimatedSection>
 
@@ -34,7 +37,7 @@ export function ContactSection({ title, contactHref }: { title: string; contactH
               href={contactHref as Route}
               className="contents"
             >
-              Reservar Mesa
+              {dict.contact_section?.cta}
               <motion.span
                 className="ml-3"
                 animate={{ rotate: [0, 15, -15, 0] }}

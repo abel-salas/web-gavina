@@ -114,6 +114,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                     title: getLocalizedText(feature.title, locale, ''),
                     description: getLocalizedText(feature.description, locale, '')
                 }))}
+                defaultFeatures={dict.about?.features}
             />
 
             {/* Sección 3: Platos Destacados */}
@@ -147,7 +148,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
 
             {/* Sección 6: Contacto */}
             <ContactSection
-                title="Reserva Tu Experiencia"
+                locale={locale}
                 contactHref={href('/contact')}
             />
 

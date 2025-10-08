@@ -5,6 +5,11 @@
         "keywords": "restaurant calella, mariscos, arrossos, paella, peix fresc, carns selectives, terrassa mar, banys gavina, des de 1958",
         "locale": "ca_ES"
     },
+    "contact_section": {
+        "title": "Reserva la teva experiència",
+        "subtitle": "Preparat per viure una experiència gastronòmica única? Reserva la teva taula i deixa'ns sorprendre't.",
+        "cta": "Reservar taula"
+    },
     "contact_info": {
         "phone": "937 69 25 39",
         "mobile": "695 349 307",
@@ -27,11 +32,12 @@
         "subtitle": "Des de 1958 en primera línia de mar",
         "description": "Situats a la Platja de Calella, som especialistes en arrossos, mariscos, peix fresc i carns selectes. Un marc incomparable davant del mar Mediterrani.",
         "metaTitle": "Restaurant Banys La Gavina - Des de 1958 a Calella | Arrossos i Mariscos",
-        "metaDescription": "Restaurant tradicional davant del mar a Calella des de 1958. Especialistes en arrossos, mariscos, peix fresc i carns selectes. Terrassa amb vistes al mar i aparcament gratuït."
+        "metaDescription": "Restaurant tradicional davant del mar a Calella des de 1958. Especialistes en arrossos, mariscos, peix fresc i carns selectes. Terrassa amb vistes al mar i aparcament gratuït.",
+        "cta": "Veure la carta"
     },
     "menu": {
         "title": "El nostre Menú",
-        "subtitle": "Gaudeix del millor menú de cuina casolana mediterrània 🍝",
+        "subtitle": "Gaudeix del millor menú de cuina casolana mediterrània",
         "description": "Descobreix la nostra selecció de plats tradicionals mediterranis, elaborats amb ingredients frescos i receptes familiars.",
         "metaTitle": "Menú Restaurant Gavina - Plats Mediterranis Tradicionals",
         "metaDescription": "Explora el nostre menú de cuina mediterrània: paelles, peixos frescos, carns a la brasa i postres casolanes. Ingredients de primera qualitat.",
@@ -84,7 +90,7 @@
             "schedule": "Horari",
             "parking": "Aparcament gratuït",
             "parking_description": "Disposem de dos pàrquings públics gratuïts de Calella molt propers al restaurant",
-            "follow_us": "🌐 Segueix-nos a les xarxes socials",
+            "follow_us": "Segueix-nos a les xarxes socials",
             "name": "Nom",
             "email": "Email",
             "message": "Missatge",
@@ -95,6 +101,30 @@
             "description": "També pots reservar taula directament per WhatsApp",
             "button": "Reservar per WhatsApp"
         }
+    },
+    "about": {
+        "features": [
+            {
+                "icon": "eco",
+                "title": "Ingredients Frescos",
+                "description": "Seleccionem els millors productes locals cada dia"
+            },
+            {
+                "icon": "restaurant",
+                "title": "Xef Expert",
+                "description": "Més de 20 anys d'experiència en cuina mediterrània"
+            },
+            {
+                "icon": "home",
+                "title": "Tradició Familiar",
+                "description": "Receptes transmeses de generació en generació"
+            },
+            {
+                "icon": "waves",
+                "title": "Ambient Únic",
+                "description": "Vistes al mar en un entorn acollidor i elegant"
+            }
+        ]
     },
     "gallery": {
         "title": "📸 Galeria de Fotos",
@@ -182,14 +212,6 @@
             "contact_button": "Reservar Taula"
         }
     },
-    "footer": {
-        "description": "Restaurant Banys La Gavina, tradició familiar des de 1958 en primera línia de mar a Calella.",
-        "contact": {
-            "title": "Contacte"
-        },
-        "language_selector": "Idioma",
-        "copyright": "© 2024 Restaurant Banys La Gavina. Tots els drets reservats."
-    },
     "sections": {
         "about": {
             "title": "La nostra Història",
@@ -227,5 +249,103 @@
             "subtitle": "Davant del mar a Calella",
             "description": "En primera línia de mar a la Platja Gran de Calella, gaudiràs d'accés directe a la platja i vistes panoràmiques al Mediterrani. La nostra terrassa ofereix l'ambient perfecte per assaborir l'autèntica cuina mediterrània en un entorn únic on el mar és el protagonista."
         }
+    },
+    "privacy": {
+        "title": "Política de Privacitat",
+        "metaTitle": "Política de Privacitat - Restaurant Banys La Gavina",
+        "metaDescription": "Política de privacitat del Restaurant Banys La Gavina. Sense cookies, compliment RGPD i protecció de dades personals.",
+        "sections": {
+            "general": {
+                "title": "Informació General",
+                "content": "En compliment de la normativa vigent en matèria de protecció de dades personals, el Reglament (UE) 2016/679 del Parlament Europeu i del Consell de 27 d'abril de 2016 (RGPD) i la Llei Orgànica 3/2018, de 5 de desembre, de Protecció de Dades Personals i garantia dels drets digitals (LOPD-GDD), us informem sobre el tractament de les vostres dades personals."
+            },
+            "responsible": {
+                "title": "Responsable del Tractament",
+                "denomination": "Denominació:",
+                "address": "Adreça:",
+                "phone": "Telèfon:",
+                "email": "Email:"
+            },
+            "data_collected": {
+                "title": "Dades que Recopilem",
+                "intro": "Les dades personals que podem recopilar inclouen:",
+                "items": [
+                    "Dades de contacte (nom, telèfon, email) quan ens contacteu per reserves o consultes",
+                    "Informació de reserves (data, hora, nombre de comensals, preferències alimentàries)",
+                    "Dades de navegació bàsics (adreça IP, tipus de navegador, pàgines visitades)"
+                ]
+            },
+            "purpose": {
+                "title": "Finalitat del Tractament",
+                "intro": "Les vostres dades personals seran tractades per a les següents finalitats:",
+                "items": [
+                    "Gestió de reserves i serveis del restaurant",
+                    "Atenció al client i resolució de consultes",
+                    "Comunicacions relacionades amb els nostres serveis",
+                    "Compliment d'obligacions legals",
+                    "Millora dels nostres serveis i experiència de l'usuari"
+                ]
+            },
+            "legal_basis": {
+                "title": "Base Legal",
+                "intro": "El tractament de les vostres dades es basa en:",
+                "contractual": "Execució contractual: Per a la prestació de serveis de restauració i gestió de reserves",
+                "consent": "Consentiment: Per a comunicacions promocionals (quan sigui aplicable)",
+                "legitimate": "Interès legítim: Per a la millora dels nostres serveis",
+                "legal": "Compliment legal: Per complir amb obligacions fiscals i comptables"
+            },
+            "retention": {
+                "title": "Conservació de Dades",
+                "content": "Les vostres dades personals es conservaran durant el temps necessari per complir amb les finalitats per a les quals van ser recollides i, en tot cas, durant els terminis previstos legalment. Les dades de reserves es conservaran durant 6 anys per complir amb obligacions fiscals."
+            },
+            "recipients": {
+                "title": "Destinataris de les Dades",
+                "intro": "Les vostres dades no seran cedides a tercers, excepte obligació legal. Únicament podran ser comunicades a:",
+                "items": [
+                    "Administracions públiques quan sigui legalment exigible",
+                    "Proveïdors de serveis tecnològics sota estrictes condicions de confidencialitat"
+                ]
+            },
+            "rights": {
+                "title": "Els vostres Drets",
+                "intro": "Teniu dret a:",
+                "access": "Accés: Conèixer quines dades tenim sobre vosaltres",
+                "rectification": "Rectificació: Corregir dades inexactes o incompletes",
+                "erasure": "Supressió: Sol·licitar l'eliminació de les vostres dades",
+                "restriction": "Limitació: Restringir el tractament de les vostres dades",
+                "portability": "Portabilitat: Rebre les vostres dades en format estructurat",
+                "objection": "Oposició: Oposar-se al tractament de les vostres dades",
+                "exercise": "Per exercir aquests drets, podeu contactar-nos a info@banyslagavina.cat o a l'adreça postal indicada anteriorment."
+            },
+            "authority": {
+                "title": "Autoritat de Control",
+                "content": "Si considereu que el tractament de les vostres dades no s'ajusta a la normativa, podeu presentar una reclamació davant l'Agència Espanyola de Protecció de Dades (AEPD) a través de la seva seu electrònica (www.aepd.es) o a la seva adreça postal: C/ Jorge Juan, 6, 28001 Madrid."
+            },
+            "cookies": {
+                "title": "Informació sobre Cookies",
+                "important": "IMPORTANT:",
+                "no_cookies": "Aquest lloc web NO utilitza cookies de cap tipus. No instal·lem cookies al vostre dispositiu, no realitzem seguiment de la vostra activitat de navegació i no recopilem dades mitjançant cookies de tercers. Per tant, no és necessari el vostre consentiment per a l'ús de cookies.",
+                "basic_data": "Únicament es processen dades bàsics de navegació (com la vostra adreça IP) que són necessaris per al funcionament tècnic del lloc web i que s'eliminen automàticament en tancar la vostra sessió de navegació."
+            },
+            "security": {
+                "title": "Seguretat",
+                "content": "Hem implementat mesures de seguretat tècniques i organitzatives apropiades per protegir les vostres dades personals contra l'accés no autoritzat, alteració, divulgació o destrucció accidental."
+            },
+            "modifications": {
+                "title": "Modificacions",
+                "content": "Ens reservem el dret a modificar aquesta Política de Privacitat. Qualsevol canvi serà publicat en aquesta pàgina amb la data d'última actualització."
+            }
+        },
+        "last_updated": "Última actualització:",
+        "date": "8 d'octubre de 2025"
+    },
+    "footer": {
+        "description": "Restaurant Banys La Gavina, tradició familiar des de 1958 en primera línia de mar a Calella.",
+        "contact": {
+            "title": "Contacte"
+        },
+        "language_selector": "Idioma",
+        "privacy_policy": "Política de Privacitat",
+        "copyright": "© 2025 Restaurant Banys La Gavina. Tots els drets reservats."
     }
 }

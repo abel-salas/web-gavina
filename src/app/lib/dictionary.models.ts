@@ -5,6 +5,11 @@ export interface Dictionary {
         keywords: string;
         locale: string;
     };
+    contact_section?: {
+        title: string;
+        subtitle: string;
+        cta: string;
+    };
     contact_info?: {
         phone: string;
         mobile: string;
@@ -107,6 +112,13 @@ export interface Dictionary {
             button: string;
         };
     };
+    about?: {
+        features: Array<{
+            icon: string;
+            title: string;
+            description: string;
+        }>;
+    };
     gallery?: {
         title: string;
         subtitle: string;
@@ -207,7 +219,84 @@ export interface Dictionary {
             facebook: string;
         };
         language_selector?: string;
+        privacy_policy?: string;
         copyright: string;
+    };
+    privacy?: {
+        title: string;
+        metaTitle: string;
+        metaDescription: string;
+        sections: {
+            general: {
+                title: string;
+                content: string;
+            };
+            responsible: {
+                title: string;
+                denomination: string;
+                address: string;
+                phone: string;
+                email: string;
+            };
+            data_collected: {
+                title: string;
+                intro: string;
+                items: string[];
+            };
+            purpose: {
+                title: string;
+                intro: string;
+                items: string[];
+            };
+            legal_basis: {
+                title: string;
+                intro: string;
+                contractual: string;
+                consent: string;
+                legitimate: string;
+                legal: string;
+            };
+            retention: {
+                title: string;
+                content: string;
+            };
+            recipients: {
+                title: string;
+                intro: string;
+                items: string[];
+            };
+            rights: {
+                title: string;
+                intro: string;
+                access: string;
+                rectification: string;
+                erasure: string;
+                restriction: string;
+                portability: string;
+                objection: string;
+                exercise: string;
+            };
+            authority: {
+                title: string;
+                content: string;
+            };
+            cookies: {
+                title: string;
+                important: string;
+                no_cookies: string;
+                basic_data: string;
+            };
+            security: {
+                title: string;
+                content: string;
+            };
+            modifications: {
+                title: string;
+                content: string;
+            };
+        };
+        last_updated: string;
+        date: string;
     };
 }
 

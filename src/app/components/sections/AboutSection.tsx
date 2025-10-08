@@ -17,34 +17,16 @@ interface AboutSectionProps {
   backgroundImage?: string;
   backgroundAlt?: string;
   features?: AboutFeature[];
+  defaultFeatures?: AboutFeature[];
 }
 
-export function AboutSection({ title, subtitle, description, backgroundImage, backgroundAlt, features }: AboutSectionProps) {
-  // Features por defecto si no se proporcionan desde Sanity
-  const defaultFeatures = [
-    {
-      icon: "eco",
-      title: "Ingredientes Frescos",
-      description: "Seleccionamos los mejores productos locales cada día"
-    },
-    {
-      icon: "restaurant",
-      title: "Chef Experto",
-      description: "Más de 20 años de experiencia en cocina mediterránea"
-    },
-    {
-      icon: "home",
-      title: "Tradición Familiar",
-      description: "Recetas transmitidas de generación en generación"
-    },
-    {
-      icon: "waves",
-      title: "Ambiente Único",
-      description: "Vistas al mar en un entorno acogedor y elegante"
-    }
-  ];
-
-  const displayFeatures = features && features.length > 0 ? features : defaultFeatures; return (
+export function AboutSection({ title, subtitle, description, backgroundImage, backgroundAlt, features, defaultFeatures }: AboutSectionProps) {
+  // Usar features proporcionadas, o defaultFeatures, o array vacío como último recurso
+  const displayFeatures = features && features.length > 0 
+    ? features 
+    : defaultFeatures && defaultFeatures.length > 0 
+    ? defaultFeatures 
+    : []; return (
     <section className="about-section py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

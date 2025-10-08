@@ -5,6 +5,11 @@
         "keywords": "restaurant calella, seafood, rice dishes, paella, fresh fish, select meats, sea terrace, banys gavina, since 1958",
         "locale": "en_US"
     },
+    "contact_section": {
+        "title": "Book Your Experience",
+        "subtitle": "Ready to enjoy a unique gastronomic experience? Book your table and let us surprise you.",
+        "cta": "Book a Table"
+    },
     "contact_info": {
         "phone": "937 69 25 39",
         "mobile": "695 349 307",
@@ -27,11 +32,12 @@
         "subtitle": "Since 1958 on the seafront",
         "description": "Located on Calella Beach, we specialize in rice dishes, seafood, fresh fish and select meats. An incomparable setting facing the Mediterranean Sea.",
         "metaTitle": "Restaurant Banys La Gavina - Since 1958 in Calella | Rice dishes and Seafood",
-        "metaDescription": "Traditional seafront restaurant in Calella since 1958. Specialists in rice dishes, seafood, fresh fish and select meats. Sea view terrace and free parking."
+        "metaDescription": "Traditional seafront restaurant in Calella since 1958. Specialists in rice dishes, seafood, fresh fish and select meats. Sea view terrace and free parking.",
+        "cta": "View Menu"
     },
     "menu": {
         "title": "🍽️ Our Menu",
-        "subtitle": "Enjoy the finest Mediterranean homemade cuisine 🍝",
+        "subtitle": "Enjoy the finest Mediterranean homemade cuisine",
         "description": "Discover our selection of traditional Mediterranean dishes, prepared with fresh ingredients and family recipes.",
         "metaTitle": "Menu - Gavina Restaurant | Traditional Mediterranean Dishes",
         "metaDescription": "Explore our Mediterranean cuisine menu: paellas, fresh seafood, grilled meats and homemade desserts. Premium quality ingredients.",
@@ -77,7 +83,7 @@
             "schedule": "Schedule",
             "parking": "Free parking",
             "parking_description": "We have two free public parking areas in Calella very close to the restaurant",
-            "follow_us": "🌐 Follow us on social media",
+            "follow_us": "Follow us on social media",
             "name": "Name",
             "email": "Email",
             "message": "Message",
@@ -88,6 +94,30 @@
             "description": "You can also book your table directly via WhatsApp",
             "button": "Book via WhatsApp"
         }
+    },
+    "about": {
+        "features": [
+            {
+                "icon": "eco",
+                "title": "Fresh Ingredients",
+                "description": "We select the best local products every day"
+            },
+            {
+                "icon": "restaurant",
+                "title": "Expert Chef",
+                "description": "Over 20 years of experience in Mediterranean cuisine"
+            },
+            {
+                "icon": "home",
+                "title": "Family Tradition",
+                "description": "Recipes passed down from generation to generation"
+            },
+            {
+                "icon": "waves",
+                "title": "Unique Atmosphere",
+                "description": "Sea views in a cozy and elegant setting"
+            }
+        ]
     },
     "gallery": {
         "title": "📸 Photo Gallery",
@@ -175,14 +205,6 @@
             "contact_button": "Book a Table"
         }
     },
-    "footer": {
-        "description": "Restaurant Banys La Gavina, family tradition since 1958 on the seafront in Calella.",
-        "contact": {
-            "title": "Contact"
-        },
-        "language_selector": "Language",
-        "copyright": "© 2024 Restaurant Banys La Gavina. All rights reserved."
-    },
     "sections": {
         "about": {
             "title": "Our History",
@@ -220,5 +242,103 @@
             "subtitle": "Facing the sea in Calella",
             "description": "On the seafront at Platja Gran de Calella, you'll enjoy direct beach access and panoramic Mediterranean views. Our terrace offers the perfect atmosphere to savor authentic Mediterranean cuisine in a unique setting where the sea is the protagonist."
         }
+    },
+    "privacy": {
+        "title": "Privacy Policy",
+        "metaTitle": "Privacy Policy - Restaurant Banys La Gavina",
+        "metaDescription": "Privacy policy of Restaurant Banys La Gavina. No cookies, GDPR compliance and personal data protection.",
+        "sections": {
+            "general": {
+                "title": "General Information",
+                "content": "In compliance with current regulations on personal data protection, Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR) and Organic Law 3/2018, of 5 December, on Personal Data Protection and guarantee of digital rights (LOPD-GDD), we inform you about the processing of your personal data."
+            },
+            "responsible": {
+                "title": "Data Controller",
+                "denomination": "Business name:",
+                "address": "Address:",
+                "phone": "Phone:",
+                "email": "Email:"
+            },
+            "data_collected": {
+                "title": "Data We Collect",
+                "intro": "The personal data we may collect includes:",
+                "items": [
+                    "Contact details (name, phone, email) when you contact us for bookings or inquiries",
+                    "Booking information (date, time, number of diners, dietary preferences)",
+                    "Basic browsing data (IP address, browser type, pages visited)"
+                ]
+            },
+            "purpose": {
+                "title": "Purpose of Processing",
+                "intro": "Your personal data will be processed for the following purposes:",
+                "items": [
+                    "Management of bookings and restaurant services",
+                    "Customer service and query resolution",
+                    "Communications related to our services",
+                    "Compliance with legal obligations",
+                    "Improvement of our services and user experience"
+                ]
+            },
+            "legal_basis": {
+                "title": "Legal Basis",
+                "intro": "The processing of your data is based on:",
+                "contractual": "Contractual performance: For the provision of restaurant services and booking management",
+                "consent": "Consent: For promotional communications (when applicable)",
+                "legitimate": "Legitimate interest: For the improvement of our services",
+                "legal": "Legal compliance: To comply with tax and accounting obligations"
+            },
+            "retention": {
+                "title": "Data Retention",
+                "content": "Your personal data will be kept for the time necessary to fulfill the purposes for which they were collected and, in any case, for the legally established periods. Booking data will be kept for 6 years to comply with tax obligations."
+            },
+            "recipients": {
+                "title": "Data Recipients",
+                "intro": "Your data will not be transferred to third parties, except legal obligation. They may only be communicated to:",
+                "items": [
+                    "Public administrations when legally required",
+                    "Technology service providers under strict confidentiality conditions"
+                ]
+            },
+            "rights": {
+                "title": "Your Rights",
+                "intro": "You have the right to:",
+                "access": "Access: Know what data we have about you",
+                "rectification": "Rectification: Correct inaccurate or incomplete data",
+                "erasure": "Erasure: Request deletion of your data",
+                "restriction": "Restriction: Restrict the processing of your data",
+                "portability": "Portability: Receive your data in structured format",
+                "objection": "Objection: Object to the processing of your data",
+                "exercise": "To exercise these rights, you can contact us at info@banyslagavina.cat or at the postal address indicated above."
+            },
+            "authority": {
+                "title": "Supervisory Authority",
+                "content": "If you consider that the processing of your data does not comply with the regulations, you may file a complaint with the Spanish Data Protection Agency (AEPD) through its electronic headquarters (www.aepd.es) or at its postal address: C/ Jorge Juan, 6, 28001 Madrid."
+            },
+            "cookies": {
+                "title": "Cookie Information",
+                "important": "IMPORTANT:",
+                "no_cookies": "This website does NOT use cookies of any kind. We do not install cookies on your device, we do not track your browsing activity and we do not collect data through third-party cookies. Therefore, your consent for the use of cookies is not necessary.",
+                "basic_data": "Only basic browsing data (such as your IP address) that is necessary for the technical operation of the website is processed and is automatically deleted when you close your browsing session."
+            },
+            "security": {
+                "title": "Security",
+                "content": "We have implemented appropriate technical and organizational security measures to protect your personal data against unauthorized access, alteration, disclosure or accidental destruction."
+            },
+            "modifications": {
+                "title": "Modifications",
+                "content": "We reserve the right to modify this Privacy Policy. Any changes will be published on this page with the date of last update."
+            }
+        },
+        "last_updated": "Last updated:",
+        "date": "October 8, 2025"
+    },
+    "footer": {
+        "description": "Restaurant Banys La Gavina, family tradition since 1958 on the seafront in Calella.",
+        "contact": {
+            "title": "Contact"
+        },
+        "language_selector": "Language",
+        "privacy_policy": "Privacy Policy",
+        "copyright": "© 2025 Restaurant Banys La Gavina. All rights reserved."
     }
 }

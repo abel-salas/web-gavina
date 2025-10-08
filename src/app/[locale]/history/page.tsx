@@ -156,15 +156,18 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
             {dict.history.heritage.title}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {dict.history.heritage.items.map((item, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
-                <div className="text-4xl mb-4">
-                  {['🏛️', '👨‍🍳', '📚', '👨‍👩‍👧‍👦'][index]}
+            {dict.history.heritage.items.map((item, index) => {
+              const icons = ['account_balance', 'restaurant', 'menu_book', 'family_restroom'];
+              return (
+                <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center">
+                  <div className="text-4xl mb-4 text-blue-600">
+                    <span className="material-icons-outlined text-5xl">{icons[index]}</span>
+                  </div>
+                  <h4 className="text-lg font-bold mb-3 text-gray-900">{item.title}</h4>
+                  <p className="text-gray-600 text-sm">{item.description}</p>
                 </div>
-                <h4 className="text-lg font-bold mb-3 text-gray-900">{item.title}</h4>
-                <p className="text-gray-600 text-sm">{item.description}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 

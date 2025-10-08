@@ -53,6 +53,16 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
                   {dict.nav.contacto}
                 </Link>
               </li>
+              <li>
+                <Link href={href('/privacy') as Route} className="text-gray-300 hover:text-white transition-colors">
+                  {dict.footer?.privacy_policy || 'Política de Privacidad'}
+                </Link>
+              </li>
+              <li>
+                <Link href={href('/legal') as Route} className="text-gray-300 hover:text-white transition-colors">
+                  Aviso Legal
+                </Link>
+              </li>
               {/* <li>
                 <Link href={href('/gallery') as Route} className="text-gray-300 hover:text-white transition-colors">
                   {dict.nav.gallery}
@@ -84,10 +94,10 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
               <div className="flex items-start">
                 <span className="material-icons-outlined mr-2 mt-1 text-lg">access_time</span>
                 <div className="flex-1">
-                  <HoursSection 
-                    locale={locale} 
-                    showTitle={true} 
-                    showIcon={false} 
+                  <HoursSection
+                    locale={locale}
+                    showTitle={true}
+                    showIcon={false}
                     isFooter={true}
                     className=""
                   />
