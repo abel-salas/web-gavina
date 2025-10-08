@@ -15,6 +15,7 @@ export const imageSlider = defineType({
         { name: 'en', title: 'English', type: 'string' },
         { name: 'ca', title: 'Català', type: 'string' },
         { name: 'nl', title: 'Nederlands', type: 'string' },
+        { name: 'de', title: 'Deutsch', type: 'string' },
       ],
       description: 'Título que aparecerá encima del slider (opcional)',
     }),
@@ -61,6 +62,7 @@ export const imageSlider = defineType({
                 { name: 'en', title: 'English', type: 'string' },
                 { name: 'ca', title: 'Català', type: 'string' },
                 { name: 'nl', title: 'Nederlands', type: 'string' },
+                { name: 'de', title: 'Deutsch', type: 'string' },
               ],
               validation: (Rule) => Rule.required(),
             },
@@ -119,7 +121,7 @@ export const imageSlider = defineType({
     prepare({ title, isActive, imageCount, order }) {
       const count = Array.isArray(imageCount) ? imageCount.length : 0;
       const displayTitle = title || 'Slider sin título';
-      
+
       return {
         title: `${isActive ? '✅' : '❌'} ${displayTitle}`,
         subtitle: `${count} imagen${count !== 1 ? 'es' : ''} • Orden: ${order} • ${isActive ? 'ACTIVO' : 'INACTIVO'}`,

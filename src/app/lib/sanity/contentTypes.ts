@@ -6,6 +6,7 @@ export interface MultiLanguageText {
   en?: string;
   ca?: string;
   nl?: string;
+  de?: string;
 }
 
 // Tipo base para imágenes de Sanity
@@ -37,25 +38,25 @@ export interface HomeContent {
   sectionId: 'hero' | 'about' | 'specialties' | 'location';
   order: number;
   isActive: boolean;
-  
+
   // Encabezado Principal (hero)
   heroTitle?: MultiLanguageText;
   heroSubtitle?: MultiLanguageText;
   heroDescription?: MultiLanguageText;
   heroBackgroundImage?: SanityImage;
-  
+
   // Sobre Nosotros (about)
   aboutTitle?: MultiLanguageText;
   aboutSubtitle?: MultiLanguageText;
   aboutDescription?: MultiLanguageText;
   aboutImage?: SanityImage;
   aboutFeatures?: AboutFeature[];
-  
+
   // Especialidades (specialties)
   specialtiesTitle?: MultiLanguageText;
   specialtiesSubtitle?: MultiLanguageText;
   specialtyItems?: SpecialtyItem[];
-  
+
   // Ubicación (location)
   locationTitle?: MultiLanguageText;
   locationSubtitle?: MultiLanguageText;
@@ -77,17 +78,17 @@ export interface MenuContent {
   sectionId: 'hero' | 'intro' | 'categories';
   order: number;
   isActive: boolean;
-  
+
   // Encabezado del Menú
   heroTitle?: MultiLanguageText;
   heroSubtitle?: MultiLanguageText;
   heroDescription?: MultiLanguageText;
   heroBackgroundImage?: SanityImage;
-  
+
   // Introducción
   introTitle?: MultiLanguageText;
   introDescription?: MultiLanguageText;
-  
+
   // Categorías
   categoryTitles?: {
     starters?: MultiLanguageText;
@@ -113,21 +114,21 @@ export interface ContactContent {
   sectionId: 'header' | 'info' | 'hours' | 'location';
   order: number;
   isActive: boolean;
-  
+
   // Encabezado de Contacto
   headerTitle?: MultiLanguageText;
   headerSubtitle?: MultiLanguageText;
   headerDescription?: MultiLanguageText;
-  
+
   // Información de Contacto
   contactInfoTitle?: MultiLanguageText;
   contactInfoDescription?: MultiLanguageText;
-  
+
   // Horarios
   hoursTitle?: MultiLanguageText;
   hoursDescription?: MultiLanguageText;
   specialHours?: MultiLanguageText;
-  
+
   // Ubicación
   locationTitle?: MultiLanguageText;
   locationDescription?: MultiLanguageText;
@@ -191,7 +192,7 @@ export function getLocalizedText(
   fallback: string = ''
 ): string {
   if (!text) return fallback;
-  
+
   const validLocale = locale as keyof MultiLanguageText;
   return text[validLocale] || text.es || text.en || fallback;
 }
@@ -199,7 +200,7 @@ export function getLocalizedText(
 // Función helper para procesar respuesta de homeContent
 export function processHomeContentResponse(data: HomeContent[]): HomeContentResponse {
   const response: HomeContentResponse = {};
-  
+
   data.forEach(item => {
     switch (item.sectionId) {
       case 'hero':
@@ -216,14 +217,14 @@ export function processHomeContentResponse(data: HomeContent[]): HomeContentResp
         break;
     }
   });
-  
+
   return response;
 }
 
 // Función helper para procesar respuesta de menuContent
 export function processMenuContentResponse(data: MenuContent[]): MenuContentResponse {
   const response: MenuContentResponse = {};
-  
+
   data.forEach(item => {
     switch (item.sectionId) {
       case 'hero':
@@ -237,14 +238,14 @@ export function processMenuContentResponse(data: MenuContent[]): MenuContentResp
         break;
     }
   });
-  
+
   return response;
 }
 
 // Función helper para procesar respuesta de contactContent
 export function processContactContentResponse(data: ContactContent[]): ContactContentResponse {
   const response: ContactContentResponse = {};
-  
+
   data.forEach(item => {
     switch (item.sectionId) {
       case 'header':
@@ -261,6 +262,6 @@ export function processContactContentResponse(data: ContactContent[]): ContactCo
         break;
     }
   });
-  
+
   return response;
 }

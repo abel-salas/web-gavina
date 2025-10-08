@@ -36,6 +36,7 @@ export const menuContent = defineType({
         { name: 'en', title: 'English', type: 'string' },
         { name: 'ca', title: 'Català', type: 'string' },
         { name: 'nl', title: 'Nederlands', type: 'string' },
+        { name: 'de', title: 'Deutsch', type: 'string' },
       ],
       hidden: ({ document }) => document?.sectionId !== 'hero',
     }),
@@ -49,6 +50,7 @@ export const menuContent = defineType({
         { name: 'en', title: 'English', type: 'string' },
         { name: 'ca', title: 'Català', type: 'string' },
         { name: 'nl', title: 'Nederlands', type: 'string' },
+        { name: 'de', title: 'Deutsch', type: 'string' },
       ],
       hidden: ({ document }) => document?.sectionId !== 'hero',
     }),
@@ -62,6 +64,7 @@ export const menuContent = defineType({
         { name: 'en', title: 'English', type: 'text' },
         { name: 'ca', title: 'Català', type: 'text' },
         { name: 'nl', title: 'Nederlands', type: 'text' },
+        { name: 'de', title: 'Deutsch', type: 'text' },
       ],
       hidden: ({ document }) => document?.sectionId !== 'hero',
     }),
@@ -93,6 +96,7 @@ export const menuContent = defineType({
         { name: 'en', title: 'English', type: 'string' },
         { name: 'ca', title: 'Català', type: 'string' },
         { name: 'nl', title: 'Nederlands', type: 'string' },
+        { name: 'de', title: 'Deutsch', type: 'string' },
       ],
       hidden: ({ document }) => document?.sectionId !== 'intro',
     }),
@@ -106,6 +110,7 @@ export const menuContent = defineType({
         { name: 'en', title: 'English', type: 'text' },
         { name: 'ca', title: 'Català', type: 'text' },
         { name: 'nl', title: 'Nederlands', type: 'text' },
+        { name: 'de', title: 'Deutsch', type: 'text' },
       ],
       hidden: ({ document }) => document?.sectionId !== 'intro',
     }),
@@ -133,7 +138,7 @@ export const menuContent = defineType({
         intro: 'Introducción',
         categories: 'Categorías',
       }
-      
+
       return {
         title: `${isActive ? '✅' : '❌'} ${sectionNames[title as keyof typeof sectionNames] || title}`,
         subtitle: `Orden: ${order} • ${isActive ? 'ACTIVO' : 'INACTIVO'}`,

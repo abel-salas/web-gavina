@@ -341,6 +341,55 @@
         "last_updated": "Última actualització:",
         "date": "8 d'octubre de 2025"
     },
+    "legal": {
+        "title": "Avís Legal",
+        "metaTitle": "Avís Legal - Restaurant Banys La Gavina",
+        "metaDescription": "Avís legal i informació general del Restaurant Banys La Gavina. Compliment LSSI i serveis de la societat de la informació.",
+        "sections": {
+            "general": {
+                "title": "Informació General",
+                "content": "En compliment de la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i de Comerç Electrònic, s'informa dels següents aspectes legals:"
+            },
+            "owner": {
+                "title": "Dades del Titular",
+                "denomination": "Denominació:",
+                "address": "Adreça:",
+                "phone": "Telèfon:",
+                "email": "Email:"
+            },
+            "purpose": {
+                "title": "Objecte",
+                "content": "Aquest lloc web té per objecte la presentació d'informació sobre el Restaurant Banys La Gavina i els seus serveis, així com facilitar un canal de contacte per a reserves i consultes."
+            },
+            "data_protection": {
+                "title": "Protecció de Dades",
+                "content": "El tractament de dades personals es realitza conforme a la nostra Política de Privacitat i les disposicions vigents del RGPD i LOPD-GDD."
+            },
+            "intellectual_property": {
+                "title": "Propietat Intel·lectual",
+                "content": "Tots els continguts d'aquest lloc web (textos, imatges, gràfics, logotip, icones de botons, arxius d'àudio i vídeo i la seva selecció i disposició) són propietat del Restaurant Banys La Gavina o s'utilitzen amb l'autorització deguda i estan protegits per les lleis de drets d'autor i altres lleis de protecció de la propietat intel·lectual."
+            },
+            "liability": {
+                "title": "Responsabilitat",
+                "content": "El Restaurant Banys La Gavina s'esforça per assegurar que la informació continguda en aquest lloc web sigui correcta i estigui actualitzada, però no assumeix cap responsabilitat per possibles errors, omissions o canvis en la informació proporcionada."
+            },
+            "external_links": {
+                "title": "Enllaços Externs",
+                "content": "Aquest lloc web pot contenir enllaços a llocs web externs. El Restaurant Banys La Gavina no es fa responsable del contingut o les pràctiques de privacitat d'aquests llocs web."
+            },
+            "applicable_law": {
+                "title": "Llei Aplicable",
+                "content": "Aquest avís legal es regeix per la legislació espanyola. Per a qualsevol controvèrsia que pogués derivar-se de l'ús d'aquest lloc web, les parts se sotmeten als Jutjats i Tribunals de Barcelona."
+            },
+            "no_cookies": {
+                "title": "Lloc Web sense Cookies",
+                "important": "IMPORTANT:",
+                "content": "Aquest lloc web NO utilitza cookies de cap tipus. No instal·lem cookies de seguiment, analítiques o de tercers al vostre dispositiu. Per tant, no cal el vostre consentiment per a l'ús de cookies i no veureu banners de cookies ni avisos similars. Respectem completament la vostra privacitat i només recopilem les dades essencials necessàries per prestar els nostres serveis."
+            }
+        },
+        "last_updated": "Última actualització:",
+        "date": "8 d'octubre de 2025"
+    },
     "footer": {
         "description": "Restaurant Banys La Gavina, tradició familiar des de 1958 en primera línia de mar a Calella.",
         "quick_links": "Enllaços Ràpids",

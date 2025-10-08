@@ -341,6 +341,55 @@
         "last_updated": "Laatst bijgewerkt:",
         "date": "8 oktober 2025"
     },
+    "legal": {
+        "title": "Juridische Kennisgeving",
+        "metaTitle": "Juridische Kennisgeving - Restaurant Banys La Gavina",
+        "metaDescription": "Juridische kennisgeving en algemene informatie van Restaurant Banys La Gavina. LSSI-naleving en informatiediensten.",
+        "sections": {
+            "general": {
+                "title": "Algemene Informatie",
+                "content": "In overeenstemming met Wet 34/2002 van 11 juli betreffende Diensten van de Informatiemaatschappij en Elektronische Handel, worden de volgende juridische aspecten gemeld:"
+            },
+            "owner": {
+                "title": "Eigenaarsinformatie",
+                "denomination": "Bedrijfsnaam:",
+                "address": "Adres:",
+                "phone": "Telefoon:",
+                "email": "E-mail:"
+            },
+            "purpose": {
+                "title": "Doel",
+                "content": "Deze website heeft tot doel informatie te presenteren over Restaurant Banys La Gavina en zijn diensten, evenals een contactkanaal te bieden voor reserveringen en vragen."
+            },
+            "data_protection": {
+                "title": "Gegevensbescherming",
+                "content": "De verwerking van persoonsgegevens wordt uitgevoerd in overeenstemming met ons Privacybeleid en de huidige bepalingen van AVG en LOPD-GDD."
+            },
+            "intellectual_property": {
+                "title": "Intellectueel Eigendom",
+                "content": "Alle inhoud van deze website (teksten, afbeeldingen, grafische elementen, logo, knoppictogrammen, audio- en videobestanden en hun selectie en rangschikking) zijn eigendom van Restaurant Banys La Gavina of worden gebruikt met behoorlijke autorisatie en zijn beschermd door auteursrechtwetten en andere wetten ter bescherming van intellectueel eigendom."
+            },
+            "liability": {
+                "title": "Aansprakelijkheid",
+                "content": "Restaurant Banys La Gavina streeft ernaar te verzekeren dat de informatie op deze website correct en actueel is, maar neemt geen verantwoordelijkheid voor mogelijke fouten, weglatingen of wijzigingen in de verstrekte informatie."
+            },
+            "external_links": {
+                "title": "Externe Links",
+                "content": "Deze website kan links naar externe websites bevatten. Restaurant Banys La Gavina is niet verantwoordelijk voor de inhoud of privacypraktijken van deze websites."
+            },
+            "applicable_law": {
+                "title": "Toepasselijk Recht",
+                "content": "Deze juridische kennisgeving wordt beheerst door de Spaanse wetgeving. Voor eventuele geschillen die kunnen voortvloeien uit het gebruik van deze website, onderwerpen partijen zich aan de rechtbanken van Barcelona."
+            },
+            "no_cookies": {
+                "title": "Cookievrije Website",
+                "important": "BELANGRIJK:",
+                "content": "Deze website gebruikt GEEN cookies van welke aard dan ook. We installeren geen tracking-, analyse- of cookies van derden op uw apparaat. Daarom is uw toestemming voor het gebruik van cookies niet vereist en zult u geen cookiebanners of soortgelijke meldingen zien. We respecteren uw privacy volledig en verzamelen alleen de essentiële gegevens die nodig zijn om onze diensten te verlenen."
+            }
+        },
+        "last_updated": "Laatst bijgewerkt:",
+        "date": "8 oktober 2025"
+    },
     "footer": {
         "description": "Restaurant Banys La Gavina, familietraditie sinds 1958 aan de kust in Calella.",
         "quick_links": "Snelle Links",

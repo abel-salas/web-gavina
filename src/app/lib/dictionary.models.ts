@@ -301,6 +301,55 @@ export interface Dictionary {
         last_updated: string;
         date: string;
     };
+    legal?: {
+        title: string;
+        metaTitle: string;
+        metaDescription: string;
+        sections: {
+            general: {
+                title: string;
+                content: string;
+            };
+            owner: {
+                title: string;
+                denomination: string;
+                address: string;
+                phone: string;
+                email: string;
+            };
+            purpose: {
+                title: string;
+                content: string;
+            };
+            data_protection: {
+                title: string;
+                content: string;
+            };
+            intellectual_property: {
+                title: string;
+                content: string;
+            };
+            liability: {
+                title: string;
+                content: string;
+            };
+            external_links: {
+                title: string;
+                content: string;
+            };
+            applicable_law: {
+                title: string;
+                content: string;
+            };
+            no_cookies: {
+                title: string;
+                important: string;
+                content: string;
+            };
+        };
+        last_updated: string;
+        date: string;
+    };
 }
 
 export interface MenuCategory {

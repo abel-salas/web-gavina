@@ -1,0 +1,387 @@
+{
+    "seo": {
+        "siteName": "Restaurant Banys La Gavina",
+        "siteDescription": "Traditionelles Restaurant direkt am Meer in Calella seit 1958. Spezialisten für Reisgerichte, Meeresfrüchte, frischen Fisch und ausgewählte Fleischsorten. Meerblick-Terrasse und kostenlose Parkplätze.",
+        "keywords": "restaurant calella, meeresfrüchte, reisgerichte, paella, frischer fisch, ausgewählte fleischsorten, meerblick terrasse, banys gavina, seit 1958",
+        "locale": "de_DE"
+    },
+    "contact_section": {
+        "title": "Reservieren Sie Ihr Erlebnis",
+        "subtitle": "Bereit für ein einzigartiges gastronomisches Erlebnis? Reservieren Sie Ihren Tisch und lassen Sie sich von uns überraschen.",
+        "cta": "Tisch reservieren"
+    },
+    "contact_info": {
+        "phone": "937 69 25 39",
+        "mobile": "695 349 307",
+        "address": "Paseo Manuel Puigvert s/n, Calella, Barcelona",
+        "location": "Platja Gran de Calella, gegenüber dem Renfe Bahnhof",
+        "parking": "Zwei kostenlose Parkplätze",
+        "facebook": "Facebook",
+        "instagram": "Instagram"
+    },
+    "nav": {
+        "home": "Startseite",
+        "menu": "Speisekarte",
+        "history": "Geschichte",
+        "reservas": "Reservierungen",
+        "contacto": "Kontakt",
+        "gallery": "Galerie"
+    },
+    "home": {
+        "title": "Banys La Gavina",
+        "subtitle": "Seit 1958 direkt am Meer",
+        "description": "Am Strand von Calella gelegen, sind wir Spezialisten für Reisgerichte, Meeresfrüchte, frischen Fisch und ausgewählte Fleischsorten. Ein unvergleichlicher Rahmen direkt am Mittelmeer.",
+        "metaTitle": "Restaurant Banys La Gavina - Seit 1958 in Calella | Reisgerichte und Meeresfrüchte",
+        "metaDescription": "Traditionelles Restaurant direkt am Meer in Calella seit 1958. Spezialisten für Reisgerichte, Meeresfrüchte, frischen Fisch und ausgewählte Fleischsorten. Meerblick-Terrasse und kostenlose Parkplätze.",
+        "cta": "Speisekarte ansehen",
+        "cta_secondary": "Tisch reservieren"
+    },
+    "menu": {
+        "title": "Unsere Speisekarte",
+        "subtitle": "Mediterrane Küche inspiriert von den Produkten des Meeres",
+        "description": "Der Küchenchef hat diese Speisekarte inspiriert von den Produkten des Meeres und unserer mediterranen Küche erstellt, ohne dabei gutes Fleisch und saisonale Gerichte zu vernachlässigen. Wir arbeiten immer mit erstklassigen Produkten und achten sehr auf die Präsentation.",
+        "metaTitle": "Speisekarte - Restaurant Banys La Gavina | Reisgerichte, Meeresfrüchte und Spezialitäten",
+        "metaDescription": "Entdecken Sie unsere Speisekarte mit den besten Reisgerichten, frischen Meeresfrüchten und mediterranen Spezialitäten. Meeresfrüchte-Paella, schwarzer Reis, Fisch des Tages.",
+        "categoryNames": {
+            "starters": "Vorspeisen",
+            "salads": "Salate",
+            "rice": "Reisgerichte",
+            "meat": "Fleischgerichte",
+            "fish": "Fischgerichte",
+            "desserts": "Nachspeisen",
+            "drinks": "Getränke"
+        },
+        "allergens": {
+            "label": "Allergene:",
+            "legend": "Allergen-Legende",
+            "types": {
+                "gluten": "Gluten",
+                "shellfish": "Schalentiere",
+                "fish": "Fisch",
+                "dairy": "Milchprodukte",
+                "eggs": "Eier",
+                "nuts": "Nüsse",
+                "soy": "Soja",
+                "celery": "Sellerie",
+                "mustard": "Senf",
+                "sesame": "Sesam",
+                "sulfites": "Sulfite"
+            }
+        },
+        "view_full_menu": "Vollständige Speisekarte ansehen",
+        "recommended": "Empfohlen"
+    },
+    "contact": {
+        "title": "Kontakt",
+        "subtitle": "Restaurant direkt am Meer in Calella - Reservierungen und Anfragen",
+        "description": "Kontaktieren Sie uns für Reservierungen, Veranstaltungen oder Anfragen. Restaurant Banys La Gavina, seit 1958 direkt am Meer in Calella, Barcelona.",
+        "metaTitle": "Kontakt - Restaurant Banys La Gavina | Reservierungen und Informationen",
+        "metaDescription": "Kontaktieren Sie Restaurant Banys La Gavina. Reservierungen: 937 69 25 39. Paseo Manuel Puigvert s/n, Calella. Täglich geöffnet direkt am Strand.",
+        "info_section": "Kontaktinformationen",
+        "form_section": "Senden Sie uns eine Nachricht",
+        "fields": {
+            "address": "Adresse",
+            "phone": "Telefon",
+            "mobile": "Mobil",
+            "schedule": "Öffnungszeiten",
+            "parking": "Kostenlose Parkplätze",
+            "parking_description": "Wir haben zwei kostenlose öffentliche Parkplätze in Calella sehr nah zum Restaurant",
+            "follow_us": "Folgen Sie uns in den sozialen Medien",
+            "name": "Name",
+            "email": "E-Mail",
+            "message": "Nachricht",
+            "send_button": "Nachricht senden"
+        }
+    },
+    "about": {
+        "features": [
+            {
+                "icon": "eco",
+                "title": "Frische Zutaten",
+                "description": "Wir wählen täglich die besten lokalen Produkte aus"
+            },
+            {
+                "icon": "restaurant",
+                "title": "Erfahrener Koch",
+                "description": "Über 20 Jahre Erfahrung in der mediterranen Küche"
+            },
+            {
+                "icon": "home",
+                "title": "Familientradition",
+                "description": "Rezepte von Generation zu Generation weitergegeben"
+            },
+            {
+                "icon": "waves",
+                "title": "Einzigartige Atmosphäre",
+                "description": "Meerblick in gemütlicher und eleganter Umgebung"
+            }
+        ]
+    },
+    "whatsapp": {
+        "title": "WhatsApp Reservierungen",
+        "description": "Sie können auch direkt über WhatsApp einen Tisch reservieren",
+        "button": "Über WhatsApp reservieren"
+    },
+    "gallery": {
+        "title": "📸 Fotogalerie",
+        "subtitle": "Entdecken Sie unsere köstlichen Gerichte und gemütliche Atmosphäre",
+        "description": "Lernen Sie die einzigartige Atmosphäre von Restaurant Gavina und unsere repräsentativsten Gerichte durch unsere Fotogalerie kennen.",
+        "metaTitle": "Galerie - Restaurant Gavina | Unsere Gerichte und Atmosphäre",
+        "metaDescription": "Entdecken Sie die gemütliche Atmosphäre von Restaurant Gavina und unsere köstlichen mediterranen Gerichte durch unsere Fotogalerie."
+    },
+    "sections": {
+        "about": {
+            "title": "Unsere Geschichte",
+            "subtitle": "Familientradition seit 1958",
+            "description": "Am Platja Gran de Calella, gegenüber dem Renfe Bahnhof, sind wir ein Familienrestaurant, das seit 1958 authentische mediterrane Küche mit Spezialitäten in Reisgerichten, frischem Fisch und erstklassigem Fleisch in einer einzigartigen Umgebung direkt am Meer anbietet."
+        },
+        "specialties": {
+            "title": "Unsere Spezialitäten",
+            "subtitle": "Das Beste des Mittelmeers und ausgewählte Fleischsorten",
+            "items": [
+                {
+                    "name": "Reisgerichte",
+                    "description": "Meeresfrüchte-Paella, schwarzer Reis, spezielle Paella mit Hummer und Fideuà",
+                    "price": "____"
+                },
+                {
+                    "name": "Meeresfrüchte",
+                    "description": "Blanes Garnelen, Langusten, Muscheln Marinera und gedämpft",
+                    "price": "____"
+                },
+                {
+                    "name": "Frischer Fisch",
+                    "description": "Tägliche Auswahl frischer mediterraner Fische",
+                    "price": "____"
+                },
+                {
+                    "name": "Ausgewählte Fleischsorten",
+                    "description": "Entrecote, Filet, Lammkoteletts und Grillspezialitäten",
+                    "price": "____"
+                }
+            ]
+        },
+        "location": {
+            "title": "Privilegierte Lage",
+            "subtitle": "Direkt am Meer in Calella",
+            "description": "Direkt am Meer am Platja Gran de Calella genießen Sie direkten Strandzugang und Panoramablick auf das Mittelmeer. Unsere Terrasse bietet die perfekte Atmosphäre, um authentische mediterrane Küche in einer einzigartigen Umgebung zu genießen, wo das Meer der Protagonist ist."
+        }
+    },
+    "history": {
+        "title": "Unsere Geschichte",
+        "subtitle": "Mehr als 65 Jahre mediterrane Tradition",
+        "metaTitle": "Geschichte - Restaurant Banys La Gavina | Seit 1958 in Calella",
+        "metaDescription": "Entdecken Sie die Geschichte des Restaurant Banys La Gavina, ein Familienrestaurant seit 1958 in Calella. Über 65 Jahre mediterrane Tradition direkt am Meer.",
+        "timeline": [
+            {
+                "year": "1958",
+                "event": "Gründung des Restaurant Banys La Gavina"
+            },
+            {
+                "year": "1960er",
+                "event": "Erste große Renovierung und Erweiterung der Terrasse"
+            },
+            {
+                "year": "1970er",
+                "event": "Konsolidierung als lokale gastronomische Referenz"
+            },
+            {
+                "year": "2010",
+                "event": "Calella tritt der Catalunya Film Commission bei"
+            },
+            {
+                "year": "2024",
+                "event": "Über 65 Jahre mit der besten mediterranen Küche"
+            }
+        ],
+        "sections": {
+            "origins": {
+                "title": "Unsere Ursprünge",
+                "content": "Das Restaurant Banys La Gavina wurde 1958 gegründet und ist seitdem ein Bezugspunkt für authentische mediterrane Küche in Calella. Unsere Geschichte ist eng mit der Entwicklung des Tourismus an der Costa del Maresme verbunden."
+            },
+            "tradition": {
+                "title": "Kulinarische Tradition",
+                "content": "Über mehr als sechs Jahrzehnte haben wir die traditionellen Rezepte unserer mediterranen Küche bewahrt und perfektioniert, mit besonderem Fokus auf Reisgerichte, frische Meeresfrüchte und Fische der Saison."
+            },
+            "location": {
+                "title": "Privilegierte Lage",
+                "content": "Unser Restaurant befindet sich in einer unvergleichlichen Lage direkt am Platja Gran de Calella, was unseren Gästen ermöglicht, eine außergewöhnliche gastronomische Erfahrung mit spektakulärem Meerblick zu genießen."
+            }
+        },
+        "heritage": {
+            "title": "Erbe und Tradition",
+            "items": [
+                {
+                    "title": "Historische Lage",
+                    "description": "Gelegen am emblematischen Paseo Manuel Puigvert, gegenüber dem Platja Gran, seit 1958"
+                },
+                {
+                    "title": "Traditionelle Rezepte",
+                    "description": "Wir bewahren die ursprünglichen Rezepte unserer Reisgerichte und Meerespezialitäten"
+                },
+                {
+                    "title": "Zeuge der Geschichte",
+                    "description": "Wir waren Zeugen der touristischen Entwicklung von Calella und der Costa del Maresme"
+                },
+                {
+                    "title": "Generationen von Kunden",
+                    "description": "Ganze Familien haben über Jahrzehnte besondere Momente an unseren Tischen geteilt"
+                }
+            ]
+        },
+        "cta": {
+            "title": "Werden Sie Teil unserer Geschichte",
+            "subtitle": "Über 65 Jahre gastronomische Tradition erwarten Sie direkt am Meer",
+            "menu_button": "Unsere Speisekarte ansehen",
+            "contact_button": "Tisch reservieren"
+        }
+    },
+    "privacy": {
+        "title": "Datenschutzerklärung",
+        "metaTitle": "Datenschutzerklärung - Restaurant Banys La Gavina",
+        "metaDescription": "Datenschutzerklärung des Restaurant Banys La Gavina. Keine Cookies, DSGVO-Konformität und Schutz personenbezogener Daten.",
+        "sections": {
+            "general": {
+                "title": "Allgemeine Informationen",
+                "content": "In Übereinstimmung mit den geltenden Bestimmungen zum Schutz personenbezogener Daten, der Verordnung (EU) 2016/679 des Europäischen Parlaments und des Rates vom 27. April 2016 (DSGVO) und dem Organischen Gesetz 3/2018 vom 5. Dezember über den Schutz personenbezogener Daten und die Gewährleistung digitaler Rechte (LOPD-GDD), informieren wir Sie über die Verarbeitung Ihrer personenbezogenen Daten."
+            },
+            "responsible": {
+                "title": "Verantwortlicher für die Datenverarbeitung",
+                "denomination": "Firmenname:",
+                "address": "Adresse:",
+                "phone": "Telefon:",
+                "email": "E-Mail:"
+            },
+            "data_collected": {
+                "title": "Daten, die wir sammeln",
+                "intro": "Die personenbezogenen Daten, die wir sammeln können, umfassen:",
+                "items": [
+                    "Kontaktdaten (Name, Telefon, E-Mail), wenn Sie uns für Reservierungen oder Anfragen kontaktieren",
+                    "Reservierungsinformationen (Datum, Uhrzeit, Anzahl der Gäste, Ernährungsvorlieben)",
+                    "Grundlegende Navigationsdaten (IP-Adresse, Browsertyp, besuchte Seiten)"
+                ]
+            },
+            "purpose": {
+                "title": "Zweck der Verarbeitung",
+                "intro": "Ihre personenbezogenen Daten werden für folgende Zwecke verarbeitet:",
+                "items": [
+                    "Verwaltung von Reservierungen und Restaurantdienstleistungen",
+                    "Kundenservice und Bearbeitung von Anfragen",
+                    "Kommunikation im Zusammenhang mit unseren Dienstleistungen",
+                    "Erfüllung gesetzlicher Verpflichtungen",
+                    "Verbesserung unserer Dienstleistungen und Benutzererfahrung"
+                ]
+            },
+            "legal_basis": {
+                "title": "Rechtsgrundlage",
+                "intro": "Die Verarbeitung Ihrer Daten basiert auf:",
+                "contractual": "Vertragserfüllung: Für die Erbringung von Restaurantdienstleistungen und Reservierungsverwaltung",
+                "consent": "Einwilligung: Für Werbekommunikation (falls zutreffend)",
+                "legitimate": "Berechtigtes Interesse: Für die Verbesserung unserer Dienstleistungen",
+                "legal": "Gesetzliche Einhaltung: Zur Erfüllung steuer- und buchhalterischer Verpflichtungen"
+            },
+            "retention": {
+                "title": "Datenspeicherung",
+                "content": "Ihre personenbezogenen Daten werden für die Zeit aufbewahrt, die zur Erfüllung der Zwecke, für die sie gesammelt wurden, erforderlich ist und in jedem Fall für die gesetzlich festgelegten Zeiträume. Reservierungsdaten werden 6 Jahre lang aufbewahrt, um steuerlichen Verpflichtungen nachzukommen."
+            },
+            "recipients": {
+                "title": "Datenempfänger",
+                "intro": "Ihre Daten werden nicht an Dritte weitergegeben, außer bei gesetzlicher Verpflichtung. Sie können nur mitgeteilt werden an:",
+                "items": [
+                    "Öffentliche Verwaltungen, wenn gesetzlich erforderlich",
+                    "Technologie-Dienstleister unter strengen Vertraulichkeitsbedingungen"
+                ]
+            },
+            "rights": {
+                "title": "Ihre Rechte",
+                "intro": "Sie haben das Recht auf:",
+                "access": "Zugang: Wissen, welche Daten wir über Sie haben",
+                "rectification": "Berichtigung: Unrichtige oder unvollständige Daten korrigieren",
+                "erasure": "Löschung: Löschung Ihrer Daten beantragen",
+                "restriction": "Einschränkung: Die Verarbeitung Ihrer Daten einschränken",
+                "portability": "Portabilität: Ihre Daten in strukturiertem Format erhalten",
+                "objection": "Widerspruch: Der Verarbeitung Ihrer Daten widersprechen",
+                "exercise": "Um diese Rechte auszuüben, können Sie uns unter info@banyslagavina.cat oder an der oben angegebenen Postanschrift kontaktieren."
+            },
+            "authority": {
+                "title": "Aufsichtsbehörde",
+                "content": "Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten nicht den Vorschriften entspricht, können Sie eine Beschwerde bei der Spanischen Datenschutzbehörde (AEPD) über deren elektronischen Sitz (www.aepd.es) oder an deren Postanschrift einreichen: C/ Jorge Juan, 6, 28001 Madrid."
+            },
+            "cookies": {
+                "title": "Cookie-Informationen",
+                "important": "WICHTIG:",
+                "no_cookies": "Diese Website verwendet KEINE Cookies jeglicher Art. Wir installieren keine Cookies auf Ihrem Gerät, verfolgen Ihre Browsing-Aktivitäten nicht und sammeln keine Daten über Cookies von Drittanbietern. Daher ist Ihre Einwilligung zur Verwendung von Cookies nicht erforderlich.",
+                "basic_data": "Nur grundlegende Navigationsdaten (wie Ihre IP-Adresse), die für den technischen Betrieb der Website erforderlich sind, werden verarbeitet und automatisch gelöscht, wenn Sie Ihre Browsing-Sitzung beenden."
+            },
+            "security": {
+                "title": "Sicherheit",
+                "content": "Wir haben angemessene technische und organisatorische Sicherheitsmaßnahmen implementiert, um Ihre personenbezogenen Daten vor unbefugtem Zugriff, Änderung, Offenlegung oder versehentlicher Zerstörung zu schützen."
+            },
+            "modifications": {
+                "title": "Änderungen",
+                "content": "Wir behalten uns das Recht vor, diese Datenschutzerklärung zu ändern. Alle Änderungen werden auf dieser Seite mit dem Datum der letzten Aktualisierung veröffentlicht."
+            }
+        },
+        "last_updated": "Zuletzt aktualisiert:",
+        "date": "8. Oktober 2025"
+    },
+    "legal": {
+        "title": "Impressum",
+        "metaTitle": "Impressum - Restaurant Banys La Gavina",
+        "metaDescription": "Rechtliche Hinweise und Impressum des Restaurant Banys La Gavina. LSSI-Konformität und Informationsgesellschaftsdienste.",
+        "sections": {
+            "general": {
+                "title": "Allgemeine Informationen",
+                "content": "In Übereinstimmung mit dem Gesetz 34/2002 vom 11. Juli über Dienstleistungen der Informationsgesellschaft und des elektronischen Geschäftsverkehrs werden die folgenden rechtlichen Aspekte mitgeteilt:"
+            },
+            "owner": {
+                "title": "Informationen über den Eigentümer",
+                "denomination": "Firmenname:",
+                "address": "Adresse:",
+                "phone": "Telefon:",
+                "email": "E-Mail:"
+            },
+            "purpose": {
+                "title": "Zweck der Website",
+                "content": "Diese Website hat den Zweck, Informationen über das Restaurant Banys La Gavina und seine Dienstleistungen zu präsentieren sowie einen Kontaktkanal für Reservierungen und Anfragen zu bieten."
+            },
+            "data_protection": {
+                "title": "Datenschutz",
+                "content": "Die Verarbeitung personenbezogener Daten erfolgt in Übereinstimmung mit unserer Datenschutzerklärung und den geltenden Bestimmungen der DSGVO und des LOPD-GDD."
+            },
+            "intellectual_property": {
+                "title": "Geistiges Eigentum",
+                "content": "Alle Inhalte dieser Website (Texte, Bilder, Grafiken, Logo, Schaltflächensymbole, Ton- und Videodateien und ihre Auswahl und Anordnung) sind Eigentum von Restaurant Banys La Gavina oder werden mit entsprechender Genehmigung verwendet und durch Urheberrechts- und andere Gesetze zum Schutz des geistigen Eigentums geschützt."
+            },
+            "liability": {
+                "title": "Haftung",
+                "content": "Restaurant Banys La Gavina bemüht sich sicherzustellen, dass die auf dieser Website enthaltenen Informationen korrekt und aktuell sind, übernimmt jedoch keine Verantwortung für mögliche Fehler, Auslassungen oder Änderungen der bereitgestellten Informationen."
+            },
+            "external_links": {
+                "title": "Externe Links",
+                "content": "Diese Website kann Links zu externen Websites enthalten. Restaurant Banys La Gavina übernimmt keine Verantwortung für den Inhalt oder die Datenschutzpraktiken dieser Websites."
+            },
+            "applicable_law": {
+                "title": "Anwendbares Recht",
+                "content": "Diese rechtlichen Hinweise unterliegen spanischem Recht. Für alle Streitigkeiten, die sich aus der Nutzung dieser Website ergeben könnten, sind die Gerichte von Barcelona zuständig."
+            },
+            "no_cookies": {
+                "title": "Cookie-freie Website",
+                "important": "WICHTIG:",
+                "content": "Diese Website verwendet KEINE Cookies jeglicher Art. Wir installieren keine Tracking-Cookies, Analyse-Cookies oder Cookies von Drittanbietern auf Ihrem Gerät. Daher ist Ihre Einwilligung zur Verwendung von Cookies nicht erforderlich, und Sie werden keine Cookie-Banner oder ähnliche Meldungen sehen. Wir respektieren Ihre Privatsphäre vollständig und sammeln nur die wesentlichen Daten, die für die Bereitstellung unserer Dienstleistungen erforderlich sind."
+            }
+        },
+        "last_updated": "Zuletzt aktualisiert:",
+        "date": "8. Oktober 2025"
+    },
+    "footer": {
+        "description": "Restaurant Banys La Gavina, Familientradition seit 1958 direkt am Meer in Calella.",
+        "quick_links": "Schnellzugriff",
+        "contact": {
+            "title": "Kontakt"
+        },
+        "language_selector": "Sprache",
+        "privacy_policy": "Datenschutzerklärung",
+        "copyright": "© 2025 Restaurant Banys La Gavina. Alle Rechte vorbehalten."
+    }
+}

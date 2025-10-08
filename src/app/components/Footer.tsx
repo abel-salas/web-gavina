@@ -60,7 +60,7 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
               </li>
               <li>
                 <Link href={href('/legal') as Route} className="text-gray-300 hover:text-white transition-colors">
-                  Aviso Legal
+                  {dict.legal?.title || 'Legal Notice'}
                 </Link>
               </li>
               {/* <li>

@@ -11,131 +11,145 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dict = await getDictionary(params.locale);
   
   return {
-    title: `Aviso Legal - ${dict.seo.siteName}`,
-    description: 'Aviso legal del sitio web del Restaurante Banys La Gavina',
+    title: dict.legal?.metaTitle || `Legal Notice - ${dict.seo.siteName}`,
+    description: dict.legal?.metaDescription || 'Legal notice of Restaurant Banys La Gavina website',
+    robots: 'index, follow',
+    alternates: {
+      canonical: `https://www.banyslagavina.cat/${params.locale}/legal`,
+      languages: {
+        'es': 'https://www.banyslagavina.cat/es/legal',
+        'en': 'https://www.banyslagavina.cat/en/legal',
+        'ca': 'https://www.banyslagavina.cat/ca/legal',
+        'nl': 'https://www.banyslagavina.cat/nl/legal',
+        'de': 'https://www.banyslagavina.cat/de/legal',
+      }
+    }
   };
 }
 
-export default async function LegalNoticePage() {
+export default async function LegalNoticePage({ params }: Props) {
+  const dict = await getDictionary(params.locale);
+  
+  if (!dict.legal) {
+    return (
+      <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <p>Legal notice not available in this language.</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto bg-white shadow-lg rounded-lg p-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-          Aviso Legal
-        </h1>
-        
-        <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">1. Información General</h2>
-            <p>
-              En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad 
-              de la Información y de Comercio Electrónico, se informa de los siguientes aspectos 
-              legales:
-            </p>
-          </section>
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            {dict.legal.title}
+          </h1>
+          <p className="text-xl text-gray-600">
+            {dict.legal.sections.general.content}
+          </p>
+        </div>
 
+        {/* Legal Content */}
+        <div className="bg-white rounded-lg shadow-lg p-8 space-y-8">
+          {/* Owner Information */}
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">2. Datos del Titular</h2>
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <p><strong>Denominación:</strong> Banys La Gavina</p>
-              <p><strong>Dirección:</strong> {CONTACT_INFO.address}</p>
-              <p><strong>Teléfono:</strong> {CONTACT_INFO.phone}</p>
-              <p><strong>Email:</strong> {CONTACT_INFO.email}</p>
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              {dict.legal.sections.owner.title}
+            </h2>
+            <div className="space-y-2 text-gray-700">
+              <p><strong>{dict.legal.sections.owner.denomination}</strong> Restaurant Banys La Gavina</p>
+              <p><strong>{dict.legal.sections.owner.address}</strong> {CONTACT_INFO.address}</p>
+              <p><strong>{dict.legal.sections.owner.phone}</strong> {CONTACT_INFO.phone}</p>
+              <p><strong>{dict.legal.sections.owner.email}</strong> {CONTACT_INFO.email}</p>
             </div>
           </section>
 
+          {/* Purpose */}
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">3. Objeto</h2>
-            <p>
-              El presente sitio web tiene por objeto la presentación de información sobre el 
-              restaurante Banys La Gavina, sus servicios gastronómicos, ubicación, horarios 
-              y facilitar el contacto con nuestros clientes.
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              {dict.legal.sections.purpose.title}
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              {dict.legal.sections.purpose.content}
             </p>
           </section>
 
+          {/* Data Protection */}
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">4. Condiciones de Uso</h2>
-            <p>
-              El acceso y uso de este sitio web implica la aceptación expresa y sin reservas 
-              de todas las condiciones de uso aquí establecidas. Si no está de acuerdo con 
-              alguna de estas condiciones, no utilice este sitio web.
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              {dict.legal.sections.data_protection.title}
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              {dict.legal.sections.data_protection.content}{' '}
+              <a href={`/${params.locale}/privacy`} className="text-blue-600 hover:text-blue-800 underline">
+                {dict.footer?.privacy_policy || 'Privacy Policy'}
+              </a>.
             </p>
-            <ul className="list-disc list-inside ml-4 space-y-2 mt-4">
-              <li>El uso del sitio web es gratuito, salvo en lo relativo al coste de la conexión</li>
-              <li>Se prohíbe el uso indebido del sitio web y de sus contenidos</li>
-              <li>Está prohibida la reproducción total o parcial sin autorización expresa</li>
-              <li>No se permite el uso comercial de la información contenida en el sitio</li>
-            </ul>
           </section>
 
+          {/* Intellectual Property */}
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">5. Responsabilidad</h2>
-            <p>
-              El titular del sitio web no se hace responsable de:
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              {dict.legal.sections.intellectual_property.title}
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              {dict.legal.sections.intellectual_property.content}
             </p>
-            <ul className="list-disc list-inside ml-4 space-y-2 mt-4">
-              <li>Los daños que puedan derivarse del uso indebido del sitio web</li>
-              <li>La interrupción, suspensión o cancelación del acceso al sitio web</li>
-              <li>Los contenidos de sitios web de terceros enlazados desde este sitio</li>
-              <li>Los errores, inexactitudes u omisiones en los contenidos</li>
-            </ul>
           </section>
 
+          {/* Liability */}
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">6. Propiedad Intelectual</h2>
-            <p>
-              Todos los contenidos del sitio web (textos, imágenes, marcas, logotipos, etc.) 
-              están protegidos por derechos de propiedad intelectual e industrial del titular 
-              o de terceros que han autorizado su uso.
-            </p>
-            <p className="mt-4">
-              Queda prohibida la reproducción, distribución, comunicación pública, transformación 
-              o cualquier otra actividad que se pueda realizar con los contenidos sin la 
-              autorización expresa del titular.
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              {dict.legal.sections.liability.title}
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              {dict.legal.sections.liability.content}
             </p>
           </section>
 
+          {/* External Links */}
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">7. Enlaces Externos</h2>
-            <p>
-              Este sitio web puede contener enlaces a páginas web de terceros. El titular 
-              no se responsabiliza del contenido de dichas páginas ni de las condiciones 
-              de uso que establezcan.
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              {dict.legal.sections.external_links.title}
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              {dict.legal.sections.external_links.content}
             </p>
           </section>
 
+          {/* Applicable Law */}
           <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">8. Modificaciones</h2>
-            <p>
-              El titular se reserva el derecho a modificar en cualquier momento las condiciones 
-              de uso del sitio web, así como eliminar, limitar o impedir el acceso cuando 
-              lo considere oportuno.
+            <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+              {dict.legal.sections.applicable_law.title}
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              {dict.legal.sections.applicable_law.content}
             </p>
           </section>
 
-          <section>
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">9. Legislación Aplicable</h2>
-            <p>
-              Las presentes condiciones se regirán por la legislación española. Para cualquier 
-              controversia que pudiera derivarse del acceso o uso del sitio web, las partes 
-              se someterán a la jurisdicción de los tribunales competentes de Barcelona.
-            </p>
+          {/* No Cookies - Highlighted */}
+          <section className="bg-green-50 border border-green-200 rounded-lg p-6">
+            <h2 className="text-2xl font-semibold text-green-800 mb-4 flex items-center">
+              <span className="mr-2">🍪</span>
+              {dict.legal.sections.no_cookies.title}
+            </h2>
+            <div className="text-green-700 space-y-2">
+              <p className="font-medium">
+                {dict.legal.sections.no_cookies.important} {dict.legal.sections.no_cookies.content}
+              </p>
+            </div>
           </section>
 
-          <section className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
-            <h2 className="text-xl font-semibold text-blue-900 mb-4">10. Información sobre Cookies</h2>
-            <p className="text-blue-800">
-              <strong>Este sitio web NO utiliza cookies.</strong> No se instalan cookies 
-              en el dispositivo del usuario ni se realiza seguimiento de la actividad de 
-              navegación. Por tanto, no es necesario el consentimiento para el uso de cookies.
+          {/* Last Updated */}
+          <section className="border-t pt-6">
+            <p className="text-sm text-gray-500">
+              <strong>{dict.legal.last_updated}</strong> {dict.legal.date}
             </p>
           </section>
-
-          <div className="text-center mt-8 pt-6 border-t border-gray-200">
-            <p className="text-sm text-gray-600">
-              <strong>Última actualización:</strong> 8 de octubre de 2025
-            </p>
-          </div>
         </div>
       </div>
     </div>

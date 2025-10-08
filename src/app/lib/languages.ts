@@ -9,7 +9,8 @@ export const SUPPORTED_LANGUAGES: Language[] = [
   { code: 'es', name: 'ES', displayName: 'Español' },
   { code: 'en', name: 'EN', displayName: 'English' },
   { code: 'ca', name: 'CA', displayName: 'Català' },
-  { code: 'nl', name: 'NL', displayName: 'Nederlands' }
+  { code: 'nl', name: 'NL', displayName: 'Nederlands' },
+  { code: 'de', name: 'DE', displayName: 'Deutsch' }
 ];
 
 // Idioma por defecto
