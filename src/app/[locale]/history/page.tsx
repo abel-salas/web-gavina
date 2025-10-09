@@ -62,6 +62,7 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
             fill
             className="object-cover"
             priority
+            fetchPriority="high"
             quality={90}
           />
           {/* Dark overlay for better text readability */}

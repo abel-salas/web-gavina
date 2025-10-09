@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import DynamicHtmlLang from "./components/DynamicHtmlLang";
 import { SEO_CONFIG } from "@/seo";
 
 const geistSans = Geist({
@@ -37,12 +36,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html>
       <head>
+        {/* Preconnect to critical domains for faster loading */}
+        {/* Sanity CDN - only if using Sanity images */}
+        <link rel="preconnect" href="https://cdn.sanity.io" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <DynamicHtmlLang />
         {children}
       </body>
     </html>

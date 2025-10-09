@@ -28,6 +28,7 @@ export function HomeMainSection({ subtitle, description, ctaText, ctaHref, backg
             fill
             className="object-cover object-top"
             priority
+            fetchPriority="high"
             quality={90}
           />
           {/* Dark overlay for better text readability */}

@@ -56,6 +56,12 @@ export default async function LocaleLayout({
                     __html: generateWebsiteJsonLd(validLocale),
                 }}
             />
+            {/* Set the correct lang attribute for SEO */}
+            <script
+                dangerouslySetInnerHTML={{
+                    __html: `document.documentElement.lang = '${validLocale}';`,
+                }}
+            />
             <div className="min-h-screen flex flex-col">
                 <Navbar params={params} />
                 <main className="flex-1 pt-16">
