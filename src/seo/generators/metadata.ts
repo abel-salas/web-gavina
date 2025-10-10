@@ -21,8 +21,21 @@ export function generatePageMetadata(options: MetadataOptions): Metadata {
     }
 
     const seoData = SEO_DATA[locale];
-    const pageData = seoData.pages[page];
+    const pageData = seoData.pages[page as keyof typeof seoData.pages];
     const siteData = seoData.site;
+
+    // Si no existe pageData para la página, usar valores por defecto del sitio
+    if (!pageData) {
+        console.warn(`No SEO data found for page '${page}' in locale '${locale}', using site defaults`);
+        return {
+            title: customTitle || siteData.name,
+            description: customDescription || siteData.description,
+            keywords: siteData.keywords,
+            alternates: {
+                canonical: `${SEO_CONFIG.site.url}/${locale}${path}`,
+            },
+        };
+    }
 
     // Construir URLs
     const baseUrl = SEO_CONFIG.site.url;
