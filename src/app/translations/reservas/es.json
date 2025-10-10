@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "Reservar Mesa Restaurant Banys La Gavina Calella | Mesa Frente al Mar | 937 69 25 39",
+    "description": "Reserva tu mesa en Restaurant Banys La Gavina Calella. Teléfono 937 69 25 39, WhatsApp o formulario online. Mesa frente al mar, cocina mediterránea auténtica, parking gratuito.",
+    "keywords": "reservar mesa Calella, booking restaurant Barcelona, mesa frente al mar, reservas WhatsApp, restaurant primera línea playa, reserva online Calella"
+  },
+  "hero": {
+    "title": "Reserva Tu Mesa Frente al Mar",
+    "subtitle": "Tu experiencia gastronómica única te está esperando",
+    "description": "Asegura tu lugar en la mejor terraza de Calella con vistas panorámicas al Mediterráneo. Más de 65 años sirviendo auténtica cocina mediterránea en primera línea de playa."
+  },
+  "reservas": {
+    "title": "Elige Tu Forma de Reservar",
+    "subtitle": "Tres maneras fáciles y rápidas para asegurar tu mesa en el mejor restaurante frente al mar de Calella",
+    "telefono": {
+      "title": "Llamada Directa",
+      "description": "La forma más rápida. Llama y confirma tu reserva al instante con nuestro equipo."
+    },
+    "whatsapp": {
+      "title": "WhatsApp",
+      "description": "Cómodo y rápido. Envía un mensaje y te confirmamos tu reserva en minutos."
+    },
+    "formulario": {
+      "title": "Reserva Online",
+      "description": "Completa el formulario y te llamamos para confirmar todos los detalles."
+    }
+  },
+  "ventajas": {
+    "title": "¿Por Qué Reservar en Banys La Gavina?",
+    "items": [
+      "🌊 Mesa garantizada frente al mar con vistas panorámicas al Mediterráneo",
+      "🍽️ Cocina mediterránea auténtica con más de 65 años de tradición familiar",
+      "🅿️ Parking gratuito disponible muy cerca del restaurante",
+      "📍 Ubicación única: frente a la Estación Renfe de Calella",
+      "👨‍👩‍👧‍👦 Ambiente familiar y acogedor, perfecto para todas las edades",
+      "🎯 Servicio personalizado y atención al detalle desde 1958",
+      "🏖️ Acceso directo a la Platja Gran de Calella",
+      "🚌 Fácil acceso en transporte público desde Barcelona"
+    ]
+  },
+  "horarios": {
+    "title": "Horarios y Disponibilidad",
+    "description": "Estamos abiertos todos los días del año para ofrecerte la mejor experiencia gastronómica frente al mar. Nuestro horario continuo te permite disfrutar desde el desayuno hasta la cena.",
+    "especial": "Recomendamos reservar con antelación, especialmente fines de semana y temporada alta (mayo-septiembre)."
+  },
+  "cta": {
+    "title": "¡No Te Quedes Sin Tu Mesa Frente al Mar!",
+    "description": "Las mejores vistas se agotan rápido. Reserva ahora y asegura tu experiencia gastronómica única en la mejor ubicación de Calella."
+  }
+}

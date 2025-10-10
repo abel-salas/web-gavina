@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { getLocalizedData } from "@/app/lib/localization";
 import { generatePageMetadata, getValidLocale } from '@/seo';
 import { getContactInfo } from "@/app/lib/contact-utils";
-import WhatsAppReservation from "@/app/components/WhatsAppReservation";
 import HoursSection from "@/app/components/HoursSection";
 import SocialMedia from '@/app/components/SocialMedia';
 
@@ -31,17 +31,97 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   return (
     <main className="container mx-auto px-4 py-8">
       <section className="text-center mb-12">
-        <h1 className="text-5xl font-parisienne mb-4">{dict.contact?.title || 'Contacto'}</h1>
-        <p className="text-xl text-gray-600 mb-8">{dict.contact?.subtitle || 'Estamos aquí para atenderte'}</p>
+        <h1 className="text-5xl font-parisienne mb-4">Contacto e Información</h1>
+        <p className="text-xl text-gray-600 mb-8">Consultas generales y celebraciones especiales</p>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-          {dict.contact?.description || 'Para reservar mesa, llámanos o ven directamente. Te esperamos en primera línea de mar.'}
+          Para consultas sobre celebraciones, eventos corporativos, información general o cualquier duda, estamos aquí para ayudarte. 
         </p>
+        
+        {/* CTA para reservas */}
+        <div className="mt-8 p-4 bg-blue-50 rounded-lg inline-block">
+          <p className="text-blue-800 font-medium mb-3">
+            💡 ¿Quieres reservar mesa? Visita nuestra página dedicada:
+          </p>
+          <Link 
+            href="/es/reservas" 
+            className="bg-blue-600 text-white font-bold py-3 px-6 rounded-full hover:bg-blue-700 transition-colors inline-block"
+          >
+            Reservar Mesa Ahora
+          </Link>
+        </div>
       </section>
 
-      {/* WhatsApp Reservation Section */}
-      <div className="mt-6 md:hidden">
-        <WhatsAppReservation dict={dict} />
-      </div>
+      {/* Sección de Celebraciones y Eventos */}
+      <section className="bg-gradient-to-br from-yellow-50 to-orange-100 rounded-2xl p-8 mb-12">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Celebraciones y Eventos Especiales
+          </h2>
+          <p className="text-xl text-gray-600 mb-6">
+            Tu evento perfecto frente al mar Mediterráneo
+          </p>
+          <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+            Organizamos celebraciones únicas en nuestra terraza con vista panorámica al mar. Más de 65 años de experiencia creando momentos inolvidables.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Tipos de celebraciones */}
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <div className="text-center mb-4">
+              <div className="bg-pink-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="material-icons-outlined text-2xl">favorite</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Bodas y Ceremonias</h3>
+            </div>
+            <ul className="text-gray-700 space-y-2">
+              <li>• Ceremonias frente al mar</li>
+              <li>• Banquetes hasta 100 personas</li>
+              <li>• Menús personalizados</li>
+              <li>• Decoración incluida</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <div className="text-center mb-4">
+              <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="material-icons-outlined text-2xl">business</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Eventos Corporativos</h3>
+            </div>
+            <ul className="text-gray-700 space-y-2">
+              <li>• Cenas de empresa</li>
+              <li>• Presentaciones de producto</li>
+              <li>• Reuniones de trabajo</li>
+              <li>• Team building gastronómico</li>
+            </ul>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow-md">
+            <div className="text-center mb-4">
+              <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                <span className="material-icons-outlined text-2xl">family_restroom</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900">Celebraciones Familiares</h3>
+            </div>
+            <ul className="text-gray-700 space-y-2">
+              <li>• Comuniones y bautizos</li>
+              <li>• Cumpleaños especiales</li>
+              <li>• Aniversarios</li>
+              <li>• Reuniones familiares</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="text-center mt-8">
+          <Link
+            href="/es/celebraciones"
+            className="bg-yellow-600 text-white font-bold py-3 px-8 rounded-full hover:bg-yellow-700 transition-colors inline-block mr-4"
+          >
+            Ver Más Sobre Celebraciones
+          </Link>
+        </div>
+      </section>
 
       <div className="grid md:grid-cols-2 gap-12">
         <section className="bg-white p-8 rounded-lg shadow-md">
@@ -104,7 +184,12 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         </section>
 
         <section className="bg-white p-8 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-6 text-blue-800">{dict.contact?.form_section || 'Envíanos un Mensaje'}</h2>
+          <h2 className="text-2xl font-semibold mb-6 text-blue-800">
+            Consultas y Celebraciones
+          </h2>
+          <p className="text-gray-600 mb-6">
+            Para consultas sobre celebraciones, eventos especiales o información general, envíanos un mensaje.
+          </p>
 
           <form className="space-y-4">
             <div>

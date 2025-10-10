@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Arroces Mediterráneos en Calella",
+    "subtitle": "Tradición catalana frente al mar"
+  },
+  "especialidades": {
+    "title": "Nuestros Arroces Mediterráneos",
+    "description": "Cada arroz es una obra de arte culinaria preparada con ingredientes frescos del Mediterráneo y la tradición gastronómica catalana"
+  },
+  "tradicion": {
+    "title": "Tradición Mediterránea"
+  },
+  "experiencia": {
+    "title": "Paellas Frente al Mar",
+    "description": "Disfruta de nuestros arroces mediterráneos en nuestra terraza con vistas panorámicas al mar. Una experiencia gastronómica única en primera línea de playa."
+  },
+  "cta": {
+    "title": "Reserva tu Mesa para Arroces",
+    "description": "Los mejores arroces mediterráneos de la Costa del Maresme te esperan en nuestra terraza frente al mar"
+  }
+}

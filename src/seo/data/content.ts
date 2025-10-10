@@ -19,14 +19,9 @@ export const SEO_DATA = {
                 keywords: 'carta restaurant Calella, paella tradicional, mariscos del día, pescado fresco Calella, carnes a la brasa, menú mediterráneo, precios restaurant Calella',
             },
             contact: {
-                title: 'Contacto y Reservas Restaurant Banys La Gavina Calella | 937 69 25 39',
-                description: 'Reservas Restaurant Banys La Gavina Calella: 937 69 25 39. Paseo Manuel Puigvert s/n, frente Estación Renfe. Abierto todos los días 9:00-23:30h.',
-                keywords: 'reservas restaurant Calella, teléfono Banys La Gavina, horarios restaurant Calella, dirección Paseo Puigvert, contacto restaurant frente mar',
-            },
-            gallery: {
-                title: 'Fotos Restaurant Banys La Gavina Calella | Terraza Frente al Mar y Platos',
-                description: 'Galería de fotos del Restaurant Banys La Gavina: terraza con vista al mar, paellas recién hechas, mariscos frescos y ambiente familiar en Calella desde 1958.',
-                keywords: 'fotos restaurant Calella, terraza vista mar, paellas fotos, mariscos frescos, ambiente familiar Calella, galería Banys La Gavina',
+                title: 'Contacto Restaurant Banys La Gavina Calella | Consultas y Celebraciones | 937 69 25 39',
+                description: 'Contacto Restaurant Banys La Gavina Calella para consultas generales, celebraciones y eventos. 937 69 25 39. Paseo Manuel Puigvert s/n, frente Estación Renfe.',
+                keywords: 'contacto restaurant Calella, consultas Banys La Gavina, celebraciones restaurant, eventos Calella, bodas frente al mar, información restaurant',
             },
             history: {
                 title: 'Historia Restaurant Banys La Gavina | 65 Años de Tradición en Calella (1958-2024)',
@@ -38,6 +33,27 @@ export const SEO_DATA = {
                 description: 'Celebra tus eventos especiales en Restaurant Banys La Gavina: bodas, comuniones, bautizos y cenas de empresa frente al mar en Calella. Menús personalizados desde 1958.',
                 keywords: 'celebraciones restaurant Calella, bodas frente al mar, comuniones Calella, eventos empresa, banquetes vista mar, Banys La Gavina eventos',
             },
+            specialties: {
+                title: 'Especialidades Restaurant Banys La Gavina | Mariscos Frescos y Pescados de Calella',
+                description: 'Especialidades del Restaurant Banys La Gavina: mariscos frescos de Blanes, pescado de lonja Calella, carnes selectas a la brasa y postres tradicionales. Tradición desde 1958.',
+                keywords: 'mariscos frescos Blanes, pescado lonja Calella, carnes brasa, especialidades mediterráneas, restaurant frente al mar Calella, cocina tradicional catalana',
+            },
+            terraza: {
+                title: 'Terraza Frente al Mar Calella | Restaurant Banys La Gavina Vista Mediterráneo',
+                description: 'Disfruta de nuestra terraza frente al mar en Calella con vistas panorámicas al Mediterráneo. Restaurant Banys La Gavina: primera línea de playa, cocina mediterránea auténtica desde 1958.',
+                keywords: 'terraza frente al mar Calella, restaurant vista mar Barcelona, comer con vista mediterráneo, primera línea playa, terraza panorámica Costa Maresme, restaurant terraza Calella',
+            },
+            arroces: {
+                title: 'Paellas y Arroces Mediterráneos Calella | Arroz del Senyoret | Banys La Gavina',
+                description: 'Los mejores arroces mediterráneos en Calella. Paellas de mariscos, arroz del senyoret, fideuá y arroz negro. Restaurant Banys La Gavina: tradición catalana desde 1958.',
+                keywords: 'paella Calella, arroz del senyoret, fideuá Costa Brava, mejores paellas Costa Maresme, arroz bomba auténtico, paella mariscos frescos, arroz negro mediterráneo',
+            },
+            reservas: {
+                title: 'Book Table Restaurant Banys La Gavina Calella | Sea View Table | 937 69 25 39',
+                description: 'Book your table at Restaurant Banys La Gavina Calella. Phone 937 69 25 39, WhatsApp or online form. Sea view table, authentic Mediterranean cuisine, free parking.',
+                keywords: 'Calella restaurant reservations, Banys La Gavina phone, Calella restaurant hours, Paseo Puigvert address, seaside restaurant contact',
+            },
+            history: {
         },
     },
 
@@ -79,6 +95,21 @@ export const SEO_DATA = {
                 description: 'Celebrate your special events at Restaurant Banys La Gavina: weddings, communions, baptisms and corporate dinners by the sea in Calella. Custom menus since 1958.',
                 keywords: 'Calella restaurant celebrations, seaside weddings, communions Calella, corporate events, sea view banquets, Banys La Gavina events',
             },
+            specialties: {
+                title: 'Specialties Restaurant Banys La Gavina | Valencian Paellas & Fresh Seafood',
+                description: 'Specialties of Restaurant Banys La Gavina: authentic Valencian paellas, fresh seafood from Blanes, fish from Calella market and grilled meats. Tradition since 1958.',
+                keywords: 'Valencian paellas Calella, fresh seafood Blanes, Calella fish market, grilled meats, seafood fideuá, authentic Mediterranean specialties',
+            },
+            terraza: {
+                title: 'Sea View Terrace Calella | Restaurant Banys La Gavina Mediterranean Views',
+                description: 'Enjoy our sea-front terrace in Calella with panoramic Mediterranean views. Restaurant Banys La Gavina: beachfront location, authentic Mediterranean cuisine since 1958.',
+                keywords: 'sea view terrace Calella, restaurant sea views Barcelona, dining Mediterranean views, beachfront restaurant, panoramic terrace Costa Maresme, Calella terrace restaurant',
+            },
+            arroces: {
+                title: 'Paellas & Mediterranean Rice Dishes Calella | Arroz del Senyoret | Banys La Gavina',
+                description: 'Best Mediterranean rice dishes in Calella. Seafood paellas, arroz del senyoret, fideuá and black rice. Restaurant Banys La Gavina: Catalan tradition since 1958.',
+                keywords: 'paella Calella, arroz del senyoret, fideuá Costa Brava, best paellas Costa Maresme, authentic bomba rice, fresh seafood paella, Mediterranean black rice',
+            },
         },
     },
 
@@ -105,20 +136,30 @@ export const SEO_DATA = {
                 description: 'Reserves Restaurant Banys La Gavina Calella: 937 69 25 39. Paseo Manuel Puigvert s/n, davant Estació Renfe. Obert tots els dies 9:00-23:30h.',
                 keywords: 'reserves restaurant Calella, telèfon Banys La Gavina, horaris restaurant Calella, direcció Paseo Puigvert, contacte restaurant davant mar',
             },
-            gallery: {
-                title: 'Fotos Restaurant Banys La Gavina Calella | Terrassa Davant del Mar i Plats',
-                description: 'Galeria de fotos del Restaurant Banys La Gavina: terrassa amb vista al mar, paelles acabades de fer, mariscs frescos i ambient familiar a Calella des de 1958.',
-                keywords: 'fotos restaurant Calella, terrassa vista mar, paelles fotos, mariscs frescos, ambient familiar Calella, galeria Banys La Gavina',
-            },
             history: {
                 title: 'Història Restaurant Banys La Gavina | 65+ Anys de Tradició a Calella (1958-2024)',
                 description: 'Història del Restaurant Banys La Gavina: des de 1958 en primera línia de platja de Calella. 65+ anys servint cuina mediterrània autèntica a famílies i turistes.',
                 keywords: 'història restaurant Calella, Banys La Gavina 1958, tradició gastronòmica Catalunya, turisme Calella anys 60, restaurant històric Costa Brava',
             },
             celebrations: {
-                title: 'Celebracions i Esdeveniments Restaurant Banys La Gavina Calella | Vista al Mar',
+                title: 'Celebracions i Banquets - Restaurant Banys La Gavina | Esdeveniments davant del mar',
                 description: 'Celebra els teus esdeveniments especials al Restaurant Banys La Gavina: noces, comunions, batejos i sopars d\'empresa davant del mar a Calella. Menús personalitzats des de 1958.',
                 keywords: 'celebracions restaurant Calella, noces davant del mar, comunions Calella, esdeveniments empresa, banquets vista mar, Banys La Gavina esdeveniments',
+            },
+            specialties: {
+                title: 'Especialitats Restaurant Banys La Gavina | Paelles Valencianes i Mariscs Frescos',
+                description: 'Especialitats del Restaurant Banys La Gavina: paelles valencianes autèntiques, mariscs frescos de Blanes, peix de llotja de Calella i carns a la brasa. Tradició des de 1958.',
+                keywords: 'paelles valencianes Calella, mariscs frescos Blanes, peix llotja Calella, carns brasa, fideuà mariscs, especialitats mediterrànies autèntiques',
+            },
+            terraza: {
+                title: 'Terrassa Davant del Mar Calella | Restaurant Banys La Gavina Vista Mediterrani',
+                description: 'Gaudeix de la nostra terrassa davant del mar a Calella amb vistes panoràmiques al Mediterrani. Restaurant Banys La Gavina: primera línia de platja, cuina mediterrània autèntica des de 1958.',
+                keywords: 'terrassa davant del mar Calella, restaurant vista mar Barcelona, menjar amb vista mediterrani, primera línia platja, terrassa panoràmica Costa Maresme, restaurant terrassa Calella',
+            },
+            arroces: {
+                title: 'Paelles i Arrossos Mediterranis Calella | Arròs del Senyoret | Banys La Gavina',
+                description: 'Els millors arrossos mediterranis a Calella. Paelles de mariscs, arròs del senyoret, fideuà i arròs negre. Restaurant Banys La Gavina: tradició catalana des de 1958.',
+                keywords: 'paella Calella, arròs del senyoret, fideuà Costa Brava, millors paelles Costa Maresme, arròs bomba autèntic, paella mariscs frescos, arròs negre mediterrani',
             },
         },
     },
@@ -146,15 +187,25 @@ export const SEO_DATA = {
                 description: 'Neem contact op met Restaurant Gavina voor reserveringen, vragen of informatie. Wij staan voor u klaar met de beste service.',
                 keywords: 'restaurant contact Barcelona, reserveringen, restaurant informatie, reservering telefoon',
             },
-            gallery: {
-                title: 'Galerij - Restaurant Gavina | Onze Gerechten en Sfeer',
-                description: 'Ontdek de gezellige sfeer van Restaurant Gavina en onze heerlijke mediterrane gerechten door onze fotogalerij.',
-                keywords: 'restaurant fotos, gezellige sfeer, mediterrane gerechten, restaurant galerij Barcelona',
-            },
             history: {
                 title: 'Geschiedenis - Restaurant Banys La Gavina | Sinds 1958 in Calella',
                 description: 'Ontdek de fascinerende geschiedenis van Restaurant Banys La Gavina, een embleem van Calella sinds 1958. Meer dan 65 jaar gastronomische traditie aan zee.',
                 keywords: 'restaurant geschiedenis Calella, Banys La Gavina 1958, gastronomische traditie, Calella toerisme jaren 60',
+            },
+            celebrations: {
+                title: 'Vieringen & Evenementen Restaurant Banys La Gavina | Zeezicht',
+                description: 'Vier uw speciale momenten bij Restaurant Banys La Gavina: bruiloften, communies en bedrijfsevenementen aan zee in Calella. Aangepaste menu\'s sinds 1958.',
+                keywords: 'vieringen restaurant Calella, zeezicht bruiloften, communies Calella, bedrijfsevenementen, banket zeezicht, Banys La Gavina evenementen',
+            },
+            specialties: {
+                title: 'Specialiteiten Restaurant Banys La Gavina | Valenciaanse Paellas & Verse Zeevruchten',
+                description: 'Specialiteiten van Restaurant Banys La Gavina: authentieke Valenciaanse paellas, verse zeevruchten uit Blanes, vis van de Calella markt en gegrild vlees. Traditie sinds 1958.',
+                keywords: 'Valenciaanse paellas Calella, verse zeevruchten Blanes, vis markt Calella, gegrild vlees, zeevruchten fideuá, authentieke mediterrane specialiteiten',
+            },
+            terraza: {
+                title: 'Zeezicht Terras Calella | Restaurant Banys La Gavina Mediterrane Uitzichten',
+                description: 'Geniet van ons terras aan zee in Calella met panoramisch uitzicht op de Middellandse Zee. Restaurant Banys La Gavina: strandlocatie, authentieke mediterrane keuken sinds 1958.',
+                keywords: 'zeezicht terras Calella, restaurant zeezicht Barcelona, dineren mediterrane uitzichten, strandrestaurant, panoramisch terras Costa Maresme, Calella terras restaurant',
             },
         },
     },
@@ -181,15 +232,30 @@ export const SEO_DATA = {
                 description: 'Kontaktieren Sie Restaurant Banys La Gavina für Reservierungen, Anfragen oder Informationen. Wir stehen Ihnen gerne zur Verfügung.',
                 keywords: 'restaurant kontakt calella, reservierungen, restaurant informationen, telefon reservierungen',
             },
-            gallery: {
-                title: 'Galerie - Restaurant Banys La Gavina | Unsere Gerichte und Atmosphäre',
-                description: 'Entdecken Sie die gemütliche Atmosphäre von Restaurant Banys La Gavina und unsere köstlichen mediterranen Gerichte in unserer Fotogalerie.',
-                keywords: 'restaurant fotos, gemütliche atmosphäre, mediterrane gerichte, restaurant galerie calella',
-            },
             history: {
                 title: 'Geschichte - Restaurant Banys La Gavina | Seit 1958 in Calella',
                 description: 'Entdecken Sie die faszinierende Geschichte des Restaurant Banys La Gavina, ein Wahrzeichen von Calella seit 1958. Über 65 Jahre gastronomische Tradition am Meer.',
                 keywords: 'restaurant geschichte calella, banys la gavina 1958, gastronomische tradition, calella tourismus 60er jahre',
+            },
+            celebrations: {
+                title: 'Feiern & Veranstaltungen Restaurant Banys La Gavina | Meerblick',
+                description: 'Feiern Sie Ihre besonderen Momente im Restaurant Banys La Gavina: Hochzeiten, Kommunionen und Firmenveranstaltungen am Meer in Calella. Individuelle Menüs seit 1958.',
+                keywords: 'feiern restaurant calella, meerblick hochzeiten, kommunionen calella, firmenveranstaltungen, bankett meerblick, banys la gavina veranstaltungen',
+            },
+            specialties: {
+                title: 'Spezialitäten Restaurant Banys La Gavina | Valencianische Paellas & Frische Meeresfrüchte',
+                description: 'Spezialitäten des Restaurant Banys La Gavina: authentische valencianische Paellas, frische Meeresfrüchte aus Blanes, Fisch vom Calella Markt und gegrilltes Fleisch. Tradition seit 1958.',
+                keywords: 'valencianische paellas calella, frische meeresfrüchte blanes, fisch markt calella, gegrilltes fleisch, meeresfrüchte fideuá, authentische mediterrane spezialitäten',
+            },
+            terraza: {
+                title: 'Meerblick Terrasse Calella | Restaurant Banys La Gavina Mediterrane Aussichten',
+                description: 'Genießen Sie unsere Terrasse am Meer in Calella mit Panoramablick auf das Mittelmeer. Restaurant Banys La Gavina: Strandlage, authentische mediterrane Küche seit 1958.',
+                keywords: 'meerblick terrasse calella, restaurant meerblick barcelona, speisen mediterrane aussichten, strandrestaurant, panorama terrasse costa maresme, calella terrasse restaurant',
+            },
+            arroces: {
+                title: 'Paellas & Mediterrane Reisgerichte Calella | Arroz del Senyoret | Banys La Gavina',
+                description: 'Beste mediterrane Reisgerichte in Calella. Meeresfrüchte-Paellas, Arroz del Senyoret, Fideuá und schwarzer Reis. Restaurant Banys La Gavina: katalanische Tradition seit 1958.',
+                keywords: 'paella calella, arroz del senyoret, fideuá costa brava, beste paellas costa maresme, authentischer bomba reis, frische meeresfrüchte paella, mediterraner schwarzer reis',
             },
         },
     },

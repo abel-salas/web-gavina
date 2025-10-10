@@ -128,6 +128,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                     image: item.image?.asset?.url || ''
                 })) || dict.sections?.specialties?.items || []}
                 menuHref={href('/menu')}
+                specialtiesHref={href('/especialidades')}
                 viewMenuText={dict.menu?.view_full_menu}
                 specialtyImages={specialtyImages}
             />
