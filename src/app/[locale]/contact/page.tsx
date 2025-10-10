@@ -49,7 +49,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
           <div className="space-y-4">
             <div className="flex items-center">
-              <span className="text-2xl mr-3">📍</span>
+              <span className="material-icons-outlined text-blue-600 text-2xl mr-3">place</span>
               <div>
                 <h3 className="font-semibold">{dict.contact?.fields?.address || 'Dirección'}</h3>
                 <p className="text-gray-600 whitespace-pre-line">{contactInfo.address}</p>
@@ -58,7 +58,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </div>
 
             <div className="flex items-center">
-              <span className="text-2xl mr-3">📞</span>
+              <span className="material-icons-outlined text-blue-600 text-2xl mr-3">phone</span>
               <div>
                 <h3 className="font-semibold">{dict.contact?.fields?.phone || 'Teléfono'}</h3>
                 <a href={`tel:${contactInfo.phone}`} className="text-blue-600 hover:text-blue-800">
@@ -68,7 +68,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </div>
 
             <div className="flex items-center">
-              <span className="text-2xl mr-3">📱</span>
+              <span className="material-icons-outlined text-blue-600 text-2xl mr-3">smartphone</span>
               <div>
                 <h3 className="font-semibold">{dict.contact?.fields?.mobile || 'Móvil'}</h3>
                 <a href={`tel:${contactInfo.mobile}`} className="text-blue-600 hover:text-blue-800">
@@ -78,7 +78,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </div>
 
             <div className="flex items-start">
-              <span className="text-2xl mr-3">🕐</span>
+              <span className="material-icons-outlined text-blue-600 text-2xl mr-3 mt-1">schedule</span>
               <div className="flex-1">
                 <HoursSection
                   locale={locale}
@@ -90,7 +90,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             </div>
 
             <div className="flex items-center">
-              <span className="text-2xl mr-3">🅿️</span>
+              <span className="material-icons-outlined text-blue-600 text-2xl mr-3">local_parking</span>
               <div>
                 <h3 className="font-semibold">{dict.contact?.fields?.parking || 'Aparcamiento'}</h3>
                 <p className="text-gray-600">{dict.contact?.fields?.parking_description || contactInfo.parking}</p>

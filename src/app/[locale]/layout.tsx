@@ -11,6 +11,8 @@ import {
     getValidLocale,
     type SupportedLocale
 } from '@/seo';
+import { generateFAQSchema } from '@/seo/generators/advanced-schema';
+import HtmlLangUpdater from '../components/HtmlLangUpdater';
 
 export async function generateMetadata({
     params
@@ -56,13 +58,15 @@ export default async function LocaleLayout({
                     __html: generateWebsiteJsonLd(validLocale),
                 }}
             />
-            {/* Set the correct lang attribute for SEO */}
             <script
+                type="application/ld+json"
                 dangerouslySetInnerHTML={{
-                    __html: `document.documentElement.lang = '${validLocale}';`,
+                    __html: generateFAQSchema(validLocale),
                 }}
             />
+
             <div className="min-h-screen flex flex-col">
+                <HtmlLangUpdater locale={validLocale} />
                 <Navbar params={params} />
                 <main className="flex-1 pt-16">
                     {children}

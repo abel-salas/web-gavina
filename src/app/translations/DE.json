@@ -1,10 +1,4 @@
 {
-    "seo": {
-        "siteName": "Restaurant Banys La Gavina",
-        "siteDescription": "Traditionelles Restaurant direkt am Meer in Calella seit 1958. Spezialisten für Reisgerichte, Meeresfrüchte, frischen Fisch und ausgewählte Fleischsorten. Meerblick-Terrasse und kostenlose Parkplätze.",
-        "keywords": "restaurant calella, meeresfrüchte, reisgerichte, paella, frischer fisch, ausgewählte fleischsorten, meerblick terrasse, banys gavina, seit 1958",
-        "locale": "de_DE"
-    },
     "contact_section": {
         "title": "Reservieren Sie Ihr Erlebnis",
         "subtitle": "Bereit für ein einzigartiges gastronomisches Erlebnis? Reservieren Sie Ihren Tisch und lassen Sie sich von uns überraschen.",
@@ -39,8 +33,8 @@
     },
     "menu": {
         "title": "Unsere Speisekarte",
-        "subtitle": "Mediterrane Küche inspiriert von den Produkten des Meeres",
-        "description": "Der Küchenchef hat diese Speisekarte inspiriert von den Produkten des Meeres und unserer mediterranen Küche erstellt, ohne dabei gutes Fleisch und saisonale Gerichte zu vernachlässigen. Wir arbeiten immer mit erstklassigen Produkten und achten sehr auf die Präsentation.",
+        "subtitle": "Traditionelle katalanische Küche mit den besten Produkten aus Meer und Land",
+        "description": "Unsere Speisekarte verbindet mediterrane Küchentradition mit den besten frischen Produkten der Costa Brava. Seit 1958 bereiten wir authentische Valencianer Paellas, Meeresfrüchte-Fideuá, frischen Fisch vom Markt Calella und ausgewähltes gegrilltes Fleisch zu. Jedes Gericht spiegelt unsere Leidenschaft für traditionelle katalanische Küche wider, mit Meeresfrüchten aus Blanes, Saisongemüse und besten katalanischen Fleischsorten, serviert auf unserer privilegierten Terrasse mit Blick auf das Mittelmeer.",
         "metaTitle": "Speisekarte - Restaurant Banys La Gavina | Reisgerichte, Meeresfrüchte und Spezialitäten",
         "metaDescription": "Entdecken Sie unsere Speisekarte mit den besten Reisgerichten, frischen Meeresfrüchten und mediterranen Spezialitäten. Meeresfrüchte-Paella, schwarzer Reis, Fisch des Tages.",
         "categoryNames": {
@@ -98,23 +92,23 @@
         "features": [
             {
                 "icon": "eco",
-                "title": "Frische Zutaten",
-                "description": "Wir wählen täglich die besten lokalen Produkte aus"
+                "title": "Frische Mittelmeerprodukte",
+                "description": "Meeresfrüchte aus Blanes, Fisch vom Markt Calella und lokales Gemüse täglich ausgewählt für maximale Qualität"
             },
             {
                 "icon": "restaurant",
-                "title": "Erfahrener Koch",
-                "description": "Über 20 Jahre Erfahrung in der mediterranen Küche"
+                "title": "Traditionelle Katalanische Küche",
+                "description": "Über 65 Jahre perfektionieren wir Valencianer Paellas, Meeresfrüchte-Fideuá und mediterrane Spezialitäten mit ancestralen Techniken"
             },
             {
                 "icon": "home",
-                "title": "Familientradition",
-                "description": "Rezepte von Generation zu Generation weitergegeben"
+                "title": "Familienrestaurant seit 1958",
+                "description": "Drei Generationen bewahren die katalanische Küchentradition mit authentischen Familienrezepten"
             },
             {
                 "icon": "waves",
-                "title": "Einzigartige Atmosphäre",
-                "description": "Meerblick in gemütlicher und eleganter Umgebung"
+                "title": "Erste Meereslinie Calella",
+                "description": "Terrasse vor Platja Gran mit Panoramablick aufs Mittelmeer und einzigartige Atmosphäre an der Costa Brava"
             }
         ]
     },
@@ -141,8 +135,8 @@
     "sections": {
         "about": {
             "title": "Unsere Geschichte",
-            "subtitle": "Familientradition seit 1958",
-            "description": "Am Platja Gran de Calella, gegenüber dem Renfe Bahnhof, sind wir ein Familienrestaurant, das seit 1958 authentische mediterrane Küche mit Spezialitäten in Reisgerichten, frischem Fisch und erstklassigem Fleisch in einer einzigartigen Umgebung direkt am Meer anbietet."
+            "subtitle": "Familientradition seit 1958 direkt am Meer",
+            "description": "Restaurant Banys La Gavina ist seit über 65 Jahren ein gastronomisches Wahrzeichen in Calella. Direkt am Platja Gran gegenüber dem Renfe-Bahnhof gelegen, sind wir Spezialisten für authentische Valencianer Paellas, frische Meeresfrüchte der Costa Brava, Marktfisch und gegrilltes Fleisch. Unsere traditionelle katalanische Mittelmeerküche kombiniert erstklassige lokale Produkte mit uralten Techniken und bietet ein einzigartiges gastronomisches Erlebnis mit Panoramablick auf das Mittelmeer."
         },
         "specialties": {
             "title": "Unsere Spezialitäten",
@@ -171,9 +165,9 @@
             ]
         },
         "location": {
-            "title": "Privilegierte Lage",
-            "subtitle": "Direkt am Meer in Calella",
-            "description": "Direkt am Meer am Platja Gran de Calella genießen Sie direkten Strandzugang und Panoramablick auf das Mittelmeer. Unsere Terrasse bietet die perfekte Atmosphäre, um authentische mediterrane Küche in einer einzigartigen Umgebung zu genießen, wo das Meer der Protagonist ist."
+            "title": "Privilegierte Lage in Calella",
+            "subtitle": "Erste Mittelmeer-Strandlinie",
+            "description": "Restaurant Banys La Gavina befindet sich am Platja Gran de Calella, direkt am Meer mit Panoramablick auf das Mittelmeer. 800m vom Bahnhof RENFE Calella entfernt und mit kostenlosem Parkplatz in der Nähe bieten wir sowohl Barcelona-Touristen als auch Einheimischen einfachen Zugang. Unsere Meeresterrasse ist der perfekte Ort, um Valencianer Paellas, frische Costa Brava Meeresfrüchte und Marktfisch in einzigartiger Mittelmeeratmosphäre zu genießen."
         }
     },
     "history": {

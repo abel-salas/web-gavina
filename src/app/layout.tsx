@@ -36,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
+    <html lang="es">
       <head>
         {/* Preconnect to critical domains for faster loading */}
         {/* Sanity CDN - only if using Sanity images */}

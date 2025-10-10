@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const dict = await getDictionary(params.locale);
   
   return {
-    title: dict.legal?.metaTitle || `Legal Notice - ${dict.seo.siteName}`,
+    title: dict.legal?.metaTitle || `Legal Notice - Restaurant Banys La Gavina`,
     description: dict.legal?.metaDescription || 'Legal notice of Restaurant Banys La Gavina website',
     robots: 'index, follow',
     alternates: {

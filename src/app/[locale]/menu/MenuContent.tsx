@@ -201,26 +201,26 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                     </div>
                 </section>
 
-                <section className="menu-content relative h-96 md:h-[500px] flex items-center justify-center py-20">
-                    {/* Background Image */}
-                    <div className="absolute inset-0">
-                        <Image
-                            src={menuContent?.backgroundImage || "/images/menu/mesa_carta.jpg"}
-                            alt="Carta del restaurante Banys La Gavina"
-                            fill
-                            className="object-cover"
-                            priority
-                            quality={90}
-                        />
-                        {/* Dark overlay for better text readability */}
-                        <div className="absolute inset-0 bg-black/50" />
-                    </div>
+                {/* Menu Image Section */}
+                <section className="menu-image relative h-96 md:h-[500px]">
+                    <Image
+                        src={menuContent?.backgroundImage || "/images/menu/mesa_carta.jpg"}
+                        alt="Carta del restaurante Banys La Gavina"
+                        fill
+                        className="object-cover"
+                        priority
+                        quality={90}
+                    />
+                </section>
 
-                    {/* Content */}
-                    <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                        <p className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                            {menuContent?.description || dict.menu?.description || "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación."}
-                        </p>
+                {/* Menu Description Section */}
+                <section className="menu-description py-16 bg-white">
+                    <div className="container mx-auto px-4">
+                        <div className="text-center max-w-4xl mx-auto">
+                            <p className="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                                {menuContent?.description || dict.menu?.description || "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación."}
+                            </p>
+                        </div>
                     </div>
                 </section>
             </main>

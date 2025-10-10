@@ -22,32 +22,39 @@ interface AboutSectionProps {
 
 export function AboutSection({ title, subtitle, description, backgroundImage, backgroundAlt, features, defaultFeatures }: AboutSectionProps) {
   // Usar features proporcionadas, o defaultFeatures, o array vacío como último recurso
-  const displayFeatures = features && features.length > 0 
-    ? features 
-    : defaultFeatures && defaultFeatures.length > 0 
-    ? defaultFeatures 
-    : []; return (
+  const displayFeatures = features && features.length > 0
+    ? features
+    : defaultFeatures && defaultFeatures.length > 0
+      ? defaultFeatures
+      : [];
+
+  return (
     <section className="about-section py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Texto */}
-          <div>
-            <AnimatedSection direction="right">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                {title}
-              </h2>
-              {subtitle && (
-                <p className="text-xl text-blue-600 mb-4 font-medium">
-                  {subtitle}
-                </p>
-              )}
-            </AnimatedSection>
-
-            <AnimatedSection direction="right" delay={0.2}>
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                {description}
+        {/* Título y subtítulo y descripción entrados al 100% */}
+        <div className="text-center mb-16">
+          <AnimatedSection direction="up">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+              {title}
+            </h2>
+            {subtitle && (
+              <p className="text-xl text-blue-600 mb-4 font-medium">
+                {subtitle}
               </p>
-            </AnimatedSection>
+            )}
+          </AnimatedSection>
+          <AnimatedSection direction="right" delay={0.2}>
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              {description}
+            </p>
+          </AnimatedSection>
+        </div>
+
+        {/* Grid de 2 columnas para contenido e imagen */}
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Contenido  y features */}
+          <div>
+
 
             <StaggerContainer className="space-y-6">
               {displayFeatures.map((feature, index) => (

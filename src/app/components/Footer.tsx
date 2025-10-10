@@ -20,7 +20,7 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
             <div className="mb-4">
               <Link href={href('/') as Route} className="text-2xl font-bold text-white hover:text-blue-300 transition-colors">
                 <span className="material-icons-outlined mr-2 align-middle">restaurant</span>
-                {dict.seo.siteName}
+                Restaurant Banys La Gavina Calella
               </Link>
             </div>
             <p className="text-gray-300 mb-6">
@@ -41,6 +41,11 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
               <li>
                 <Link href={href('/menu') as Route} className="text-gray-300 hover:text-white transition-colors">
                   {dict.nav.menu}
+                </Link>
+              </li>
+              <li>
+                <Link href={href('/celebrations') as Route} className="text-gray-300 hover:text-white transition-colors">
+                  {dict.nav.celebrations}
                 </Link>
               </li>
               <li>

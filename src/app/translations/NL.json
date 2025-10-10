@@ -1,10 +1,4 @@
 {
-    "seo": {
-        "siteName": "Restaurant Banys La Gavina",
-        "siteDescription": "Traditioneel restaurant aan zee in Calella sinds 1958. Specialisten in rijstgerechten, zeevruchten, verse vis en geselecteerde vlees. Terras met zeezicht en gratis parkeren.",
-        "keywords": "restaurant calella, zeevruchten, rijstgerechten, paella, verse vis, geselecteerde vlees, zeeterras, banys gavina, sinds 1958",
-        "locale": "nl_NL"
-    },
     "contact_section": {
         "title": "Reserveer je ervaring",
         "subtitle": "Ready to enjoy a unique gastronomic experience? Book your table and let us surprise you.",
@@ -38,8 +32,8 @@
     },
     "menu": {
         "title": "Ons Menu",
-        "subtitle": "Geniet van het beste mediterrane huisgemaakte menu",
-        "description": "Ontdek onze selectie van traditionele mediterrane gerechten, bereid met verse ingrediënten en familierecepten.",
+        "subtitle": "Traditionele Catalaanse keuken met de beste producten van zee en land",
+        "description": "Ons menu combineert mediterrane keukentraditie met de beste verse producten van de Costa Brava. Sinds 1958 bereiden wij authentieke Valenciaanse paella's, zeevruchten fideuá, verse vis van de markt Calella en select gegrild vlees. Elk gerecht weerspiegelt onze passie voor traditionele Catalaanse keuken, met zeevruchten uit Blanes, seizoensgroenten en het beste Catalaanse vlees, allemaal geserveerd op ons bevoorrechte terras met uitzicht op de Middellandse Zee.",
         "metaTitle": "Menu Restaurant Gavina - Traditionele Mediterrane Gerechten",
         "metaDescription": "Verken ons mediterrane keuken menu: paella's, verse zeevruchten, gegrild vlees en huisgemaakte desserts. Eersteklas kwaliteit ingrediënten.",
         "categoryNames": {
@@ -109,23 +103,23 @@
         "features": [
             {
                 "icon": "eco",
-                "title": "Verse Ingrediënten",
-                "description": "Wij selecteren elke dag de beste lokale producten"
+                "title": "Verse Mediterrane Producten",
+                "description": "Zeevruchten uit Blanes, vis van de markt Calella en lokale groenten dagelijks geselecteerd voor maximale kwaliteit"
             },
             {
                 "icon": "restaurant",
-                "title": "Expert Chef",
-                "description": "Meer dan 20 jaar ervaring in de mediterrane keuken"
+                "title": "Traditionele Catalaanse Keuken",
+                "description": "Meer dan 65 jaar perfectioneren van Valenciaanse paella's, zeevruchten fideuá en mediterrane specialiteiten met voorouderlijke technieken"
             },
             {
                 "icon": "home",
-                "title": "Familietraditie",
-                "description": "Recepten doorgegeven van generatie op generatie"
+                "title": "Familierestaurant sinds 1958",
+                "description": "Drie generaties behouden de Catalaanse keukentraditie met authentieke familierecepten"
             },
             {
                 "icon": "waves",
-                "title": "Unieke Atmosfeer",
-                "description": "Uitzicht op zee in een gezellige en elegante omgeving"
+                "title": "Calella Zeefront Locatie",
+                "description": "Terras voor Platja Gran met panoramisch uitzicht op de Middellandse Zee en unieke sfeer aan de Costa Brava"
             }
         ]
     },
@@ -226,8 +220,8 @@
     "sections": {
         "about": {
             "title": "Onze Geschiedenis",
-            "subtitle": "Familietraditie sinds 1958",
-            "description": "Aan Platja Gran de Calella, tegenover het Renfe Station, zijn wij een familierestaurant dat sinds 1958 authentieke mediterrane keuken biedt met specialiteiten in rijstgerechten, verse vis en eersteklas vlees in een unieke omgeving aan zee."
+            "subtitle": "Familietraditie sinds 1958 aan de zeefront",
+            "description": "Restaurant Banys La Gavina is meer dan 65 jaar een gastronomisch landmark in Calella. Gelegen aan Platja Gran tegenover het Renfe Station, zijn wij specialisten in authentieke Valenciaanse paella's, verse Costa Brava zeevruchten, marktvis en gegrild vlees. Onze traditionele Catalaanse mediterrane keuken combineert eersteklas lokale producten met voorouderlijke technieken, en biedt een unieke gastronomische ervaring met panoramisch uitzicht op de Middellandse Zee."
         },
         "specialties": {
             "title": "Onze Specialiteiten",
@@ -256,9 +250,9 @@
             ]
         },
         "location": {
-            "title": "Bevoorrechte Locatie",
-            "subtitle": "Aan zee in Calella",
-            "description": "Aan de kust bij Platja Gran de Calella geniet u van directe toegang tot het strand en panoramisch uitzicht op de Middellandse Zee. Ons terras biedt de perfecte sfeer om te genieten van authentieke mediterrane keuken in een unieke omgeving waar de zee de hoofdrol speelt."
+            "title": "Bevoorrechte Locatie in Calella",
+            "subtitle": "Eerste lijn Middellandse Zee strand",
+            "description": "Restaurant Banys La Gavina ligt aan Platja Gran de Calella, aan de zeefront met panoramisch uitzicht op de Middellandse Zee. Op 800m van RENFE Station Calella en met gratis parkeren in de buurt, bieden wij gemakkelijke toegang voor zowel Barcelona toeristen als locals. Ons zeeterras is de perfecte setting om te genieten van Valenciaanse paella's, verse Costa Brava zeevruchten en marktvis in een unieke mediterrane sfeer."
         }
     },
     "privacy": {

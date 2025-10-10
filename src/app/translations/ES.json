@@ -1,10 +1,4 @@
 {
-    "seo": {
-        "siteName": "Restaurante Banys La Gavina",
-        "siteDescription": "Restaurante tradicional frente al mar en Calella desde 1958. Especialistas en arroces, mariscos, pescado fresco y carnes selectas. Terraza con vistas al mar y aparcamiento gratuito.",
-        "keywords": "restaurante calella, mariscos, arroces, paella, pescado fresco, carnes selectas, terraza mar, banys gavina, desde 1958",
-        "locale": "es_ES"
-    },
     "contact_section": {
         "title": "Reserva Tu Experiencia",
         "subtitle": "¿Listo para vivir una experiencia gastronómica única? Reserva tu mesa y déjanos sorprenderte.",
@@ -39,8 +33,8 @@
     },
     "menu": {
         "title": "Nuestra Carta",
-        "subtitle": "Cocina mediterránea inspirada en los productos del mar",
-        "description": "El chef ha creado este menú inspirándose en los productos del mar y en nuestra cocina mediterránea, sin descuidar las buenas carnes y los platos de temporada. Siempre trabajando con productos de primera calidad y cuidando mucho la presentación.",
+        "subtitle": "Cocina tradicional catalana con los mejores productos del mar y la tierra",
+        "description": "Nuestra carta combina la tradición culinaria mediterránea con los mejores productos frescos de la Costa Brava. Desde 1958 elaboramos paellas valencianas auténticas, fideuá de mariscos, pescados frescos de la lonja de Calella y carnes selectas a la brasa. Cada plato refleja nuestra pasión por la cocina catalana tradicional, utilizando mariscos de Blanes, verduras de temporada y las mejores carnes catalanas, todo ello servido en nuestra privilegiada terraza frente al mar Mediterráneo.",
         "metaTitle": "Carta - Restaurante Banys La Gavina | Arroces, Mariscos y Especialidades",
         "metaDescription": "Descubre nuestra carta con los mejores arroces, mariscos frescos y especialidades mediterráneas. Paella marinera, arroz negro, pescados del día.",
         "categoryNames": {
@@ -103,23 +97,23 @@
         "features": [
             {
                 "icon": "eco",
-                "title": "Ingredientes Frescos",
-                "description": "Seleccionamos los mejores productos locales cada día"
+                "title": "Productos Frescos del Mediterráneo",
+                "description": "Mariscos de Blanes, pescado de lonja de Calella y verduras locales seleccionadas diariamente para garantizar máxima calidad"
             },
             {
                 "icon": "restaurant",
-                "title": "Chef Experto",
-                "description": "Más de 20 años de experiencia en cocina mediterránea"
+                "title": "Cocina Tradicional Catalana",
+                "description": "Más de 65 años perfeccionando paellas valencianas, fideuá de mariscos y especialidades mediterráneas con técnicas ancestrales"
             },
             {
-                "icon": "home",
-                "title": "Tradición Familiar",
-                "description": "Recetas transmitidas de generación en generación"
+                "icon": "home", 
+                "title": "Restaurante Familiar desde 1958",
+                "description": "Tres generaciones manteniendo la tradición culinaria catalana con recetas auténticas transmitidas en familia"
             },
             {
                 "icon": "waves",
-                "title": "Ambiente Único",
-                "description": "Vistas al mar en un entorno acogedor y elegante"
+                "title": "Primera Línea de Mar Calella",
+                "description": "Terraza frente a la Platja Gran con vistas panorámicas al Mediterráneo y ambiente único en la Costa Brava"
             }
         ]
     },
@@ -141,8 +135,8 @@
     "sections": {
         "about": {
             "title": "Nuestra Historia",
-            "subtitle": "Tradición familiar desde 1958",
-            "description": "En la Playa Gran de Calella, frente a la Estación de Renfe, somos un restaurante familiar que desde 1958 ofrece la auténtica cocina mediterránea con especialidades en arroces, pescados frescos y carnes de primera calidad en un entorno único frente al mar."
+            "subtitle": "Tradición familiar desde 1958 en primera línea de mar",
+            "description": "Restaurante Banys La Gavina lleva más de 65 años siendo referente gastronómico en Calella. Situados en la Platja Gran frente a la Estación de Renfe, somos especialistas en paellas valencianas auténticas, mariscos frescos de la Costa Brava, pescado de lonja y carnes a la brasa. Nuestra cocina mediterránea tradicional catalana combina productos locales de primera calidad con técnicas ancestrales, ofreciendo una experiencia gastronómica única con vistas panorámicas al mar Mediterráneo."
         },
         "specialties": {
             "title": "Nuestras Especialidades",
@@ -171,9 +165,9 @@
             ]
         },
         "location": {
-            "title": "Ubicación Privilegiada",
-            "subtitle": "Frente al mar en Calella",
-            "description": "En primera línea de mar en la Platja Gran de Calella, disfrutarás de acceso directo a la playa y vistas panorámicas al Mediterráneo. Nuestra terraza ofrece el ambiente perfecto para saborear la auténtica cocina mediterránea en un entorno único donde el mar es el protagonista."
+            "title": "Ubicación Privilegiada en Calella",
+            "subtitle": "Primera línea de playa del Mediterráneo",
+            "description": "Restaurante Banys La Gavina está situado en la Platja Gran de Calella, en primera línea de mar con vistas panorámicas al Mediterráneo. A 800m de la Estación RENFE Calella y con parking gratuito cerca, ofrecemos fácil acceso tanto para turistas de Barcelona como locales. Nuestra terraza frente al mar es el escenario perfecto para disfrutar de paellas valencianas, mariscos frescos de la Costa Brava y pescado de lonja en un ambiente único mediterráneo."
         },
         "services": {
             "title": "Nuestros Servicios",

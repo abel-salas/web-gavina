@@ -64,7 +64,6 @@ export default function LanguageModal({ currentLocale, onClose }: LanguageModalP
                 {/* Language Switcher in Modal Mode */}
                 <LanguageSwitcher
                     currentLocale={currentLocale}
-                    showFlags={true}
                     isModal={true}
                     onLanguageSelect={handleLanguageSelect}
                 />

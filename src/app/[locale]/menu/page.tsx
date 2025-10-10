@@ -5,6 +5,7 @@ import { client } from '../../../../sanity/client';
 import { menuItemsQuery, menuContentQuery } from '../../lib/sanity/contentQueries';
 import { getLocalizedText } from '../../lib/sanity/contentTypes';
 import MenuContent from '@/app/[locale]/menu/MenuContent';
+import { generateMenuSchema } from '@/seo/generators/advanced-schema';
 
 // Función para obtener nombres de categorías desde el diccionario
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -29,6 +30,7 @@ export async function generateMetadata({
 
 export default async function MenuPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
+  const validLocale = getValidLocale(locale);
   const { dict } = getLocalizedData(locale);
 
   // Obtener items del menú y contenido desde Sanity
@@ -89,5 +91,16 @@ export default async function MenuPage({ params }: { params: Promise<{ locale: s
     backgroundImage: homeMainSection?.heroBackgroundImage?.asset?.url || '/images/menu/mesa_carta.jpg'
   };
 
-  return <MenuContent dict={dict} menuData={menuDataByCategory} menuContent={menuContentInfo} />;
+  return (
+    <>
+      {/* Menu Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateMenuSchema(validLocale),
+        }}
+      />
+      <MenuContent dict={dict} menuData={menuDataByCategory} menuContent={menuContentInfo} />
+    </>
+  );
 }
