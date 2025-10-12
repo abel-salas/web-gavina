@@ -14,9 +14,9 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo y descripción */}
-          <div className="md:col-span-2">
+          <div>
             <div className="mb-4">
               <Link href={href('/') as Route} className="text-2xl font-bold text-white hover:text-blue-300 transition-colors">
                 <span className="material-icons-outlined mr-2 align-middle">restaurant</span>
@@ -29,51 +29,71 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
             <SocialMedia theme="dark" iconSize="large" />
           </div>
 
-          {/* Enlaces rápidos */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{dict.footer?.quick_links || 'Enlaces Rápidos'}</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href={href('/') as Route} className="text-gray-300 hover:text-white transition-colors">
-                  {dict.nav.home}
-                </Link>
-              </li>
-              <li>
-                <Link href={href('/menu') as Route} className="text-gray-300 hover:text-white transition-colors">
-                  {dict.nav.menu}
-                </Link>
-              </li>
-              <li>
-                <Link href={href('/celebrations') as Route} className="text-gray-300 hover:text-white transition-colors">
-                  {dict.nav.celebrations}
-                </Link>
-              </li>
-              <li>
-                <Link href={href('/history') as Route} className="text-gray-300 hover:text-white transition-colors">
-                  {dict.nav.history}
-                </Link>
-              </li>
-              <li>
-                <Link href={href('/contact') as Route} className="text-gray-300 hover:text-white transition-colors">
-                  {dict.nav.contacto}
-                </Link>
-              </li>
-              <li>
-                <Link href={href('/privacy') as Route} className="text-gray-300 hover:text-white transition-colors">
-                  {dict.footer?.privacy_policy || 'Política de Privacidad'}
-                </Link>
-              </li>
-              <li>
-                <Link href={href('/legal') as Route} className="text-gray-300 hover:text-white transition-colors">
-                  {dict.legal?.title || 'Legal Notice'}
-                </Link>
-              </li>
-              {/* <li>
-                <Link href={href('/gallery') as Route} className="text-gray-300 hover:text-white transition-colors">
-                  {dict.nav.gallery}
-                </Link>
-              </li> */}
-            </ul>
+          {/* Enlaces rápidos en dos columnas */}
+          <div className="grid grid-cols-2 gap-4">
+            {/* Columna 1: Páginas principales */}
+            <div>
+              <h4 className="text-md font-semibold mb-3 text-blue-300">Restaurante</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link href={href('/') as Route} className="text-gray-300 hover:text-white transition-colors text-sm">
+                    {dict.nav.home}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={href('/carta') as Route} className="text-gray-300 hover:text-white transition-colors text-sm">
+                    {dict.nav.menu}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={href('/arroces') as Route} className="text-gray-300 hover:text-white transition-colors text-sm">
+                    {(dict.nav as Record<string, string>).paellas || 'Paellas'}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={href('/terraza-vista-mar') as Route} className="text-gray-300 hover:text-white transition-colors text-sm">
+                    {(dict.nav as Record<string, string>).terraza || 'Terraza'}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={href('/historia') as Route} className="text-gray-300 hover:text-white transition-colors text-sm">
+                    {dict.nav.history}
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Columna 2: Servicios y legal */}
+            <div>
+              <h4 className="text-md font-semibold mb-3 text-blue-300">Servicios</h4>
+              <ul className="space-y-2">
+                <li>
+                  <Link href={href('/reservas') as Route} className="text-gray-300 hover:text-white transition-colors text-sm">
+                    {dict.nav.reservas || 'Reservas'}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={href('/celebraciones') as Route} className="text-gray-300 hover:text-white transition-colors text-sm">
+                    {dict.nav.celebrations}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={href('/contacto') as Route} className="text-gray-300 hover:text-white transition-colors text-sm">
+                    {dict.nav.contacto || 'Contacto'}
+                  </Link>
+                </li>
+                <li className="pt-2">
+                  <Link href={href('/privacy') as Route} className="text-gray-400 hover:text-gray-300 transition-colors text-xs">
+                    {dict.footer?.privacy_policy || 'Política de Privacidad'}
+                  </Link>
+                </li>
+                <li>
+                  <Link href={href('/legal') as Route} className="text-gray-400 hover:text-gray-300 transition-colors text-xs">
+                    {dict.legal?.title || 'Aviso Legal'}
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* Información de contacto */}
@@ -102,7 +122,6 @@ export default async function Footer({ params }: { params: Promise<{ locale: str
                   <HoursSection
                     locale={locale}
                     showTitle={true}
-                    showIcon={false}
                     isFooter={true}
                     className=""
                   />

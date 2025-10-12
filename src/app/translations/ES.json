@@ -16,11 +16,14 @@
     "nav": {
         "home": "Inicio",
         "menu": "Carta",
-        "history": "Historia",
-        "celebrations": "Celebraciones",
+        "especialidades": "Especialidades",
+        "terraza": "Terraza",
+        "paellas": "Paellas",
+        "arroces": "Arroces",
         "reservas": "Reservas",
+        "celebrations": "Celebraciones",
         "contacto": "Contacto",
-        "gallery": "Galería"
+        "history": "Historia"
     },
     "home": {
         "title": "Banys La Gavina",
@@ -67,11 +70,24 @@
         "recommended": "Recomendado"
     },
     "contact": {
-        "title": "Contacto",
-        "subtitle": "Restaurante frente al mar en Calella - Reservas y consultas",
-        "description": "Contacta con nosotros para reservas, eventos o consultas. Restaurante Banys La Gavina, desde 1958 en primera línea de mar en Calella, Barcelona.",
-        "metaTitle": "Contacto - Restaurante Banys La Gavina | Reservas y Información",
-        "metaDescription": "Contacta con Restaurante Banys La Gavina. Reservas: 937 69 25 39. Paseo Manuel Puigvert s/n, Calella. Abierto todos los días frente a la playa.",
+        "title": "Reservas y Contacto",
+        "subtitle": "Restaurante frente al mar en Calella - Mesa con vistas al Mediterráneo",
+        "description": "Reserva tu mesa en el Restaurant Banys La Gavina y disfruta de auténtica cocina mediterránea frente al mar. Desde 1958 en primera línea de playa en Calella, Barcelona.",
+        "metaTitle": "Reservas Restaurante Banys La Gavina Calella | Mesa Frente al Mar | 937 69 25 39",
+        "metaDescription": "Reserva mesa en Restaurant Banys La Gavina Calella: 937 69 25 39. Terraza frente al mar, cocina mediterránea, parking gratuito. Paseo Manuel Puigvert s/n.",
+        "reservations_section": "Reservar Mesa",
+        "reservations_subtitle": "Tu mesa frente al Mediterráneo te está esperando",
+        "reservations_description": "Disfruta de nuestras especialidades mediterráneas en una ubicación única: terraza con vista panorámica al mar, ambiente familiar y más de 65 años de tradición culinaria.",
+        "reservation_benefits": {
+            "title": "¿Por qué reservar con nosotros?",
+            "items": [
+                "🌊 Terraza frente al mar con vistas panorámicas",
+                "🍽️ Cocina mediterránea auténtica desde 1958", 
+                "🅿️ Parking gratuito muy cerca del restaurante",
+                "👨‍👩‍👧‍👦 Ambiente familiar y acogedor",
+                "📍 Frente a la Estación Renfe de Calella"
+            ]
+        },
         "info_section": "Información de Contacto",
         "form_section": "Envíanos un Mensaje",
         "fields": {
@@ -269,6 +285,14 @@
             "subtitle": "Más de 65 años de tradición gastronómica te esperan en primera línea de mar",
             "menu_button": "Ver Nuestra Carta",
             "contact_button": "Reservar Mesa"
+        }
+    },
+    "common": {
+        "cta": {
+            "reserve_now": "Reservar Ahora",
+            "more_info": "Más Información",
+            "whatsapp_reserve": "Reservar por WhatsApp",
+            "contact": "Contactar"
         }
     },
     "privacy": {

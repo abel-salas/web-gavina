@@ -97,7 +97,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                 subtitle={heroData ? getLocalizedText(heroData.heroSubtitle, locale, pageData.subtitle) : pageData.subtitle}
                 description={heroData ? getLocalizedText(heroData.heroDescription, locale, pageData.description) : pageData.description}
                 ctaText={pageData.cta || "Ver Carta"}
-                ctaHref={href('/menu')}
+                ctaHref={href('/carta')}
                 backgroundImage={heroBackgroundImage}
                 backgroundAlt={heroBackgroundAlt}
             />
@@ -127,7 +127,7 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                     price: item.price,
                     image: item.image?.asset?.url || ''
                 })) || dict.sections?.specialties?.items || []}
-                menuHref={href('/menu')}
+                menuHref={href('/carta')}
                 viewMenuText={dict.menu?.view_full_menu}
                 specialtyImages={specialtyImages}
             />
@@ -150,12 +150,8 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
             {/* Sección 6: Contacto */}
             <ContactSection
                 locale={locale}
-                contactHref={href('/contact')}
+                contactHref={href('/reservas')}
             />
-
-            {/* Sección 3.5: Slider de Imágenes */}
-            <ImageSliderSection sliders={imageSliders} locale={locale} />
-
         </>
     );
 }

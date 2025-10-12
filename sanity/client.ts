@@ -1,9 +1,7 @@
 import { createClient } from '@sanity/client'
 
-// Configurar SSL en desarrollo y build
-if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === undefined) {
-  process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
-}
+// Importar configuración SSL para desarrollo
+import '../src/app/lib/ssl-config'
 
 // Configuración del cliente Sanity
 export const client = createClient({

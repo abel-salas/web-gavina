@@ -13,7 +13,7 @@ interface LocationSectionProps {
   description?: string;
 }
 
-export function LocationSection({ title, backgroundImage, backgroundAlt, useContactInfo = false, subtitle, description }: LocationSectionProps) {
+export function LocationSection({ title, backgroundImage, backgroundAlt, useContactInfo: _useContactInfo = false, subtitle, description }: LocationSectionProps) {
   return (
     <section className="location-section py-20 bg-white">
       <div className="container mx-auto px-4">

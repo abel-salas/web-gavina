@@ -15,7 +15,9 @@
     },
     "nav": {
         "home": "Home",
-        "menu": "Menu",
+        "menu": "Menukaart",
+        "terraza": "Terras",
+        "paellas": "Paellas",
         "history": "Geschiedenis",
         "celebrations": "Vieringen",
         "reservas": "Reserveringen",
@@ -392,6 +394,14 @@
         },
         "last_updated": "Laatst bijgewerkt:",
         "date": "8 oktober 2025"
+    },
+    "common": {
+        "cta": {
+            "reserve_now": "Nu Reserveren",
+            "more_info": "Meer Informatie",
+            "whatsapp_reserve": "Via WhatsApp Reserveren",
+            "contact": "Contact"
+        }
     },
     "footer": {
         "description": "Restaurant Banys La Gavina, familietraditie sinds 1958 aan de kust in Calella.",

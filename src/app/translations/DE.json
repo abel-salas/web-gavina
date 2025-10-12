@@ -16,6 +16,8 @@
     "nav": {
         "home": "Startseite",
         "menu": "Speisekarte",
+        "terraza": "Terrasse",
+        "paellas": "Paellas",
         "history": "Geschichte",
         "celebrations": "Feiern",
         "reservas": "Reservierungen",
@@ -86,6 +88,11 @@
             "email": "E-Mail",
             "message": "Nachricht",
             "send_button": "Nachricht senden"
+        },
+        "whatsapp": {
+            "title": "WhatsApp Reservierungen",
+            "description": "Sie können auch direkt über WhatsApp einen Tisch reservieren",
+            "button": "Über WhatsApp reservieren"
         }
     },
     "about": {
@@ -111,26 +118,6 @@
                 "description": "Terrasse vor Platja Gran mit Panoramablick aufs Mittelmeer und einzigartige Atmosphäre an der Costa Brava"
             }
         ]
-    },
-    "whatsapp": {
-        "title": "WhatsApp Reservierungen",
-        "description": "Sie können auch direkt über WhatsApp einen Tisch reservieren",
-        "button": "Über WhatsApp reservieren"
-    },
-    "gallery": {
-        "title": "📸 Fotogalerie",
-        "subtitle": "Entdecken Sie unsere köstlichen Gerichte und gemütliche Atmosphäre",
-        "description": "Lernen Sie die einzigartige Atmosphäre von Restaurant Gavina und unsere repräsentativsten Gerichte durch unsere Fotogalerie kennen.",
-        "metaTitle": "Galerie - Restaurant Gavina | Unsere Gerichte und Atmosphäre",
-        "metaDescription": "Entdecken Sie die gemütliche Atmosphäre von Restaurant Gavina und unsere köstlichen mediterranen Gerichte durch unsere Fotogalerie."
-    },
-    "celebrations": {
-        "title": "Feiern",
-        "subtitle": "Ihr besonderes Event am Meer",
-        "description": "Feiern Sie Ihre besonderen Momente in einer einzigartigen Umgebung direkt am Mittelmeer. Wir organisieren Bankette, Hochzeiten, Kommunionen, Firmenessen und alle Arten von Familienfeiern.",
-        "metaTitle": "Feiern & Bankette - Restaurant Banys La Gavina | Events am Meer",
-        "metaDescription": "Feiern Sie Ihre besonderen Events im Restaurant Banys La Gavina. Bankette, Hochzeiten, Kommunionen und Firmenessen am Meer in Calella. Kapazität bis zu 100 Personen.",
-        "keywords": "feiern restaurant calella, bankette am meer, hochzeit restaurant barcelona, kommunionen costa maresme, firmenessen calella, events meerblick"
     },
     "sections": {
         "about": {
@@ -198,17 +185,29 @@
             }
         ],
         "sections": {
-            "origins": {
-                "title": "Unsere Ursprünge",
-                "content": "Das Restaurant Banys La Gavina wurde 1958 gegründet und ist seitdem ein Bezugspunkt für authentische mediterrane Küche in Calella. Unsere Geschichte ist eng mit der Entwicklung des Tourismus an der Costa del Maresme verbunden."
+            "origin": {
+                "title": "Die Anfänge (1958)",
+                "content": "Das Restaurant Banys La Gavina öffnete 1958 seine Türen, mitten im touristischen Aufschwung von Calella. Von Anfang an strategisch günstig an der Platja Gran de Calella gelegen, gegenüber dem Renfe-Bahnhof, wurde es zum perfekten Treffpunkt für Einheimische und Besucher."
+            },
+            "calella_context": {
+                "title": "Calella: Vom Fischerdorf zum Touristenziel",
+                "content": "In den 60er und 70er Jahren erlebte Calella eine radikale Transformation. Von einem traditionellen Fischer- und Textildorf entwickelte es sich zu einem der wichtigsten Touristenziele an der Costa del Maresme. Dieser Tourismusboom, besonders des mitteleuropäischen Tourismus, führte dazu, dass Calella als 'Calella dels Alemanys' bekannt wurde und seine Bevölkerung während der Hochsaison verdreifachte."
+            },
+            "golden_era": {
+                "title": "Die goldene Ära des Tourismus",
+                "content": "Banys La Gavina war Zeuge und Protagonist dieser goldenen Ära. Mit seiner privilegierten Lage direkt am Meer und neben dem Bahnhof wurde das Restaurant zu einem Pflichtbesuch für Touristen, die nach Calella kamen, um Sonne, Strand und authentische mediterrane Gastronomie zu suchen."
             },
             "tradition": {
-                "title": "Kulinarische Tradition",
-                "content": "Über mehr als sechs Jahrzehnte haben wir die traditionellen Rezepte unserer mediterranen Küche bewahrt und perfektioniert, mit besonderem Fokus auf Reisgerichte, frische Meeresfrüchte und Fische der Saison."
+                "title": "Über 65 Jahre Tradition",
+                "content": "Über mehr als sechs Jahrzehnte hinweg hat das Restaurant seinen familiären Charakter und sein Engagement für Qualität bewahrt. Es war Zeuge der Entwicklung Calellas, von seinen Anfängen als Touristenziel bis hin zu einer kosmopolitischen Stadt, die Besucher aus ganz Europa empfängt."
             },
-            "location": {
-                "title": "Privilegierte Lage",
-                "content": "Unser Restaurant befindet sich in einer unvergleichlichen Lage direkt am Platja Gran de Calella, was unseren Gästen ermöglicht, eine außergewöhnliche gastronomische Erfahrung mit spektakulärem Meerblick zu genießen."
+            "calella_cinema": {
+                "title": "Calella: Stadt des Kinos",
+                "content": "Calella war auch Schauplatz zahlreicher Film- und Fernsehproduktionen. Seit 2010 ist es Teil der Catalunya Film Commission und verfügt über ein eigenes Calella Film Office. Die Stadt diente als 'Filmstadt' für Produktionen, die die Essenz des katalanischen Mittelmeers einfangen wollten."
+            },
+            "present": {
+                "title": "Das Restaurant heute",
+                "content": "Derzeit bleibt das Restaurant Banys La Gavina eine gastronomische Referenz in Calella. Es bewahrt seine traditionellen Spezialitäten in Reisgerichten, Meeresfrüchten und frischem Fisch, während es sich an die neuen Zeiten anpasst und dabei seine mediterrane und familiäre Seele bewahrt."
             }
         },
         "heritage": {
@@ -376,6 +375,14 @@
         },
         "last_updated": "Zuletzt aktualisiert:",
         "date": "8. Oktober 2025"
+    },
+    "common": {
+        "cta": {
+            "reserve_now": "Jetzt Reservieren",
+            "more_info": "Mehr Informationen",
+            "whatsapp_reserve": "Per WhatsApp Reservieren",
+            "contact": "Kontakt"
+        }
     },
     "footer": {
         "description": "Restaurant Banys La Gavina, Familientradition seit 1958 direkt am Meer in Calella.",

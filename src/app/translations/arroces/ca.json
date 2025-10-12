@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Arrossos Mediterranis a Calella",
+    "subtitle": "Tradició catalana davant del mar"
+  },
+  "especialidades": {
+    "title": "Els Nostres Arrossos Mediterranis",
+    "description": "Cada arròs és una obra d'art culinària preparada amb ingredients frescos del Mediterrani i la tradició gastronòmica catalana"
+  },
+  "tradicion": {
+    "title": "Tradició Mediterrània"
+  },
+  "experiencia": {
+    "title": "Paelles Davant del Mar",
+    "description": "Gaudeix dels nostres arrossos mediterranis a la nostra terrassa amb vistes panoràmiques al mar. Una experiència gastronòmica única en primera línia de platja."
+  },
+  "cta": {
+    "title": "Reserva la Teva Taula per Arrossos",
+    "description": "Els millors arrossos mediterranis de la Costa del Maresme t'esperen a la nostra terrassa davant del mar"
+  }
+}

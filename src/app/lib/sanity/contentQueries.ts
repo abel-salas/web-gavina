@@ -320,6 +320,7 @@ export const menuItemsByCategoryQuery = groq`
 export const imageSliderQuery = groq`
   *[_type == "imageSlider" && !(_id in path("drafts.**")) && isActive == true] | order(order asc) {
     _id,
+    name,
     title,
     isActive,
     autoplaySpeed,

@@ -14,36 +14,30 @@ async function revalidateAllPages() {
     '/ca',
     '/nl',
     '/de',
-    // Páginas de menú
-    '/es/menu',
-    '/en/menu',
-    '/ca/menu', 
-    '/nl/menu',
-    '/de/menu',
+    // Páginas de carta
+    '/es/carta',
+    '/en/carta',
+    '/ca/carta', 
+    '/nl/carta',
+    '/de/carta',
     // Páginas de celebraciones
-    '/es/celebrations',
-    '/en/celebrations',
-    '/ca/celebrations',
-    '/nl/celebrations', 
-    '/de/celebrations',
+    '/es/celebraciones',
+    '/en/celebraciones',
+    '/ca/celebraciones',
+    '/nl/celebraciones', 
+    '/de/celebraciones',
     // Páginas de contacto
-    '/es/contact',
-    '/en/contact',
-    '/ca/contact',
-    '/nl/contact',
-    '/de/contact',
-    // Páginas de galería
-    '/es/gallery',
-    '/en/gallery',
-    '/ca/gallery',
-    '/nl/gallery',
-    '/de/gallery',
+    '/es/contacto',
+    '/en/contacto',
+    '/ca/contacto',
+    '/nl/contacto',
+    '/de/contacto',
     // Páginas de historia
-    '/es/history',
-    '/en/history',
-    '/ca/history',
-    '/nl/history',
-    '/de/history'
+    '/es/historia',
+    '/en/historia',
+    '/ca/historia',
+    '/nl/historia',
+    '/de/historia'
   ];
 
   for (const path of paths) {

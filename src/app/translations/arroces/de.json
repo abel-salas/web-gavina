@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Mediterrane Reisgerichte in Calella",
+    "subtitle": "Katalanische Tradition am Meer"
+  },
+  "especialidades": {
+    "title": "Unsere Mediterranen Reisgerichte",
+    "description": "Jeder Reis ist ein kulinarisches Kunstwerk, zubereitet mit frischen mediterranen Zutaten und katalanischer gastronomischer Tradition"
+  },
+  "tradicion": {
+    "title": "Mediterrane Tradition"
+  },
+  "experiencia": {
+    "title": "Paellas am Meer",
+    "description": "Genießen Sie unsere mediterranen Reisgerichte auf unserer Terrasse mit Panoramablick aufs Meer. Ein einzigartiges gastronomisches Erlebnis direkt am Strand."
+  },
+  "cta": {
+    "title": "Reservieren Sie Ihren Tisch für Reisgerichte",
+    "description": "Die besten mediterranen Reisgerichte der Costa del Maresme erwarten Sie auf unserer Terrasse mit Meerblick"
+  }
+}

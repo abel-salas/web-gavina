@@ -2,13 +2,21 @@ import { defineField, defineType } from 'sanity'
 
 export const imageSlider = defineType({
   name: 'imageSlider',
-  title: 'Slider de Imágenes',
+  title: '🖼️ Slider de Imágenes',
   type: 'document',
   icon: () => '🖼️',
   fields: [
     defineField({
+      name: 'name',
+      title: 'Nombre del Slider (para identificarlo)',
+      type: 'string',
+      validation: (Rule) => Rule.required().error('Necesitas un nombre para identificar este slider'),
+      description: 'Ej: "Slider Celebraciones", "Slider Home", etc. Solo para identificación en Sanity.'
+    }),
+
+    defineField({
       name: 'title',
-      title: 'Título del Slider',
+      title: 'Título del Slider (mostrado en web)',
       type: 'object',
       fields: [
         { name: 'es', title: 'Español', type: 'string' },
@@ -17,7 +25,7 @@ export const imageSlider = defineType({
         { name: 'nl', title: 'Nederlands', type: 'string' },
         { name: 'de', title: 'Deutsch', type: 'string' },
       ],
-      description: 'Título que aparecerá encima del slider (opcional)',
+      description: 'Título que aparecerá encima del slider en la web (opcional)',
     }),
 
     defineField({
@@ -113,17 +121,19 @@ export const imageSlider = defineType({
 
   preview: {
     select: {
+      name: 'name',
       title: 'title.es',
       isActive: 'isActive',
       imageCount: 'images',
       order: 'order',
     },
-    prepare({ title, isActive, imageCount, order }) {
+    prepare({ name, title, isActive, imageCount, order }) {
       const count = Array.isArray(imageCount) ? imageCount.length : 0;
-      const displayTitle = title || 'Slider sin título';
+      const displayName = name || 'Slider sin nombre';
+      const webTitle = title ? ` (${title})` : '';
 
       return {
-        title: `${isActive ? '✅' : '❌'} ${displayTitle}`,
+        title: `${isActive ? '✅' : '❌'} ${displayName}${webTitle}`,
         subtitle: `${count} imagen${count !== 1 ? 'es' : ''} • Orden: ${order} • ${isActive ? 'ACTIVO' : 'INACTIVO'}`,
         media: count > 0 ? imageCount[0]?.image : undefined,
       }

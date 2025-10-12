@@ -15,6 +15,7 @@ interface MenuHighlightProps {
     price: string;
   }>;
   menuHref: string;
+  specialtiesHref?: string;
   viewMenuText?: string;
   specialtyImages?: {
     arroces?: string;
@@ -24,7 +25,7 @@ interface MenuHighlightProps {
   };
 }
 
-export function MenuHighlightSection({ title, subtitle, specialties, menuHref, viewMenuText, specialtyImages }: MenuHighlightProps) {
+export function MenuHighlightSection({ title, subtitle, specialties, menuHref, specialtiesHref, viewMenuText, specialtyImages }: MenuHighlightProps) {
   // Mapear los datos de especialidades a un formato con imágenes
   const dishes = specialties.map((specialty, index) => {
     const fallbackImages = [
@@ -58,9 +59,17 @@ export function MenuHighlightSection({ title, subtitle, specialties, menuHref, v
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <AnimatedSection direction="down">
-            <h2 className="text-5xl md:text-6xl font-parisienne mb-6">
-              {title}
-            </h2>
+            {specialtiesHref ? (
+              <Link href={specialtiesHref as Route}>
+                <h2 className="text-5xl md:text-6xl font-parisienne mb-6 hover:text-yellow-400 transition-colors cursor-pointer">
+                  {title}
+                </h2>
+              </Link>
+            ) : (
+              <h2 className="text-5xl md:text-6xl font-parisienne mb-6">
+                {title}
+              </h2>
+            )}
           </AnimatedSection>
           <AnimatedSection direction="up" delay={0.2}>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">

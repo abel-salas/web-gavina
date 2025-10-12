@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "title": "Mediterranean Rice Dishes in Calella",
+    "subtitle": "Catalan tradition by the sea"
+  },
+  "especialidades": {
+    "title": "Our Mediterranean Rice Dishes",
+    "description": "Each rice dish is a culinary work of art prepared with fresh Mediterranean ingredients and Catalan gastronomic tradition"
+  },
+  "tradicion": {
+    "title": "Mediterranean Tradition"
+  },
+  "experiencia": {
+    "title": "Paellas by the Sea",
+    "description": "Enjoy our Mediterranean rice dishes on our terrace with panoramic sea views. A unique gastronomic experience on the beachfront."
+  },
+  "cta": {
+    "title": "Book Your Table for Rice Dishes",
+    "description": "The best Mediterranean rice dishes of Costa del Maresme await you on our terrace facing the sea"
+  }
+}

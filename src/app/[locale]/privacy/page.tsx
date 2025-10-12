@@ -4,11 +4,12 @@ import { CONTACT_INFO } from '../../lib/contact-info';
 import type { Metadata } from 'next';
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const dict = await getDictionary(params.locale);
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
   
   return {
     title: dict.privacy?.metaTitle || 'Política de Privacidad',
@@ -17,7 +18,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function PrivacyPolicyPage({ params }: Props) {
-  const dict = await getDictionary(params.locale);
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
   const privacy = dict.privacy;
   
   // Fallback content if translations are not available

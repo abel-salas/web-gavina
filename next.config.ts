@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
     // Ensure TypeScript compilation is strict
     tsconfigPath: './tsconfig.json',
   },
+  eslint: {
+    // Re-enable ESLint with warnings instead of errors
+    ignoreDuringBuilds: false,
+  },
   // Moved from experimental to main config
   typedRoutes: true,
   images: {
