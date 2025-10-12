@@ -10,22 +10,46 @@ async function revalidateAllPages() {
     // Páginas de inicio
     '/',
     '/es',
-    '/en', 
+    '/en',
     '/ca',
     '/nl',
     '/de',
-    // Páginas de carta
+    // Páginas de carta (antes menu)
     '/es/carta',
     '/en/carta',
-    '/ca/carta', 
+    '/ca/carta',
     '/nl/carta',
     '/de/carta',
+    // Páginas de arroces (nueva)
+    '/es/arroces',
+    '/en/arroces',
+    '/ca/arroces',
+    '/nl/arroces',
+    '/de/arroces',
+    // Páginas de especialidades
+    '/es/especialidades',
+    '/en/especialidades',
+    '/ca/especialidades',
+    '/nl/especialidades',
+    '/de/especialidades',
+    // Páginas de terraza-vista-mar (nueva)
+    '/es/terraza-vista-mar',
+    '/en/terraza-vista-mar',
+    '/ca/terraza-vista-mar',
+    '/nl/terraza-vista-mar',
+    '/de/terraza-vista-mar',
     // Páginas de celebraciones
     '/es/celebraciones',
     '/en/celebraciones',
     '/ca/celebraciones',
-    '/nl/celebraciones', 
+    '/nl/celebraciones',
     '/de/celebraciones',
+    // Páginas de reservas (nueva)
+    '/es/reservas',
+    '/en/reservas',
+    '/ca/reservas',
+    '/nl/reservas',
+    '/de/reservas',
     // Páginas de contacto
     '/es/contacto',
     '/en/contacto',
@@ -37,7 +61,19 @@ async function revalidateAllPages() {
     '/en/historia',
     '/ca/historia',
     '/nl/historia',
-    '/de/historia'
+    '/de/historia',
+    // Páginas legales
+    '/es/legal',
+    '/en/legal',
+    '/ca/legal',
+    '/nl/legal',
+    '/de/legal',
+    // Páginas de privacidad
+    '/es/privacy',
+    '/en/privacy',
+    '/ca/privacy',
+    '/nl/privacy',
+    '/de/privacy'
   ];
 
   for (const path of paths) {
@@ -51,16 +87,16 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const secret = searchParams.get('secret');
     const pages = searchParams.get('pages'); // Parámetro para páginas específicas
-    
+
     // Verificar secreto en la URL
     if (secret !== REVALIDATE_SECRET) {
       return NextResponse.json({ message: 'No autorizado' }, { status: 401 });
     }
 
     console.log('🔄 Revalidación manual solicitada');
-    
+
     let pathsToRevalidate: string[] = [];
-    
+
     // Si no se especifican páginas, revalidar todas
     if (!pages) {
       console.log('📄 Revalidando todas las páginas...');
@@ -70,9 +106,9 @@ export async function GET(request: Request) {
       // Revalidar páginas específicas (siempre en todos los idiomas)
       const requestedPages = pages.split(',').map(p => p.trim());
       const allLangs = ['es', 'en', 'ca', 'nl', 'de'];
-      
+
       console.log('📄 Revalidando páginas específicas:', requestedPages);
-      
+
       for (const page of requestedPages) {
         if (page === 'home') {
           // Páginas de inicio
@@ -87,14 +123,14 @@ export async function GET(request: Request) {
           }
         }
       }
-      
+
       // Ejecutar revalidación
       for (const path of pathsToRevalidate) {
         revalidatePath(path);
       }
     }
-    
-    return NextResponse.json({ 
+
+    return NextResponse.json({
       message: '✅ Páginas revalidadas correctamente',
       timestamp: new Date().toISOString(),
       paths: pathsToRevalidate,

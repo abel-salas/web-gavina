@@ -6,39 +6,123 @@ import Image from 'next/image';
 import type { Route } from 'next';
 import { useParams } from 'next/navigation';
 
-import { Dictionary } from '@/app/lib/dictionary.models';
 
-interface ArrocesContentProps {
-  dict: Dictionary;
+interface ArrocesTranslations {
+  hero: {
+    title: string;
+    subtitle: string;
+  };
+  especialidades: {
+    title: string;
+    description: string;
+  };
+  platos: {
+    paellaMariscos: {
+      title: string;
+      description: string;
+    };
+    arrozSenyoret: {
+      title: string;
+      description: string;
+    };
+    fideuaMariscos: {
+      title: string;
+      description: string;
+    };
+    paellaMixta: {
+      title: string;
+      description: string;
+    };
+    arrozNegro: {
+      title: string;
+      description: string;
+    };
+    arrozBogavante: {
+      title: string;
+      description: string;
+    };
+  };
+  tradicion: {
+    title: string;
+    bomba: {
+      title: string;
+      description: string;
+    };
+    mariscos: {
+      title: string;
+      description: string;
+    };
+    sofrito: {
+      title: string;
+      description: string;
+    };
+  };
+  experiencia: {
+    title: string;
+    description: string;
+    stats: {
+      tiempo: {
+        value: string;
+        label: string;
+      };
+      personas: {
+        value: string;
+        label: string;
+      };
+      ingredientes: {
+        value: string;
+        label: string;
+      };
+      tradicion: {
+        value: string;
+        label: string;
+      };
+    };
+  };
+  cta: {
+    title: string;
+    description: string;
+    buttons: {
+      reservar: string;
+      masInfo: string;
+    };
+  };
+  whatsapp: {
+    message: string;
+  };
 }
 
-export default function ArrocesContent({ dict }: ArrocesContentProps) {
+interface ArrocesContentProps {
+  arrocesData: ArrocesTranslations;
+}
+
+export default function ArrocesContent({ arrocesData }: ArrocesContentProps) {
   const params = useParams();
   const locale = params.locale as string;
   
   const href = (path: string): string => {
     return `/${locale}${path}`;
   };
-  const arrocesData = (dict as Record<string, any>)?.pages?.arroces || {};
 
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <AnimatedSection className="relative h-[70vh] flex items-center justify-center bg-gradient-to-r from-blue-900/80 to-blue-700/80">
-        <div 
-          className="absolute inset-0 bg-cover bg-center z-0"
-          style={{
-            backgroundImage: "url('/images/home/paellas.jpg')",
-            backgroundPosition: 'center center'
-          }}
+      <AnimatedSection className="relative h-[70vh] flex items-center justify-center overflow-hidden">
+        <Image
+          src="/images/home/paellas.jpg"
+          alt="Paellas mediterráneas frente al mar"
+          fill
+          className="absolute inset-0 object-cover object-center z-0"
+          priority
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/70 to-transparent z-10" />
         <div className="relative z-20 text-center text-white max-w-4xl mx-auto px-6">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            {arrocesData.hero?.title || 'Arroces Mediterráneos en Calella'}
+            {arrocesData.hero.title}
           </h1>
           <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
-            {arrocesData.hero?.subtitle || 'Tradición catalana frente al mar'}
+            {arrocesData.hero.subtitle}
           </p>
         </div>
       </AnimatedSection>
@@ -48,10 +132,10 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-              {arrocesData.especialidades?.title || 'Nuestros Arroces Mediterráneos'}
+              {arrocesData.especialidades.title}
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              {arrocesData.especialidades?.description || 'Cada arroz es una obra de arte culinaria preparada con ingredientes frescos del Mediterráneo y la tradición gastronómica catalana'}
+              {arrocesData.especialidades.description}
             </p>
           </div>
           
@@ -63,11 +147,11 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
                   <span className="text-2xl">🦐</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Paella de Mariscos
+                  {arrocesData.platos.paellaMariscos.title}
                 </h3>
               </div>
               <p className="text-gray-600 text-center leading-relaxed">
-                Langostinos, mejillones, almejas y calamares frescos del Mediterráneo con arroz bomba y azafrán auténtico
+                {arrocesData.platos.paellaMariscos.description}
               </p>
             </div>
 
@@ -78,11 +162,11 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
                   <span className="text-2xl">🍤</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Arroz del Senyoret
+                  {arrocesData.platos.arrozSenyoret.title}
                 </h3>
               </div>
               <p className="text-gray-600 text-center leading-relaxed">
-                Mariscos pelados para comer cómodamente, con gambas rojas, langostinos y sepia en sofrito mediterráneo
+                {arrocesData.platos.arrozSenyoret.description}
               </p>
             </div>
 
@@ -93,11 +177,11 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
                   <span className="text-2xl">🍝</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-3">
-                  Fideuá de Mariscos
+                  {arrocesData.platos.fideuaMariscos.title}
                 </h3>
               </div>
               <p className="text-gray-600 text-center leading-relaxed">
-                Fideos con mariscos frescos y alioli artesanal, una especialidad de la Costa Brava
+                {arrocesData.platos.fideuaMariscos.description}
               </p>
             </div>
 
@@ -108,11 +192,11 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
                   <span className="text-2xl">🥘</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Paella Mixta
+                  {arrocesData.platos.paellaMixta.title}
                 </h3>
               </div>
               <p className="text-gray-600 text-center leading-relaxed">
-                La combinación perfecta de pollo de corral, conejo, mariscos frescos y verduras de temporada
+                {arrocesData.platos.paellaMixta.description}
               </p>
             </div>
 
@@ -123,11 +207,11 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
                   <span className="text-2xl">🦑</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Arroz Negro
+                  {arrocesData.platos.arrozNegro.title}
                 </h3>
               </div>
               <p className="text-gray-600 text-center leading-relaxed">
-                Con tinta de calamar fresco, sepia y alioli de ajo, un clásico de la gastronomía mediterránea
+                {arrocesData.platos.arrozNegro.description}
               </p>
             </div>
 
@@ -138,11 +222,11 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
                   <span className="text-2xl">🦞</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-800 mb-2">
-                  Arroz con Bogavante
+                  {arrocesData.platos.arrozBogavante.title}
                 </h3>
               </div>
               <p className="text-gray-600 text-center leading-relaxed">
-                Bogavante fresco del Mediterráneo con arroz bomba, tomate natural y hierbas aromáticas
+                {arrocesData.platos.arrozBogavante.description}
               </p>
             </div>
           </div>
@@ -155,7 +239,7 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                {arrocesData.tradicion?.title || 'Tradición Mediterránea'}
+                {arrocesData.tradicion.title}
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
@@ -163,8 +247,8 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
                     <span className="text-white text-sm">✓</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-2">Arroz Bomba Auténtico</h3>
-                    <p className="text-gray-600">Utilizamos exclusivamente arroz bomba, el único que absorbe los sabores sin perder la textura perfecta</p>
+                    <h3 className="font-semibold text-gray-800 mb-2">{arrocesData.tradicion.bomba.title}</h3>
+                    <p className="text-gray-600">{arrocesData.tradicion.bomba.description}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -172,8 +256,8 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
                     <span className="text-white text-sm">✓</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-2">Mariscos de Lonja</h3>
-                    <p className="text-gray-600">Ingredientes frescos directos de la lonja de Blanes y mercados locales cada mañana</p>
+                    <h3 className="font-semibold text-gray-800 mb-2">{arrocesData.tradicion.mariscos.title}</h3>
+                    <p className="text-gray-600">{arrocesData.tradicion.mariscos.description}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -181,8 +265,8 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
                     <span className="text-white text-sm">✓</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-800 mb-2">Sofrito Mediterráneo</h3>
-                    <p className="text-gray-600">Base de tomate natural, ajo, cebolla y pimiento, cocinado lentamente para intensificar los sabores</p>
+                    <h3 className="font-semibold text-gray-800 mb-2">{arrocesData.tradicion.sofrito.title}</h3>
+                    <p className="text-gray-600">{arrocesData.tradicion.sofrito.description}</p>
                   </div>
                 </div>
               </div>
@@ -218,27 +302,27 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
             </div>
             <div className="order-1 lg:order-2">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                {arrocesData.experiencia?.title || 'Paellas Frente al Mar'}
+                {arrocesData.experiencia.title}
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                {arrocesData.experiencia?.description || 'Disfruta de nuestros arroces mediterráneos en nuestra terraza con vistas panorámicas al mar. Una experiencia gastronómica única en primera línea de playa.'}
+                {arrocesData.experiencia.description}
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">45min</div>
-                  <p className="text-sm text-gray-600">Tiempo de preparación</p>
+                  <div className="text-2xl font-bold text-blue-600 mb-2">{arrocesData.experiencia.stats.tiempo.value}</div>
+                  <p className="text-sm text-gray-600">{arrocesData.experiencia.stats.tiempo.label}</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">2-6</div>
-                  <p className="text-sm text-gray-600">Personas por paella</p>
+                  <div className="text-2xl font-bold text-blue-600 mb-2">{arrocesData.experiencia.stats.personas.value}</div>
+                  <p className="text-sm text-gray-600">{arrocesData.experiencia.stats.personas.label}</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">100%</div>
-                  <p className="text-sm text-gray-600">Ingredientes frescos</p>
+                  <div className="text-2xl font-bold text-blue-600 mb-2">{arrocesData.experiencia.stats.ingredientes.value}</div>
+                  <p className="text-sm text-gray-600">{arrocesData.experiencia.stats.ingredientes.label}</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 mb-2">1964</div>
-                  <p className="text-sm text-gray-600">Tradición familiar</p>
+                  <div className="text-2xl font-bold text-blue-600 mb-2">{arrocesData.experiencia.stats.tradicion.value}</div>
+                  <p className="text-sm text-gray-600">{arrocesData.experiencia.stats.tradicion.label}</p>
                 </div>
               </div>
             </div>
@@ -250,23 +334,23 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
       <AnimatedSection className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="max-w-4xl mx-auto text-center px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            {arrocesData.cta?.title || 'Reserva tu Mesa para Arroces'}
+            {arrocesData.cta.title}
           </h2>
           <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-            {arrocesData.cta?.description || 'Los mejores arroces mediterráneos de la Costa del Maresme te esperan en nuestra terraza frente al mar'}
+            {arrocesData.cta.description}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
-              onClick={() => window.open('https://wa.me/34972769012?text=' + encodeURIComponent('Hola! Me gustaría reservar mesa para arroces en Banys La Gavina'), '_blank')}
+              onClick={() => window.open('https://wa.me/34972769012?text=' + encodeURIComponent(arrocesData.whatsapp.message), '_blank')}
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              {(dict as Record<string, any>).common?.cta?.reserve_now || 'Reservar Ahora'}
+              {arrocesData.cta.buttons.reservar}
             </button>
             <Link 
               href={href('/contacto') as Route}
               className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white/30"
             >
-              {(dict as Record<string, any>).common?.cta?.more_info || 'Más Información'}
+              {arrocesData.cta.buttons.masInfo}
             </Link>
           </div>
         </div>

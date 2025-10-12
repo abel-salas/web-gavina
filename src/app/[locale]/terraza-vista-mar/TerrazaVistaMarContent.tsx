@@ -68,7 +68,7 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         </div>
-        
+
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-parisienne mb-6">
             {content.hero.title}
@@ -79,10 +79,10 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
           <p className="text-lg md:text-xl mb-12 max-w-3xl mx-auto">
             {content.hero.description}
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href={`/${locale}/menu` as Route}
+              href={`/${locale}/carta` as Route}
               className="bg-yellow-500 text-black font-bold py-4 px-8 rounded-full hover:bg-yellow-400 transition-colors text-lg"
             >
               {content.hero.cta_menu}
@@ -108,7 +108,7 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
               {content.vista.description}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <Image
@@ -152,7 +152,7 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
               <p className="text-xl text-gray-700 mb-8 leading-relaxed">
                 {content.ambiente.description}
               </p>
-              
+
               <div className="space-y-4">
                 {content.ambiente.features.map((feature: string, index: number) => (
                   <div key={index} className="flex items-center">
@@ -161,7 +161,7 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
                   </div>
                 ))}
               </div>
-              
+
               <div className="mt-8">
                 <Link
                   href={`/${locale}/contact` as Route}
@@ -171,7 +171,7 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
                 </Link>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-4">
               <Image
                 src="/images/gavina/ceremonia.jpg"
@@ -221,7 +221,7 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
               {content.ubicacion.description}
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-8">
             {content.ubicacion.ventajas.map((ventaja: Ventaja, index: number) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-md text-center">
@@ -247,7 +247,7 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             {content.cta.description}
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={`/${locale}/menu` as Route}

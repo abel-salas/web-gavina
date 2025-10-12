@@ -148,12 +148,12 @@ export default function CelebrationsContent({ content, locale }: CelebrationsCon
       {/* Hero Section con Slider */}
       <section className="relative w-full aspect-video overflow-hidden">
         {content.hero.heroSlider && content.hero.heroSlider.isActive && content.hero.heroSlider.images.length > 0 ? (
-          <CelebrationsSlider 
+          <CelebrationsSlider
             images={content.hero.heroSlider.images.map(img => ({
               caption: img.caption || undefined,
               alt: img.image.alt || '',
               image: img.image
-            }))} 
+            }))}
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-blue-900 via-blue-800 to-cyan-700 flex items-center justify-center">
@@ -175,16 +175,6 @@ export default function CelebrationsContent({ content, locale }: CelebrationsCon
             <h1 className="text-4xl md:text-6xl font-parisienne mb-4">
               {content.hero.title}
             </h1>
-            {content.hero.subtitle && (
-              <p className="text-xl md:text-2xl font-light mb-4 max-w-4xl mx-auto">
-                {content.hero.subtitle}
-              </p>
-            )}
-            {content.hero.description && (
-              <p className="text-lg opacity-90 max-w-3xl mx-auto">
-                {content.hero.description}
-              </p>
-            )}
           </div>
         </div>
 
@@ -197,10 +187,27 @@ export default function CelebrationsContent({ content, locale }: CelebrationsCon
       {/* Tipos de Celebraciones */}
       <section className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div>
+            <div className="text-center mb-16">
+              <h2 className="font-parisine text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                {content.celebrationTypesSection.title}
+              </h2>
+            </div>
+            <div className="text-center mb-16">
+              {content.hero.subtitle && (
+                <p className="text-xl md:text-2xl font-light mb-4 max-w-4xl mx-auto">
+                  {content.hero.subtitle}
+                </p>
+              )}
+              {content.hero.description && (
+                <p className="text-lg opacity-90 max-w-3xl mx-auto">
+                  {content.hero.description}
+                </p>
+              )}
+            </div>
+          </div>
           <div className="text-center mb-16">
-            <h2 className="font-parisine text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              {content.celebrationTypesSection.title}
-            </h2>
+
             {content.celebrationTypesSection.subtitle && (
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-4">
                 {content.celebrationTypesSection.subtitle}
@@ -217,11 +224,11 @@ export default function CelebrationsContent({ content, locale }: CelebrationsCon
             {content.celebrationTypesSection.celebrationTypes.map((type, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
                 <div className="text-center">
-                  <div 
+                  <div
                     className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6"
                     style={{ backgroundColor: type.iconColor ? `${type.iconColor}15` : '#f3f4f6' }}
                   >
-                    <span 
+                    <span
                       className="material-icons-outlined text-2xl"
                       style={{ color: type.iconColor || '#6b7280' }}
                     >
@@ -405,18 +412,17 @@ export default function CelebrationsContent({ content, locale }: CelebrationsCon
                   const href = button.href.startsWith('/') && !button.href.startsWith(`/${locale}`)
                     ? `/${locale}${button.href}`
                     : button.href;
-                  
+
                   return (
                     <a
                       key={index}
                       href={href}
-                      className={`inline-flex items-center px-8 py-4 rounded-full font-semibold transition-all ${
-                        button.variant === 'outline'
-                          ? 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600'
-                          : button.variant === 'secondary'
+                      className={`inline-flex items-center px-8 py-4 rounded-full font-semibold transition-all ${button.variant === 'outline'
+                        ? 'bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600'
+                        : button.variant === 'secondary'
                           ? 'bg-gray-200 text-gray-900 hover:bg-gray-300'
                           : 'bg-white text-blue-600 hover:bg-gray-100'
-                      }`}
+                        }`}
                     >
                       {button.icon && (
                         <span className="material-icons-outlined mr-2">
