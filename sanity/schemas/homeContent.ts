@@ -1,9 +1,10 @@
-import { defineField, defineType } from 'sanity'
+import { defineField } from 'sanity'
 
-export const homeContent = defineType({
+export const homeContent = {
   name: 'homeContent',
-  title: 'Página Principal',
+  title: 'Página HOME',
   type: 'document',
+  icon: () => '🏠',
   fields: [
     defineField({
       name: 'sectionId',
@@ -367,7 +368,7 @@ export const homeContent = defineType({
       order: 'order',
       isActive: 'isActive',
     },
-    prepare({ title, order, isActive }) {
+    prepare({ title, order, isActive }: { title: string, order: number, isActive: boolean }) {
       const sectionNames = {
         hero: 'Encabezado Principal',
         about: 'Sobre Nosotros',
@@ -381,4 +382,4 @@ export const homeContent = defineType({
       }
     },
   },
-})
+}

@@ -2,6 +2,308 @@
 import { client } from './client'
 import { MenuCategory, Dictionary } from '../src/app/lib/dictionary.models'
 
+// Query para obtener horarios del restaurant por locale
+export const hoursContentQuery = `*[_type == "hoursContent" && locale == $locale && isActive == true][0] {
+  _id,
+  locale,
+  title,
+  subtitle,
+  operatingDays,
+  operatingHours,
+  specialHours[] {
+    title,
+    description,
+    dates,
+    lunch,
+    dinner,
+    isActive
+  },
+  reservationNote,
+  isActive,
+  lastUpdated
+}`
+
+// Query para obtener contenido de contacto
+export const contactContentQuery = `*[_type == "contactContent" && locale == $locale][0] {
+  _id,
+  locale,
+  hero {
+    badge,
+    title,
+    subtitle
+  },
+  reservationCta {
+    title,
+    description,
+    buttonText
+  },
+  celebrationsSection {
+    title,
+    subtitle,
+    description,
+    celebrationTypes[] {
+      icon,
+      iconColor,
+      title,
+      features[]
+    },
+    ctaText
+  },
+  contactInfo {
+    title,
+    subtitle,
+    description,
+    contactMethods[] {
+      type,
+      icon,
+      label,
+      value,
+      link
+    }
+  },
+  scheduleSection {
+    title,
+    subtitle,
+    description,
+    scheduleNote,
+    schedules[] {
+      period,
+      days,
+      hours,
+      note
+    }
+  },
+  locationSection {
+    title,
+    subtitle,
+    address,
+    mapDescription,
+    transportInfo[] {
+      type,
+      icon,
+      title,
+      description
+    }
+  },
+  contactForm {
+    title,
+    description,
+    successMessage,
+    errorMessage
+  },
+  finalCta {
+    title,
+    description,
+    buttons[] {
+      text,
+      href,
+      variant,
+      icon
+    }
+  }
+}`
+
+// Query para obtener contenido de celebraciones
+// Query para configuración global de celebraciones
+export const celebrationsGlobalConfigQuery = `*[_type == "celebrationsGlobalConfig" && isActive == true][0] {
+  _id,
+  heroSlider-> {
+    _id,
+    name,
+    title,
+    isActive,
+    autoplaySpeed,
+    showOnMobile,
+    images[] {
+      image {
+        asset-> {
+          _id,
+          url,
+          metadata {
+            dimensions,
+            lqip
+          }
+        },
+        alt
+      },
+      caption
+    }
+  }
+}`;
+
+export const celebrationsContentQuery = `*[_type == "celebrationsContent" && locale == $locale][0] {
+  _id,
+  locale,
+  hero {
+    badge,
+    title,
+    subtitle,
+    description,
+    heroSlider-> {
+      _id,
+      name,
+      title,
+      isActive,
+      autoplaySpeed,
+      showOnMobile,
+      images[] {
+        image {
+          asset-> {
+            _id,
+            url,
+            metadata {
+              dimensions,
+              lqip
+            }
+          },
+          alt
+        },
+        caption
+      }
+    }
+  },
+  celebrationTypesSection {
+    title,
+    subtitle,
+    description,
+    celebrationTypes[] {
+      icon,
+      iconColor,
+      title,
+      description,
+      capacity,
+      features[]
+    }
+  },
+  capacitySection {
+    title,
+    subtitle,
+    description,
+    spaces[] {
+      name,
+      capacity,
+      description,
+      features[],
+      icon
+    }
+  },
+  servicesSection {
+    title,
+    subtitle,
+    description,
+    services[] {
+      icon,
+      title,
+      description,
+      included
+    }
+  },
+  whyChooseSection {
+    title,
+    subtitle,
+    description,
+    features[] {
+      icon,
+      title,
+      description
+    },
+    highlightedCelebrations {
+      title,
+      celebrations[] {
+        icon,
+        title,
+        description
+      }
+    }
+  },
+  contactCta {
+    title,
+    description,
+    buttons[] {
+      text,
+      href,
+      variant,
+      icon
+    }
+  }
+}`
+
+// Query para obtener contenido de reservas
+export const reservasContentQuery = `*[_type == "reservasContent" && locale == $locale][0] {
+  _id,
+  locale,
+  hero {
+    title,
+    subtitle,
+    description
+  },
+  reservationMethods {
+    title,
+    subtitle,
+    telefono {
+      title,
+      description
+    },
+    whatsapp {
+      title,
+      description
+    },
+    formulario {
+      title,
+      description
+    }
+  },
+  advantages {
+    title,
+    items[]
+  },
+  schedule {
+    title,
+    description,
+    horariosSection {
+      title,
+      verano {
+        label,
+        horario
+      },
+      invierno {
+        label,
+        horario
+      },
+      reservaNote
+    },
+    musicSection {
+      title,
+      verano {
+        title,
+        description,
+        subtitle
+      },
+      finesdeSemana {
+        title,
+        description,
+        subtitle
+      },
+      restaurantNote
+    },
+    especialTitle,
+    especial
+  },
+  finalCta {
+    title,
+    description,
+    buttons {
+      callButton,
+      menuButton
+    }
+  },
+  seo {
+    title,
+    description,
+    keywords
+  }
+}`
+
 // Query para obtener elementos del menú por categoría
 export async function getMenuItemsByCategory(category: string, locale: string = 'es') {
   const query = `*[_type == "menuItem" && category == $category && isActive == true] | order(order asc) {
@@ -231,3 +533,82 @@ function getCategorySubtitle(category: string, locale: string): string {
   
   return subtitles[category]?.[locale] || subtitles[category]?.es || ''
 }
+
+// Query para obtener contenido de HOME por locale (nuevo patrón)
+export const homeContentNewQuery = `*[_type == "homeContentNew" && locale == $locale && isActive == true][0] {
+  _id,
+  locale,
+  hero {
+    title,
+    subtitle,
+    description,
+    ctaText,
+    ctaSecondaryText,
+    backgroundImage {
+      asset-> {
+        url,
+        _id
+      },
+      alt
+    }
+  },
+  aboutSection {
+    title,
+    subtitle,
+    description,
+    backgroundImage {
+      asset-> {
+        url,
+        _id
+      },
+      alt
+    },
+    features[] {
+      icon,
+      title,
+      description
+    }
+  },
+  specialtiesSection {
+    title,
+    subtitle,
+    specialtyItems[] {
+      name,
+      description,
+      price,
+      category,
+      image {
+        asset-> {
+          url,
+          _id
+        },
+        alt
+      }
+    },
+    viewMenuText
+  },
+  locationSection {
+    title,
+    subtitle,
+    description,
+    backgroundImage {
+      asset-> {
+        url,
+        _id
+      },
+      alt
+    }
+  },
+  contactSection {
+    title,
+    subtitle,
+    ctaText
+  },
+  seo {
+    metaTitle,
+    metaDescription,
+    keywords
+  },
+  isActive,
+  lastUpdated
+}`

@@ -1,4 +1,4 @@
-import { getDictionary } from '@/app/lib/getDictionary';
+import { getLocalizedData } from '@/app/lib/localization';
 import ArrocesContent from './ArrocesContent';
 import { generatePageMetadata } from '@/seo/generators/metadata';
 import { generateRestaurantJsonLd } from '@/seo/generators/json-ld';
@@ -6,16 +6,16 @@ import { generateRestaurantJsonLd } from '@/seo/generators/json-ld';
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   return generatePageMetadata({ 
-    locale: locale as any, 
-    page: 'arroces' as any 
+    locale: locale as 'es' | 'en' | 'ca' | 'nl' | 'de', 
+    page: 'arroces' 
   });
 }
 
 export default async function ArrocesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  const dict = await getDictionary(locale);
+  const { dict } = getLocalizedData(locale);
 
-  const jsonLD = generateRestaurantJsonLd(locale as any);
+  const jsonLD = generateRestaurantJsonLd(locale as 'es' | 'en' | 'ca' | 'nl' | 'de');
 
   return (
     <>

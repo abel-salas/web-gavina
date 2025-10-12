@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '../../components/animations/AnimatedSection';
 import { useState, useEffect } from 'react';
+import { Dictionary } from '@/app/lib/dictionary.models';
 
 // Interfaces para el contenido JSON
 interface SpecialtyItem {
@@ -38,7 +39,7 @@ interface SpecialtiesData {
 
 interface SpecialtiesContentProps {
   locale: string;
-  dict: Record<string, unknown>;
+  dict: Dictionary;
 }
 
 export default function SpecialtiesContent({ locale }: SpecialtiesContentProps) {

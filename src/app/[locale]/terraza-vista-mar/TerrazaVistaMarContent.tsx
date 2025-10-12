@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Route } from 'next';
 
 interface Benefit {
   icon: string;
@@ -81,13 +82,13 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href={`/${locale}/menu`}
+              href={`/${locale}/menu` as Route}
               className="bg-yellow-500 text-black font-bold py-4 px-8 rounded-full hover:bg-yellow-400 transition-colors text-lg"
             >
               {content.hero.cta_menu}
             </Link>
             <Link
-              href={`/${locale}/contact`}
+              href={`/${locale}/contact` as Route}
               className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg"
             >
               {content.hero.cta_reserva}
@@ -163,7 +164,7 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
               
               <div className="mt-8">
                 <Link
-                  href={`/${locale}/contact`}
+                  href={`/${locale}/contact` as Route}
                   className="inline-block bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition-colors"
                 >
                   {content.ambiente.cta}
@@ -249,13 +250,13 @@ export default function TerrazaVistaMarContent({ locale, content }: TerrazaVista
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href={`/${locale}/menu`}
+              href={`/${locale}/menu` as Route}
               className="bg-yellow-500 text-black font-bold py-4 px-8 rounded-full hover:bg-yellow-400 transition-colors text-lg"
             >
               {content.cta.cta_menu}
             </Link>
             <Link
-              href={`/${locale}/contact`}
+              href={`/${locale}/contact` as Route}
               className="bg-transparent border-2 border-white text-white font-bold py-4 px-8 rounded-full hover:bg-white hover:text-gray-900 transition-colors text-lg"
             >
               {content.cta.cta_reserva}

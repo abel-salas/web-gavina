@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { generatePageMetadata, getValidLocale } from '@/seo';
+import { client } from '../../../../sanity/client';
+import { reservasContentQuery } from '../../../../sanity/queries';
 import ReservasContent from './ReservasContent';
 
 export async function generateMetadata({
@@ -10,23 +12,23 @@ export async function generateMetadata({
     const { locale } = await params;
     const validLocale = getValidLocale(locale);
 
-    // Cargar el SEO desde el JSON de traducciones
-    let seoData;
+    // Obtener SEO desde Sanity con manejo de errores
+    let reservasData = null;
+    let seoData = null;
+
     try {
-        const data = await import(`../../translations/reservas/${validLocale}.json`);
-        seoData = data.default.seo;
-    } catch {
-        // Fallback a español si no existe el idioma
-        const fallbackData = await import(`../../translations/reservas/es.json`);
-        seoData = fallbackData.default.seo;
+        reservasData = await client.fetch(reservasContentQuery, { locale: validLocale });
+        seoData = reservasData?.seo;
+    } catch (error) {
+        console.warn('⚠️ No se pudo obtener SEO de reservas desde Sanity:', error);
     }
 
     return generatePageMetadata({
         locale: validLocale,
         page: 'reservas',
         path: '/reservas',
-        customTitle: seoData.title,
-        customDescription: seoData.description
+        customTitle: seoData?.title,
+        customDescription: seoData?.description
     });
 }
 
@@ -38,18 +40,14 @@ export default async function ReservasPage({
     const { locale } = await params;
     const validLocale = getValidLocale(locale);
 
-    // Cargar contenido específico de reservas
-    let reservasContent;
+    // Obtener contenido desde Sanity con manejo de errores
+    let reservasContent = null;
+
     try {
-        const data = await import(`../../translations/reservas/${validLocale}.json`);
-        reservasContent = data.default;
-    } catch {
-        // Fallback a español si no existe el idioma
-        const fallbackData = await import(`../../translations/reservas/es.json`);
-        reservasContent = fallbackData.default;
+        reservasContent = await client.fetch(reservasContentQuery, { locale: validLocale });
+    } catch (error) {
+        console.warn('⚠️ No se pudo obtener contenido de reservas desde Sanity:', error);
     }
 
-    return (
-        <ReservasContent locale={validLocale} content={reservasContent} />
-    );
+    return <ReservasContent locale={validLocale} content={reservasContent} />;
 }

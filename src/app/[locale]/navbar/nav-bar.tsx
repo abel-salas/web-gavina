@@ -11,10 +11,7 @@ export default async function Navbar({ params }: { params: Promise<{ locale: str
   const navItems = [
     { href: href('/'), label: dict.nav.home },
     { href: href('/carta'), label: dict.nav.menu },
-    { href: href('/especialidades'), label: (dict.nav as any).especialidades },
-    { href: href('/terraza-vista-mar'), label: (dict.nav as any).terraza },
-    { href: href('/arroces'), label: (dict.nav as any).arroces },
-    { href: href('/reservas'), label: (dict.nav as any).reservas },
+    { href: href('/reservas'), label: dict.nav.reservas || 'Reservas' },
     { href: href('/celebraciones'), label: dict.nav.celebrations },
     { href: href('/contacto'), label: dict.nav.contacto || 'Contacto' },
     { href: href('/historia'), label: dict.nav.history },

@@ -17,7 +17,8 @@
         "home": "Inicio",
         "menu": "Carta",
         "especialidades": "Especialidades",
-        "terraza": "Terraza Vista Mar",
+        "terraza": "Terraza",
+        "paellas": "Paellas",
         "arroces": "Arroces",
         "reservas": "Reservas",
         "celebrations": "Celebraciones",
@@ -286,6 +287,14 @@
             "contact_button": "Reservar Mesa"
         }
     },
+    "common": {
+        "cta": {
+            "reserve_now": "Reservar Ahora",
+            "more_info": "Más Información",
+            "whatsapp_reserve": "Reservar por WhatsApp",
+            "contact": "Contactar"
+        }
+    },
     "privacy": {
         "title": "Política de Privacidad",
         "metaTitle": "Política de Privacidad - Restaurante Banys La Gavina",
@@ -423,29 +432,6 @@
         },
         "last_updated": "Última actualización:",
         "date": "8 de octubre de 2025"
-    },
-    "pages": {
-        "arroces": {
-            "hero": {
-                "title": "Arroces Mediterráneos en Calella",
-                "subtitle": "Tradición catalana frente al mar"
-            },
-            "especialidades": {
-                "title": "Nuestros Arroces Mediterráneos",
-                "description": "Cada arroz es una obra de arte culinaria preparada con ingredientes frescos del Mediterráneo y la tradición gastronómica catalana"
-            },
-            "tradicion": {
-                "title": "Tradición Mediterránea"
-            },
-            "experiencia": {
-                "title": "Paellas Frente al Mar",
-                "description": "Disfruta de nuestros arroces mediterráneos en nuestra terraza con vistas panorámicas al mar. Una experiencia gastronómica única en primera línea de playa."
-            },
-            "cta": {
-                "title": "Reserva tu Mesa para Arroces",
-                "description": "Los mejores arroces mediterráneos de la Costa del Maresme te esperan en nuestra terraza frente al mar"
-            }
-        }
     },
     "footer": {
         "description": "Restaurante Banys La Gavina, tradición familiar desde 1958 en primera línea de mar en Calella.",

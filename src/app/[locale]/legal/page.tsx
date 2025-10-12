@@ -4,18 +4,19 @@ import { CONTACT_INFO } from '../../lib/contact-info';
 import type { Metadata } from 'next';
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const dict = await getDictionary(params.locale);
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
   
   return {
     title: dict.legal?.metaTitle || `Legal Notice - Restaurant Banys La Gavina`,
     description: dict.legal?.metaDescription || 'Legal notice of Restaurant Banys La Gavina website',
     robots: 'index, follow',
     alternates: {
-      canonical: `https://www.banyslagavina.cat/${params.locale}/legal`,
+      canonical: `https://www.banyslagavina.cat/${locale}/legal`,
       languages: {
         'es': 'https://www.banyslagavina.cat/es/legal',
         'en': 'https://www.banyslagavina.cat/en/legal',
@@ -28,7 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function LegalNoticePage({ params }: Props) {
-  const dict = await getDictionary(params.locale);
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
   
   if (!dict.legal) {
     return (
@@ -85,7 +87,7 @@ export default async function LegalNoticePage({ params }: Props) {
             </h2>
             <p className="text-gray-700 leading-relaxed">
               {dict.legal.sections.data_protection.content}{' '}
-              <a href={`/${params.locale}/privacy`} className="text-blue-600 hover:text-blue-800 underline">
+              <a href={`/${locale}/privacy`} className="text-blue-600 hover:text-blue-800 underline">
                 {dict.footer?.privacy_policy || 'Privacy Policy'}
               </a>.
             </p>

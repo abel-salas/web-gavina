@@ -2,13 +2,24 @@
 
 import { AnimatedSection } from '@/app/components/animations/AnimatedSection';
 import Link from 'next/link';
+import Image from 'next/image';
+import type { Route } from 'next';
+import { useParams } from 'next/navigation';
+
+import { Dictionary } from '@/app/lib/dictionary.models';
 
 interface ArrocesContentProps {
-  dict: any;
+  dict: Dictionary;
 }
 
 export default function ArrocesContent({ dict }: ArrocesContentProps) {
-  const arrocesData = dict.pages?.arroces || {};
+  const params = useParams();
+  const locale = params.locale as string;
+  
+  const href = (path: string): string => {
+    return `/${locale}${path}`;
+  };
+  const arrocesData = (dict as Record<string, any>)?.pages?.arroces || {};
 
   return (
     <main className="min-h-screen">
@@ -26,23 +37,9 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
             {arrocesData.hero?.title || 'Arroces Mediterráneos en Calella'}
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90 leading-relaxed">
+          <p className="text-xl md:text-2xl opacity-90 leading-relaxed">
             {arrocesData.hero?.subtitle || 'Tradición catalana frente al mar'}
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => window.open('https://wa.me/34972769012?text=' + encodeURIComponent('Hola! Me gustaría reservar mesa para arroces en Banys La Gavina'), '_blank')}
-              className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Reservar Mesa para Arroces
-            </button>
-            <Link 
-              href="/carta"
-              className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white/30"
-            >
-              Ver Carta Completa
-            </Link>
-          </div>
         </div>
       </AnimatedSection>
 
@@ -188,22 +185,16 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
                     <p className="text-gray-600">Base de tomate natural, ajo, cebolla y pimiento, cocinado lentamente para intensificar los sabores</p>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-800 mb-2">Fuego de Leña</h3>
-                    <p className="text-gray-600">Cocinados en paelleras de hierro sobre fuego de leña para ese sabor ahumado inconfundible</p>
-                  </div>
-                </div>
               </div>
             </div>
             <div className="relative">
-              <img 
-                src="/images/menu/fuego.jpeg" 
-                alt="Paella cocinándose al fuego de leña"
+              <Image 
+                src="/images/arroz_negro.jpg" 
+                alt="Paella arroz negro"
+                width={600}
+                height={400}
                 className="rounded-2xl shadow-lg w-full h-[400px] object-cover"
+                priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl" />
             </div>
@@ -216,9 +207,11 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 relative">
-              <img 
+              <Image 
                 src="/images/gavina/terraza.jpg" 
                 alt="Terraza con vistas al mar Mediterráneo"
+                width={600}
+                height={400}
                 className="rounded-2xl shadow-lg w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 to-transparent rounded-2xl" />
@@ -267,13 +260,13 @@ export default function ArrocesContent({ dict }: ArrocesContentProps) {
               onClick={() => window.open('https://wa.me/34972769012?text=' + encodeURIComponent('Hola! Me gustaría reservar mesa para arroces en Banys La Gavina'), '_blank')}
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
-              Reservar Ahora
+              {(dict as Record<string, any>).common?.cta?.reserve_now || 'Reservar Ahora'}
             </button>
             <Link 
-              href="/contacto"
+              href={href('/contacto') as Route}
               className="bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 border border-white/30"
             >
-              Más Información
+              {(dict as Record<string, any>).common?.cta?.more_info || 'Más Información'}
             </Link>
           </div>
         </div>
