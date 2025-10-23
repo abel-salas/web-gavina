@@ -113,6 +113,72 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
           <div className="grid lg:grid-cols-2 gap-8">
             <div className='space-y-4'>
               <Image
+                src={'/images/gavina/gavina_1964.jpg'}
+                alt='La gavina restaurant historia'
+                width={800}
+                height={600}
+                className="w-full h-auto rounded-lg shadow-md"
+                quality={90}
+              />
+            </div>
+
+            <div className="space-y-4">
+              <article className="bg-white p-8 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  {dict.history.sections.origin.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {dict.history.sections.origin.content}
+                </p>
+              </article>
+            </div>
+
+            <div className='space-y-4'>
+              <Image
+                src={'/images/gavina/gavina_1964_1.jpg'}
+                alt='La Gavina construcción 1964'
+                width={800}
+                height={600}
+                className="w-full h-auto rounded-lg shadow-md"
+                quality={90}
+              />
+            </div>
+
+            <div className="space-y-4">
+              <article className="bg-white p-8 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  {dict.history.sections.calella_context.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {dict.history.sections.calella_context.content}
+                </p>
+              </article>
+            </div>
+
+            <div className='space-y-4'>
+              <Image
+                src={'/images/gavina/calella_1970.jpg'}
+                alt='La gavina calella historia'
+                width={800}
+                height={600}
+                className="w-full h-auto rounded-lg shadow-md"
+                quality={90}
+              />
+            </div>
+
+            <div className="space-y-4">
+              <article className="bg-white p-8 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  {dict.history.sections.golden_era.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {dict.history.sections.golden_era.content}
+                </p>
+              </article>
+            </div>
+
+            <div className='space-y-4'>
+              <Image
                 src={'/images/gavina/barques.jpg'}
                 alt='Barques a la platja de Calella'
                 width={800}
@@ -122,20 +188,38 @@ export default async function HistoryPage({ params }: { params: Promise<{ locale
               />
             </div>
 
-            {Object.entries(dict.history.sections).map(([key, section]) => {
-              return (
-                <div key={key} className="space-y-4">
-                  <article className="bg-white p-8 rounded-lg shadow-md">
-                    <h3 className="text-2xl font-bold mb-4 text-gray-900">
-                      {section.title}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      {section.content}
-                    </p>
-                  </article>
-                </div>
-              );
-            })}
+            <div className="space-y-4">
+              <article className="bg-white p-8 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  {dict.history.sections.tradition.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {dict.history.sections.tradition.content}
+                </p>
+              </article>
+            </div>
+
+            <div className="space-y-4">
+              <article className="bg-white p-8 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  {dict.history.sections.calella_cinema.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {dict.history.sections.calella_cinema.content}
+                </p>
+              </article>
+            </div>
+
+            <div className="space-y-4">
+              <article className="bg-white p-8 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold mb-4 text-gray-900">
+                  {dict.history.sections.present.title}
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  {dict.history.sections.present.content}
+                </p>
+              </article>
+            </div>
 
             <div className='space-y-4'>
               <Image
