@@ -210,7 +210,6 @@ export default async function HomeContent({ locale }: HomeContentProps) {
           description={homeData.locationSection.description || ''}
           backgroundImage={homeData.locationSection.backgroundImage?.asset?.url || '/images/home/gavina_frontal.jpg'}
           backgroundAlt={homeData.locationSection.backgroundImage?.alt || 'Ubicación privilegiada'}
-          useContactInfo={true}
         />
       )}
 
