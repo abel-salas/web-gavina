@@ -139,7 +139,8 @@ export default async function LocaleHomePage({ params }: { params: Promise<{ loc
                 description={locationData ? getLocalizedText(locationData.locationDescription, locale, dict.sections?.location?.description || '') : dict.sections?.location?.description || ''}
                 backgroundImage={locationBackgroundImage}
                 backgroundAlt={locationBackgroundAlt}
-                useContactInfo={true}
+                descript_seo_1={locationData ? getLocalizedText(locationData.descript_seo_1, locale, dict.sections?.location?.descript_seo_1 || '') : dict.sections?.location?.descript_seo_1 || ''}
+                descript_seo={locationData ? getLocalizedText(locationData.descript_seo, locale, dict.sections?.location?.descript_seo || '') : dict.sections?.location?.descript_seo || ''}
             />
 
             {/* Sección 5: Galería

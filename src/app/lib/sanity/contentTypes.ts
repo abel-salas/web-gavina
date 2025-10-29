@@ -62,6 +62,8 @@ export interface HomeContent {
   locationSubtitle?: MultiLanguageText;
   locationDescription?: MultiLanguageText;
   locationImage?: SanityImage;
+  descript_seo_1?: MultiLanguageText;
+  descript_seo?: MultiLanguageText;
 }
 
 // Item de especialidad

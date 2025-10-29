@@ -7,6 +7,7 @@ export interface Dictionary {
     };
     contact_section?: {
         title: string;
+        title2?: string;
         subtitle: string;
         cta: string;
     };
@@ -148,6 +149,8 @@ export interface Dictionary {
             title: string;
             subtitle: string;
             description: string;
+            descript_seo_1?: string;
+            descript_seo?: string;
         };
         services?: {
             title: string;

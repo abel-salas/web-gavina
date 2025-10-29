@@ -8,12 +8,21 @@ interface LocationSectionProps {
   title: string;
   backgroundImage?: string;
   backgroundAlt?: string;
-  useContactInfo?: boolean;
   subtitle?: string;
   description?: string;
+  descript_seo_1?: string;
+  descript_seo?: string;
 }
 
-export function LocationSection({ title, backgroundImage, backgroundAlt, useContactInfo: _useContactInfo = false, subtitle, description }: LocationSectionProps) {
+export function LocationSection({
+  title,
+  backgroundImage,
+  backgroundAlt,
+  subtitle,
+  description,
+  descript_seo_1,
+  descript_seo
+}: LocationSectionProps) {
   return (
     <section className="location-section py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -26,6 +35,16 @@ export function LocationSection({ title, backgroundImage, backgroundAlt, useCont
               {subtitle && (
                 <p className="text-xl text-gray-600 mb-4 font-medium">
                   {subtitle}
+                </p>
+              )}
+              {descript_seo && (
+                <p className="text-xl text-gray-600 mb-4 font-medium">
+                  {descript_seo}
+                </p>
+              )}
+              {descript_seo_1 && (
+                <p className="text-xl text-gray-600 mb-4 font-medium">
+                  {descript_seo_1}
                 </p>
               )}
             </AnimatedSection>

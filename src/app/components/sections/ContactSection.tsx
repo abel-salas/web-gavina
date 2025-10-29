@@ -15,6 +15,9 @@ export function ContactSection({ locale, contactHref }: { locale: string; contac
         <AnimatedSection direction="down">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {dict.contact_section?.title}
+            {dict.contact_section?.title2 && (
+              <span>{dict.contact_section?.title2}</span>
+            )}
           </h2>
         </AnimatedSection>
 

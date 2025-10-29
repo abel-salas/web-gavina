@@ -1,7 +1,7 @@
 {
     "contact_section": {
         "title": "Reserva Tu Experiencia",
-        "subtitle": "¿Listo para vivir una experiencia gastronómica única? Reserva tu mesa y déjanos sorprenderte.",
+        "subtitle": "¿Listo para vivir una experiencia gastronómica única en uno de los mejores restaurantes de Calella? Reserva tu mesa y déjanos sorprenderte.",
         "cta": "Reservar Mesa"
     },
     "contact_info": {
@@ -183,7 +183,9 @@
         "location": {
             "title": "Ubicación Privilegiada en Calella",
             "subtitle": "Primera línea de playa del Mediterráneo",
-            "description": "Restaurante Banys La Gavina está situado en la Platja Gran de Calella, en primera línea de mar con vistas panorámicas al Mediterráneo. A 800m de la Estación RENFE Calella y con parking gratuito cerca, ofrecemos fácil acceso tanto para turistas de Barcelona como locales. Nuestra terraza frente al mar es el escenario perfecto para disfrutar de paellas valencianas, mariscos frescos de la Costa Brava y pescado de lonja en un ambiente único mediterráneo."
+            "description": "Restaurante Banys La Gavina está situado en la Platja Gran de Calella, en primera línea de mar, con vistas panorámicas al Mediterráneo. A solo 800 m de la estación RENFE Calella y con parking gratuito cercano, ofrecemos un acceso cómodo tanto para visitantes de Barcelona como para locales.",
+            "descript_seo": "Si estás buscando restaurantes en Calella de Mar donde combinar cocina mediterránea con ubicación excepcional, este es tu lugar. Nuestra terraza frente al mar es el escenario perfecto para disfrutar de auténticas paellas valencianas, mariscos frescos de la Costa Brava y pescado de lonja, todo en un entorno único y relajado.",
+            "descript_seo_1": "Somos una referencia entre los restaurantes Calella por nuestra cocina de calidad, servicio cercano y ambiente junto al mar."
         },
         "services": {
             "title": "Nuestros Servicios",
