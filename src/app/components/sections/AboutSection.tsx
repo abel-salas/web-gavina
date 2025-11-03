@@ -11,6 +11,7 @@ interface AboutFeature {
 }
 
 interface AboutSectionProps {
+  titleSeo: string;
   title: string;
   subtitle?: string;
   description: string;
@@ -20,7 +21,7 @@ interface AboutSectionProps {
   defaultFeatures?: AboutFeature[];
 }
 
-export function AboutSection({ title, subtitle, description, backgroundImage, backgroundAlt, features, defaultFeatures }: AboutSectionProps) {
+export function AboutSection({ titleSeo, title, subtitle, description, backgroundImage, backgroundAlt, features, defaultFeatures }: AboutSectionProps) {
   // Usar features proporcionadas, o defaultFeatures, o array vacío como último recurso
   const displayFeatures = features && features.length > 0
     ? features
@@ -37,6 +38,7 @@ export function AboutSection({ title, subtitle, description, backgroundImage, ba
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
               {title}
             </h2>
+            <h1 className="text-sm text-gray-500 mb-4">{titleSeo}</h1>
             {subtitle && (
               <p className="text-xl text-blue-600 mb-4 font-medium">
                 {subtitle}

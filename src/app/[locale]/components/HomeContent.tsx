@@ -30,6 +30,7 @@ interface HomeContentData {
     };
   };
   aboutSection: {
+    titleSeo?: string;
     title?: string;
     subtitle?: string;
     description?: string;
@@ -171,6 +172,7 @@ export default async function HomeContent({ locale }: HomeContentProps) {
       {/* Sección 2: Sobre Nosotros */}
       {homeData.aboutSection && (
         <AboutSection
+          titleSeo={homeData.aboutSection.titleSeo || ''}
           title={homeData.aboutSection.title || ''}
           subtitle={homeData.aboutSection.subtitle || ''}
           description={homeData.aboutSection.description || ''}

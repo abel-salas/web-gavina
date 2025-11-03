@@ -122,8 +122,9 @@
     "sections": {
         "about": {
             "title": "Unsere Geschichte",
+            "titleSeo": "Restaurant Banys La Gavina ist seit über 65 Jahren ein gastronomisches Wahrzeichen in Calella.",
             "subtitle": "Familientradition seit 1958 direkt am Meer",
-            "description": "Restaurant Banys La Gavina ist seit über 65 Jahren ein gastronomisches Wahrzeichen in Calella. Direkt am Platja Gran gegenüber dem Renfe-Bahnhof gelegen, sind wir Spezialisten für authentische Valencianer Paellas, frische Meeresfrüchte der Costa Brava, Marktfisch und gegrilltes Fleisch. Unsere traditionelle katalanische Mittelmeerküche kombiniert erstklassige lokale Produkte mit uralten Techniken und bietet ein einzigartiges gastronomisches Erlebnis mit Panoramablick auf das Mittelmeer."
+            "description": "Direkt am Platja Gran gegenüber dem Renfe-Bahnhof gelegen, sind wir Spezialisten für authentische Valencianer Paellas, frische Meeresfrüchte der Costa Brava, Marktfisch und gegrilltes Fleisch. Unsere traditionelle katalanische Mittelmeerküche kombiniert erstklassige lokale Produkte mit uralten Techniken und bietet ein einzigartiges gastronomisches Erlebnis mit Panoramablick auf das Mittelmeer."
         },
         "specialties": {
             "title": "Unsere Spezialitäten",

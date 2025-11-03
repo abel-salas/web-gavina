@@ -140,7 +140,9 @@ export default function MenuContent({ dict, menuData, menuContent }: MenuContent
                                                         </span>
                                                     )}
                                                     {item.image && (
-                                                        <span className="ml-2 text-blue-500 text-sm hover:text-blue-700 transition-colors" title="Ver imagen del plato">📸</span>
+                                                        <span className="ml-2 text-blue-500 hover:text-blue-700 transition-colors inline-flex items-center align-middle" title="Ver imagen del plato">
+                                                            <span className="material-icons-outlined text-[16px] leading-none">photo_camera</span>
+                                                        </span>
                                                     )}
                                                 </h3>
                                                 <span className="text-blue-600 font-semibold ml-4">{item.price}</span>

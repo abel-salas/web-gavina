@@ -32,7 +32,7 @@ export function HomeMainSection({ subtitle, description, ctaText, ctaHref, backg
             quality={90}
           />
           {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/30" />
         </div>
       ) : (
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-gray-900 to-black">

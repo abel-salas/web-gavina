@@ -133,6 +133,7 @@ export interface Dictionary {
     sections?: {
         about?: {
             title: string;
+            titleSeo?: string;
             subtitle: string;
             description: string;
         };
