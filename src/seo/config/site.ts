@@ -22,7 +22,7 @@ export const SEO_CONFIG = {
         cuisine: 'Mediterranean',
         priceRange: '€€',
         phone: '+34 937 69 25 39',
-        mobile: '+34 695 349 307',
+        mobile: '+34 692 473 865',
         email: 'info@banyslagavina.cat',
         address: {
             street: 'Paseo Manuel Puigvert s/n',
