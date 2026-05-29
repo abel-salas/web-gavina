@@ -9,7 +9,7 @@
         "mobile": "692 473 865",
         "address": "Paseo Manuel Puigvert s/n, Calella, Barcelona",
         "location": "Platja Gran de Calella, frente a la Estación de Renfe",
-        "parking": "Dos aparcamientos gratuitos",
+        "parking": "Consulta de acceso por telefono",
         "facebook": "Facebook",
         "instagram": "Instagram"
     },
@@ -30,7 +30,7 @@
         "subtitle": "Desde 1958 en primera línea de mar",
         "description": "Situados en la Playa de Calella, somos especialistas en arroces, mariscos, pescado fresco y carnes selectas. Un marco incomparable frente al mar Mediterráneo.",
         "metaTitle": "Restaurante Banys La Gavina - Desde 1958 en Calella | Arroces y Mariscos",
-        "metaDescription": "Restaurante tradicional frente al mar en Calella desde 1958. Especialistas en arroces, mariscos, pescado fresco y carnes selectas. Terraza con vistas al mar y aparcamiento gratuito.",
+        "metaDescription": "Restaurante tradicional frente al mar en Calella desde 1958. Especialistas en arroces, mariscos, pescado fresco y carnes selectas. Terraza con vistas al mar.",
         "cta": "Ver Carta",
         "cta_secondary": "Reservar Mesa"
     },
@@ -74,7 +74,7 @@
         "subtitle": "Restaurante frente al mar en Calella - Mesa con vistas al Mediterráneo",
         "description": "Reserva tu mesa en el Restaurant Banys La Gavina y disfruta de auténtica cocina mediterránea frente al mar. Desde 1958 en primera línea de playa en Calella, Barcelona.",
         "metaTitle": "Reservas Restaurante Banys La Gavina Calella | Mesa Frente al Mar | 937 69 25 39",
-        "metaDescription": "Reserva mesa en Restaurant Banys La Gavina Calella: 937 69 25 39. Terraza frente al mar, cocina mediterránea, parking gratuito. Paseo Manuel Puigvert s/n.",
+        "metaDescription": "Reserva mesa en Restaurant Banys La Gavina Calella: 937 69 25 39. Terraza frente al mar, cocina mediterránea. Paseo Manuel Puigvert s/n.",
         "reservations_section": "Reservar Mesa",
         "reservations_subtitle": "Tu mesa frente al Mediterráneo te está esperando",
         "reservations_description": "Disfruta de nuestras especialidades mediterráneas en una ubicación única: terraza con vista panorámica al mar, ambiente familiar y más de 65 años de tradición culinaria.",
@@ -83,7 +83,6 @@
             "items": [
                 "🌊 Terraza frente al mar con vistas panorámicas",
                 "🍽️ Cocina mediterránea auténtica desde 1958", 
-                "🅿️ Parking gratuito muy cerca del restaurante",
                 "👨‍👩‍👧‍👦 Ambiente familiar y acogedor",
                 "📍 Frente a la Estación Renfe de Calella"
             ]
@@ -95,8 +94,8 @@
             "phone": "Teléfono",
             "mobile": "Móvil",
             "schedule": "Horario",
-            "parking": "Aparcamiento gratuito",
-            "parking_description": "Disponemos de dos parkings públicos gratuitos de Calella muy cercanos al restaurante",
+            "parking": "Acceso",
+            "parking_description": "Consulta las opciones de acceso por telefono",
             "follow_us": "🌐 Síguenos en redes sociales",
             "name": "Nombre",
             "email": "Email",
@@ -184,7 +183,7 @@
         "location": {
             "title": "Ubicación Privilegiada en Calella",
             "subtitle": "Primera línea de playa del Mediterráneo",
-            "description": "Restaurante Banys La Gavina está situado en la Platja Gran de Calella, en primera línea de mar, con vistas panorámicas al Mediterráneo. A solo 800 m de la estación RENFE Calella y con parking gratuito cercano, ofrecemos un acceso cómodo tanto para visitantes de Barcelona como para locales.",
+            "description": "Restaurante Banys La Gavina está situado en la Platja Gran de Calella, en primera línea de mar, con vistas panorámicas al Mediterráneo. A solo 800 m de la estación RENFE Calella, ofrecemos un acceso cómodo tanto para visitantes de Barcelona como para locales.",
             "descript_seo": "Si estás buscando restaurantes en Calella de Mar donde combinar cocina mediterránea con ubicación excepcional, este es tu lugar. Nuestra terraza frente al mar es el escenario perfecto para disfrutar de auténticas paellas valencianas, mariscos frescos de la Costa Brava y pescado de lonja, todo en un entorno único y relajado.",
             "descript_seo_1": "Somos una referencia entre los restaurantes Calella por nuestra cocina de calidad, servicio cercano y ambiente junto al mar."
         },
@@ -205,8 +204,8 @@
                     "description": "Espacio perfecto para todo tipo de eventos, día y noche"
                 },
                 {
-                    "title": "Aparcamiento Gratuito",
-                    "description": "Dos aparcamientos gratuitos, uno frente al restaurantee"
+                    "title": "Acceso",
+                    "description": "Consulta por telefono la mejor forma de llegar"
                 }
             ]
         }

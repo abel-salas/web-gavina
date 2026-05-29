@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { getContactInfo } from "@/app/lib/contact-utils";
-import WhatsAppReservation from "@/app/components/WhatsAppReservation";
-import ReservationForm from "@/app/components/ReservationForm";
 import HoursSection from "@/app/components/HoursSection";
+import WhatsAppReservation from "@/app/components/WhatsAppReservation";
 import { getLocalizedData } from '@/app/lib/localization';
 
 // Interfaz para datos desde Sanity
@@ -88,8 +87,8 @@ interface ReservasContentProps {
 }
 
 export default function ReservasContent({ locale, content }: ReservasContentProps) {
-  const { dict } = getLocalizedData(locale);
   const contactInfo = getContactInfo();
+  const { dict } = getLocalizedData(locale);
 
   // Si no hay contenido desde Sanity, mostrar fallback
   if (!content) {
@@ -144,7 +143,7 @@ export default function ReservasContent({ locale, content }: ReservasContentProp
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
             {/* Reserva por Teléfono */}
             <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
               <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
@@ -185,12 +184,6 @@ export default function ReservasContent({ locale, content }: ReservasContentProp
               </p>
               <WhatsAppReservation dict={dict} />
             </div>
-
-            {/* Formulario Online */}
-            <ReservationForm 
-              title={content.reservationMethods.formulario.title}
-              description={content.reservationMethods.formulario.description}
-            />
           </div>
         </div>
       </section>

@@ -3,7 +3,6 @@ import type { Route } from 'next';
 // import { getContactInfo } from "@/app/lib/contact-utils"; // No usado actualmente
 import HoursSection from "@/app/components/HoursSection";
 import SocialMedia from '@/app/components/SocialMedia';
-import ReservationForm from "@/app/components/ReservationForm";
 import { getLocalizedData } from '@/app/lib/localization';
 
 // Interfaz para datos desde Sanity
@@ -93,6 +92,15 @@ interface ContactContentProps {
 
 export default function ContactContent({ content, locale }: ContactContentProps) {
   const { href } = getLocalizedData(locale);
+  const directMethods = content.contactInfo.contactMethods.filter(
+    (method) =>
+      method.type === 'phone' ||
+      method.type === 'whatsapp' ||
+      method.link?.startsWith('tel:') ||
+      method.link?.includes('wa.me') ||
+      method.link?.includes('whatsapp')
+  );
+  const actionableDirectMethods = directMethods.filter((method) => Boolean(method.link));
   // const contactInfo = getContactInfo(); // Comentado temporalmente, se usa contenido de Sanity
 
   return (
@@ -191,7 +199,7 @@ export default function ContactContent({ content, locale }: ContactContentProps)
           )}
 
           <div className="space-y-4">
-            {content.contactInfo.contactMethods.map((method, index) => (
+            {directMethods.map((method, index) => (
               <div key={index} className="flex items-center">
                 <span className="material-icons-outlined text-blue-600 text-2xl mr-3">
                   {method.icon}
@@ -202,7 +210,7 @@ export default function ContactContent({ content, locale }: ContactContentProps)
                     <a 
                       href={method.link} 
                       className="text-blue-600 hover:text-blue-800"
-                      {...(method.type === 'phone' || method.type === 'whatsapp' ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+                      {...(method.link.startsWith('tel:') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
                     >
                       {method.value}
                     </a>
@@ -231,11 +239,30 @@ export default function ContactContent({ content, locale }: ContactContentProps)
           </div>
         </section>
 
-        {/* Formulario de Contacto */}
-        <ReservationForm 
-          title={content.contactForm.title}
-          description={content.contactForm.description || ''}
-        />
+        {/* Contacto directo */}
+        <section className="bg-white p-8 rounded-2xl shadow-lg text-center">
+          <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+            <span className="material-icons-outlined text-3xl">call</span>
+          </div>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Reservas por telefono y WhatsApp
+          </h3>
+          <p className="text-gray-600 mb-6">
+            Atendemos reservas y consultas por llamada o WhatsApp.
+          </p>
+          <div className="space-y-3">
+            {actionableDirectMethods.map((method, index) => (
+              <a
+                key={index}
+                href={method.link as string}
+                className="block text-2xl font-bold text-blue-600 hover:text-blue-800 transition-colors"
+                {...(method.link?.startsWith('tel:') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
+              >
+                {method.value}
+              </a>
+            ))}
+          </div>
+        </section>
       </div>
 
       {/* CTA Final */}

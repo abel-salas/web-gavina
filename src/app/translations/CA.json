@@ -9,7 +9,7 @@
         "mobile": "692 473 865",
         "address": "Paseo Manuel Puigvert s/n, Calella, Barcelona",
         "location": "Platja Gran de Calella, davant de l'Estació de Renfe",
-        "parking": "Dues zones d'aparcament gratuït",
+        "parking": "Detalls d'accés per telèfon",
         "facebook": "Facebook",
         "instagram": "Instagram"
     },
@@ -29,7 +29,7 @@
         "subtitle": "Des de 1958 en primera línia de mar",
         "description": "Situats a la Platja de Calella, som especialistes en arrossos, mariscos, peix fresc i carns selectes. Un marc incomparable davant del mar Mediterrani.",
         "metaTitle": "Restaurant Banys La Gavina - Des de 1958 a Calella | Arrossos i Mariscos",
-        "metaDescription": "Restaurant tradicional davant del mar a Calella des de 1958. Especialistes en arrossos, mariscos, peix fresc i carns selectes. Terrassa amb vistes al mar i aparcament gratuït.",
+        "metaDescription": "Restaurant tradicional davant del mar a Calella des de 1958. Especialistes en arrossos, mariscos, peix fresc i carns selectes. Terrassa amb vistes al mar.",
         "cta": "Veure la carta"
     },
     "menu": {
@@ -79,7 +79,7 @@
         "hours": "Obert tots els dies",
         "facebook": "Facebook",
         "location": "Platja Gran de Calella, davant de l'Estació de Renfe",
-        "parking": "Dos aparcaments gratuïts",
+        "parking": "Detalls d'accés per telèfon",
         "info_section": "Informació de Contacte",
         "form_section": "Envia'ns un Missatge",
         "fields": {
@@ -87,8 +87,8 @@
             "phone": "Telèfon",
             "mobile": "Mòbil",
             "schedule": "Horari",
-            "parking": "Aparcament gratuït",
-            "parking_description": "Disposem de dos pàrquings públics gratuïts de Calella molt propers al restaurant",
+            "parking": "Accés",
+            "parking_description": "Consulta les opcions d'accés per telèfon",
             "follow_us": "Segueix-nos a les xarxes socials",
             "name": "Nom",
             "email": "Email",

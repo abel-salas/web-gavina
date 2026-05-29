@@ -89,10 +89,6 @@ export function generateFAQSchema(locale: SupportedLocale) {
                 answer: "Estamos abiertos todos los días de 9:00 a 23:30h. Servimos desayunos, comidas y cenas durante todo el horario."
             },
             {
-                question: "¿Tienen aparcamiento disponible?",
-                answer: "Sí, disponemos de dos parkings públicos gratuitos de Calella muy cercanos al restaurante."
-            },
-            {
                 question: "¿Cuál es la especialidad del restaurante?",
                 answer: "Nos especializamos en cocina mediterránea auténtica: paellas tradicionales, mariscos frescos y pescados del día, todo con vista al mar."
             },
@@ -113,10 +109,6 @@ export function generateFAQSchema(locale: SupportedLocale) {
             {
                 question: "What are the restaurant opening hours?",
                 answer: "We are open every day from 9:00 to 23:30h. We serve breakfast, lunch and dinner throughout our opening hours."
-            },
-            {
-                question: "Do you have parking available?",
-                answer: "Yes, we have two free public parking areas in Calella very close to the restaurant."
             },
             {
                 question: "What is the restaurant's specialty?",
@@ -141,10 +133,6 @@ export function generateFAQSchema(locale: SupportedLocale) {
                 answer: "Estem oberts tots els dies de 9:00 a 23:30h. Servim esmorzars, dinars i sopars durant tot l'horari."
             },
             {
-                question: "Tenen aparcament disponible?",
-                answer: "Sí, disposem de dos aparcaments públics gratuïts de Calella molt propers al restaurant."
-            },
-            {
                 question: "Quina és l'especialitat del restaurant?",
                 answer: "Ens especialitzem en cuina mediterrània autèntica: paelles tradicionals, mariscs frescos i peixos del dia, tot amb vista al mar."
             },
@@ -167,10 +155,6 @@ export function generateFAQSchema(locale: SupportedLocale) {
                 answer: "We zijn elke dag open van 9:00 tot 23:30u. We serveren ontbijt, lunch en diner gedurende onze openingstijden."
             },
             {
-                question: "Hebben jullie parkeergelegenheid?",
-                answer: "Ja, we hebben twee gratis openbare parkeerplaatsen in Calella zeer dicht bij het restaurant."
-            },
-            {
                 question: "Wat is de specialiteit van het restaurant?",
                 answer: "We zijn gespecialiseerd in authentieke mediterrane keuken: traditionele paella's, verse zeevruchten en vis van de dag, allemaal met zeezicht."
             },
@@ -191,10 +175,6 @@ export function generateFAQSchema(locale: SupportedLocale) {
             {
                 question: "Was sind die Öffnungszeiten des Restaurants?",
                 answer: "Wir haben täglich von 9:00 bis 23:30 Uhr geöffnet. Wir servieren Frühstück, Mittag- und Abendessen während unserer gesamten Öffnungszeiten."
-            },
-            {
-                question: "Haben Sie Parkmöglichkeiten?",
-                answer: "Ja, wir haben zwei kostenlose öffentliche Parkplätze in Calella ganz in der Nähe des Restaurants."
             },
             {
                 question: "Was ist die Spezialität des Restaurants?",

@@ -51,7 +51,7 @@ export const SEO_DATA = {
             reservas: {
                 title: 'Reservar mesa | Restaurant Banys La Gavina Calella',
                 description: 'Reserva tu mesa en Banys La Gavina. Cocina mediterránea, terraza frente al mar y fácil acceso en Calella. Teléfono 937 69 25 39.',
-                keywords: 'reservar mesa Calella, booking restaurant Barcelona, mesa frente al mar, reservas WhatsApp, restaurant primera línea playa, reserva online Calella',
+                keywords: 'reservar mesa Calella, booking restaurant Barcelona, mesa frente al mar, reservas por telefono, restaurant primera línea playa',
             },
         },
     },
@@ -86,7 +86,7 @@ export const SEO_DATA = {
             },
             celebraciones: {
                 title: 'Weddings & Events Restaurant Banys La Gavina Calella | Seaside Celebrations & Corporate Events',
-                description: 'Plan your perfect celebration at Restaurant Banys La Gavina Calella: seaside weddings, communions, baptisms, anniversaries, bachelor parties, corporate events and business dinners with panoramic Mediterranean views. Capacity up to 100 guests, personalized menus, free parking, and over 65 years of experience. Prime location opposite Renfe Station.',
+                description: 'Plan your perfect celebration at Restaurant Banys La Gavina Calella: seaside weddings, communions, baptisms, anniversaries, bachelor parties, corporate events and business dinners with panoramic Mediterranean views. Capacity up to 100 guests, personalized menus, and over 65 years of experience. Prime location opposite Renfe Station.',
                 keywords: 'seaside weddings Calella, sea view restaurant celebrations, Calella communions Costa Maresme, Mediterranean baptisms, anniversary restaurant Calella, bachelor parties Calella, corporate events seaside, business dinners sea view, banquets Calella, family celebrations Costa Brava, events restaurant Calella, celebration venues sea view, beach weddings Barcelona, terrace communions, Banys La Gavina events',
             },
             specialties: {
@@ -106,8 +106,8 @@ export const SEO_DATA = {
             },
             reservas: {
                 title: 'Book Table Restaurant Banys La Gavina Calella | Seafront Dining | +34 937 69 25 39',
-                description: 'Book your table at Restaurant Banys La Gavina Calella. Phone +34 937 69 25 39, WhatsApp, or online form. Seafront dining, authentic Mediterranean cuisine, free parking.',
-                keywords: 'book table Calella, restaurant booking Barcelona, seafront dining, WhatsApp reservations, beachfront restaurant, online booking Calella',
+                description: 'Book your table at Restaurant Banys La Gavina Calella by phone: +34 937 69 25 39. Seafront dining and authentic Mediterranean cuisine.',
+                keywords: 'book table Calella, restaurant booking Barcelona, seafront dining, phone reservations Calella, beachfront restaurant',
             },
         },
     },
@@ -163,7 +163,7 @@ export const SEO_DATA = {
             reservas: {
                 title: 'Reservar taula | Restaurant Banys La Gavina Calella',
                 description: 'Reserva la teva taula a Banys La Gavina. Cuina mediterrània autèntica, terrassa davant del mar i fàcil accés a Calella. Tel. 937 69 25 39.',
-                keywords: 'reservar taula Calella, reserva restaurant Barcelona, taula davant del mar, reserves WhatsApp, restaurant primera línia platja, reserva online Calella',
+                keywords: 'reservar taula Calella, reserva restaurant Barcelona, taula davant del mar, reserves per telefon, restaurant primera línia platja',
             },
         },
     },
@@ -218,8 +218,8 @@ export const SEO_DATA = {
             },
             reservas: {
                 title: 'Tafel Reserveren Restaurant Banys La Gavina Calella | Aan Zee | +34 937 69 25 39',
-                description: 'Reserveer uw tafel bij Restaurant Banys La Gavina Calella. Telefoon +34 937 69 25 39, WhatsApp of online formulier. Dineren aan zee, authentieke mediterrane keuken, gratis parkeren.',
-                keywords: 'tafel reserveren calella, restaurant booking barcelona, dineren aan zee, whatsapp reserveringen, strandrestaurant, online booking calella',
+                description: 'Reserveer uw tafel bij Restaurant Banys La Gavina Calella via telefoon: +34 937 69 25 39. Dineren aan zee en authentieke mediterrane keuken.',
+                keywords: 'tafel reserveren calella, restaurant booking barcelona, dineren aan zee, telefonische reserveringen, strandrestaurant',
             },
         },
     },
@@ -273,8 +273,8 @@ export const SEO_DATA = {
             },
             reservas: {
                 title: 'Tisch Reservieren Restaurant Banys La Gavina Calella | Am Meer | +34 937 69 25 39',
-                description: 'Reservieren Sie Ihren Tisch im Restaurant Banys La Gavina Calella. Telefon +34 937 69 25 39, WhatsApp oder Online-Formular. Essen am Meer, authentische mediterrane Küche, kostenlose Parkplätze.',
-                keywords: 'tisch reservieren calella, restaurant booking barcelona, essen am meer, whatsapp reservierungen, strandrestaurant, online booking calella',
+                description: 'Reservieren Sie Ihren Tisch im Restaurant Banys La Gavina Calella telefonisch: +34 937 69 25 39. Essen am Meer mit authentischer mediterraner Küche.',
+                keywords: 'tisch reservieren calella, restaurant booking barcelona, essen am meer, telefonische reservierungen, strandrestaurant',
             },
         },
     },

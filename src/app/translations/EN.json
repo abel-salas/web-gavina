@@ -9,7 +9,7 @@
         "mobile": "692 473 865",
         "address": "Paseo Manuel Puigvert s/n, Calella, Barcelona",
         "location": "Platja Gran de Calella, facing the Renfe Station",
-        "parking": "Two free parking areas",
+        "parking": "Access details by phone",
         "facebook": "Facebook",
         "instagram": "Instagram"
     },
@@ -29,7 +29,7 @@
         "subtitle": "Since 1958 on the seafront",
         "description": "Located on Calella Beach, we specialize in rice dishes, seafood, fresh fish and select meats. An incomparable setting facing the Mediterranean Sea.",
         "metaTitle": "Restaurant Banys La Gavina - Since 1958 in Calella | Rice dishes and Seafood",
-        "metaDescription": "Traditional seafront restaurant in Calella since 1958. Specialists in rice dishes, seafood, fresh fish and select meats. Sea view terrace and free parking.",
+        "metaDescription": "Traditional seafront restaurant in Calella since 1958. Specialists in rice dishes, seafood, fresh fish and select meats. Sea view terrace.",
         "cta": "View Menu"
     },
     "menu": {
@@ -80,8 +80,8 @@
             "phone": "Phone",
             "mobile": "Mobile",
             "schedule": "Schedule",
-            "parking": "Free parking",
-            "parking_description": "We have two free public parking areas in Calella very close to the restaurant",
+            "parking": "Access",
+            "parking_description": "Call us for access details",
             "follow_us": "Follow us on social media",
             "name": "Name",
             "email": "Email",
@@ -233,7 +233,7 @@
         "location": {
             "title": "Privileged Location in Calella",
             "subtitle": "Mediterranean seafront location",
-            "description": "Restaurant Banys La Gavina is situated at Platja Gran de Calella, on the seafront with panoramic Mediterranean views. 800m from Calella RENFE Station and with free parking nearby, we offer easy access for both Barcelona tourists and locals. Our seafront terrace is the perfect setting to enjoy Valencian paellas, fresh Costa Brava seafood and market fish in a unique Mediterranean atmosphere."
+            "description": "Restaurant Banys La Gavina is situated at Platja Gran de Calella, on the seafront with panoramic Mediterranean views. 800m from Calella RENFE Station, we offer easy access for both Barcelona tourists and locals. Our seafront terrace is the perfect setting to enjoy Valencian paellas, fresh Costa Brava seafood and market fish in a unique Mediterranean atmosphere."
         }
     },
     "privacy": {
